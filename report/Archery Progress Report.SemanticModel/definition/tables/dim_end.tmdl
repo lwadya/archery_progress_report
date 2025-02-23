@@ -1,0 +1,57 @@
+table dim_end
+	lineageTag: 2ab4c433-d98c-4bdf-97b6-12df3a89eddd
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3af966ce-2a08-4f72-9d2c-2d5f1f2854f0
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a4a985c0-981c-41b8-be00-30b90b60c7b9
+		summarizeBy: none
+		sourceColumn: end_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column end
+		dataType: int64
+		formatString: 0
+		lineageTag: 93428dca-beea-4933-b278-a1b86b7d836f
+		summarizeBy: sum
+		sourceColumn: end
+
+		annotation SummarizationSetBy = Automatic
+
+	column normalized_session_time
+		dataType: decimal
+		formatString: #,0%;-#,0%;#,0%
+		lineageTag: 2a61df33-0abf-4aad-b286-e5e1722c158a
+		summarizeBy: sum
+		sourceColumn: normalized_session_time
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_end = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = Table.NestedJoin(cumulative_end_score, {"session_id"}, session_counts, {"session_id"}, "session_counts", JoinKind.LeftOuter),
+				    #"Expanded session_counts" = Table.ExpandTableColumn(Source, "session_counts", {"session_end_count", "session_shot_count"}, {"session_end_count", "session_shot_count"}),
+				    #"Added Custom" = Table.AddColumn(#"Expanded session_counts", "normalized_session_time_end", each [end] / [session_end_count], Currency.Type),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "normalized_session_time_shot", each [cumulative_shot_count] / [session_shot_count], Currency.Type),
+				    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "normalized_session_time", each Number.RoundDown( [normalized_session_time_shot] / normalized_session_time_increment ) * normalized_session_time_increment, Currency.Type),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Added Custom2",{"session_id", "end_id", "end", "normalized_session_time"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

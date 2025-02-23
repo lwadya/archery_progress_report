@@ -1,0 +1,71 @@
+table dim_calendar
+	lineageTag: dccd6de7-88ba-4012-a0c1-7e7849e1910c
+	dataCategory: Time
+
+	column date
+		isKey
+		formatString: yyyy-mm-dd
+		lineageTag: 7b49a55a-4455-44fd-a9ce-38f4fa0f06f2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column start_of_year
+		formatString: General Date
+		lineageTag: d7dccf0a-5f4c-4ddf-9e79-2336f7c7017e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Start_of_Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_of_month
+		formatString: General Date
+		lineageTag: b8a31b2d-e9ec-4a1e-bbe1-d036a2bf5333
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Start_of_Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_of_week
+		formatString: General Date
+		lineageTag: ed67a976-bfc5-4db8-b93d-99a8b6660644
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Start_of_Week]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_calendar = calculated
+		mode: import
+		source =
+				
+				// Last Developer:      Lukas Wadya
+				// Last Change Date:    2024-10-09
+				// Description:         Calendar table for the report
+				
+				VAR _base_calendar =
+				CALENDAR(
+				    MIN( 'dim_session'[date] ),
+				    MAX( 'dim_session'[date] )
+				)
+				
+				VAR _result =
+				SELECTCOLUMNS(
+				    _base_calendar,
+				    "date", [Date],
+				    "start_of_year", DATE( YEAR( [Date] ), 1, 1 ),
+				    "start_of_month", DATE( YEAR( [Date] ), MONTH( [Date] ), 1 ),
+				    "start_of_week", [Date] - WEEKDAY( [Date], 1 ) + 1
+				)
+				
+				RETURN
+				_result
+
+	annotation PBI_Id = 6647433d3227408a82b2be98e1e79053
+

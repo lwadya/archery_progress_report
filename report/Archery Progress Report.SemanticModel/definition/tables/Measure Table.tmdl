@@ -1,0 +1,237 @@
+table 'Measure Table'
+	lineageTag: e06aa0ae-6b63-4802-b6e2-30fd7ea315c9
+
+	measure 'Shot Score Average' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-10-09
+			// Description:     Average score of all selected shots
+			
+			AVERAGE( fact_shot_score[score_end_average] )
+		formatString: 0.0
+		displayFolder: Score
+		lineageTag: edf13954-720e-48a5-ba68-bd7384bdea2e
+
+	measure 'Round Score 30 Average OLD' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-08-26
+			// Description:     Average 30-shot round score for all selected shots
+			
+			[Shot Score Average] * 30
+		formatString: 0
+		displayFolder: _delete
+		lineageTag: 9592e6f3-66ff-475f-ad98-7613c868c26f
+
+	measure 'Shot Score Rolling Average' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-10-09
+			// Description:     Rolling average score of all selected shots
+			
+			VAR _session_window = 5
+			
+			VAR _latest_session_id = MAX( 'dim_session'[session_id] )
+			
+			VAR _earliest_session_id = _latest_session_id - _session_window + 1
+			
+			VAR _rolling_average =
+			CALCULATE(
+			    [Shot Score Average],
+			    FILTER(
+			        ALL( 'dim_session' ),
+			        'dim_session'[session_id] >= _earliest_session_id && 'dim_session'[session_id] <= _latest_session_id
+			    )
+			)
+			
+			VAR _result =
+			IF(
+			    _earliest_session_id >= 1,
+			    _rolling_average
+			)
+			
+			RETURN
+			_result
+		formatString: 0.0
+		displayFolder: Score
+		lineageTag: c3457a91-fee8-44fd-826a-36232c6d55ee
+
+	measure 'Shot Score Previous Session' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-10-09
+			// Description:     Average score of all selected shots from the previous session
+			
+			VAR _latest_session_id = MAX( 'dim_session'[session_id] )
+			
+			VAR _previous_session_id = _latest_session_id - 1
+			
+			VAR _result =
+			CALCULATE(
+			    [Shot Score Average],
+			    FILTER(
+			        ALL( 'dim_session' ),
+			        'dim_session'[session_id] = _previous_session_id
+			    )
+			)
+			
+			RETURN
+			_result
+		formatString: 0.0
+		displayFolder: Score
+		lineageTag: 9cf0c7aa-0ea1-430e-9167-a8b75e00ac7e
+
+	measure 'Shot Count' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-08-29
+			// Description:     Count of shots
+			
+			COUNTROWS( fact_shot_score )
+		formatString: #,0
+		displayFolder: Shot
+		lineageTag: 21936e43-5cf6-4ee0-8164-46334dea594a
+
+	measure 'Round Score 30 Average' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-10-27
+			// Description:     Average 30-shot round score for all selected shots
+			
+			VAR _round_shot_count = 30
+			
+			VAR _result =
+			AVERAGEX(
+			    fact_shot_score,
+			    CALCULATE(
+			        IF(
+			            MAX( fact_shot_score[session_shot_id] ) >= _round_shot_count,
+			            SUM( fact_shot_score[score_end_average] )
+			        ),
+			        FILTER(
+			            ALL( fact_shot_score ),
+			            fact_shot_score[shot_id] <= MAX( fact_shot_score[shot_id] ) && fact_shot_score[shot_id] > MAX( fact_shot_score[shot_id] ) - _round_shot_count && fact_shot_score[session_id] = MAX( fact_shot_score[session_id] )
+			        )
+			    )
+			)
+			
+			RETURN
+			_result
+		formatString: 0
+		displayFolder: Score
+		lineageTag: 0fc71b9c-19cc-4aaa-bfe2-d72aca981feb
+
+	measure 'Shot Count Session Average' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-09-05
+			// Description:     Average count of shots per session
+			
+			AVERAGEX(
+			    'dim_session',
+			    [Shot Count]
+			)
+		formatString: 0.0
+		displayFolder: Shot
+		lineageTag: 7fcdcd05-6f8f-494e-b62c-37520fe113df
+
+	measure 'Shot Count Selected Sessions' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-10-09
+			// Description:     Total count of shots for selected sessions
+			
+			SUM( 'dim_session'[session_shot_count] )
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: 8c24f062-e816-497b-b392-b30fcccc303d
+
+	measure 'Shot Percentage' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-09-08
+			// Description:     Selected shots as a percentage of selected sessions
+			
+			DIVIDE(
+			    [Shot Count],
+			    [Shot Count Selected Sessions]
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Shot
+		lineageTag: 9fb8690f-c78c-4ce0-9944-ce339cc26558
+
+	measure 'Session ID as Percentage' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-10-09
+			// Description:     Percentage of progress through all sessions
+			
+			VAR _current_session_id = MAX( 'dim_session'[session_id] )
+			
+			VAR _total_sessions =
+			COUNTROWS(
+			    ALL( 'dim_session' )
+			)
+			
+			RETURN
+			DIVIDE(
+			    _current_session_id,
+			    _total_sessions
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Session
+		lineageTag: 8e43940f-2ba4-473d-a7ca-7113b1fa4ccd
+
+	measure 'End Count' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-10-09
+			// Description:     Count of ends
+			
+			COUNTROWS( dim_end )
+		formatString: #,0
+		displayFolder: End
+		lineageTag: 7ed5ffc0-eb90-4eb8-9a92-56c24da1df70
+
+	measure 'Session ID Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-11-08
+			// Description:     Min session_id value for selected sessions
+			
+			MIN( dim_session[session_id] )
+		formatString: 0
+		displayFolder: Session
+		lineageTag: 31d29bbe-3c75-47f2-ba72-ed94353d7b20
+
+	measure 'Session ID Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-11-08
+			// Description:     Max session_id value for selected sessions
+			
+			MAX( dim_session[session_id] )
+		formatString: 0
+		displayFolder: Session
+		lineageTag: 697ae780-a074-40ae-a780-d34514a361ad
+
+	measure 'Session ID Count' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-11-08
+			// Description:     Count of selected dim_session rows
+			
+			COUNTROWS( dim_session )
+		formatString: #,0
+		displayFolder: Session
+		lineageTag: fc368630-612a-4a05-b6ac-2b39facfdf35
+
+	partition 'Measure Table' = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source = #table( {}, {} )
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,95 @@
+/// Gets raw data from shot tracking Google sheet
+expression raw_shot_data =
+		let
+		    //Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1nCBdNwAHM2udDAdk-XrrSoA7iWGeCGFj7CJXsgXMB-M/edit?usp=sharing"),
+		    //DataTable = Source{[name="TrackingScore",ItemKind="Table"]}[Data],
+		    Source = Excel.Workbook(File.Contents("C:\Users\lukas\OneDrive\Documents\projects\archery_performance\data\Archery.xlsx"), null, true),
+		    DataTable = Source{[Item="TrackingScore",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(DataTable,1),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Filtered Rows" = Table.SelectRows(#"Promoted Headers", each [Date] <> null and [Date] <> ""),
+		    _all_columns = Table.ColumnNames( #"Filtered Rows"),
+		    _score_columns = List.Select( _all_columns, each try Value.Is(Number.FromText(_), type number) otherwise false ),
+		    #"Selected Columns" = Table.SelectColumns( #"Filtered Rows", {"Date", "Notes", "Major Adjustment"} & _score_columns ),
+		    #"Columns to Text" = Table.TransformColumnTypes( #"Selected Columns", List.Transform( List.RemoveFirstN( Table.ColumnNames( #"Selected Columns" ), 1 ), each {_, type text} )),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Columns to Text",{{"Date", type date}}),
+		    #"Added Index" = Table.AddIndexColumn(#"Changed Type", "session_id", 1, 1, Int64.Type),
+		    #"Renamed Columns" = Table.RenameColumns(#"Added Index",{{"Date", "date"}, {"Notes", "notes"}, {"Major Adjustment", "major_adjustment"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 0b94cfb4-8aab-4eb8-b53a-04d47108ce3f
+	queryGroup: 'Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+/// Helper table of cumulative shots and scores for each end
+expression cumulative_end_score =
+		let
+		    Source = basic_shot_score,
+		    #"Grouped Rows" = Table.Group(Source, {"session_id", "end"}, {{"shot_count", each Table.RowCount(_), Int64.Type}, {"score", each List.Sum([score]), Int64.Type}}),
+		    #"Added Index" = Table.AddIndexColumn(#"Grouped Rows", "end_id", 1, 1, Int64.Type),
+		    #"Self Join" = Table.NestedJoin(#"Added Index", {"session_id"}, #"Added Index", {"session_id"}, "end_score", JoinKind.Inner),
+		    #"Expanded end_score" = Table.ExpandTableColumn(#"Self Join", "end_score", {"end", "shot_count", "score"}, {"prev_end", "prev_shot_count", "prev_score"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Expanded end_score", each [prev_end] <= [end]),
+		    #"Grouped Rows1" = Table.Group(#"Filtered Rows", {"session_id", "end_id", "end", "shot_count", "score"}, {{"cumulative_shot_count", each List.Sum([prev_shot_count]), Int64.Type}, {"cumulative_score", each List.Sum([prev_score]), Int64.Type}})
+		in
+		    #"Grouped Rows1"
+	lineageTag: 6c07150e-8967-40e3-9bf6-9aa9d1b3593a
+	queryGroup: 'Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+/// Helper table of total end and shot counts for each session
+expression session_counts =
+		let
+		    Source = cumulative_end_score,
+		    #"Grouped Rows" = Table.Group(Source, {"session_id"}, {{"session_end_count", each Table.RowCount(_), Int64.Type}, {"session_shot_count", each List.Sum([shot_count]), Int64.Type}, {"session_score_average", each List.Max([cumulative_score]) / List.Sum([shot_count]), Currency.Type}}),
+		    #"Added Custom" = Table.AddColumn(#"Grouped Rows", "next_session_id", each [session_id] + 1, Int64.Type)
+		in
+		    #"Added Custom"
+	lineageTag: 1210571f-c2e3-400c-b295-7502fb4437da
+	queryGroup: 'Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+/// Helper table of scores for each shot
+expression basic_shot_score =
+		let
+		    Source = raw_shot_data,
+		    #"Removed Columns" = Table.RemoveColumns(Source,{"date", "notes", "major_adjustment"}),
+		    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Removed Columns", {"session_id"}, "end", "score"),
+		    #"Filtered Rows" = Table.SelectRows(#"Unpivoted Columns", each [score] <> null and [score] <> ""),
+		    #"Split Column by Positions" = Table.ExpandListColumn(Table.TransformColumns(#"Filtered Rows", {{"score", Splitter.SplitTextByRepeatedLengths(1), let itemType = (type nullable text) meta [Serialized.Text = true] in type {itemType}}}), "score"),
+		    #"Replaced Value" = Table.ReplaceValue(#"Split Column by Positions","$","10",Replacer.ReplaceValue,{"score"}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"end", Int64.Type}, {"score", Int64.Type}}),
+		    #"Sorted Rows" = Table.Sort(#"Changed Type",{{"session_id", Order.Ascending}, {"end", Order.Ascending}}),
+		    #"Grouped Rows" = Table.Group(#"Sorted Rows", {"session_id"}, {{"rows", each _, type table [session_id=number, end=nullable number, score=nullable number]}}),
+		    #"Added Custom" = Table.AddColumn(#"Grouped Rows", "rows_with_index", each Table.AddIndexColumn( [rows], "session_shot_id", 1, 1, Int64.Type )),
+		    #"Expanded rows_with_index" = Table.ExpandTableColumn(#"Added Custom", "rows_with_index", {"end", "score", "session_shot_id"}, {"end", "score", "session_shot_id"}),
+		    #"Removed Columns1" = Table.RemoveColumns(#"Expanded rows_with_index",{"rows"}),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Removed Columns1",{{"end", Int64.Type}, {"score", Int64.Type}, {"session_shot_id", Int64.Type}}),
+		    #"Added Index" = Table.AddIndexColumn(#"Changed Type1", "shot_id", 1, 1, Int64.Type)
+		in
+		    #"Added Index"
+	lineageTag: 3596e014-7048-4390-8230-dad038e2ac27
+	queryGroup: 'Helper Queries'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+/// Percentage point increments for normalized session time progress (0-100%)
+expression normalized_session_time_increment = 0.1 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=true]
+	lineageTag: b6ea038b-a931-4103-85bc-7cad12af5382
+	queryGroup: Parameters
+
+	annotation PBI_ResultType = Number
+
+	annotation PBI_NavigationStepName = Navigation
+

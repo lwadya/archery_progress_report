@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "9a7450f3273b3475128b",
+  "position": {
+    "x": 22.225730071033936,
+    "y": 382.8887134964483,
+    "z": 1000,
+    "height": 302.06787687450668,
+    "width": 418.24782951854775,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "kpi",
+    "query": {
+      "queryState": {
+        "Goal": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Shot Score Previous Session"
+                }
+              },
+              "queryRef": "Measure Table.Shot Score Previous Session",
+              "nativeQueryRef": "Shot Score Previous Session"
+            }
+          ]
+        },
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Shot Score Average"
+                }
+              },
+              "queryRef": "Measure Table.Shot Score Average",
+              "nativeQueryRef": "Shot Score Average"
+            }
+          ]
+        },
+        "TrendLine": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_calendar"
+                    }
+                  },
+                  "Property": "date"
+                }
+              },
+              "queryRef": "Calendar.Date",
+              "nativeQueryRef": "Date"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

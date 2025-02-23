@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Archery Progress Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c3f25fa3-64c6-4c1e-91f0-5cc009796797"
+  }
+}

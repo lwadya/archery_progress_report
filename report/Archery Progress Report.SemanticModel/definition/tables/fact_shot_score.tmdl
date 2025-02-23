@@ -1,0 +1,76 @@
+/// Fact table of scores for each shot taken
+table fact_shot_score
+	lineageTag: e6891884-0821-44e6-a257-b96b37aa6cd8
+
+	column score
+		dataType: int64
+		formatString: 0
+		lineageTag: f448e191-474b-4191-9612-c9223dab0463
+		summarizeBy: sum
+		sourceColumn: score
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6395fb28-b88e-47a5-96ba-7419b937b629
+		summarizeBy: none
+		sourceColumn: end_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column score_end_average
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: b31eee47-36ee-43bb-ac88-9df71fe2f4dc
+		summarizeBy: sum
+		sourceColumn: score_end_average
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column session_shot_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ec380635-65b5-4740-8f33-e727998b4e62
+		summarizeBy: sum
+		sourceColumn: session_shot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column shot_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ded94982-77ac-4e3a-a6a0-d061a6ae4de7
+		summarizeBy: sum
+		sourceColumn: shot_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e42132a5-77ed-433b-bd09-4841aee8c064
+		summarizeBy: sum
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_shot_score = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = Table.NestedJoin(basic_shot_score, {"session_id", "end"}, cumulative_end_score, {"session_id", "end"}, "basic_shot_score", JoinKind.LeftOuter),
+				    #"Expanded basic_shot_score" = Table.ExpandTableColumn(Source, "basic_shot_score", {"end_id", "shot_count", "score"}, {"end_id", "shot_count", "end_score"}),
+				    #"Added Custom" = Table.AddColumn(#"Expanded basic_shot_score", "score_end_average", each [end_score] / [shot_count], Currency.Type),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Custom",{"end", "shot_count", "end_score"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1280"
+   height="435"
+   viewBox="0 0 1280 435"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="fatigue_container_bg_v0001.svg"
+   inkscape:export-filename="fatigue_container_bg.png"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.97836539"
+     inkscape:cx="642.90909"
+     inkscape:cy="309.70024"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="581"
+     inkscape:window-y="254"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask3">
+      <rect
+         style="font-variation-settings:normal;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.205559;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4"
+         width="1280"
+         height="23"
+         x="0"
+         y="0" />
+    </mask>
+  </defs>
+  <rect
+     style="display:none;fill:#d8d8d8;fill-opacity:1;stroke:none;stroke-width:1.88981"
+     id="rect2"
+     width="1280"
+     height="435"
+     x="0"
+     y="0"
+     inkscape:label="page BG" />
+  <g
+     inkscape:label="container"
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:export-filename="fatigue_container_bg.png"
+     inkscape:export-xdpi="192"
+     inkscape:export-ydpi="192">
+    <rect
+       style="fill:#ffffff;stroke-width:1.9126"
+       id="rect1"
+       width="1264"
+       height="435"
+       x="8"
+       y="0"
+       rx="4"
+       ry="4"
+       inkscape:label="section BG" />
+    <rect
+       style="fill:#333333;stroke-width:1.9126;fill-opacity:1"
+       id="rect1-1"
+       width="1264"
+       height="435"
+       x="8"
+       y="0"
+       rx="4"
+       ry="4"
+       inkscape:label="section header"
+       mask="url(#mask3)" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 185.5,5 V 18"
+       id="path2-1-7"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 185.5,33 V 150"
+       id="path2-1-7-2"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 185.5,170 V 287"
+       id="path2-1-7-2-1"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 185.5,307 V 424"
+       id="path2-1-7-2-7"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 815.5,5 V 18"
+       id="path2-1-7-9"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 815.5,33 V 150"
+       id="path2-1-7-2-2"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 815.5,170 V 287"
+       id="path2-1-7-2-1-7"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 815.5,307 V 424"
+       id="path2-1-7-2-7-9"
+       inkscape:label="divider v" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 13,297.5 H 1267"
+       id="path2"
+       inkscape:label="divider h" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 13,160.5 H 1267"
+       id="path2-8"
+       inkscape:label="divider h" />
+    <path
+       style="display:none;fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       d="M 13,23.5 H 1267"
+       id="path2-1"
+       inkscape:label="divider h" />
+  </g>
+</svg>

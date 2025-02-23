@@ -1,0 +1,97 @@
+/// Dimension table of information for each shooting session
+table dim_session
+	lineageTag: 05e65518-a919-4c75-a671-443a92a8bdd7
+
+	column date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: eebb2a20-d29f-43b1-b548-97f82658f561
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column notes
+		dataType: string
+		lineageTag: 65ae86d9-dbbd-4964-837d-56f9145c2591
+		summarizeBy: none
+		sourceColumn: notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column major_adjustment
+		dataType: string
+		lineageTag: ff1e3ea4-2f1b-4a79-8f9e-b218bb3cc1f3
+		summarizeBy: none
+		sourceColumn: major_adjustment
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: bb67f8b1-e1c2-4820-abc1-ee577d7545c0
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_end_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 97e25b38-7cdb-4cad-ac1b-91a3820c7fdc
+		summarizeBy: sum
+		sourceColumn: session_end_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_score_average
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ad1acae8-6bc2-4b35-bb7e-196b9c691990
+		summarizeBy: sum
+		sourceColumn: session_score_average
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column session_shot_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 047b9acd-efe7-4825-bd91-2ea511537067
+		summarizeBy: sum
+		sourceColumn: session_shot_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column days_since_previous_session
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a6c728e-9aea-4535-b155-fb2c0106a1e2
+		summarizeBy: sum
+		sourceColumn: days_since_previous_session
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_session = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = raw_shot_data,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"date", "notes", "major_adjustment", "session_id"}),
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Other Columns", {"session_id"}, session_counts, {"session_id"}, "session_counts", JoinKind.LeftOuter),
+				    #"Expanded session_counts" = Table.ExpandTableColumn(#"Merged Queries", "session_counts", {"session_end_count", "session_score_average", "session_shot_count"}, {"session_end_count", "session_score_average", "session_shot_count"}),
+				    #"Added Custom" = Table.AddColumn( #"Expanded session_counts", "days_since_previous_session", each if [session_id] > 1 then Duration.Days( [date] - (#"Expanded session_counts"[date]{[session_id] - 2}) ) else null, Int64.Type )
+				in
+				    #"Added Custom"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

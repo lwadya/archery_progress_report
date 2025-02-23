@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Archery Progress Report"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d40d48fb-9c6e-4deb-a466-51c4d56c3c3c"
+  }
+}
