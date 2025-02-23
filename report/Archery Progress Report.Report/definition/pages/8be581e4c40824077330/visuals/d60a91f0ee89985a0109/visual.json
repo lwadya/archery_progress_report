@@ -4,7 +4,7 @@
   "position": {
     "x": 235,
     "y": 0,
-    "z": 2000,
+    "z": 1000,
     "height": 55,
     "width": 587,
     "tabOrder": 2000
@@ -23,7 +23,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Session Dates Scores"
+                  "Property": "Session Dates Scores Text"
                 }
               },
               "queryRef": "Measure Table.Session Selected Display",
@@ -43,7 +43,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Session Dates Scores"
+                "Property": "Session Dates Scores Text"
               }
             },
             "direction": "Ascending"
@@ -478,7 +478,7 @@
                 "Entity": "Measure Table"
               }
             },
-            "Property": "Session Dates Scores"
+            "Property": "Session Dates Scores Text"
           }
         },
         "type": "Advanced",

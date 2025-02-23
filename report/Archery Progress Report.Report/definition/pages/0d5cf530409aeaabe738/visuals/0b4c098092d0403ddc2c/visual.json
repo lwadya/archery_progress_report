@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 156,
     "width": 532,
-    "tabOrder": 1000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -586,6 +586,17 @@
                   "Value": "true"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FAFAFA'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -638,9 +649,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#e6e6e6'"
                     }
                   }
                 }
@@ -650,6 +660,13 @@
               "expr": {
                 "Literal": {
                   "Value": "4D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }

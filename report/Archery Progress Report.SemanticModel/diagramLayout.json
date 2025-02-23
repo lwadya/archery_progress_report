@@ -4,13 +4,13 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1327,
+        "x": 0,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 1327,
+            "x": 2105.9898662361888,
             "y": 0
           },
           "nodeIndex": "Measure Table",
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 1328,
-            "y": 132.9375
+            "x": 2106.9898662361879,
+            "y": 128.19719655434369
           },
           "nodeIndex": "calc_grp_sessions",
           "nodeLineageTag": "e0fef639-72d4-427c-a750-e8f3c91647dd",
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 244,
-            "y": 298.8125
+            "x": 247.16020229710421,
+            "y": 260.89007243474941
           },
           "nodeIndex": "dim_session",
           "nodeLineageTag": "05e65518-a919-4c75-a671-443a92a8bdd7",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 430,
-            "y": 679.8125
+            "x": 516.90556317036578,
+            "y": 665.59158966303107
           },
           "nodeIndex": "fact_shot_score",
           "nodeLineageTag": "e6891884-0821-44e6-a257-b96b37aa6cd8",
@@ -75,8 +75,8 @@
         },
         {
           "location": {
-            "x": 1329,
-            "y": 292.90625
+            "x": 2107.9898662361879,
+            "y": 441.43575796389791
           },
           "nodeIndex": "calc_grp_formulas",
           "nodeLineageTag": "a2c12ae1-4ff8-4185-abf5-d9851d7f8596",
@@ -88,8 +88,8 @@
         },
         {
           "location": {
-            "x": 641,
-            "y": 447.5625
+            "x": 756.34738384430375,
+            "y": 430.18138736592681
           },
           "nodeIndex": "dim_score_buckets",
           "nodeLineageTag": "aec2c89e-c340-48ea-ad41-1e7b01603e63",
@@ -101,8 +101,8 @@
         },
         {
           "location": {
-            "x": 2478,
-            "y": 325.90625
+            "x": 1836.478933687845,
+            "y": 171.05633744189359
           },
           "nodeIndex": "select_session_end_date",
           "nodeLineageTag": "4faa2d23-3000-4abf-87c0-28d8cd734f75",
@@ -114,8 +114,8 @@
         },
         {
           "location": {
-            "x": 1068,
-            "y": 295.90625
+            "x": 1832.7689558992195,
+            "y": 340.149082159459
           },
           "nodeIndex": "select_session_range",
           "nodeLineageTag": "a9ddc8ad-4c59-4814-b59c-ebc619deaf91",
@@ -127,97 +127,89 @@
         },
         {
           "location": {
-            "x": 1080,
-            "y": 957.90625
+            "x": 1561.9308503083926,
+            "y": 744.59259494546563
           },
           "nodeIndex": "select_data_table_colors",
+          "nodeLineageTag": "1012ce1e-abae-4db7-8bd3-30ff6782116b",
           "size": {
-            "height": 152,
+            "height": 316.33051944941906,
             "width": 234
           },
           "zIndex": 1
         },
         {
           "location": {
-            "x": 1079,
-            "y": 600.90625
+            "x": 1564.0910526054963,
+            "y": 322.3406343046297
           },
           "nodeIndex": "select_data_table_columns",
+          "nodeLineageTag": "c47c67cc-b4f1-4183-a4f6-0675fbed8879",
           "size": {
-            "height": 152,
+            "height": 186.76222526814638,
             "width": 234
           },
           "zIndex": 2
         },
         {
           "location": {
-            "x": 1072,
-            "y": 785.90625
+            "x": 1561.8313560511531,
+            "y": 533.090066231663
           },
           "nodeIndex": "select_data_table_sort",
+          "nodeLineageTag": "591f18ae-4d5b-40b5-9249-c688841bb967",
           "size": {
-            "height": 152,
+            "height": 185.18212411959428,
             "width": 234
           },
           "zIndex": 3
         },
         {
           "location": {
-            "x": 1613,
-            "y": 442.953125
+            "x": 1831.0539585001904,
+            "y": 504.577069793532
           },
           "nodeIndex": "select_session_rolling_average",
           "nodeLineageTag": "014e3fd3-1912-4588-9570-245d853e1cab",
           "size": {
-            "height": 224,
+            "height": 145,
             "width": 234
           },
           "zIndex": 4
         },
         {
           "location": {
-            "x": 1897,
-            "y": 442.953125
+            "x": 1829.0556506122591,
+            "y": 668.90758924295119
           },
           "nodeIndex": "select_shot_rolling_average",
           "nodeLineageTag": "551521ff-b4da-4785-b9c7-6e8e96035c96",
           "size": {
-            "height": 224,
+            "height": 145,
             "width": 234
           },
           "zIndex": 5
         },
         {
           "location": {
-            "x": 1063,
+            "x": 1565.4721652395697,
             "y": 0
           },
           "nodeIndex": "select_round_scoring",
+          "nodeLineageTag": "ee5a8820-0588-4b32-9a46-ba022f251b9f",
           "size": {
-            "height": 270,
+            "height": 296.86171952538581,
             "width": 234
           },
           "zIndex": 6
         },
         {
           "location": {
-            "x": 2465,
-            "y": 490.953125
-          },
-          "nodeIndex": "select_scoring_pace_features",
-          "nodeLineageTag": "25ef34ae-41c3-4a78-b365-3aae09a37ecb",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 7
-        },
-        {
-          "location": {
-            "x": 3317,
-            "y": 490.953125
+            "x": 2108.2226213576387,
+            "y": 283.95987453967416
           },
           "nodeIndex": "calc_grp_correlations",
+          "nodeLineageTag": "856bd851-8114-4990-b801-7bc09ef381c7",
           "size": {
             "height": 128,
             "width": 234
@@ -226,10 +218,11 @@
         },
         {
           "location": {
-            "x": 2749,
-            "y": 478.953125
+            "x": 936.62398261073417,
+            "y": 161.35279414102672
           },
           "nodeIndex": "fields_fatigue_measure",
+          "nodeLineageTag": "1c0f7f02-45e7-42a0-a05a-d6a060872c52",
           "size": {
             "height": 152,
             "width": 234
@@ -238,10 +231,11 @@
         },
         {
           "location": {
-            "x": 3033,
-            "y": 478.953125
+            "x": 1271.1872193644019,
+            "y": 159.7726929924745
           },
           "nodeIndex": "fields_fatigue_column",
+          "nodeLineageTag": "b54b41bb-ef1f-48cb-ae7c-69cdba6b6a88",
           "size": {
             "height": 152,
             "width": 234
@@ -250,8 +244,8 @@
         },
         {
           "location": {
-            "x": 2891,
-            "y": 266.953125
+            "x": 1118.126511324537,
+            "y": 1.5801011485521066
           },
           "nodeIndex": "select_fatigue_factor",
           "nodeLineageTag": "b69c7bdb-2844-42b3-b59e-11964bda0291",
@@ -263,21 +257,21 @@
         },
         {
           "location": {
-            "x": 3601,
-            "y": 442.953125
+            "x": 1565.8297447753175,
+            "y": 1086.0542924607071
           },
           "nodeIndex": "select_boolean",
           "nodeLineageTag": "95c146cd-e2a3-47a3-b737-04bef913cb43",
           "size": {
-            "height": 224,
+            "height": 145,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 2477,
-            "y": 109.953125
+            "x": 1835.4789336878446,
+            "y": 0
           },
           "nodeIndex": "select_session_end_date_time_series",
           "nodeLineageTag": "71062c48-9f05-4bc8-bdc5-2022b9f7a711",
@@ -286,10 +280,23 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 522.96296262049748,
+            "y": 3.1602022971042132
+          },
+          "nodeIndex": "select_major_adjustment",
+          "nodeLineageTag": "82dd63e9-871d-49a8-a73c-ae41dc71978a",
+          "size": {
+            "height": 147.8566620977806,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 63.287087723234038,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

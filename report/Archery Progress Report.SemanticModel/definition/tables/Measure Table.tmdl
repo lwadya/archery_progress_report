@@ -17,36 +17,17 @@ table 'Measure Table'
 	measure 'Shot Score Rolling Average Sessions' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-20
+			// Last Updated:    2025-02-17
 			// Description:     Rolling average score across sessions for all selected shots
 			
-			VAR _default_session_window = 5
-			
-			VAR _session_window = SELECTEDVALUE( select_session_rolling_average[sessions], _default_session_window )
-			
-			VAR _latest_session_id = MAX( dim_session[session_id] )
-			
-			VAR _earliest_session_id = _latest_session_id - _session_window + 1
-			
-			VAR _rolling_average =
 			CALCULATE(
 			    [Shot Score Average],
-			    FILTER(
-			        ALL( dim_session ),
-			        dim_session[session_id] >= _earliest_session_id && 'dim_session'[session_id] <= _latest_session_id
-			    )
+			    calc_grp_formulas[formula] = "Rolling Average Sessions Backward"
 			)
-			
-			VAR _result =
-			IF(
-			    _earliest_session_id >= 1,
-			    _rolling_average
-			)
-			
-			RETURN _result
-		formatString: 0.0
 		displayFolder: Shot
 		lineageTag: c3457a91-fee8-44fd-826a-36232c6d55ee
+
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
 
 	measure 'Shot Count' =
 			
@@ -251,10 +232,10 @@ table 'Measure Table'
 	measure 'Score Meets Average Shot ID Min' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-10
+			// Last Updated:    2025-02-16
 			// Description:     The first session shot id for selected sessions where the average shot score meets or exceeds the average score across all shots
 			
-			VAR _position_if_at_min = -1000
+			VAR _hidden_position = -1000
 			
 			VAR _avg_score_all_shots =
 			CALCULATE(
@@ -287,7 +268,7 @@ table 'Measure Table'
 			IF(
 			    _min_shot_at_avg > _min_shot_id,
 			    _min_shot_at_avg,
-			    _position_if_at_min
+			    _hidden_position
 			)
 			
 			RETURN _result
@@ -298,10 +279,10 @@ table 'Measure Table'
 	measure 'Score Meets Average Shot ID Max' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-10
+			// Last Updated:    2025-02-16
 			// Description:     The last session shot id for selected sessions where the average shot score meets or exceeds the average score across all shots
 			
-			VAR _position_if_at_max = 1000
+			VAR _hidden_position = 1000
 			
 			VAR _avg_score_all_shots =
 			CALCULATE(
@@ -334,7 +315,7 @@ table 'Measure Table'
 			IF(
 			    _max_shot_at_avg < _max_shot_id,
 			    _max_shot_at_avg,
-			    _position_if_at_max
+			    _hidden_position
 			)
 			
 			RETURN _result
@@ -357,7 +338,7 @@ table 'Measure Table'
 		displayFolder: Session
 		lineageTag: 7819e57a-ac6d-42f6-936b-41474bf992ce
 
-	measure 'Session Dates Scores' =
+	measure 'Session Dates Scores Text' =
 			
 			// Last Developer:  Lukas Wadya
 			// Last Updated:    2025-02-02
@@ -382,7 +363,7 @@ table 'Measure Table'
 			)
 			
 			RETURN _result
-		displayFolder: Time
+		displayFolder: Display Text
 		lineageTag: 2419cabb-9bf8-4f68-92c4-7aa25ea7a1d6
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -394,7 +375,7 @@ table 'Measure Table'
 			// Description:     Most recent major adjustment for the selected session
 			
 			SELECTEDVALUE( dim_session[latest_major_adjustment] )
-		displayFolder: Session
+		displayFolder: Adjustments
 		lineageTag: d32f3cd1-7abc-41f6-8a30-24f907aa5281
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -473,23 +454,27 @@ table 'Measure Table'
 		displayFolder: Session
 		lineageTag: 16a5fb45-9073-4aa6-aee1-861dbfcf8e12
 
-	measure 'Session Date Range' =
+	measure 'Session Date Range Text' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-05
-			// Description:     Display text for selected date range for the Adjustments and Fatigue Effects pages
+			// Last Updated:    2025-02-20
+			// Description:     Display text for selected date range for the Fatigue Effects page
 			
-			VAR _range_end_date = MAX( select_session_end_date[date] )
+			VAR _range_end_date =
+			CALCULATE(
+			    [Date Max],
+			    calc_grp_sessions[sessions] = "Selected Range"
+			)
 			
 			VAR _range_start_date =
 			CALCULATE(
-			    MIN( dim_session[date] ),
+			    [Date Min],
 			    calc_grp_sessions[sessions] = "Selected Range"
 			)
 			
 			VAR _range_length =
 			CALCULATE(
-			    COUNTROWS( dim_session ),
+			    [Session Count],
 			    calc_grp_sessions[sessions] = "Selected Range"
 			)
 			
@@ -497,197 +482,10 @@ table 'Measure Table'
 			_range_start_date & " - " & _range_end_date & " (" & _range_length & " sessions)"
 			
 			RETURN _result
-		displayFolder: Time
+		displayFolder: Display Text
 		lineageTag: 708de027-4d4c-43fc-bab4-07d0bb071a5b
 
 		annotation PBI_FormatHint = {"isText":true}
-
-	measure 'Days Since Prev Correlation Coef' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-07
-			// Description:     Correlation coefficient for performance against benchmark and days since previous session
-			
-			VAR _value =
-			CALCULATE(
-			    [Days Since Previous Session],
-			    calc_grp_correlations[formula] = "Performance Coefficient"
-			)
-			
-			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
-			
-			RETURN _value
-		formatString: 0.00
-		displayFolder: _Delete
-		lineageTag: fa7330d8-6088-450d-a880-78f1415ae7cb
-
-	measure 'Days Since Prev Correlation Desc' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation description for performance against benchmark and days since previous session
-			
-			CALCULATE(
-			    [Days Since Previous Session],
-			    calc_grp_correlations[formula] = "Performance Description"
-			)
-		displayFolder: _Delete
-		lineageTag: b4c535c2-8a72-4771-9635-3ce6da74170b
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	measure 'Shots Per Session Correlation Coef' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-07
-			// Description:     Correlation coefficient for performance against benchmark and count of shots per session
-			
-			VAR _value =
-			CALCULATE(
-			    [Shot Count],
-			    calc_grp_correlations[formula] = "Performance Coefficient"
-			)
-			
-			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
-			
-			RETURN _value
-		formatString: 0.00
-		displayFolder: _Delete
-		lineageTag: 525bfea6-360a-40e7-9bcb-53e75b69d924
-
-	measure 'Shots Per Session Correlation Desc' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation description for performance against benchmark and count of shots per session
-			
-			CALCULATE(
-			    [Shot Count],
-			    calc_grp_correlations[formula] = "Performance Description"
-			)
-		displayFolder: _Delete
-		lineageTag: 76007cb8-378a-4dd0-b1d4-0778712784fc
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	measure 'Shots Per End Correlation Coef' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-07
-			// Description:     Correlation coefficient for performance against benchmark and count of shots per end
-			
-			VAR _value =
-			CALCULATE(
-			    [Shot Count Per End Avg],
-			    calc_grp_correlations[formula] = "Performance Coefficient"
-			)
-			
-			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
-			
-			RETURN _value
-		formatString: 0.00
-		displayFolder: _Delete
-		lineageTag: 6437fcc6-95a5-422f-b672-56079f4957c2
-
-	measure 'Shots Per End Correlation Desc' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation description for performance against benchmark and count of shots per end
-			
-			CALCULATE(
-			    [Shot Count Per End Avg],
-			    calc_grp_correlations[formula] = "Performance Description"
-			)
-		displayFolder: _Delete
-		lineageTag: aafbcb26-437e-4f1c-b1c0-aa2b4da520fa
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	measure 'Day of Week Correlation Coef' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation coefficient for performance against benchmark and day of week number
-			
-			CALCULATE(
-			    [Day of Week Number],
-			    calc_grp_correlations[formula] = "Performance Coefficient"
-			)
-		formatString: 0.00
-		displayFolder: _Delete
-		lineageTag: 96d5d791-327f-4c0c-9a94-62e039d918ee
-
-	measure 'Day of Week Correlation Desc' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation description for performance against benchmark and day of week number
-			
-			CALCULATE(
-			    [Day of Week Number],
-			    calc_grp_correlations[formula] = "Performance Description"
-			)
-		displayFolder: _Delete
-		lineageTag: 8994be80-5da6-406e-aaae-034f07773ef2
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	measure 'Day of Week Correlation Color' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation color step value for performance against benchmark and day of week number
-			
-			CALCULATE(
-			    [Day of Week Number],
-			    calc_grp_correlations[formula] = "Performance Color Step"
-			)
-		formatString: 0
-		displayFolder: _Delete
-		lineageTag: 80e904dc-2d9c-4490-af66-d2cb0f4e946a
-
-	measure 'Days Since Prev Correlation Color' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation color step value for performance against benchmark and days since previous session
-			
-			CALCULATE(
-			    [Days Since Previous Session],
-			    calc_grp_correlations[formula] = "Performance Color Step"
-			)
-		formatString: 0
-		displayFolder: _Delete
-		lineageTag: 206f416c-9348-4853-bc32-3d71f765fa22
-
-	measure 'Shots Per End Correlation Color' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation color step value for performance against benchmark and count of shots per end
-			
-			CALCULATE(
-			    [Shot Count Per End Avg],
-			    calc_grp_correlations[formula] = "Performance Color Step"
-			)
-		formatString: 0
-		displayFolder: _Delete
-		lineageTag: 1c66542c-7242-4785-b542-4139eba3bd15
-
-	measure 'Shots Per Session Correlation Color' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
-			// Description:     Correlation color step value for performance against benchmark and count of shots per session
-			
-			CALCULATE(
-			    [Shot Count],
-			    calc_grp_correlations[formula] = "Performance Color Step"
-			)
-		formatString: 0
-		displayFolder: _Delete
-		lineageTag: 1ce06bce-bb97-4d23-9eae-d846c52da4fb
 
 	measure 'Data Table Values' =
 			
@@ -769,7 +567,7 @@ table 'Measure Table'
 			// Description:     Major adjustment for the selected session
 			
 			SELECTEDVALUE( dim_session[major_adjustment] )
-		displayFolder: Session
+		displayFolder: Adjustments
 		lineageTag: 7fee0b68-2437-4541-84ce-8a32069dcd80
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -923,17 +721,17 @@ table 'Measure Table'
 	measure 'Shot Score Adjustment Against Benchmark' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-15
-			// Description:     Shot Score Average minus benchmark value multiplied by round shot count
+			// Last Updated:    2025-02-17
+			// Description:     Shot Score Average at major adjustment minus benchmark value multiplied by round shot count
 			
 			CALCULATE(
 			    [Shot Score Average],
-			    calc_grp_correlations[formula] = "Neighboring Sessions Difference"
+			    calc_grp_formulas[formula] = "Adjustment Difference"
 			)
-		displayFolder: Shot
+		displayFolder: _Delete
 		lineageTag: 89dc8f4b-6c5f-499f-a4b4-d9bd53c8fc38
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
 
 	measure 'Round Score Pace' =
 			
@@ -996,7 +794,7 @@ table 'Measure Table'
 			)
 			
 			RETURN _result
-		displayFolder: Session
+		displayFolder: _Delete
 		lineageTag: 23789799-a4bf-4969-ba25-1a8a6d539649
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1008,7 +806,7 @@ table 'Measure Table'
 			// Description:     Descriptive text for round score min metric
 			
 			SELECTEDVALUE( select_round_scoring[min_description] )
-		displayFolder: Round
+		displayFolder: Display Text
 		lineageTag: 09904902-e4ca-4646-94b0-04cc0a5e912d
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1020,7 +818,7 @@ table 'Measure Table'
 			// Description:     Descriptive text for round score max metric
 			
 			SELECTEDVALUE( select_round_scoring[max_description] )
-		displayFolder: Round
+		displayFolder: Display Text
 		lineageTag: 30910a5f-7ecd-48d6-b5d5-e763860cf498
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1032,7 +830,7 @@ table 'Measure Table'
 			// Description:     Descriptive text for round score average metric
 			
 			SELECTEDVALUE( select_round_scoring[average_description] )
-		displayFolder: Round
+		displayFolder: Display Text
 		lineageTag: 105ee184-f153-4cc4-9029-0e139a520a89
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1044,7 +842,7 @@ table 'Measure Table'
 			// Description:     Descriptive text for the selected round type
 			
 			SELECTEDVALUE( select_round_scoring[round_description] )
-		displayFolder: Round
+		displayFolder: Display Text
 		lineageTag: 079cc39a-8d9c-43ca-a46b-6681c165dc0e
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1065,7 +863,7 @@ table 'Measure Table'
 			)
 			
 			RETURN _result
-		displayFolder: Round
+		displayFolder: Display Text
 		lineageTag: fc1b4192-119d-4250-8148-2b1992cfdeac
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1087,7 +885,7 @@ table 'Measure Table'
 			)
 			
 			RETURN _result
-		displayFolder: Time
+		displayFolder: Display Text
 		lineageTag: 4ba731b7-116c-475d-b2fd-2f83c41ae10f
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1108,7 +906,7 @@ table 'Measure Table'
 			)
 			
 			RETURN _result
-		displayFolder: Round
+		displayFolder: Display Text
 		lineageTag: 4e3b1945-dc22-4043-aa1a-5bfb7c76574e
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1192,7 +990,7 @@ table 'Measure Table'
 			VAR _result = _max_value + (_std_value * .1)
 			
 			RETURN _result
-		displayFolder: Correlations
+		displayFolder: Display Text
 		lineageTag: cb1dd65c-4e86-4992-a31d-4fa3b6ba95bf
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1218,7 +1016,7 @@ table 'Measure Table'
 			VAR _result = _min_value - (_std_value * .1)
 			
 			RETURN _result
-		displayFolder: Correlations
+		displayFolder: Display Text
 		lineageTag: 115cd53b-acc0-411f-861b-7ff0b3ea1b74
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1283,9 +1081,10 @@ table 'Measure Table'
 	measure 'Fields Fatigue Correlation Arrow' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-13
-			// Description:     Arrow character that corresponds to a correlation coefficient value
+			// Last Updated:    2025-02-15
+			// Description:     Fatigue factor title and arrow character that corresponds to a correlation coefficient value
 			
+			SELECTEDVALUE( select_fatigue_factor[factor_name] ) & " " &
 			CALCULATE(
 			    [Fields Fatigue Selected Meas],
 			    calc_grp_correlations[formula] = "Performance Arrow"
@@ -1317,7 +1116,7 @@ table 'Measure Table'
 			// Description:     Title for points above benchmark column chart on Fatigue Effects page
 			
 			"Average points above benchmark by " & LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) )
-		displayFolder: Correlations
+		displayFolder: Display Text
 		lineageTag: f7aeb150-ff4b-49fe-aea2-de09d6101775
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1329,7 +1128,7 @@ table 'Measure Table'
 			// Description:     Title for points above benchmark scatter chart on Fatigue Effects page
 			
 			"Points above benchmark by session date, " & LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) )
-		displayFolder: Correlations
+		displayFolder: Display Text
 		lineageTag: 04667063-64af-47c1-b0e1-b3e530fe27d6
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1342,7 +1141,7 @@ table 'Measure Table'
 			
 			"Correlation by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range: performance vs "
 			& LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) )
-		displayFolder: Correlations
+		displayFolder: Display Text
 		lineageTag: 70105733-cdee-4678-a3fc-6b7e8a6a961e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1354,7 +1153,7 @@ table 'Measure Table'
 			// Description:     Title for fatigue factor time series chart on Fatigue Effects page
 			
 			"Average " & LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) ) & " by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range"
-		displayFolder: Correlations
+		displayFolder: Display Text
 		lineageTag: f4fa9765-40e9-4c03-ad68-3630c5f9ce15
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1366,7 +1165,7 @@ table 'Measure Table'
 			// Description:     Title for correlation chart range slicer on Fatigue Effects page
 			
 			"Hide dates with ranges less than " & SELECTEDVALUE( select_session_range[sessions] ) & " sessions"
-		displayFolder: Correlations
+		displayFolder: Display Text
 		lineageTag: f66b84b8-af57-40d6-8fc1-da4d1e6e16db
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -1453,6 +1252,320 @@ table 'Measure Table'
 		formatString: 0.00
 		displayFolder: Correlations
 		lineageTag: a6733b52-8b8d-43ca-883a-0119060d62db
+
+	measure 'Decline Period Shot Count' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-16
+			// Description:     Length of decline period in shots, zero if there is no decline
+			//                  decline - point in sessions when scores dip below average and never recover
+			
+			VAR _shot_difference = MAX( dim_session[session_shot_count] ) - [Score Meets Average Shot ID Max]
+			
+			VAR _result =
+			IF(
+			    _shot_difference > 0,
+			    _shot_difference,
+			    0
+			)
+			
+			RETURN _result
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: 2e455886-a9a6-45eb-a595-21c80a1d1adc
+
+	measure 'Warm Up Period Shot Count' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-16
+			// Description:     Length of warm up period in shots, zero if there is no warm up period
+			//                  warm up - point in sessions when scores first rise above average
+			
+			VAR _shot_position = [Score Meets Average Shot ID Min]
+			
+			VAR _result =
+			IF(
+			    _shot_position > 0,
+			    _shot_position,
+			    0
+			)
+			
+			RETURN _result
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: 598f2498-cdaf-40c9-b459-bc1f7a6a413a
+
+	measure 'Decline Period Shot Count End Date' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-16
+			// Description:     Returns length of decline period only if the date in filter context is the latest in the date slicer
+			
+			IF(
+			    MAX( select_session_end_date[date] ) == MAX( select_session_end_date_time_series[date] ),
+			    [Decline Period Shot Count]
+			)
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: 3a06e8e4-0e11-42a9-8677-39fdb51df99e
+
+	measure 'Warm Up Period Shot Count End Date' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-16
+			// Description:     Returns length of warm up period only if the date in filter context is the latest in the date slicer
+			
+			IF(
+			    MAX( select_session_end_date[date] ) == MAX( select_session_end_date_time_series[date] ),
+			    [Warm Up Period Shot Count]
+			)
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: a8ebc161-42e6-42ab-bb8a-3ea947bf4b3e
+
+	measure 'Warm Up Time Series Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-16
+			// Description:     Title for warm up time series chart on Warm Up and Decline page
+			
+			"Warm up period length in shots by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range"
+		displayFolder: Display Text
+		lineageTag: c1e1af85-14bd-447d-b61b-c1cc3ad80e8b
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Decline Time Series Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-16
+			// Description:     Title for decline time series chart on Warm Up and Decline page
+			
+			"Decline period length in shots by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range"
+		displayFolder: Display Text
+		lineageTag: 6e181f3a-0093-4c66-a1ae-7100f257e8c1
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Shot Score Rolling Average Selected Adjustment' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-18
+			// Description:     Rolling average score across sessions for which the selected major adjustments are the latest
+			
+			CALCULATE(
+			    [Shot Score Rolling Average Sessions],
+			    calc_grp_sessions[sessions] = "Selected Adjustments Time Series"
+			)
+		displayFolder: Adjustments
+		lineageTag: 36a36c21-2e4a-49a2-9609-a5c873d5e3df
+
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
+
+	measure 'Shot Score Rolling Average Selected Adjustment Ends' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-19
+			// Description:     Rolling average score for the first and last sessions that pass the calculation group filter
+			
+			VAR _in_context_session_id = SELECTEDVALUE( dim_session[session_id] )
+			
+			VAR _result =
+			IF(
+			    OR( _in_context_session_id = [Session Adjustment Selected ID Min], _in_context_session_id = [Session Adjustment Selected ID Max] ),
+			    [Shot Score Rolling Average Selected Adjustment]
+			)
+			
+			RETURN _result
+		displayFolder: Adjustments
+		lineageTag: 2c14ddc8-6bbd-4721-9b91-e46449d76656
+
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
+
+	measure 'Shot Score Rolling Average Selected Adjustment Range Difference' = ```
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-19
+			// Description:     Difference between rolling average score for the first session and last session for the selected adjustments
+			
+			VAR _decimal_count = 
+			IF(
+			    SELECTEDVALUE( select_round_scoring[shot_count], 1 ) = 1,
+			    1,
+			    0
+			)
+			
+			VAR _start_id = [Session Adjustment Selected ID Min]
+			
+			VAR _end_id = [Session Adjustment Selected ID Max]
+			
+			VAR _start_value =
+			CALCULATE(
+			    [Shot Score Rolling Average Sessions],
+			    FILTER(
+			        ALL( dim_session ),
+			        dim_session[session_id] = _start_id
+			    )
+			)
+			
+			VAR _end_value =
+			CALCULATE(
+			    [Shot Score Rolling Average Sessions],
+			    FILTER(
+			        ALL( dim_session ),
+			        dim_session[session_id] = _end_id
+			    )
+			)
+			
+			VAR _result = ROUND( _end_value - _start_value, _decimal_count )
+			
+			RETURN _result
+			```
+		displayFolder: Adjustments
+		lineageTag: 8db9bf62-062b-4fed-8557-84f65338de98
+
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
+
+	measure 'Session Adjustment Count' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-18
+			// Description:     Count of sessions with selected adjustments as their latest adjustment
+			
+			CALCULATE(
+			    [Session Count],
+			    calc_grp_sessions[sessions] = "Selected Adjustments"
+			)
+		formatString: 0
+		displayFolder: Adjustments
+		lineageTag: 12efd68d-5dd0-444a-9b57-7abd4182740b
+
+	measure 'Session Adjustment Selected ID Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-19
+			// Description:     First session id for the selected adjustments
+			
+			CALCULATE(
+			    [Session ID Min],
+			    calc_grp_sessions[sessions] = "Selected Adjustments"
+			)
+		formatString: 0
+		displayFolder: Adjustments
+		lineageTag: a691542c-e673-47db-b4cc-0ac2b4505ddf
+
+	measure 'Session Adjustment Selected ID Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-19
+			// Description:     Latest session id for the selected adjustments
+			
+			CALCULATE(
+			    [Session ID Max],
+			    calc_grp_sessions[sessions] = "Selected Adjustments"
+			)
+		formatString: 0
+		displayFolder: Adjustments
+		lineageTag: 8543bf24-29a3-43aa-a064-423a4f162d00
+
+	measure 'Session Adjustment in Date Range' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-19
+			// Description:     Returns 1 if any sessions for each adjustment are within the selected date range
+			
+			IF(
+			    CONTAINS(
+			        VALUES( dim_session[latest_adjustment_session_id] ),
+			        dim_session[latest_adjustment_session_id],
+			        SELECTEDVALUE( select_major_adjustment[session_id] )
+			    ),
+			    1,
+			    0
+			)
+		formatString: 0
+		displayFolder: Adjustments
+		lineageTag: d727d407-821d-4f30-bf30-159802f423fd
+
+	measure 'Session Adjustment Date Range Text' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-20
+			// Description:     Display text for selected date range for the Adjustments page
+			
+			VAR _range_end_date =
+			CALCULATE(
+			    [Date Max],
+			    calc_grp_sessions[sessions] = "Selected Adjustments"
+			)
+			
+			VAR _range_start_date =
+			CALCULATE(
+			    [Date Min],
+			    calc_grp_sessions[sessions] = "Selected Adjustments"
+			)
+			
+			VAR _range_length =
+			CALCULATE(
+			    [Session Count],
+			    calc_grp_sessions[sessions] = "Selected Adjustments"
+			)
+			
+			VAR _latest_adjustment_start_date =
+			CALCULATE(
+			    MAX( select_major_adjustment[date] ),
+			    ALL( select_major_adjustment )
+			)
+			
+			VAR _result =
+			_range_start_date & " - " & _range_end_date & " (" & _range_length & " sessions" &
+			IF(
+			    _range_start_date = _latest_adjustment_start_date,
+			    ", latest adjustment)",
+			    ")"
+			)
+			
+			RETURN _result
+		displayFolder: Display Text
+		lineageTag: 9d2cce10-32a2-40c6-81f3-e5d6b75036ec
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Date Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-20
+			// Description:     Min dim_calendar date value
+			
+			MIN( dim_calendar[date] )
+		displayFolder: Time
+		lineageTag: 92435634-876c-4260-bcf2-543580d0c97b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Date Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-20
+			// Description:     Max dim_calendar date value
+			
+			MAX( dim_calendar[date] )
+		displayFolder: Time
+		lineageTag: e2a99b2d-7e7b-4503-b953-a7b64ef0ffce
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Session Adjustment Time Series Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-20
+			// Description:     Title for correlation coefficient chart on Fatigue Effects page
+			
+			"Average score by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range (selected adjustment periods highlighted)"
+		displayFolder: Display Text
+		lineageTag: bcdb8b56-d86f-47dc-af18-6f1cdc305cc6
+
+		annotation PBI_FormatHint = {"isText":true}
 
 	partition 'Measure Table' = m
 		mode: import

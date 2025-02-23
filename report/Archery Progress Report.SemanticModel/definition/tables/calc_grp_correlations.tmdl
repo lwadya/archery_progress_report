@@ -124,7 +124,7 @@ table calc_grp_correlations
 		calculationItem 'Performance Arrow' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-02-13
+				// Last Updated:    2025-02-15
 				// Description:     Arrow characters corresponding to a Performance Correlation Coefficient color step value
 				
 				VAR _up_char = UNICHAR( 9650 )
@@ -142,8 +142,8 @@ table calc_grp_correlations
 				VAR _result =
 				SWITCH(
 				    TRUE(),
-				    _color_step < 0, REPT( _down_char, _num_characters ),
-				    _color_step > 0, REPT( _up_char, _num_characters ),
+				    _color_step < 0, _down_char,    //REPT( _down_char, _num_characters ),
+				    _color_step > 0, _up_char,      //REPT( _up_char, _num_characters ),
 				    _neutral_char
 				)
 				

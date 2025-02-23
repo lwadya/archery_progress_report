@@ -22,3 +22,8 @@ relationship c95d40f9-b57e-cf67-ca99-a154bec885c9
 	fromColumn: select_fatigue_factor.factor_id
 	toColumn: fields_fatigue_measure.factor_id
 
+relationship 8e4c6233-fde5-1315-af96-ec012a85572d
+	isActive: false
+	fromColumn: dim_session.latest_adjustment_session_id
+	toColumn: select_major_adjustment.session_id
+

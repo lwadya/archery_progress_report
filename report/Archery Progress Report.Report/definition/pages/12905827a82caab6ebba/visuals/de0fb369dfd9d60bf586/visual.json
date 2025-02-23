@@ -1289,6 +1289,20 @@
                               "Value": "'Selected Range'"
                             }
                           }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Selected Adjustments Time Series'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Selected Adjustments'"
+                            }
+                          }
                         ]
                       ]
                     }

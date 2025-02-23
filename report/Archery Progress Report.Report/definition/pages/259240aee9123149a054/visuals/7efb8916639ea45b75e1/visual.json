@@ -3,10 +3,10 @@
   "name": "7efb8916639ea45b75e1",
   "position": {
     "x": 0,
-    "y": 1.6526791478373144,
-    "z": 3000,
-    "height": 218.97998708844415,
-    "width": 1263.4732085216267,
+    "y": 0.6526791478373144,
+    "z": 500,
+    "height": 220,
+    "width": 1264,
     "tabOrder": 1000
   },
   "visual": {
@@ -240,7 +240,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.1
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -307,6 +307,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }
@@ -401,7 +408,7 @@
             "shadeTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "85D"
+                  "Value": "60D"
                 }
               }
             },
@@ -428,8 +435,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#d64550'"
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
                     }
                   }
                 }
@@ -542,7 +550,7 @@
             "shadeTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "85D"
+                  "Value": "60D"
                 }
               }
             },
@@ -691,7 +699,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -742,7 +750,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -781,21 +789,21 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "7D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "7D"
                 }
               }
             }
@@ -841,7 +849,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }

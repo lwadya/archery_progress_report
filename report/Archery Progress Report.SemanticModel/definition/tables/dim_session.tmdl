@@ -139,6 +139,15 @@ table dim_session
 
 		annotation SummarizationSetBy = Automatic
 
+	column latest_adjustment_session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 61831825-854f-4f7b-b565-7b70dd00a548
+		summarizeBy: sum
+		sourceColumn: latest_adjustment_session_id
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_session = m
 		mode: import
 		queryGroup: 'Table Queries'
@@ -156,9 +165,11 @@ table dim_session
 				    #"Inserted Round Down1" = Table.AddColumn(#"Added Custom1", "shot_count_per_end_rounded", each Number.RoundDown([shot_count_per_end] * 2) / 2, Currency.Type),
 				    #"Added Custom2" = Table.AddColumn(#"Inserted Round Down1", "shot_count_per_end_buckets", each Number.ToText( [shot_count_per_end_rounded] ) & " - " & Number.ToText( [shot_count_per_end_rounded] + .5 ), type text),
 				    #"Duplicated Column" = Table.DuplicateColumn(#"Added Custom2", "major_adjustment", "latest_major_adjustment"),
-				    #"Filled Down" = Table.FillDown(#"Duplicated Column",{"latest_major_adjustment"})
+				    #"Filled Down" = Table.FillDown(#"Duplicated Column",{"latest_major_adjustment"}),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Filled Down", "latest_adjustment_session_id", each if [major_adjustment] <> null then [session_id] else null, Int64.Type),
+				    #"Filled Down1" = Table.FillDown(#"Added Conditional Column1",{"latest_adjustment_session_id"})
 				in
-				    #"Filled Down"
+				    #"Filled Down1"
 
 	annotation PBI_NavigationStepName = Navigation
 

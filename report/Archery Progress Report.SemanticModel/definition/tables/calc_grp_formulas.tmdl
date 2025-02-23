@@ -11,15 +11,64 @@ table calc_grp_formulas
 				
 				SELECTEDMEASURE()
 
+		calculationItem 'Rolling Average Sessions Forward' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-20
+				// Description:     Forward-looking rolling average sessions based on the select_session_range[sessions] column
+				
+				VAR _score_multiplier = SELECTEDVALUE( select_round_scoring[shot_count], 1 )
+				
+				VAR _session_count = SELECTEDVALUE( select_session_range[sessions], 5 )
+				
+				VAR _earliest_session_id = MAX( dim_session[session_id] )
+				
+				VAR _latest_session_id = _earliest_session_id + _session_count - 1
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        dim_session[session_id] >= _earliest_session_id && 'dim_session'[session_id] <= _latest_session_id
+				    )
+				) * _score_multiplier
+				
+				RETURN _result
+
+		calculationItem 'Rolling Average Sessions Backward' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-20
+				// Description:     Backward-looking rolling average sessions based on the select_session_range[sessions] column
+				
+				VAR _score_multiplier = SELECTEDVALUE( select_round_scoring[shot_count], 1 )
+				
+				VAR _session_count = SELECTEDVALUE( select_session_range[sessions], 5 )
+				
+				VAR _latest_session_id = MAX( dim_session[session_id] )
+				
+				VAR _earliest_session_id = _latest_session_id - _session_count + 1
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        dim_session[session_id] >= _earliest_session_id && 'dim_session'[session_id] <= _latest_session_id
+				    )
+				) * _score_multiplier
+				
+				RETURN _result
+
 		calculationItem 'Adjustment Current' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-20
-				// Description:     Range of n consecutive sessions starting with the latest major adjustment
+				// Last Updated:    2025-02-17
+				// Description:     Forward-looking rolling sessions starting with the latest major adjustment
 				
-				VAR _default_max_sessions = 5
-				
-				VAR _max_sessions = SELECTEDVALUE( select_session_rolling_average[sessions], _default_max_sessions )
+				/*
+				VAR _session_count = SELECTEDVALUE( select_session_rolling_average[sessions], 5 )
 				
 				VAR _start_session_id =
 				CALCULATE(
@@ -27,7 +76,7 @@ table calc_grp_formulas
 				    NOT( ISBLANK( dim_session[major_adjustment] ) )
 				)
 				
-				VAR _end_session_id = _start_session_id + _max_sessions
+				VAR _end_session_id = _start_session_id + _session_count
 				
 				VAR _result =
 				CALCULATE(
@@ -40,22 +89,26 @@ table calc_grp_formulas
 				
 				RETURN
 				_result
+				*/
+				
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    dim_session[session_id] = MAX( select_major_adjustment[session_id] ),
+				    calc_grp_formulas[formula] = "Rolling Average Sessions Forward"
+				)
 
 		calculationItem 'Adjustment Benchmark' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-05
+				// Last Updated:    2025-02-17
 				// Description:     Equivalent number of sessions to Adjustment Current, but before the selected adjustment
+				
+				/*
+				VAR _session_count = SELECTEDVALUE( select_session_rolling_average[sessions], 5 )
 				
 				VAR _start_session_id =
 				CALCULATE(
 				    [Session ID Min],
-				    calc_grp_formulas[formula] = "Adjustment Current"
-				)
-				
-				VAR _session_count =
-				CALCULATE(
-				    [Session Count],
 				    calc_grp_formulas[formula] = "Adjustment Current"
 				)
 				
@@ -73,14 +126,18 @@ table calc_grp_formulas
 				
 				RETURN
 				_result
+				*/
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    dim_session[session_id] = MAX( select_major_adjustment[session_id] ),
+				    calc_grp_formulas[formula] = "Rolling Average Sessions Backward"
+				)
 
 		calculationItem 'Adjustment Difference' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-15
-				// Description:     Difference between adjustment period and benchmark period, multiplied by round shot count
-				
-				VAR _score_multiplier = SELECTEDVALUE( select_round_scoring[shot_count], 1 )
+				// Last Updated:    2025-02-17
+				// Description:     Difference between adjustment period and benchmark period
 				
 				VAR _adjustment_value =
 				CALCULATE(
@@ -97,7 +154,7 @@ table calc_grp_formulas
 				VAR _result =
 				IF(
 				    NOT( ISBLANK( _adjustment_value ) ) && NOT( ISBLANK( _benchmark_value ) ),
-				    (_adjustment_value - _benchmark_value) * _score_multiplier
+				    (_adjustment_value - _benchmark_value)
 				)
 				
 				RETURN

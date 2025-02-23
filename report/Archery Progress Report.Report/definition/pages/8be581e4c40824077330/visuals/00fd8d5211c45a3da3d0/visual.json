@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "00fd8d5211c45a3da3d0",
   "position": {
-    "x": 9.6292315959161741,
-    "y": 526.16872649113384,
-    "z": 3000,
-    "height": 180.20419129500269,
-    "width": 1262.11714132187,
-    "tabOrder": 1000
+    "x": 450.87470449172577,
+    "y": 415,
+    "z": 6000,
+    "height": 298,
+    "width": 822.06461780929862,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "columnChart",
@@ -20,6 +20,22 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "dim_session"
+                    }
+                  },
+                  "Property": "latest_major_adjustment"
+                }
+              },
+              "queryRef": "dim_session.latest_major_adjustment",
+              "nativeQueryRef": "Most Recent Adjustment",
+              "active": true,
+              "displayName": "Most Recent Adjustment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "dim_calendar"
                     }
                   },
@@ -27,9 +43,9 @@
                 }
               },
               "queryRef": "dim_calendar.date",
-              "nativeQueryRef": "Date",
+              "nativeQueryRef": "Session Date",
               "active": true,
-              "displayName": "Date",
+              "displayName": "Session Date",
               "format": "M/d"
             }
           ]
@@ -50,24 +66,6 @@
               "queryRef": "select_score_buckets.score_bucket",
               "nativeQueryRef": "Score",
               "displayName": "Score"
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "Session Adjustment Most Recent"
-                }
-              },
-              "queryRef": "Measure Table.Session Adjustment Most Recent",
-              "nativeQueryRef": "Session Adjustment Most Recent"
             }
           ]
         },
@@ -92,6 +90,19 @@
       },
       "sortDefinition": {
         "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_calendar"
+                  }
+                },
+                "Property": "date"
+              }
+            },
+            "direction": "Ascending"
+          },
           {
             "field": {
               "Column": {
@@ -136,7 +147,7 @@
             "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "15L"
+                  "Value": "10L"
                 }
               }
             },
@@ -150,7 +161,54 @@
             "maxMarginFactor": {
               "expr": {
                 "Literal": {
-                  "Value": "15L"
+                  "Value": "20L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            },
+            "gridlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineThickness": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "gridlineDashArray": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
                 }
               }
             }
@@ -885,6 +943,13 @@
                   "Value": "0D"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -902,14 +967,14 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'TopRight'"
+                  "Value": "'TopCenter'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "9D"
                 }
               }
             },
@@ -924,6 +989,18 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
                 }
               }
             }
@@ -989,6 +1066,33 @@
             }
           }
         }
+      ],
+      "smallMultiplesLayout": [
+        {
+          "properties": {
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            },
+            "gridPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -996,6 +1100,90 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualInformationButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showVisualWarningButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showVisualErrorButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillRoleSelector": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillUpButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillDownLevelButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillDownExpandButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showPinButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showSeeDataLayoutToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showOptionsMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showFilterRestatementButton": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -1024,7 +1212,40 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Percentage of shots in each scoring area by adjustment, session date'"
                 }
               }
             }
@@ -1037,7 +1258,7 @@
             "customizeSpacing": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1050,8 +1271,149 @@
             }
           }
         }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "06ef25041912c373b7a7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calc_grp_sessions"
+              }
+            },
+            "Property": "sessions"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "8d706e5ff756a0faa0fd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calc_grp_sessions"
+              }
+            },
+            "Property": "sessions"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "calc_grp_sessions",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "sessions"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Selected Adjustments Time Series'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      }
+    ]
   }
 }

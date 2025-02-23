@@ -7,7 +7,7 @@
     "z": 9000,
     "height": 168,
     "width": 1264,
-    "tabOrder": 0
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -134,6 +134,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -145,6 +152,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
                 }
               }
             }
@@ -453,9 +467,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FAFAFA'"
                     }
                   }
                 }
@@ -544,9 +557,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FAFAFA'"
                     }
                   }
                 }
@@ -741,9 +753,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#e6e6e6'"
                     }
                   }
                 }
@@ -787,6 +798,23 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FAFAFA'"
+                    }
+                  }
                 }
               }
             }

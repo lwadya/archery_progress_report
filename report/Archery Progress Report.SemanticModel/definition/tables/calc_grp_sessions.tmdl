@@ -142,6 +142,62 @@ table calc_grp_sessions
 				
 				RETURN _result
 
+		calculationItem 'Selected Adjustments' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-18
+				// Description:     All sessions between (inclusive) the selected major adjustments
+				//                  If no major adjustments are selected, use the latest one as the selection
+				
+				VAR _selection_latest_adjustment_id = MAX( select_major_adjustment[session_id] )
+				
+				VAR _selection_earliest_adjustment_id =
+				IF(
+				    ISFILTERED( select_major_adjustment ),
+				    MIN( select_major_adjustment[session_id] ),
+				    _selection_latest_adjustment_id
+				)
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        AND( dim_session[latest_adjustment_session_id] >= _selection_earliest_adjustment_id, dim_session[latest_adjustment_session_id] <= _selection_latest_adjustment_id )
+				    )
+				)
+				
+				RETURN _result
+
+		calculationItem 'Selected Adjustments Time Series' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-18
+				// Description:     Only display values for all sessions between (inclusive) the selected major adjustments
+				//                  If no major adjustments are selected, use the latest one as the selection
+				
+				VAR _selection_earliest_adjustment_id =
+				CALCULATE(
+				    [Session ID Min],
+				    calc_grp_sessions[sessions] = "Selected Adjustments"
+				)
+				
+				VAR _selection_latest_adjustment_id =
+				CALCULATE(
+				    [Session ID Max],
+				    calc_grp_sessions[sessions] = "Selected Adjustments"
+				)
+				
+				VAR _dim_session_selected_adjustment_id = SELECTEDVALUE( dim_session[latest_adjustment_session_id] )
+				
+				VAR _result =
+				IF(
+				    AND( _dim_session_selected_adjustment_id >= _selection_earliest_adjustment_id, _dim_session_selected_adjustment_id <= _selection_latest_adjustment_id ),
+				    SELECTEDMEASURE()
+				)
+				
+				RETURN _result
+
 	column sessions
 		dataType: string
 		lineageTag: 0c2b12f9-c495-4803-8730-2c0efe05f38e

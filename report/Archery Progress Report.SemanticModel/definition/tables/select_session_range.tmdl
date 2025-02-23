@@ -20,22 +20,27 @@ table select_session_range
 		source = ```
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-02-08
-				// Description:     Series from 5 to the total number of session in the dataset
+				// Last Updated:    2025-02-16
+				// Description:     Series from 1 to the total number of session in the dataset
+				//                  Numbers before _table_split_value increment by 1, numbers after use _max_step as increment
 				
-				VAR _step = 5
+				VAR _table_split_value = 5
+				VAR _max_step = 5
 				
 				VAR _max_session_id =
 				COUNTROWS( ALL( dim_session ) )
 				
 				VAR _max_range = 
 				ROUNDUP(
-				    DIVIDE( _max_session_id, _step ),
+				    DIVIDE( _max_session_id, _max_step ),
 				    0
-				) * _step
+				) * _max_step
 				
 				VAR _result =
-				GENERATESERIES( 5, _max_range, _step )
+				UNION(
+				    GENERATESERIES( 1, _table_split_value - 1, 1 ),
+				    GENERATESERIES( _table_split_value, _max_range, _max_step )
+				)
 				
 				RETURN _result
 				```

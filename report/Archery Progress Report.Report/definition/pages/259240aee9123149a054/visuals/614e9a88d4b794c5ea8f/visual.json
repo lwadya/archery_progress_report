@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "614e9a88d4b794c5ea8f",
   "position": {
-    "x": 938.39131474897272,
-    "y": 0,
+    "x": 911.12791900978618,
+    "y": 1,
     "z": 1000,
     "height": 36,
     "width": 110,
@@ -140,6 +140,26 @@
               "expr": {
                 "Literal": {
                   "Value": "'Scoring Pace Title Shape'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

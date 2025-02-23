@@ -68,18 +68,18 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "title_bar8762841819884204.png",
-          "path": "title_bar8762841819884204.png",
-          "type": "Image"
-        },
-        {
           "name": "Archery_Performance6522022864024726.json",
           "path": "Archery_Performance6522022864024726.json",
           "type": "CustomTheme"
         },
         {
-          "name": "fatigue_container_bg5032828167531136.png",
-          "path": "fatigue_container_bg5032828167531136.png",
+          "name": "title_bar1574112459214878.png",
+          "path": "title_bar1574112459214878.png",
+          "type": "Image"
+        },
+        {
+          "name": "end_sort_arrow_down5274179272921182.png",
+          "path": "end_sort_arrow_down5274179272921182.png",
           "type": "Image"
         }
       ]

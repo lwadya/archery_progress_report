@@ -4,7 +4,7 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 13000,
+    "z": 1000,
     "height": 55,
     "width": 1280,
     "tabOrder": 0
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Adjustments",
+                    "value": "Adjustment Effects",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
                       "fontSize": "16pt",

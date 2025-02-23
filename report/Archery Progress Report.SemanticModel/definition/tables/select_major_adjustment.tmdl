@@ -1,0 +1,46 @@
+table select_major_adjustment
+	lineageTag: 82dd63e9-871d-49a8-a73c-ae41dc71978a
+
+	column major_adjustment
+		lineageTag: ca09e310-3f6f-49e5-80ca-7416a04d36dc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dim_session[major_adjustment]
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		formatString: Short Date
+		lineageTag: 07a2048e-e494-4807-a1ee-9b25881dec81
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: dim_session[date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		formatString: 0
+		lineageTag: 3b1c2c50-cdb8-4225-831d-4e00d6014cf5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: dim_session[session_id]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_major_adjustment = calculated
+		mode: import
+		source =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-17
+				// Description:     All major adjustments and their session IDs from the dim_session table
+				
+				SUMMARIZE(
+				    FILTER( ALL( dim_session ), NOT( ISBLANK( dim_session[major_adjustment] ) ) ),
+				    dim_session[major_adjustment],
+				    dim_session[date],
+				    dim_session[session_id]
+				)
+
+	annotation PBI_Id = 11c3a2034afb4cf2aa3bac4f641ab18f
+

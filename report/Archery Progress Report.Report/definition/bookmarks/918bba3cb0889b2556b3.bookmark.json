@@ -638,7 +638,7 @@
                           "Entity": "Measure Table"
                         }
                       },
-                      "Property": "Session Dates Scores"
+                      "Property": "Session Dates Scores Text"
                     }
                   }
                 }
@@ -888,12 +888,6 @@
               "objects": {}
             }
           },
-          "1e7b62bb5963c8a94148": {
-            "singleVisual": {
-              "visualType": "pageNavigator",
-              "objects": {}
-            }
-          },
           "e2cbd919c8c00b10b5ce": {
             "singleVisual": {
               "visualType": "textbox",
@@ -903,12 +897,6 @@
           "ccd9ac34ae8c313524d3": {
             "singleVisual": {
               "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "09678993a77058d7e410": {
-            "singleVisual": {
-              "visualType": "image",
               "objects": {}
             }
           }

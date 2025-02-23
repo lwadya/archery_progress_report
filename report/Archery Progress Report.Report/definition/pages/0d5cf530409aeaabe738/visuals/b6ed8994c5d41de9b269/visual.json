@@ -26,7 +26,7 @@
                   "Property": "sessions"
                 }
               },
-              "queryRef": "sessions.sessions",
+              "queryRef": "select_session_range.sessions",
               "nativeQueryRef": "sessions",
               "active": true
             }
@@ -231,12 +231,61 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "sessions",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "1926c7608318696a33aa"
+  "parentGroupName": "1926c7608318696a33aa",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "89ae1fe9e44b33622c10",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "select_session_range"
+              }
+            },
+            "Property": "sessions"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "select_session_range",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 2,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "s"
+                        }
+                      },
+                      "Property": "sessions"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "15L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      }
+    ]
+  }
 }

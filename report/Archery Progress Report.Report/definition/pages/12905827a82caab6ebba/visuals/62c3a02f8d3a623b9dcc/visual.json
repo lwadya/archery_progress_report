@@ -23,7 +23,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Session Dates Scores"
+                  "Property": "Session Dates Scores Text"
                 }
               },
               "queryRef": "Measure Table.Session Selected Display",
@@ -43,7 +43,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Session Dates Scores"
+                "Property": "Session Dates Scores Text"
               }
             },
             "direction": "Ascending"
@@ -478,7 +478,7 @@
                 "Entity": "Measure Table"
               }
             },
-            "Property": "Session Dates Scores"
+            "Property": "Session Dates Scores Text"
           }
         },
         "type": "Advanced",

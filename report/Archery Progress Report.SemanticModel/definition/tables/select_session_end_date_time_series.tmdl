@@ -23,6 +23,10 @@ table select_session_end_date_time_series
 		mode: import
 		source =
 				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-16
+				// Description:     An exact copy of select_session_end_date used for time series charts that should not be filtered by date
+				
 				select_session_end_date
 
 	annotation PBI_Id = 8ca5ba9f697a4ad99bd0c1815c2ab9d9

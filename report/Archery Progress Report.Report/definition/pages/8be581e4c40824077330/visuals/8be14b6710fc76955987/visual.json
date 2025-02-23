@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "8be14b6710fc76955987",
+  "position": {
+    "x": 450.87470449172577,
+    "y": 122.0488573680063,
+    "z": 3750,
+    "height": 285.95114263199372,
+    "width": 821.05594956658786,
+    "tabOrder": 5000
+  },
+  "visualGroup": {
+    "displayName": "Time Series Group",
+    "groupMode": "ScaleMode"
+  }
+}
