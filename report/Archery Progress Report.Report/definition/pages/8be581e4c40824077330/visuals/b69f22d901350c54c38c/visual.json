@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "b69f22d901350c54c38c",
   "position": {
-    "x": 10.678531701890989,
-    "y": 81.868743047830918,
+    "x": 11.004836109618486,
+    "y": 81.848468565287476,
     "z": 0,
-    "height": 192.9254727474972,
-    "width": 1260.778642936596,
+    "height": 184.33100483610963,
+    "width": 1260.7415368081677,
     "tabOrder": 0
   },
   "visual": {
@@ -61,25 +61,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Shot Score Average"
+                  "Property": "Round Score Pace Rolling Average Shots"
                 }
               },
-              "queryRef": "Measure Table.Shot Score Average",
-              "nativeQueryRef": "Shot Score Average"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "Shot Score Rolling Average Shots"
-                }
-              },
-              "queryRef": "Measure Table.Shot Score Rolling Average Shots",
-              "nativeQueryRef": "Shot Score Rolling Average Shots"
+              "queryRef": "Measure Table.Round Score Pace Rolling Average Shots",
+              "nativeQueryRef": "Round Score Pace Rolling Average Shots"
             }
           ]
         }
@@ -146,6 +132,20 @@
                   "Property": "Shot Count Per Session Max"
                 }
               }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "20L"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -164,7 +164,33 @@
                   }
                 }
               }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
             }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Round Score Pace Rolling Average Shots"
           }
         }
       ],
@@ -198,6 +224,20 @@
                   "Value": "false"
                 }
               }
+            },
+            "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "switchAxisPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -205,17 +245,21 @@
       "lineStyles": [
         {
           "properties": {
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
             "lineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'dotted'"
-                }
-              }
-            },
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
+                  "Value": "'solid'"
                 }
               }
             },
@@ -228,7 +272,7 @@
             }
           },
           "selector": {
-            "metadata": "Measure Table.Shot Score Rolling Average Shots"
+            "metadata": "Measure Table.Round Score Pace Rolling Average Shots"
           }
         }
       ],
@@ -443,6 +487,73 @@
           },
           "selector": {
             "id": "2"
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "responsive": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

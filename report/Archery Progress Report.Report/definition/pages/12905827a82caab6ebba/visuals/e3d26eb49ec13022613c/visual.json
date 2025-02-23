@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "b6ed8994c5d41de9b269",
+  "name": "e3d26eb49ec13022613c",
   "position": {
-    "x": 254.27124366910525,
-    "y": 0,
-    "z": 12000,
-    "height": 72.031513787281938,
-    "width": 228.33989870568374,
-    "tabOrder": 12000
+    "x": 1048.4089603676048,
+    "y": 5.8816771970132109,
+    "z": 7000,
+    "height": 67.639287765651929,
+    "width": 152.18839747271684,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "select_session_range"
+                      "Entity": "select_round_type"
                     }
                   },
-                  "Property": "sessions"
+                  "Property": "round_type"
                 }
               },
-              "queryRef": "sessions.sessions",
-              "nativeQueryRef": "sessions",
-              "active": true
+              "queryRef": "select_round_type.round_type",
+              "nativeQueryRef": "Round Type",
+              "active": true,
+              "displayName": "Round Type"
             }
           ]
         }
@@ -38,17 +39,23 @@
       "data": [
         {
           "properties": {
-            "numericStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
-                }
-              }
-            },
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Single'"
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -58,43 +65,41 @@
       "general": [
         {
           "properties": {
-            "responsive": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "filter": {
               "filter": {
                 "Version": 2,
                 "From": [
                   {
                     "Name": "s",
-                    "Entity": "select_session_range",
+                    "Entity": "select_round_type",
                     "Type": 0
                   }
                 ],
                 "Where": [
                   {
                     "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "s"
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "s"
+                                }
+                              },
+                              "Property": "round_type"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'300'"
                               }
-                            },
-                            "Property": "sessions"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "30D"
-                          }
-                        }
+                            }
+                          ]
+                        ]
                       }
                     }
                   }
@@ -103,8 +108,10 @@
             }
           }
         }
-      ],
-      "header": [
+      ]
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
         {
           "properties": {
             "show": {
@@ -116,9 +123,7 @@
             }
           }
         }
-      ]
-    },
-    "visualContainerObjects": {
+      ],
       "general": [
         {
           "properties": {
@@ -134,7 +139,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "sessions",
+      "groupName": "round_type",
       "fieldChanges": true,
       "filterChanges": true
     },

@@ -4,10 +4,10 @@
   "position": {
     "x": 8.4488448844884481,
     "y": 0,
-    "z": 8000,
+    "z": 5000,
     "height": 63.366336633663366,
     "width": 160.52805280528051,
-    "tabOrder": 8000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -29,6 +29,25 @@
               "queryRef": "Measure Table.Round Selected Type",
               "nativeQueryRef": "Round Type",
               "displayName": "Round Type"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Round Selected Type Description"
+                }
+              },
+              "queryRef": "Measure Table.Round Selected Type Description",
+              "nativeQueryRef": "Description",
+              "displayName": "Description"
             }
           ]
         }
@@ -223,6 +242,32 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

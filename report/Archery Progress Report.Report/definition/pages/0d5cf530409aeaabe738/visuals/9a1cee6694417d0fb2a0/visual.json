@@ -31,6 +31,25 @@
               "displayName": "Round Type"
             }
           ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Round Selected Type Description"
+                }
+              },
+              "queryRef": "Measure Table.Round Selected Type Description",
+              "nativeQueryRef": "Description",
+              "displayName": "Description"
+            }
+          ]
         }
       },
       "sortDefinition": {
@@ -223,6 +242,32 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

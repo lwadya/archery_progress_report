@@ -17,10 +17,12 @@ table 'Measure Table'
 	measure 'Shot Score Rolling Average Sessions' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-12-26
+			// Last Updated:    2025-01-20
 			// Description:     Rolling average score across sessions for all selected shots
 			
-			VAR _session_window = 5
+			VAR _default_session_window = 5
+			
+			VAR _session_window = SELECTEDVALUE( select_session_rolling_average[sessions], _default_session_window )
 			
 			VAR _latest_session_id = MAX( dim_session[session_id] )
 			
@@ -225,10 +227,12 @@ table 'Measure Table'
 	measure 'Shot Score Rolling Average Shots' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-12-26
-			// Description:     Rolling average score of last n shots
+			// Last Updated:    2025-01-20
+			// Description:     Rolling average shot score of last n shots
 			
-			VAR _shot_window = 5
+			VAR _default_shot_window = 5
+			
+			VAR _shot_window = SELECTEDVALUE( select_shot_rolling_average[shots], _default_shot_window )
 			
 			VAR _latest_shot_id = MAX( fact_shot_score[session_shot_id] )
 			
@@ -390,47 +394,13 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isText":true}
 
-	measure 'Session Notes Latest' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-02
-			// Description:     Notes from the latest selected session
-			
-			CALCULATE(
-			    MAX( dim_session[notes] ),
-			    INDEX(
-			        1,
-			        dim_session,
-			        ORDERBY( dim_session[session_id], DESC )
-			    )
-			)
-		displayFolder: Session
-		lineageTag: a969c51e-6453-49c7-ba43-df96721e96bd
-
-		annotation PBI_FormatHint = {"isText":true}
-
 	measure 'Session Adjustment Most Recent' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-02
-			// Description:     Most recent major adjustment for the latest selected session
+			// Last Updated:    2025-01-23
+			// Description:     Most recent major adjustment for the selected session
 			
-			VAR _latest_selected_session = MAX( dim_session[session_id] )
-			
-			VAR _result =
-			CALCULATE(
-			    MAX( dim_session[major_adjustment] ) & " (" & MAX( dim_session[date] ) & ")",
-			    INDEX(
-			        1,
-			        FILTER(
-			            ALL( dim_session ),
-			            dim_session[session_id] <= _latest_selected_session && NOT( ISBLANK( dim_session[major_adjustment] ) )
-			        ),
-			        ORDERBY( dim_session[session_id], DESC )
-			    )
-			)
-			
-			RETURN _result
+			SELECTEDVALUE( dim_session[latest_major_adjustment] )
 		displayFolder: Session
 		lineageTag: d32f3cd1-7abc-41f6-8a30-24f907aa5281
 
@@ -462,20 +432,13 @@ table 'Measure Table'
 	measure 'Shot Score Performance Against Benchmark' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-05
-			// Description:     Shot Score Average minus benchmark value
+			// Last Updated:    2025-01-15
+			// Description:     Shot Score Average minus benchmark value multiplied by round shot count
 			
-			VAR _score_multiplier = SELECTEDVALUE( select_round_type[shot_count], 1 )
-			
-			VAR _raw_score_difference =
 			CALCULATE(
 			    [Shot Score Average],
 			    calc_grp_formulas[formula] = "Neighboring Sessions Difference"
 			)
-			
-			VAR _result = _score_multiplier * _raw_score_difference
-			
-			RETURN _result
 		displayFolder: Shot
 		lineageTag: 9721f256-1e14-415d-b8eb-2a335bb676ff
 
@@ -940,6 +903,135 @@ table 'Measure Table'
 		lineageTag: 3adb561b-6f68-4b73-9ce7-249936ebac4e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Shot Score Adjustment Against Benchmark' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-15
+			// Description:     Shot Score Average minus benchmark value multiplied by round shot count
+			
+			CALCULATE(
+			    [Shot Score Average],
+			    calc_grp_formulas[formula] = "Neighboring Sessions Difference"
+			)
+		displayFolder: Shot
+		lineageTag: 89dc8f4b-6c5f-499f-a4b4-d9bd53c8fc38
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Round Score Pace' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-18
+			// Description:     Round pace for any given shot, equal to average shot score multiplied by round shot count
+			
+			[Shot Score Average] * SELECTEDVALUE( select_round_type[shot_count], 1 )
+		displayFolder: Round
+		lineageTag: eb1a1150-40d3-4d7a-8661-a05a1248b70c
+
+		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+
+	measure 'Round Score Pace Rolling Average Shots' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-19
+			// Description:     Rolling average round pace over n shots, equal to rolling average shot score multiplied by round shot count
+			
+			[Shot Score Rolling Average Shots] * SELECTEDVALUE( select_round_type[shot_count], 1 )
+		displayFolder: Round
+		lineageTag: 773dc509-483a-485c-957e-6f524d58d7ff
+
+		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+
+	measure 'Round Score Pace Rolling Average Sessions' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-19
+			// Description:     Rolling average round pace over n sessions, equal to rolling average shot score multiplied by round shot count
+			
+			[Shot Score Rolling Average Sessions] * SELECTEDVALUE( select_round_type[shot_count], 1 )
+		displayFolder: Round
+		lineageTag: 2577dbb2-6d49-4bb9-88c5-2914ab499101
+
+		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+
+	measure 'Session Adjustment Chart Data Label' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-20
+			// Description:     Displays most recent major adjustment for a session at the middle of the chart category range
+			
+			VAR _selected_id = SELECTEDVALUE( dim_session[session_id] )
+			VAR _latest_adjustment = SELECTEDVALUE( dim_session[latest_major_adjustment] )
+			
+			VAR _middle_range_id =
+			CALCULATE(
+			    INT( (MAX( dim_session[session_id] ) - MIN( dim_session[session_id] )) / 2 + MIN( dim_session[session_id] ) ),
+			    FILTER(
+			        ALL( dim_session ),
+			        dim_session[latest_major_adjustment] = _latest_adjustment
+			    )
+			)
+			
+			VAR _result =
+			IF(
+			    _selected_id = _middle_range_id,
+			    _latest_adjustment
+			)
+			
+			RETURN _result
+		displayFolder: Session
+		lineageTag: 23789799-a4bf-4969-ba25-1a8a6d539649
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Round Score Min Description' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-23
+			// Description:     Descriptive text for round score min metric
+			
+			SELECTEDVALUE( select_round_type[min_description] )
+		displayFolder: Round
+		lineageTag: 09904902-e4ca-4646-94b0-04cc0a5e912d
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Round Score Max Description' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-23
+			// Description:     Descriptive text for round score max metric
+			
+			SELECTEDVALUE( select_round_type[max_description] )
+		displayFolder: Round
+		lineageTag: 30910a5f-7ecd-48d6-b5d5-e763860cf498
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Round Score Average Description' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-23
+			// Description:     Descriptive text for round score average metric
+			
+			SELECTEDVALUE( select_round_type[average_description] )
+		displayFolder: Round
+		lineageTag: 105ee184-f153-4cc4-9029-0e139a520a89
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Round Selected Type Description' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-23
+			// Description:     Descriptive text for the selected round type
+			
+			SELECTEDVALUE( select_round_type[round_description] )
+		displayFolder: Round
+		lineageTag: 079cc39a-8d9c-43ca-a46b-6681c165dc0e
+
+		annotation PBI_FormatHint = {"isText":true}
 
 	partition 'Measure Table' = m
 		mode: import

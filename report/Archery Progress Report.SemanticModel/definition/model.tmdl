@@ -38,6 +38,8 @@ ref table select_session_end_date
 ref table select_data_table_columns
 ref table select_data_table_sort
 ref table select_data_table_colors
+ref table select_session_rolling_average
+ref table select_shot_rolling_average
 
 ref cultureInfo en-US
 

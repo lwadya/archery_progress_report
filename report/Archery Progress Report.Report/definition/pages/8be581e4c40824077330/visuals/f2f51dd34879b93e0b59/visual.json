@@ -4,10 +4,10 @@
   "position": {
     "x": 10.084411930219472,
     "y": 0,
-    "z": 5000,
+    "z": 3000,
     "height": 72.031513787281938,
     "width": 231.22115925717503,
-    "tabOrder": 5000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,32 +23,17 @@
                       "Entity": "select_session_end_date"
                     }
                   },
-                  "Property": "date"
+                  "Property": "session_id"
                 }
               },
-              "queryRef": "select_session_end_date.date",
-              "nativeQueryRef": "date",
+              "queryRef": "select_session_end_date.session_id",
+              "nativeQueryRef": "session_id",
               "active": true
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "select_session_end_date"
-                  }
-                },
-                "Property": "date"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -59,7 +44,7 @@
             "endDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2025-01-13T00:00:00'"
+                  "Value": "datetime'2024-09-06T00:00:00'"
                 }
               }
             },
@@ -81,42 +66,6 @@
                 "Literal": {
                   "Value": "false"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "s",
-                    "Entity": "select_session_end_date",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 3,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "s"
-                              }
-                            },
-                            "Property": "date"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "datetime'2025-01-14T00:00:00'"
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
               }
             }
           }

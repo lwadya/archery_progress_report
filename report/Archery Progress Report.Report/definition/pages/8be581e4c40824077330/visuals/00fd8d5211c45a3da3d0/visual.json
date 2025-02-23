@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "00fd8d5211c45a3da3d0",
   "position": {
-    "x": 201.71206225680933,
-    "y": 428.32684824902725,
-    "z": 3000,
-    "height": 227.85992217898834,
-    "width": 712.2178988326848,
-    "tabOrder": 3000
+    "x": 9.6292315959161741,
+    "y": 526.16872649113384,
+    "z": 1000,
+    "height": 180.20419129500269,
+    "width": 1262.11714132187,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "columnChart",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "dim_calendar.date",
-              "nativeQueryRef": "date",
+              "nativeQueryRef": "Date",
               "active": true,
+              "displayName": "Date",
               "format": "M/d"
             }
           ]
@@ -47,7 +48,26 @@
                 }
               },
               "queryRef": "select_score_buckets.score_bucket",
-              "nativeQueryRef": "score_bucket"
+              "nativeQueryRef": "Score",
+              "displayName": "Score"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Session Adjustment Most Recent"
+                }
+              },
+              "queryRef": "Measure Table.Session Adjustment Most Recent",
+              "nativeQueryRef": "Session Adjustment Most Recent"
             }
           ]
         },
@@ -116,7 +136,7 @@
             "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "30L"
+                  "Value": "15L"
                 }
               }
             },
@@ -143,7 +163,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -801,6 +821,31 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "borderOutlineOnly": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColorMatchFill": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "valueAxis": [
@@ -826,6 +871,20 @@
                   "Value": "false"
                 }
               }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
@@ -843,7 +902,28 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'TopCenter'"
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -889,6 +969,26 @@
             }
           }
         }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelOrientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -912,6 +1012,39 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "customizeSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "spaceBelowTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

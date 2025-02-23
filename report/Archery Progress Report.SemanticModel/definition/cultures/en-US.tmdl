@@ -558,6 +558,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "shot score": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
 			          "fact shot notch": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -618,43 +624,43 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fact shot total": {
+			          "shot notch": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "fact shot tally": {
+			          "shot slash": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "fact shot grade": {
+			          "shot groove": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "fact shot result": {
+			          "shot nick": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.485
 			          }
 			        }
 			      ]
@@ -2741,12 +2747,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "shot": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "session shot": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -2823,33 +2823,43 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "gunshot": {
+			          "session round": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "potshot": {
+			          "session volley": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "explosion": {
+			          "session report": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "shot": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2873,12 +2883,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "shot": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -2919,66 +2923,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "gunshot": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "potshot": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "explosion": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "round": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "volley": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "report": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
 			          }
 			        }
 			      ]
@@ -5717,128 +5661,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.session_latest_notes": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Session Notes Latest"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "session latest notes": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "latest notes": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "session latest transcript": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "session latest transcription": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "session latest résumé": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "latest transcript": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "latest transcription": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "latest résumé": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "session latest minute": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "session latest record": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "session latest proceeding": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "session latest summary": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        }
-			      ]
-			    },
 			    "measure_table.v_Shot_Score_Rolling_Average_Shots_FormatString_shot_score_rolling_average_shots_FormatString": {
 			      "Definition": {
 			        "Binding": {
@@ -6764,12 +6586,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "description": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "average appearance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -6810,46 +6626,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "appearance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "descriptor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "explanation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "specification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
 			          "average account": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -6861,6 +6637,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "average overview": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "average report": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6890,12 +6676,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "description": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -6939,46 +6719,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "appearance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "descriptor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "explanation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "specification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
 			          "min account": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -6996,6 +6736,26 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "min report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "minimum description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
 			          }
 			        }
 			      ]
@@ -7019,12 +6779,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "description": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -7068,46 +6822,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "appearance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "descriptor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "explanation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "specification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
 			          "max account": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -7125,6 +6839,26 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "max report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "maximum description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
 			          }
 			        }
 			      ]
@@ -7302,6 +7036,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Score": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -7551,12 +7295,12 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "session most recent adjustment": {
+			          "session adjustment most recent": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "session most recent alteration": {
+			          "session alteration most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7566,7 +7310,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent modification": {
+			          "session modification most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7576,7 +7320,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent regulation": {
+			          "session regulation most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7586,7 +7330,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent correction": {
+			          "session correction most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7596,7 +7340,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent amendment": {
+			          "session amendment most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7606,7 +7350,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent variation": {
+			          "session variation most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7616,7 +7360,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent change": {
+			          "session change most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7626,7 +7370,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent tuning": {
+			          "session tuning most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7636,7 +7380,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent fine-tuning": {
+			          "session fine-tuning most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7646,7 +7390,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session most recent tweaking": {
+			          "session tweaking most recent": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7793,11 +7537,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.v_Session_Latest_Notes_FormatString_session_latest_notes_FormatString": {
+			    "measure_table.v_Data_Table_End_Score_Average_FormatString_data_table_end_score_average_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Session Latest Notes FormatString"
+			          "ConceptualProperty": "_Data Table End Score Average FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -7806,17 +7550,17 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "_session latest notes FormatString": {
+			          "_data table end score average FormatString": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "measure_table.v_Session_Most_Recent_Adjustment_FormatString_session_most_recent_adjustment_FormatString": {
+			    "measure_table.v_Data_Table_Notes_Icon_Text_FormatString_data_table_notes_icon_text_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Session Most Recent Adjustment FormatString"
+			          "ConceptualProperty": "_Data Table Notes Icon Text FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -7825,7 +7569,7 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "_session most recent adjustment FormatString": {
+			          "_data table notes icon text FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -8239,12 +7983,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "description": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
 			          "round appearance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8285,46 +8023,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "appearance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "descriptor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "explanation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "specification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
 			          "round account": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8342,6 +8040,21 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "round report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "description": {
+			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -10417,19 +10130,31 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "select raw data column": {
+			          "select data table column": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "select_raw_data_columns": {
+			          "select_data_table_columns": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "select raw information column": {
+			          "table column": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "data table column": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "select information table column": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10439,7 +10164,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw fact column": {
+			          "select fact table column": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10449,7 +10174,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw info column": {
+			          "select info table column": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10459,7 +10184,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw statistic column": {
+			          "select statistic table column": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10469,7 +10194,47 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw document column": {
+			          "information table column": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact table column": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info table column": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic table column": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "select document table column": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10479,53 +10244,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw figure column": {
+			          "select figure table column": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "select raw record column": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "select raw data pilaster": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "select raw data pier": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "select raw data pillar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
 			          }
 			        }
 			      ]
@@ -10725,7 +10450,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "raw data values": {
+			          "data table values": {
 			            "State": "Generated"
 			          }
 			        },
@@ -10736,13 +10461,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "data values": {
+			          "table values": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "raw information value": {
+			          "information table value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10752,7 +10477,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw fact value": {
+			          "fact table value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10762,7 +10487,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw info value": {
+			          "info table value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10772,7 +10497,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw statistic value": {
+			          "statistic table value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10782,47 +10507,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "information value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "fact value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "info value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "statistic value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "raw document value": {
+			          "document table value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10832,13 +10517,53 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw figure value": {
+			          "figure table value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record table value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "data table ethic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "data table principle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "data table tenet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
 			          }
 			        }
 			      ]
@@ -10853,7 +10578,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "raw data colors": {
+			          "data table colors": {
 			            "State": "Generated"
 			          }
 			        },
@@ -10864,13 +10589,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "data colors": {
+			          "table colors": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "raw information color": {
+			          "information table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10880,7 +10605,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw fact color": {
+			          "fact table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10890,7 +10615,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw info color": {
+			          "info table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10900,7 +10625,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw statistic color": {
+			          "statistic table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10910,47 +10635,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "information color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "fact color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "info color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "statistic color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "raw document color": {
+			          "document table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10960,13 +10645,53 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw figure color": {
+			          "figure table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record table color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "data table insignia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "data table ensign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "table insignia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
 			          }
 			        }
 			      ]
@@ -10981,12 +10706,12 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "session selected adjustment": {
+			          "session adjustment selected": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "session selected alteration": {
+			          "session alteration selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -10996,7 +10721,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected modification": {
+			          "session modification selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11006,7 +10731,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected regulation": {
+			          "session regulation selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11016,7 +10741,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected correction": {
+			          "session correction selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11026,7 +10751,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected amendment": {
+			          "session amendment selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11036,7 +10761,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected variation": {
+			          "session variation selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11046,7 +10771,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected change": {
+			          "session change selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11056,7 +10781,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected tuning": {
+			          "session tuning selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11066,7 +10791,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected fine-tuning": {
+			          "session fine-tuning selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11076,7 +10801,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected tweaking": {
+			          "session tweaking selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11107,7 +10832,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "notes icon text": {
+			          "data table notes icon text": {
 			            "State": "Generated"
 			          }
 			        },
@@ -11124,112 +10849,124 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "note icon manuscript": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
+			          "notes icon text": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "note icon transcript": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
+			          "table notes icon text": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "note icon typescript": {
+			          "information table note icon text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.624
 			          }
 			        },
 			        {
-			          "note icon edition": {
+			          "fact table note icon text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.624
 			          }
 			        },
 			        {
-			          "note icon version": {
+			          "info table note icon text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.624
 			          }
 			        },
 			        {
-			          "icon manuscript": {
+			          "statistic table note icon text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.624
 			          }
 			        },
 			        {
-			          "icon transcript": {
+			          "document table note icon text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.605
 			          }
 			        },
 			        {
-			          "icon typescript": {
+			          "figure table note icon text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.605
 			          }
 			        },
 			        {
-			          "icon edition": {
+			          "record table note icon text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.605
 			          }
 			        },
 			        {
-			          "icon version": {
+			          "data table note icon manuscript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "data table note icon transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "data table note icon typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
 			          }
 			        }
 			      ]
 			    },
-			    "measure_table.v_Raw_Data_Values_FormatString_raw_data_values_FormatString": {
+			    "measure_table.v_Session_Adjustment_Selected_FormatString_session_adjustment_selected_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Raw Data Values FormatString"
+			          "ConceptualProperty": "_Session Adjustment Selected FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -11238,195 +10975,17 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "_raw data values FormatString": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "_raw information value formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw fact value formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw info value formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw statistic value formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw document value formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "_raw figure value formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "_raw record value formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "measure_table.v_Raw_Data_Colors_FormatString_raw_data_colors_FormatString": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Raw Data Colors FormatString"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "_raw data colors FormatString": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "_raw information color formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw fact color formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw info color formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw statistic color formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "_raw document color formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "_raw figure color formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "_raw record color formatstring": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "measure_table.v_Session_Selected_Adjustment_FormatString_session_selected_adjustment_FormatString": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Session Selected Adjustment FormatString"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "_session selected adjustment FormatString": {
+			          "_session adjustment selected FormatString": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "measure_table.v_Notes_Icon_Text_FormatString_notes_icon_text_FormatString": {
+			    "measure_table.v_Data_Table_Colors_FormatString_data_table_colors_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Notes Icon Text FormatString"
+			          "ConceptualProperty": "_Data Table Colors FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -11435,7 +10994,185 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "_notes icon text FormatString": {
+			          "_data table colors FormatString": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_ information table color formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ fact table color formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ info table color formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ statistic table color formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ document table color formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_ figure table color formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_ record table color formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Data_Table_Values_FormatString_data_table_values_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Data Table Values FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_data table values FormatString": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_ information table value formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ fact table value formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ info table value formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ statistic table value formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_ document table value formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_ figure table value formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_ record table value formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Session_Adjustment_Most_Recent_FormatString_session_adjustment_most_recent_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Session Adjustment Most Recent FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_session adjustment most recent FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -11513,19 +11250,31 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "select raw data sort": {
+			          "select data table sort": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "select_raw_data_sort": {
+			          "select_data_table_sort": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "select raw information sort": {
+			          "table sort": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "data table sort": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "select information table sort": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11535,7 +11284,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw fact sort": {
+			          "select fact table sort": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11545,7 +11294,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw info sort": {
+			          "select info table sort": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11555,7 +11304,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw statistic sort": {
+			          "select statistic table sort": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11565,7 +11314,47 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw document sort": {
+			          "information table sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact table sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info table sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic table sort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "select document table sort": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11575,53 +11364,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw figure sort": {
+			          "select figure table sort": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "select raw record sort": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "select raw data category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "select raw data genus": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "select raw data species": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
 			          }
 			        }
 			      ]
@@ -11919,19 +11668,37 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "select raw data color": {
+			          "select data table color": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "select_raw_data_colors": {
+			          "select_data_table_colors": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "select raw information color": {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "table color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "data table color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "select information table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11941,7 +11708,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw fact color": {
+			          "select fact table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11951,7 +11718,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw info color": {
+			          "select info table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11961,7 +11728,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw statistic color": {
+			          "select statistic table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11971,7 +11738,47 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw document color": {
+			          "information table color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact table color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info table color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic table color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "select document table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11981,53 +11788,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "select raw figure color": {
+			          "select figure table color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "select raw record color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "select raw data hue": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "select raw data tint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "select raw data shade": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
 			          }
 			        }
 			      ]
@@ -12290,75 +12057,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "select_raw_data_color.color_10_9": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "select_data_table_colors",
-			          "ConceptualProperty": "color_10_9"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "color 10 9": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "color_10_9": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "select_raw_data_color.color_8_7": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "select_data_table_colors",
-			          "ConceptualProperty": "color_8_7"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "color 8 7": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "color_8_7": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "select_raw_data_color.color_6_5": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "select_data_table_colors",
-			          "ConceptualProperty": "color_6_5"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "color 6 5": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "color_6_5": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "select_raw_data_color.color_4_0": {
 			      "Definition": {
 			        "Binding": {
@@ -12392,7 +12090,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "raw data end score average": {
+			          "data table end score average": {
 			            "State": "Generated"
 			          }
 			        },
@@ -12409,13 +12107,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "data end score average": {
+			          "table end score average": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "raw information end score average": {
+			          "information table end score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12425,7 +12123,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw fact end score average": {
+			          "fact table end score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12435,7 +12133,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw info end score average": {
+			          "info table end score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12445,7 +12143,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw statistic end score average": {
+			          "statistic table end score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12455,7 +12153,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw data completion score average": {
+			          "data table completion score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12465,7 +12163,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw data conclusion score average": {
+			          "data table conclusion score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12475,7 +12173,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw data expiration score average": {
+			          "data table expiration score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12485,7 +12183,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "information end score average": {
+			          "table completion score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12495,7 +12193,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "fact end score average": {
+			          "table conclusion score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12505,7 +12203,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "info end score average": {
+			          "table expiration score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12516,40 +12214,268 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.v_Selected_Column_FormatString_selected_column_FormatString": {
+			    "measure_table.round_score_max_description": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Selected Column FormatString"
+			          "ConceptualProperty": "Round Score Max Description"
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
-			          "_selected column FormatString": {
+			          "round score max description": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "score max description": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "round score max appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score max descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score max explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score max specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "score max appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score max descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score max explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score max specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "round score maximum description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "round score max account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "measure_table.v_Raw_Data_End_Score_Average_FormatString_raw_data_end_score_average_FormatString": {
+			    "measure_table.shot_score_adjustment_against_benchmark": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Raw Data End Score Average FormatString"
+			          "ConceptualProperty": "Shot Score Adjustment Against Benchmark"
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
-			          "_raw data end score average FormatString": {
+			          "shot score adjustment against benchmark": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "adjustment": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "score adjustment": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "shot score adjustment": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "shot score alteration against benchmark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "shot score modification against benchmark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "shot score regulation against benchmark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "shot score correction against benchmark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "shot score amendment against benchmark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "shot score variation against benchmark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "shot score alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "shot score modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "shot score regulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "shot score correction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
 			          }
 			        }
 			      ]
@@ -12683,7 +12609,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "raw data shot score average": {
+			          "data tooltip shot score average": {
 			            "State": "Generated"
 			          }
 			        },
@@ -12694,13 +12620,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "data shot score average": {
+			          "tooltip shot score average": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "raw information shot score average": {
+			          "information tooltip shot score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12710,7 +12636,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw fact shot score average": {
+			          "fact tooltip shot score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12720,7 +12646,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw info shot score average": {
+			          "info tooltip shot score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12730,7 +12656,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw statistic shot score average": {
+			          "statistic tooltip shot score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12740,47 +12666,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "information shot score average": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "fact shot score average": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "info shot score average": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "statistic shot score average": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "raw document shot score average": {
+			          "document tooltip shot score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12790,13 +12676,53 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw figure shot score average": {
+			          "figure tooltip shot score average": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "record tooltip shot score average": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "data tooltip shot score mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "data tooltip shot score norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "tooltip shot score mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
 			          }
 			        },
 			        {
@@ -12884,21 +12810,136 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.v_Raw_Data_Shot_Score_Average_FormatString_raw_data_shot_score_average_FormatString": {
+			    "measure_table.data_tooltip_color_background": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Raw Data Shot Score Average FormatString"
+			          "ConceptualProperty": "Data Tooltip Color Background"
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
-			          "_raw data shot score average FormatString": {
+			          "data tooltip color background": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "background": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color background": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tooltip color background": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information tooltip color background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact tooltip color background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info tooltip color background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic tooltip color background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document tooltip color background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure tooltip color background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record tooltip color background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "data tooltip color upbringing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "data tooltip color education": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "tooltip color upbringing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
 			          }
 			        }
 			      ]
@@ -12913,7 +12954,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "raw data shot score color": {
+			          "data tooltip shot score color": {
 			            "State": "Generated"
 			          }
 			        },
@@ -12936,13 +12977,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "data shot score color": {
+			          "tooltip shot score color": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "raw information shot score color": {
+			          "information tooltip shot score color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12952,7 +12993,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw fact shot score color": {
+			          "fact tooltip shot score color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12962,7 +13003,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw info shot score color": {
+			          "info tooltip shot score color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12972,7 +13013,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw statistic shot score color": {
+			          "statistic tooltip shot score color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -12982,47 +13023,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "information shot score color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "fact shot score color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "info shot score color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "statistic shot score color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "raw document shot score color": {
+			          "document tooltip shot score color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13032,32 +13033,187 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "raw figure shot score color": {
+			          "figure tooltip shot score color": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "record tooltip shot score color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "data tooltip shot score hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "tooltip shot score hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "shot score hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
 			          }
 			        }
 			      ]
 			    },
-			    "measure_table.v_Raw_Data_Shot_Score_Color_FormatString_raw_data_shot_score_color_FormatString": {
+			    "measure_table.data_tooltip_color_text": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Raw Data Shot Score Color FormatString"
+			          "ConceptualProperty": "Data Tooltip Color Text"
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
-			          "_raw data shot score color FormatString": {
+			          "data tooltip color text": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tooltip color text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information tooltip color text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact tooltip color text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info tooltip color text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic tooltip color text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document tooltip color text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure tooltip color text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record tooltip color text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "data tooltip color manuscript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "data tooltip color transcript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "data tooltip color typescript": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
 			          }
 			        }
 			      ]
@@ -13072,12 +13228,12 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "session selected notes": {
+			          "session notes selected": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "session selected transcript": {
+			          "session transcript selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13087,7 +13243,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected transcription": {
+			          "session transcription selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13097,7 +13253,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected résumé": {
+			          "session résumé selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13107,7 +13263,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected minute": {
+			          "session minute selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13117,7 +13273,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected record": {
+			          "session record selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13127,7 +13283,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected proceeding": {
+			          "session proceeding selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13137,7 +13293,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected summary": {
+			          "session summary selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13147,7 +13303,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected follow-ups": {
+			          "session follow-ups selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13157,7 +13313,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected log": {
+			          "session log selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13167,7 +13323,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session selected report": {
+			          "session report selected": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -13188,11 +13344,123 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.v_Session_Selected_Notes_FormatString_session_selected_notes_FormatString": {
+			    "measure_table.data_tooltip_shot_count": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Session Selected Notes FormatString"
+			          "ConceptualProperty": "Data Tooltip Shot Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data tooltip shot count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tooltip shot count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "data tooltip shot amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "tooltip shot amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "information tooltip shot count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact tooltip shot count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info tooltip shot count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic tooltip shot count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document tooltip shot count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure tooltip shot count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record tooltip shot count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Data_Tooltip_Shot_Score_Average_FormatString_data_tooltip_shot_score_average_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Data Tooltip Shot Score Average FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -13201,7 +13469,1995 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "_session selected notes FormatString": {
+			          "_data tooltip shot score average FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Data_Tooltip_Shot_Score_Color_FormatString_data_tooltip_shot_score_color_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Data Tooltip Shot Score Color FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_data tooltip shot score color FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Session_Notes_Selected_FormatString_session_notes_selected_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Session Notes Selected FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_session notes selected FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Data_Tooltip_Shot_Count_FormatString_data_tooltip_shot_count_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Data Tooltip Shot Count FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_data tooltip shot count FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Data_Tooltip_Color_Text_FormatString_data_tooltip_color_text_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Data Tooltip Color Text FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_data tooltip color text FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Data_Tooltip_Color_Background_FormatString_data_tooltip_color_background_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Data Tooltip Color Background FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_data tooltip color background FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Shot_Score_Adjustment_Against_Benchmark_FormatString_shot_score_adjustment_against_benchmark_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Shot Score Adjustment Against Benchmark FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_shot score adjustment against benchmark FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "select_raw_data_color.color_8": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_data_table_colors",
+			          "ConceptualProperty": "color_8"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color 8": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color_8": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "select_raw_data_color.color_7": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_data_table_colors",
+			          "ConceptualProperty": "color_7"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color 7": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color_7": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "select_raw_data_color.color_6": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_data_table_colors",
+			          "ConceptualProperty": "color_6"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color 6": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color_6": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "select_raw_data_color.color_5": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_data_table_colors",
+			          "ConceptualProperty": "color_5"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color 5": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color_5": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "select_raw_data_color.color_10": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_data_table_colors",
+			          "ConceptualProperty": "color_10"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color 10": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color_10": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "select_raw_data_color.color_9": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_data_table_colors",
+			          "ConceptualProperty": "color_9"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "color 9": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color_9": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "session.latest_major_adjustment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_session",
+			          "ConceptualProperty": "latest_major_adjustment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latest major adjustment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "latest_major_adjustment": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "adjustment": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "latest major alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "latest major modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "latest major regulation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "latest major correction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "latest major amendment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "latest major variation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "latest major change": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "latest major tuning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "latest major fine-tuning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "latest major tweaking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.round_score_pace": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Round Score Pace"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "round score pace": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pace": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "score pace": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "round notch pace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round slash pace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round score step": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round score stride": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round groove pace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round score leap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round nick pace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round score bound": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round cut pace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "round score hop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.round_score_pace_rolling_average_shots": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Round Score Pace Rolling Average Shots"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "round score pace rolling average shots": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "shots": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average shots": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rolling average shots": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pace rolling average shots": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "score pace rolling average shots": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pace rolling average gunshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "pace rolling average potshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "pace rolling average explosion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "rolling average gunshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rolling average potshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rolling average explosion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "notch pace rolling average shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "slash pace rolling average shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "groove pace rolling average shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "nick pace rolling average shot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.round_score_pace_rolling_average_sessions": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Round Score Pace Rolling Average Sessions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "round score pace rolling average sessions": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sessions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average sessions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rolling average sessions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pace rolling average sessions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "score pace rolling average sessions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "pace rolling average assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "rolling average assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "notch pace rolling average session": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "slash pace rolling average session": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "groove pace rolling average session": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "nick pace rolling average session": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "cut pace rolling average session": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "mark pace rolling average session": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "average assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "step rolling average session": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.session_adjustment_chart_data_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Session Adjustment Chart Data Label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "session adjustment chart data label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "data label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "chart data label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "adjustment chart data label": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "session adjustment chart data sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "adjustment chart data sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "chart data sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "session adjustment chart data tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "session adjustment chart data decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "data sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "adjustment chart data tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "adjustment chart data decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "chart data tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "chart data decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Round_Score_Pace_FormatString_round_score_pace_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Round Score Pace FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_round score pace FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Round_Score_Pace_Rolling_Average_Shots_FormatString_round_score_pace_rolling_average_shots_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Round Score Pace Rolling Average Shots FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_round score pace rolling average shots FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Round_Score_Pace_Rolling_Average_Sessions_FormatString_round_score_pace_rolling_average_sessions_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Round Score Pace Rolling Average Sessions FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_round score pace rolling average sessions FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Session_Adjustment_Chart_Data_Label_FormatString_session_adjustment_chart_data_label_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Session Adjustment Chart Data Label FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_session adjustment chart data label FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.round_score_min_description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Round Score Min Description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "round score min description": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "score min description": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "round score min appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score min descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score min explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score min specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "score min appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score min descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score min explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score min specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "round score minimum description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "round score min account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "select_session_rolling_average": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_session_rolling_average"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "select session rolling average": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "select_session_rolling_average": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "rolling average": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "session rolling average": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "select session rolling mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "select session rolling norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "session rolling mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "session rolling norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "rolling mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "rolling norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "select session rolling mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "select session rolling median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "session rolling mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "session rolling median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "select_session_rolling_average.session": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_session_rolling_average",
+			          "ConceptualProperty": "sessions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "session": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sitting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "conference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gathering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hearing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "semester": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "trimester": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "term": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "select_shot_rolling_average": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_shot_rolling_average"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "select shot rolling average": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "select_shot_rolling_average": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "rolling average": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "shot rolling average": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "select shot rolling mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "select shot rolling norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "shot rolling mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "shot rolling norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "rolling mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "rolling norm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "select shot rolling mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "select shot rolling median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "shot rolling mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "shot rolling median": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "select_shot_rolling_average.shot": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_shot_rolling_average",
+			          "ConceptualProperty": "shots"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "shot": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "gunshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "potshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "explosion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "round": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "volley": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "bang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "blast": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buckshot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "bullet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.round_score_average_description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Round Score Average Description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "round score average description": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "score average description": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "round score average appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score average descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score average explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round score average specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "score average appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score average descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score average explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "score average specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "round score average account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "round score average overview": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.round_selected_type_description": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Round Selected Type Description"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "round selected type description": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "round selected category description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected genre description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected manner description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected variety description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected type appearance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected type descriptor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected type explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected type specification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "round selected brand description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "round selected class description": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "selected type description": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Description": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Round_Score_Min_Description_FormatString_round_score_min_description_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Round Score Min Description FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_round score min description FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Round_Score_Max_Description_FormatString_round_score_max_description_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Round Score Max Description FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_round score max description FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Round_Score_Average_Description_FormatString_round_score_average_description_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Round Score Average Description FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_round score average description FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Round_Selected_Type_Description_FormatString_round_selected_type_description_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Round Selected Type Description FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_round selected type description FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -13347,6 +15603,627 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "measure_table_has_round_selected_type_description": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.round_selected_type_description": {
+			          "Target": {
+			            "Entity": "measure_table.round_selected_type_description"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.round_selected_type_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_round_selected_type_description"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Prepositions": [
+			              {
+			                "round": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "measure_table.round_selected_type_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_are_round_round_selected_type_description"
+			        }
+			      ]
+			    },
+			    "measure_table_has_round_score_average_description": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.round_score_average_description": {
+			          "Target": {
+			            "Entity": "measure_table.round_score_average_description"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.round_score_average_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_round_score_average_description"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Prepositions": [
+			              {
+			                "round": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "measure_table.round_score_average_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_are_round_round_score_average_description"
+			        }
+			      ]
+			    },
+			    "select_shot_rolling_average_has_shot": {
+			      "Binding": {
+			        "ConceptualEntity": "select_shot_rolling_average"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_shot_rolling_average": {
+			          "Target": {
+			            "Entity": "select_shot_rolling_average"
+			          }
+			        },
+			        "select_shot_rolling_average.shot": {
+			          "Target": {
+			            "Entity": "select_shot_rolling_average.shot"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_shot_rolling_average"
+			            },
+			            "Object": {
+			              "Role": "select_shot_rolling_average.shot"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_shot_rolling_averages_have_shots"
+			        }
+			      ]
+			    },
+			    "select_session_rolling_average_has_session": {
+			      "Binding": {
+			        "ConceptualEntity": "select_session_rolling_average"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_session_rolling_average": {
+			          "Target": {
+			            "Entity": "select_session_rolling_average"
+			          }
+			        },
+			        "select_session_rolling_average.session": {
+			          "Target": {
+			            "Entity": "select_session_rolling_average.session"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_session_rolling_average"
+			            },
+			            "Object": {
+			              "Role": "select_session_rolling_average.session"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_session_rolling_averages_have_sessions"
+			        }
+			      ]
+			    },
+			    "measure_table_has_round_score_min_description": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.round_score_min_description": {
+			          "Target": {
+			            "Entity": "measure_table.round_score_min_description"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.round_score_min_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_round_score_min_description"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Prepositions": [
+			              {
+			                "round": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "measure_table.round_score_min_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_are_round_round_score_min_description"
+			        }
+			      ]
+			    },
+			    "measure_table_has_session_adjustment_chart_data_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.session_adjustment_chart_data_label": {
+			          "Target": {
+			            "Entity": "measure_table.session_adjustment_chart_data_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.session_adjustment_chart_data_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_session_adjustment_chart_data_label"
+			        }
+			      ]
+			    },
+			    "measure_table_has_round_score_pace_rolling_average_sessions": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.round_score_pace_rolling_average_sessions": {
+			          "Target": {
+			            "Entity": "measure_table.round_score_pace_rolling_average_sessions"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.round_score_pace_rolling_average_sessions"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_round_score_pace_rolling_average_sessions"
+			        }
+			      ]
+			    },
+			    "measure_table_has_round_score_pace_rolling_average_shots": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.round_score_pace_rolling_average_shots": {
+			          "Target": {
+			            "Entity": "measure_table.round_score_pace_rolling_average_shots"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.round_score_pace_rolling_average_shots"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_round_score_pace_rolling_average_shots"
+			        }
+			      ]
+			    },
+			    "measure_table_has_round_score_pace": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.round_score_pace": {
+			          "Target": {
+			            "Entity": "measure_table.round_score_pace"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.round_score_pace"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_round_score_pace"
+			        }
+			      ]
+			    },
+			    "session_has_latest_major_adjustment": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_session"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "session": {
+			          "Target": {
+			            "Entity": "session"
+			          }
+			        },
+			        "session.latest_major_adjustment": {
+			          "Target": {
+			            "Entity": "session.latest_major_adjustment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "session"
+			            },
+			            "Object": {
+			              "Role": "session.latest_major_adjustment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_sessions_have_latest_major_adjustments"
+			        }
+			      ]
+			    },
+			    "select_raw_data_color_has_color_9": {
+			      "Binding": {
+			        "ConceptualEntity": "select_data_table_colors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_raw_data_color": {
+			          "Target": {
+			            "Entity": "select_raw_data_color"
+			          }
+			        },
+			        "select_raw_data_color.color_9": {
+			          "Target": {
+			            "Entity": "select_raw_data_color.color_9"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_raw_data_color"
+			            },
+			            "Object": {
+			              "Role": "select_raw_data_color.color_9"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_data_table_colors_have_color_9"
+			        }
+			      ]
+			    },
+			    "select_raw_data_color_has_color_10": {
+			      "Binding": {
+			        "ConceptualEntity": "select_data_table_colors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_raw_data_color": {
+			          "Target": {
+			            "Entity": "select_raw_data_color"
+			          }
+			        },
+			        "select_raw_data_color.color_10": {
+			          "Target": {
+			            "Entity": "select_raw_data_color.color_10"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_raw_data_color"
+			            },
+			            "Object": {
+			              "Role": "select_raw_data_color.color_10"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_data_table_colors_have_color_10"
+			        }
+			      ]
+			    },
+			    "select_raw_data_color_has_color_5": {
+			      "Binding": {
+			        "ConceptualEntity": "select_data_table_colors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_raw_data_color": {
+			          "Target": {
+			            "Entity": "select_raw_data_color"
+			          }
+			        },
+			        "select_raw_data_color.color_5": {
+			          "Target": {
+			            "Entity": "select_raw_data_color.color_5"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_raw_data_color"
+			            },
+			            "Object": {
+			              "Role": "select_raw_data_color.color_5"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_data_table_colors_have_color_5"
+			        }
+			      ]
+			    },
+			    "select_raw_data_color_has_color_6": {
+			      "Binding": {
+			        "ConceptualEntity": "select_data_table_colors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_raw_data_color": {
+			          "Target": {
+			            "Entity": "select_raw_data_color"
+			          }
+			        },
+			        "select_raw_data_color.color_6": {
+			          "Target": {
+			            "Entity": "select_raw_data_color.color_6"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_raw_data_color"
+			            },
+			            "Object": {
+			              "Role": "select_raw_data_color.color_6"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_data_table_colors_have_color_6"
+			        }
+			      ]
+			    },
+			    "select_raw_data_color_has_color_7": {
+			      "Binding": {
+			        "ConceptualEntity": "select_data_table_colors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_raw_data_color": {
+			          "Target": {
+			            "Entity": "select_raw_data_color"
+			          }
+			        },
+			        "select_raw_data_color.color_7": {
+			          "Target": {
+			            "Entity": "select_raw_data_color.color_7"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_raw_data_color"
+			            },
+			            "Object": {
+			              "Role": "select_raw_data_color.color_7"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_data_table_colors_have_color_7"
+			        }
+			      ]
+			    },
+			    "select_raw_data_color_has_color_8": {
+			      "Binding": {
+			        "ConceptualEntity": "select_data_table_colors"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_raw_data_color": {
+			          "Target": {
+			            "Entity": "select_raw_data_color"
+			          }
+			        },
+			        "select_raw_data_color.color_8": {
+			          "Target": {
+			            "Entity": "select_raw_data_color.color_8"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_raw_data_color"
+			            },
+			            "Object": {
+			              "Role": "select_raw_data_color.color_8"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_data_table_colors_have_color_8"
+			        }
+			      ]
+			    },
+			    "shot_score_has_measure_table_data_tooltip_shot_count": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_shot_score"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "shot_score": {
+			          "Target": {
+			            "Entity": "shot_score"
+			          }
+			        },
+			        "measure_table.data_tooltip_shot_count": {
+			          "Target": {
+			            "Entity": "measure_table.data_tooltip_shot_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "shot_score"
+			            },
+			            "Object": {
+			              "Role": "measure_table.data_tooltip_shot_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_shot_scores_have_data_tooltip_shot_count"
+			        }
+			      ]
+			    },
 			    "measure_table_has_session_selected_notes": {
 			      "Binding": {
 			        "ConceptualEntity": "Measure Table"
@@ -13376,11 +16253,11 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_session_selected_notes"
+			          "ID": "measure_tables_have_session_notes_selected"
 			        }
 			      ]
 			    },
-			    "measure_table_has_raw_data_shot_score_color": {
+			    "measure_table_has_data_tooltip_color_text": {
 			      "Binding": {
 			        "ConceptualEntity": "Measure Table"
 			      },
@@ -13389,6 +16266,39 @@ cultureInfo en-US
 			        "measure_table": {
 			          "Target": {
 			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.data_tooltip_color_text": {
+			          "Target": {
+			            "Entity": "measure_table.data_tooltip_color_text"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.data_tooltip_color_text"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_data_tooltip_color_text"
+			        }
+			      ]
+			    },
+			    "shot_score_has_measure_table_raw_data_shot_score_color": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_shot_score"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "shot_score": {
+			          "Target": {
+			            "Entity": "shot_score"
 			          }
 			        },
 			        "measure_table.raw_data_shot_score_color": {
@@ -13401,7 +16311,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "measure_table"
+			              "Role": "shot_score"
 			            },
 			            "Object": {
 			              "Role": "measure_table.raw_data_shot_score_color"
@@ -13409,7 +16319,40 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_raw_data_shot_score_color"
+			          "ID": "fact_shot_scores_have_data_tooltip_shot_score_color"
+			        }
+			      ]
+			    },
+			    "measure_table_has_data_tooltip_color_background": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.data_tooltip_color_background": {
+			          "Target": {
+			            "Entity": "measure_table.data_tooltip_color_background"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.data_tooltip_color_background"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_data_tooltip_color_background"
 			        }
 			      ]
 			    },
@@ -13442,7 +16385,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_columns_have_column_names"
+			          "ID": "select_data_table_columns_have_column_names"
 			        }
 			      ]
 			    },
@@ -13475,7 +16418,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_shot_scores_have_raw_data_shot_score_average"
+			          "ID": "fact_shot_scores_have_data_tooltip_shot_score_average"
 			        }
 			      ]
 			    },
@@ -13512,6 +16455,92 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "shot_score_has_measure_table_shot_score_adjustment_against_benchmark": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_shot_score"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "shot_score": {
+			          "Target": {
+			            "Entity": "shot_score"
+			          }
+			        },
+			        "measure_table.shot_score_adjustment_against_benchmark": {
+			          "Target": {
+			            "Entity": "measure_table.shot_score_adjustment_against_benchmark"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "shot_score"
+			            },
+			            "Object": {
+			              "Role": "measure_table.shot_score_adjustment_against_benchmark"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_shot_scores_have_shot_score_adjustment_against_benchmark"
+			        }
+			      ]
+			    },
+			    "measure_table_has_round_score_max_description": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.round_score_max_description": {
+			          "Target": {
+			            "Entity": "measure_table.round_score_max_description"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.round_score_max_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_round_score_max_description"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Prepositions": [
+			              {
+			                "round": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "measure_table.round_score_max_description"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_are_round_round_score_max_description"
+			        }
+			      ]
+			    },
 			    "measure_table_has_raw_data_end_score_average": {
 			      "Binding": {
 			        "ConceptualEntity": "Measure Table"
@@ -13541,40 +16570,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_raw_data_end_score_average"
-			        }
-			      ]
-			    },
-			    "measure_table_has_selected_column": {
-			      "Binding": {
-			        "ConceptualEntity": "Measure Table"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "measure_table": {
-			          "Target": {
-			            "Entity": "measure_table"
-			          }
-			        },
-			        "measure_table.selected_column": {
-			          "Target": {
-			            "Entity": "measure_table.selected_column"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "measure_table"
-			            },
-			            "Object": {
-			              "Role": "measure_table.selected_column"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "measure_tables_have_selected_column"
+			          "ID": "measure_tables_have_data_table_end_score_average"
 			        }
 			      ]
 			    },
@@ -13607,106 +16603,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_colors_have_color_4_0"
-			        }
-			      ]
-			    },
-			    "select_raw_data_color_has_color_6_5": {
-			      "Binding": {
-			        "ConceptualEntity": "select_data_table_colors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "select_raw_data_color": {
-			          "Target": {
-			            "Entity": "select_raw_data_color"
-			          }
-			        },
-			        "select_raw_data_color.color_6_5": {
-			          "Target": {
-			            "Entity": "select_raw_data_color.color_6_5"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "select_raw_data_color"
-			            },
-			            "Object": {
-			              "Role": "select_raw_data_color.color_6_5"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "select_raw_data_colors_have_color_6_5"
-			        }
-			      ]
-			    },
-			    "select_raw_data_color_has_color_8_7": {
-			      "Binding": {
-			        "ConceptualEntity": "select_data_table_colors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "select_raw_data_color": {
-			          "Target": {
-			            "Entity": "select_raw_data_color"
-			          }
-			        },
-			        "select_raw_data_color.color_8_7": {
-			          "Target": {
-			            "Entity": "select_raw_data_color.color_8_7"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "select_raw_data_color"
-			            },
-			            "Object": {
-			              "Role": "select_raw_data_color.color_8_7"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "select_raw_data_colors_have_color_8_7"
-			        }
-			      ]
-			    },
-			    "select_raw_data_color_has_color_10_9": {
-			      "Binding": {
-			        "ConceptualEntity": "select_data_table_colors"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "select_raw_data_color": {
-			          "Target": {
-			            "Entity": "select_raw_data_color"
-			          }
-			        },
-			        "select_raw_data_color.color_10_9": {
-			          "Target": {
-			            "Entity": "select_raw_data_color.color_10_9"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "select_raw_data_color"
-			            },
-			            "Object": {
-			              "Role": "select_raw_data_color.color_10_9"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "select_raw_data_colors_have_color_10_9"
+			          "ID": "select_data_table_colors_have_color_4_0"
 			        }
 			      ]
 			    },
@@ -13739,7 +16636,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_colors_have_scheme_ids"
+			          "ID": "select_data_table_colors_have_scheme_ids"
 			        }
 			      ]
 			    },
@@ -13772,7 +16669,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_colors_have_color_schemes"
+			          "ID": "select_data_table_colors_have_color_schemes"
 			        }
 			      ]
 			    },
@@ -13805,7 +16702,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_sorts_have_sort_multipliers"
+			          "ID": "select_data_table_sorts_have_sort_multipliers"
 			        }
 			      ]
 			    },
@@ -13838,7 +16735,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_sorts_have_sort_directions"
+			          "ID": "select_data_table_sorts_have_sort_directions"
 			        }
 			      ]
 			    },
@@ -13871,7 +16768,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_sorts_have_column_ids"
+			          "ID": "select_data_table_sorts_have_column_ids"
 			        }
 			      ]
 			    },
@@ -13904,7 +16801,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_sorts_have_column_names"
+			          "ID": "select_data_table_sorts_have_column_names"
 			        }
 			      ]
 			    },
@@ -13937,7 +16834,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_columns_have_column_ids"
+			          "ID": "select_data_table_columns_have_column_ids"
 			        }
 			      ]
 			    },
@@ -13970,7 +16867,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_notes_icon_text"
+			          "ID": "measure_tables_have_data_table_notes_icon_text"
 			        }
 			      ]
 			    },
@@ -14003,7 +16900,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_session_selected_adjustment"
+			          "ID": "measure_tables_have_session_adjustment_selected"
 			        }
 			      ]
 			    },
@@ -14036,7 +16933,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_raw_data_colors"
+			          "ID": "measure_tables_have_data_table_colors"
 			        }
 			      ]
 			    },
@@ -14069,7 +16966,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_raw_data_values"
+			          "ID": "measure_tables_have_data_table_values"
 			        }
 			      ]
 			    },
@@ -14102,7 +16999,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_columns_have_display_formats"
+			          "ID": "select_data_table_columns_have_display_formats"
 			        }
 			      ]
 			    },
@@ -14135,7 +17032,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_raw_data_columns_have_levels"
+			          "ID": "select_data_table_columns_have_levels"
 			        }
 			      ]
 			    },
@@ -14872,15 +17769,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "session_has_measure_table_session_most_recent_adjustment": {
+			    "measure_table_has_session_most_recent_adjustment": {
 			      "Binding": {
-			        "ConceptualEntity": "dim_session"
+			        "ConceptualEntity": "Measure Table"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "session": {
+			        "measure_table": {
 			          "Target": {
-			            "Entity": "session"
+			            "Entity": "measure_table"
 			          }
 			        },
 			        "measure_table.session_most_recent_adjustment": {
@@ -14893,7 +17790,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "session"
+			              "Role": "measure_table"
 			            },
 			            "Object": {
 			              "Role": "measure_table.session_most_recent_adjustment"
@@ -14901,7 +17798,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_sessions_have_session_most_recent_adjustment"
+			          "ID": "measure_tables_have_session_adjustment_most_recent"
 			        }
 			      ]
 			    },
@@ -15321,15 +18218,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table_has_shot_score_performance_against_benchmark": {
+			    "shot_score_has_measure_table_shot_score_performance_against_benchmark": {
 			      "Binding": {
-			        "ConceptualEntity": "Measure Table"
+			        "ConceptualEntity": "fact_shot_score"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "measure_table": {
+			        "shot_score": {
 			          "Target": {
-			            "Entity": "measure_table"
+			            "Entity": "shot_score"
 			          }
 			        },
 			        "measure_table.shot_score_performance_against_benchmark": {
@@ -15342,7 +18239,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "measure_table"
+			              "Role": "shot_score"
 			            },
 			            "Object": {
 			              "Role": "measure_table.shot_score_performance_against_benchmark"
@@ -15350,40 +18247,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_shot_score_performance_against_benchmark"
-			        }
-			      ]
-			    },
-			    "session_has_measure_table_session_latest_notes": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_session"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "session": {
-			          "Target": {
-			            "Entity": "session"
-			          }
-			        },
-			        "measure_table.session_latest_notes": {
-			          "Target": {
-			            "Entity": "measure_table.session_latest_notes"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "session"
-			            },
-			            "Object": {
-			              "Role": "measure_table.session_latest_notes"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_sessions_have_session_latest_notes"
+			          "ID": "fact_shot_scores_have_shot_score_performance_against_benchmark"
 			        }
 			      ]
 			    },

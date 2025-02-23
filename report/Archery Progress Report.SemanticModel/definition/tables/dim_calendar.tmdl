@@ -88,7 +88,7 @@ table dim_calendar
 		source =
 				
 				// Last Developer:      Lukas Wadya
-				// Last Change Date:    2025-01-04
+				// Last Change Date:    2025-01-23
 				// Description:         Calendar table for the report
 				
 				VAR _base_calendar =
@@ -107,7 +107,7 @@ table dim_calendar
 				    "start_of_week", [Date] - WEEKDAY( [Date], 1 ) + 1,
 				    "day_of_week_number", WEEKDAY( [Date], 2 ),
 				    "day_of_week_name", FORMAT( [Date], "ddd" ),
-				    "day_of_week_display", FORMAT( [Date], "ddd" ) & " (" & WEEKDAY( [Date], 2 ) & ")"
+				    "day_of_week_display", WEEKDAY( [Date], 2 ) & " (" & FORMAT( [Date], "ddd" ) & ")"
 				)
 				
 				RETURN

@@ -128,6 +128,14 @@ table dim_session
 
 		annotation SummarizationSetBy = Automatic
 
+	column latest_major_adjustment
+		dataType: string
+		lineageTag: a4cbea61-a932-4059-92f3-c6af39c32e4f
+		summarizeBy: none
+		sourceColumn: latest_major_adjustment
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_session = m
 		mode: import
 		queryGroup: 'Table Queries'
@@ -143,9 +151,11 @@ table dim_session
 				    #"Inserted Round Down" = Table.AddColumn(#"Inserted Division", "session_shot_count_rounded", each Number.RoundDown([session_shot_count], -1), Int64.Type),
 				    #"Added Custom1" = Table.AddColumn(#"Inserted Round Down", "session_shot_count_buckets", each Number.ToText( [session_shot_count_rounded] ) & " - " & Number.ToText( [session_shot_count_rounded] + 9 ), type text),
 				    #"Inserted Round Down1" = Table.AddColumn(#"Added Custom1", "shot_count_per_end_rounded", each Number.RoundDown([shot_count_per_end] * 2) / 2, Currency.Type),
-				    #"Added Custom2" = Table.AddColumn(#"Inserted Round Down1", "shot_count_per_end_buckets", each Number.ToText( [shot_count_per_end_rounded] ) & " - " & Number.ToText( [shot_count_per_end_rounded] + .5 ), type text)
+				    #"Added Custom2" = Table.AddColumn(#"Inserted Round Down1", "shot_count_per_end_buckets", each Number.ToText( [shot_count_per_end_rounded] ) & " - " & Number.ToText( [shot_count_per_end_rounded] + .5 ), type text),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Added Custom2", "major_adjustment", "latest_major_adjustment"),
+				    #"Filled Down" = Table.FillDown(#"Duplicated Column",{"latest_major_adjustment"})
 				in
-				    #"Added Custom2"
+				    #"Filled Down"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -48,6 +48,21 @@
               },
               "queryRef": "Measure Table.Session Rank",
               "nativeQueryRef": "Session Rank"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Session Notes Selected"
+                }
+              },
+              "queryRef": "Measure Table.Session Notes Selected",
+              "nativeQueryRef": "Notes",
+              "displayName": "Notes"
             }
           ]
         },

@@ -1,0 +1,22 @@
+table select_session_rolling_average
+	lineageTag: 014e3fd3-1912-4588-9570-245d853e1cab
+
+	column sessions
+		formatString: 0
+		lineageTag: 09a4a199-12dd-4932-9ff5-84bf533faad9
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition select_session_rolling_average = calculated
+		mode: import
+		source = GENERATESERIES(1, 20, 1)
+
+	annotation PBI_Id = ae47289152af472fab5d48472ccca333
+

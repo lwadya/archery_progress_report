@@ -1,0 +1,22 @@
+table select_shot_rolling_average
+	lineageTag: 551521ff-b4da-4785-b9c7-6e8e96035c96
+
+	column shots
+		formatString: 0
+		lineageTag: 6212b403-b52f-481b-ad3a-62e943d24904
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition select_shot_rolling_average = calculated
+		mode: import
+		source = GENERATESERIES(1, 20, 1)
+
+	annotation PBI_Id = 0997faa473cd476695b505b1e84eaaf2
+

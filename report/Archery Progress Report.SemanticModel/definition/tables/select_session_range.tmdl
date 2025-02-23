@@ -2,9 +2,10 @@ table select_session_range
 	lineageTag: a9ddc8ad-4c59-4814-b59c-ebc619deaf91
 
 	column sessions
+		dataType: int64
 		formatString: 0
 		lineageTag: 6a0854b0-f7aa-4a08-ba69-0e64b261e8ce
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: [Value]
 
 		extendedProperty ParameterMetadata =
@@ -12,21 +13,21 @@ table select_session_range
 				  "version": 0
 				}
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	partition select_session_range = calculated
 		mode: import
 		source =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-04
-				// Description:     Series from 1 to the total number of session in the dataset
+				// Last Updated:    2025-01-22
+				// Description:     Series from 5 to the total number of session in the dataset
 				
 				VAR _max_session_id =
 				COUNTROWS( ALL( dim_session ) )
 				
 				VAR _result =
-				GENERATESERIES( 1, _max_session_id, 1 )
+				GENERATESERIES( 5, _max_session_id, 5 )
 				
 				RETURN _result
 
