@@ -1,0 +1,69 @@
+table select_data_table_colors
+	lineageTag: 1012ce1e-abae-4db7-8bd3-30ff6782116b
+
+	column color_scheme
+		dataType: string
+		lineageTag: 93b12c6b-6fe4-4733-b0d6-9a703747d6f9
+		summarizeBy: none
+		sourceColumn: color_scheme
+		sortByColumn: scheme_id
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column scheme_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 13028a08-c8c2-4ef7-9712-e090e4950719
+		summarizeBy: sum
+		sourceColumn: scheme_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column color_10_9
+		dataType: string
+		lineageTag: 748ca168-9c01-4fbb-a9b6-97422302b0e0
+		summarizeBy: none
+		sourceColumn: color_10_9
+
+		annotation SummarizationSetBy = Automatic
+
+	column color_8_7
+		dataType: string
+		lineageTag: 7cf896a2-50ee-4227-8a39-61d58e0eaed5
+		summarizeBy: none
+		sourceColumn: color_8_7
+
+		annotation SummarizationSetBy = Automatic
+
+	column color_6_5
+		dataType: string
+		lineageTag: ed5856e4-13b1-45db-94a0-4f6f925f4127
+		summarizeBy: none
+		sourceColumn: color_6_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column color_4_0
+		dataType: string
+		lineageTag: 828e7468-bbb0-49df-94a3-10526da0371c
+		summarizeBy: none
+		sourceColumn: color_4_0
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_data_table_colors = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCkksSk8tUdJRMgRiZVc3VzdTRzDLxdTV1BXEMjNyNHV1ArEsjUFQKVYnWsm9KLGyODkxJxUobgSSczMDQRDLxQ0EQSwnSxAE6zQEQaXYWAA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [color_scheme = _t, scheme_id = _t, color_10_9 = _t, color_8_7 = _t, color_6_5 = _t, color_4_0 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"scheme_id", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

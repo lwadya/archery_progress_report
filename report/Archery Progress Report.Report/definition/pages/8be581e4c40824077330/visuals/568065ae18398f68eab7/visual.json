@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "12f579567c272127e17d",
+  "name": "568065ae18398f68eab7",
   "position": {
-    "x": 697.029702970297,
-    "y": 0,
-    "z": 4000,
-    "height": 71.815181518151817,
-    "width": 160.52805280528051,
-    "tabOrder": 4000
+    "x": 492.6955543050085,
+    "y": 4.3218908272369161,
+    "z": 6000,
+    "height": 63.387732132808111,
+    "width": 160.63027574563873,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,31 +23,17 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Session Count"
+                  "Property": "Round Selected Type"
                 }
               },
-              "queryRef": "Measure Table.Session Count",
-              "nativeQueryRef": "Session Count"
+              "queryRef": "Measure Table.Round Selected Type",
+              "nativeQueryRef": "Round Type",
+              "displayName": "Round Type"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Measure Table"
-                  }
-                },
-                "Property": "Session Count"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },

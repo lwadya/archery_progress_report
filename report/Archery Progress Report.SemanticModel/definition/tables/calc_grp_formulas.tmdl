@@ -282,6 +282,26 @@ table calc_grp_formulas
 				
 				RETURN _result
 
+		calculationItem 'Data Table Score Color' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-12
+				// Description:     Background color for scores in the raw data matrix
+				
+				VAR _value = SELECTEDMEASURE()
+				
+				VAR _result =
+				SWITCH(
+				    TRUE(),
+				    _value >= 9, SELECTEDVALUE( select_data_table_colors[color_10_9] ),  // yellow
+				    _value >= 7, SELECTEDVALUE( select_data_table_colors[color_8_7] ),   // red
+				    _value >= 5, SELECTEDVALUE( select_data_table_colors[color_6_5] ),   // blue
+				    _value >= 0, SELECTEDVALUE( select_data_table_colors[color_4_0] ),   // black
+				    BLANK()
+				)
+				
+				RETURN _result
+
 	column formula
 		dataType: string
 		lineageTag: 676e5f0c-1b85-44a1-b5fa-09034ee4e12e

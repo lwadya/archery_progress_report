@@ -51,10 +51,10 @@ table fact_shot_score
 		dataType: int64
 		formatString: 0
 		lineageTag: b89daec6-a380-4466-9a91-a0924e9a1346
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: end
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	partition fact_shot_score = m
 		mode: import

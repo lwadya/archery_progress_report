@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "55f1ea822ce3fd9b5a50",
+  "name": "15c1e4bc09e2c2f8fdbc",
   "position": {
-    "x": 733.64136413641359,
-    "y": 12.673267326732672,
-    "z": 6000,
-    "height": 101.38613861386138,
-    "width": 546.3586358635863,
-    "tabOrder": 6000
+    "x": 659.08835115362979,
+    "y": 4.3218908272369161,
+    "z": 7000,
+    "height": 63.387732132808111,
+    "width": 610.82723691615081,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,25 +23,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Session Adjustment Most Recent"
+                  "Property": "Session Date Range Improvements"
                 }
               },
-              "queryRef": "Measure Table.Session Latest Adjustment",
-              "nativeQueryRef": "Session Most Recent Adjustment"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "Session Notes Latest"
-                }
-              },
-              "queryRef": "Measure Table.Session Latest Notes",
-              "nativeQueryRef": "Session Latest Notes"
+              "queryRef": "Measure Table.Session Date Range Improvements",
+              "nativeQueryRef": "Session Date Range Improvements"
             }
           ]
         }
@@ -57,7 +43,7 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -74,13 +60,6 @@
                   "Value": "'middle'"
                 }
               }
-            },
-            "maxTiles": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
-                }
-              }
             }
           }
         }
@@ -91,7 +70,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "22D"
                 }
               }
             },
@@ -99,20 +78,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'left'"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "textWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -265,63 +230,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ce4dddf1fa8bec7a8a4b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "calc_grp_sessions"
-              }
-            },
-            "Property": "sessions"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "calc_grp_sessions",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "c"
-                          }
-                        },
-                        "Property": "sessions"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Selected Sessions'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      }
-    ]
   }
 }

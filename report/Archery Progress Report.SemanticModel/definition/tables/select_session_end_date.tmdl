@@ -1,3 +1,4 @@
+/// Table defined in PBI to allow users to select the session end date for performance KPIs
 table select_session_end_date
 	lineageTag: 4faa2d23-3000-4abf-87c0-28d8cd734f75
 

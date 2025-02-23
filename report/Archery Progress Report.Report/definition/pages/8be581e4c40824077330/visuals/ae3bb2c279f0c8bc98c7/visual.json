@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "f7bd5ab9e67946cf3965",
+  "name": "ae3bb2c279f0c8bc98c7",
   "position": {
-    "x": 914.12489006156545,
-    "y": 15.760773966578716,
-    "z": 5000,
-    "height": 102.44503078276165,
-    "width": 300.58047493403694,
-    "tabOrder": 5000
+    "x": 254.27124366910525,
+    "y": 0,
+    "z": 4000,
+    "height": 72.031513787281938,
+    "width": 228.33989870568374,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_session"
+                      "Entity": "select_session_range"
                     }
                   },
-                  "Property": "session_id"
+                  "Property": "sessions"
                 }
               },
-              "queryRef": "dim_session.session_id",
-              "nativeQueryRef": "session_id",
+              "queryRef": "sessions.sessions",
+              "nativeQueryRef": "sessions",
               "active": true
             }
           ]
@@ -41,14 +41,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "49D"
-                }
-              }
-            },
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'After'"
+                  "Value": "30D"
                 }
               }
             }
@@ -63,8 +56,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "d",
-                    "Entity": "dim_session",
+                    "Name": "s",
+                    "Entity": "select_session_range",
                     "Type": 0
                   }
                 ],
@@ -72,20 +65,20 @@
                   {
                     "Condition": {
                       "Comparison": {
-                        "ComparisonKind": 2,
+                        "ComparisonKind": 0,
                         "Left": {
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "d"
+                                "Source": "s"
                               }
                             },
-                            "Property": "session_id"
+                            "Property": "sessions"
                           }
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "49D"
+                            "Value": "30D"
                           }
                         }
                       }
@@ -93,10 +86,50 @@
                   }
                 ]
               }
+            },
+            "responsive": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
       ]
+    },
+    "visualContainerObjects": {
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "syncGroup": {
+      "groupName": "sessions",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

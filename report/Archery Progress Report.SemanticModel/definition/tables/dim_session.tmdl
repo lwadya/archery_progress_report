@@ -4,7 +4,7 @@ table dim_session
 
 	column date
 		dataType: dateTime
-		formatString: yyyy-mm-dd
+		formatString: Short Date
 		lineageTag: eebb2a20-d29f-43b1-b548-97f82658f561
 		summarizeBy: none
 		sourceColumn: date
@@ -12,8 +12,6 @@ table dim_session
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
-
-		annotation PBI_FormatHint = {"isCustom":true}
 
 	column notes
 		dataType: string
@@ -121,6 +119,15 @@ table dim_session
 
 		annotation SummarizationSetBy = Automatic
 
+	column session_score_average
+		dataType: decimal
+		formatString: 0.0
+		lineageTag: f47a9d32-4478-4e88-aa04-a72cc1a46fab
+		summarizeBy: sum
+		sourceColumn: session_score_average
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_session = m
 		mode: import
 		queryGroup: 'Table Queries'
@@ -129,7 +136,7 @@ table dim_session
 				    Source = raw_shot_data,
 				    #"Removed Other Columns" = Table.SelectColumns(Source,{"date", "notes", "major_adjustment", "session_id"}),
 				    #"Merged Queries" = Table.NestedJoin(#"Removed Other Columns", {"session_id"}, score_session_agg, {"session_id"}, "session_counts", JoinKind.LeftOuter),
-				    #"Expanded session_counts" = Table.ExpandTableColumn(#"Merged Queries", "session_counts", {"session_end_count", "session_shot_count"}),
+				    #"Expanded session_counts" = Table.ExpandTableColumn(#"Merged Queries", "session_counts", {"session_end_count", "session_shot_count", "session_score_average"}),
 				    #"Added Custom" = Table.AddColumn( #"Expanded session_counts", "days_since_previous_session", each if [session_id] > 1 then Duration.Days( [date] - (#"Expanded session_counts"[date]{[session_id] - 2}) ) else null, Int64.Type ),
 				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "days_since_previous_session_buckets", each if [days_since_previous_session] = null then null else if [days_since_previous_session] > 7 then "8+" else Number.ToText( [days_since_previous_session], "#" ), type text),
 				    #"Inserted Division" = Table.AddColumn(#"Added Conditional Column", "shot_count_per_end", each Number.Round( [session_shot_count] / [session_end_count], 2 ), Currency.Type),

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.3.0/schema.json",
+  "name": "3e601c34ea17f5f08c0f",
+  "displayName": "TT Data Table",
+  "displayOption": "ActualSize",
+  "height": 220,
+  "width": 200,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a059d3616c6b291043b6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "Data Table Values"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "7755ce003e738a53c283",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_session"
+              }
+            },
+            "Property": "major_adjustment"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "55a7ca9b8b70a0a8a2c7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_session"
+              }
+            },
+            "Property": "date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "fde3572aefb0c75266b6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "select_data_table_columns"
+              }
+            },
+            "Property": "column_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "66864b4f4ceb57054cab",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "select_data_table_colors"
+              }
+            },
+            "Property": "color_scheme"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "d3915d98e8c7f3a3ad90",
+    "type": "Tooltip",
+    "parameters": [
+      {
+        "name": "efd333411f37ee665734",
+        "boundFilter": "a059d3616c6b291043b6",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "Data Table Values"
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "type": "Tooltip"
+}

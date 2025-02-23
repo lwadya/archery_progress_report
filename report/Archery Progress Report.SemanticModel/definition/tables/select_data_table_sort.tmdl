@@ -1,0 +1,57 @@
+table select_data_table_sort
+	lineageTag: 591f18ae-4d5b-40b5-9249-c688841bb967
+
+	column column_name
+		dataType: string
+		lineageTag: 55b7b60e-0cf9-46b6-88e8-2f5099c9bd3a
+		summarizeBy: none
+		sourceColumn: column_name
+		sortByColumn: column_id
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column column_id
+		dataType: int64
+		formatString: 0
+		lineageTag: eb505e97-cbfc-4beb-b16a-1c92bb1c6641
+		summarizeBy: sum
+		sourceColumn: column_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sort_direction
+		dataType: string
+		lineageTag: ff9b1ea8-4df2-48ae-856c-4e7c8bd6c505
+		summarizeBy: none
+		sourceColumn: sort_direction
+
+		annotation SummarizationSetBy = Automatic
+
+	column sort_multiplier
+		dataType: int64
+		formatString: 0
+		lineageTag: 66554d5c-9dd9-4ce7-92b4-649d6b290bb5
+		summarizeBy: sum
+		sourceColumn: sort_multiplier
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_data_table_sort = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WckksSVWK1YlWCk4tLs7Mz1NwLEtXCE7OL4KIuiRWFisEZ+YlpyoEFKWWKUBVgeVC8ksScxRc81KKkbjBGfklED6YpVCQWgRSohQbCwA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [column_name = _t]),
+				    #"Added Index" = Table.AddIndexColumn(Source, "column_id", 1, 1, Int64.Type),
+				    #"Added Custom" = Table.AddColumn(#"Added Index", "sort_table", each #table( type table [sort_direction = text, sort_multiplier = Int64.Type], {{"▲", 1}, {"▼", -1}} )),
+				    #"Expanded sort_table" = Table.ExpandTableColumn(#"Added Custom", "sort_table", {"sort_direction", "sort_multiplier"}, {"sort_direction", "sort_multiplier"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded sort_table",{{"sort_direction", type text}, {"sort_multiplier", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

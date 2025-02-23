@@ -1,0 +1,63 @@
+/// Table defined in PBI to display raw data of different types in the same matrix
+table select_data_table_columns
+	lineageTag: c47c67cc-b4f1-4183-a4f6-0675fbed8879
+
+	column level
+		dataType: string
+		lineageTag: ed432fea-57ef-4ece-a3cf-51ade4ff26e7
+		summarizeBy: none
+		sourceColumn: level
+
+		annotation SummarizationSetBy = Automatic
+
+	column display_format
+		dataType: string
+		lineageTag: 4d0f3be1-551a-4c0a-907a-b810818cb4e1
+		summarizeBy: none
+		sourceColumn: display_format
+
+		annotation SummarizationSetBy = Automatic
+
+	column column_id
+		dataType: int64
+		formatString: 0
+		lineageTag: e9d066a0-661f-4ad7-8da5-79133f591668
+		summarizeBy: sum
+		sourceColumn: column_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column column_name
+		dataType: string
+		lineageTag: 70d7d1e8-278f-4518-b53d-2830ed9f403d
+		summarizeBy: none
+		sourceColumn: column_name
+		sortByColumn: column_id
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_data_table_columns = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = score_end_agg,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"end"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Duplicates",{{"end", "column_name"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"column_name", type text}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "level", each "end", type text),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "display_format", each "0.0", type text),
+				    // PostEndColumns appear at the back of the matrix, after score per end columns
+				    PostEndColumns = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45W8ssvSS1W0lEqTi0uzszPA7KUYmMB", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [column_name = _t, level = _t, display_format = _t]),
+				    #"Appended Query" = Table.Combine({#"Added Custom1", PostEndColumns}),
+				    #"Added Index" = Table.AddIndexColumn(#"Appended Query", "column_id", 1, 1, Int64.Type)
+				in
+				    #"Added Index"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

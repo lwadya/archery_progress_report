@@ -118,13 +118,6 @@
                                 "Value": "'Last 5 Sessions'"
                               }
                             }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Last Session'"
-                              }
-                            }
                           ]
                         ]
                       }

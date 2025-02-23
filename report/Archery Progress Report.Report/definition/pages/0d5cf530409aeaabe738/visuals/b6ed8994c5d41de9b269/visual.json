@@ -126,6 +126,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "sessions",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }

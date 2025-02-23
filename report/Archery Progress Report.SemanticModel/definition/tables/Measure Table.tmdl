@@ -390,7 +390,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isText":true}
 
-	measure 'Session Latest Notes' =
+	measure 'Session Notes Latest' =
 			
 			// Last Developer:  Lukas Wadya
 			// Last Updated:    2025-01-02
@@ -409,7 +409,7 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isText":true}
 
-	measure 'Session Most Recent Adjustment' =
+	measure 'Session Adjustment Most Recent' =
 			
 			// Last Developer:  Lukas Wadya
 			// Last Updated:    2025-01-02
@@ -714,6 +714,232 @@ table 'Measure Table'
 		formatString: 0
 		displayFolder: Correlations
 		lineageTag: 1ce06bce-bb97-4d23-9eae-d846c52da4fb
+
+	measure 'Data Table Values' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-11
+			// Description:     Values for raw data matrix
+			
+			// Get selected values from sort settings table
+			VAR _selected_sort_column = SELECTEDVALUE( select_data_table_sort[column_name] )
+			VAR _selected_sort_multiplier = SELECTEDVALUE( select_data_table_sort[sort_multiplier] )
+			
+			// Get selected values from matrix columns table
+			VAR _selected_column = SELECTEDVALUE( select_data_table_columns[column_name], _selected_sort_column )
+			VAR _is_total = NOT( HASONEVALUE( select_data_table_columns[column_name] ) )
+			
+			// Calculate value of selected cell
+			VAR _cell_value =
+			SWITCH(
+			    _selected_column,
+			    "Date", MAX( dim_session[date] ),
+			    "Session Avg Score", [Shot Score Average],
+			    "Days Since Prev Session", [Days Since Previous Session],
+			    "Total Ends", [End Count],
+			    "Total Shots", [Shot Count],
+			    "Shots per End", [Shot Count Per End Max],
+			    "Notes", [Data Table Notes Icon Text],
+			    [Data Table End Score Average]
+			)
+			
+			// Apply multiplier if value is a total and used for sorting
+			VAR _result =
+			IF(
+			    _is_total,
+			    _cell_value * _selected_sort_multiplier,
+			    _cell_value
+			)
+			
+			RETURN _result
+		displayFolder: Data Table
+		lineageTag: 23463c1b-4620-44e4-ae0a-aef35606aac8
+
+		formatStringDefinition = SELECTEDVALUE( select_data_table_columns[display_format] )
+
+	measure 'Data Table Colors' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-12
+			// Description:     Conditional background color index for raw data matrix
+			
+			VAR _selected_level = SELECTEDVALUE( select_data_table_columns[level] )
+			
+			VAR _data_table_color =
+			CALCULATE(
+			    [Data Table Values],
+			    calc_grp_formulas[formula] = "Data Table Score Color"
+			)
+			
+			VAR _result =
+			IF(
+			    _selected_level = "end",
+			    _data_table_color
+			)
+			
+			RETURN _result
+		displayFolder: Data Table
+		lineageTag: 7a63bb75-4447-46f2-a85d-90d2f2bbc48e
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Session Adjustment Selected' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-08
+			// Description:     Major adjustment for the selected session
+			
+			SELECTEDVALUE( dim_session[major_adjustment] )
+		displayFolder: Session
+		lineageTag: 7fee0b68-2437-4541-84ce-8a32069dcd80
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Table Notes Icon Text' = ```
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-12
+			// Description:     Text icons for raw data matrix Notes column
+			
+			VAR _has_notes = NOT( ISBLANK( SELECTEDVALUE( dim_session[notes] ) ) )
+			VAR _has_major_adjustment = NOT( ISBLANK( SELECTEDVALUE( dim_session[major_adjustment] ) ) )
+			
+			VAR _result = 
+			IF( _has_major_adjustment, UNICHAR( 9873 ) & " " ) &
+			IF( _has_notes, UNICHAR( 9998 ) & " " )
+			
+			RETURN _result
+			```
+		displayFolder: Data Table
+		lineageTag: 5002268e-7c52-4c2c-ad18-27170a517a45
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Table End Score Average' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-12
+			// Description:     Average score for the selected end, used in raw data matrix
+			
+			VAR _selected_column = SELECTEDVALUE( select_data_table_columns[column_name] )
+			VAR _selected_level = SELECTEDVALUE( select_data_table_columns[level] )
+			
+			VAR _result =
+			IF(
+			    _selected_level = "end",
+			    CALCULATE(
+			        [Shot Score Average],
+			        fact_shot_score[end] = CONVERT( _selected_column, INTEGER )
+			    )
+			)
+			
+			RETURN _result
+		formatString: 0.0
+		displayFolder: Data Table
+		lineageTag: 48389aef-5cf3-4477-9ce5-fe0470a6ecde
+
+	measure 'Data Tooltip Shot Score Average' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-13
+			// Description:     Average score for an individual shot based on the end in context in the raw data matrix
+			
+			VAR _selected_end = SELECTEDVALUE( select_data_table_columns[column_id] ) -- Use column_id because it's already of type int
+			
+			VAR _result =
+			CALCULATE(
+			    AVERAGE( fact_shot_score[score] ),
+			    fact_shot_score[end] = _selected_end
+			)
+			
+			RETURN _result
+		displayFolder: Data Table
+		lineageTag: b7df8f34-e9d1-4902-9ef3-e49c711b811f
+
+		formatStringDefinition =
+				IF(
+				    HASONEVALUE( fact_shot_score[session_shot_id] ),
+				    "0",
+				    "0.0"
+				)
+
+	measure 'Data Tooltip Shot Score Color' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-12
+			// Description:     Background color for an individual shot based on the end in context in the raw data matrix
+			
+			CALCULATE(
+			    [Data Tooltip Shot Score Average],
+			    calc_grp_formulas[formula] = "Data Table Score Color"
+			)
+		displayFolder: Data Table
+		lineageTag: 85a71d61-04c3-4cfc-a65b-51c1896ede0c
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Session Notes Selected' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-12
+			// Description:     Notes for the selected session
+			
+			SELECTEDVALUE( dim_session[notes] )
+		displayFolder: Session
+		lineageTag: 80d3fdf6-a272-4106-8296-983466e08961
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Tooltip Shot Count' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-12
+			// Description:     Count of shot records that appear in the data table tooltip
+			
+			VAR _selected_end = SELECTEDVALUE( select_data_table_columns[column_id] ) -- Use column_id because it's already of type int
+			
+			VAR _result =
+			CALCULATE(
+			    [Shot Count],
+			    fact_shot_score[end] = _selected_end
+			)
+			
+			RETURN _result
+		formatString: 0
+		displayFolder: Data Table
+		lineageTag: 65c12060-32ca-408e-9dec-c3585085200f
+
+	measure 'Data Tooltip Color Text' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-13
+			// Description:     Text color with transparency switch for raw data matrix tooltip
+			
+			IF(
+			    SELECTEDVALUE( select_data_table_columns[column_name] ) = "Notes",
+			    "#000000FF",
+			    "#00000000"
+			)
+		displayFolder: Data Table
+		lineageTag: 04b56f8b-0bc9-4dec-b596-c4990268e2f4
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Data Tooltip Color Background' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-01-13
+			// Description:     Background color with transparency switch for raw data matrix tooltip
+			
+			IF(
+			    SELECTEDVALUE( select_data_table_columns[column_name] ) = "Notes",
+			    "#FFFFFFFF",
+			    "#FFFFFF00"
+			)
+		displayFolder: Data Table
+		lineageTag: 3adb561b-6f68-4b73-9ce7-249936ebac4e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'Measure Table' = m
 		mode: import
