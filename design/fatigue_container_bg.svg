@@ -3,12 +3,12 @@
 
 <svg
    width="1280"
-   height="435"
-   viewBox="0 0 1280 435"
+   height="418"
+   viewBox="0 0 1280 418"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="fatigue_container_bg_v0001.svg"
+   sodipodi:docname="fatigue_container_bg_v0002.svg"
    inkscape:export-filename="fatigue_container_bg.png"
    inkscape:export-xdpi="192"
    inkscape:export-ydpi="192"
@@ -68,14 +68,14 @@
        style="fill:#ffffff;stroke-width:1.9126"
        id="rect1"
        width="1264"
-       height="435"
+       height="418"
        x="8"
        y="0"
        rx="4"
        ry="4"
        inkscape:label="section BG" />
     <rect
-       style="fill:#333333;stroke-width:1.9126;fill-opacity:1"
+       style="fill:#333333;fill-opacity:1;stroke-width:1.9126"
        id="rect1-1"
        width="1264"
        height="435"
@@ -92,17 +92,17 @@
        inkscape:label="divider v" />
     <path
        style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
-       d="M 185.5,33 V 150"
+       d="M 185.48702,33 V 144"
        id="path2-1-7-2"
        inkscape:label="divider v" />
     <path
        style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
-       d="M 185.5,170 V 287"
+       d="M 185.48927,164 V 276"
        id="path2-1-7-2-1"
        inkscape:label="divider v" />
     <path
        style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
-       d="M 185.5,307 V 424"
+       d="M 185.48702,296 V 407"
        id="path2-1-7-2-7"
        inkscape:label="divider v" />
     <path
@@ -112,27 +112,27 @@
        inkscape:label="divider v" />
     <path
        style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
-       d="M 815.5,33 V 150"
+       d="M 815.51298,33 V 144"
        id="path2-1-7-2-2"
        inkscape:label="divider v" />
     <path
        style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
-       d="M 815.5,170 V 287"
+       d="M 815.51073,164 V 276"
        id="path2-1-7-2-1-7"
        inkscape:label="divider v" />
     <path
        style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
-       d="M 815.5,307 V 424"
+       d="M 815.51298,296 V 407"
        id="path2-1-7-2-7-9"
        inkscape:label="divider v" />
     <path
        style="fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
-       d="M 13,297.5 H 1267"
+       d="M 13,286.5 H 1267"
        id="path2"
        inkscape:label="divider h" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#c8c6c4;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 13,160.5 H 1267"
+       d="M 13,154.5 H 1267"
        id="path2-8"
        inkscape:label="divider h" />
     <path
