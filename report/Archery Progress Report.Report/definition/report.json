@@ -36,6 +36,10 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "Timeline1447991079100",
+    "PBI_CV_16948668_E17D_454B_8664_2F2C470EA8C1"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",

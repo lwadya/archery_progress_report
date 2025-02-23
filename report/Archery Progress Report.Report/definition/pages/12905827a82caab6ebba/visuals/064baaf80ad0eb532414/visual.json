@@ -42,11 +42,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Average"
+                  "Property": "Round Score Average"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Average",
-              "nativeQueryRef": "Round Score 30 Average"
+              "nativeQueryRef": "Round Score Average"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Round Score 30 Average"
+                "Property": "Round Score Average"
               }
             },
             "direction": "Descending"
@@ -362,5 +362,63 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "dc2b12c94c0273bd6c97",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calc_grp_sessions"
+              }
+            },
+            "Property": "sessions"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "calc_grp_sessions",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "sessions"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Selected'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

@@ -61,7 +61,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Average"
+                  "Property": "Round Score Average"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Average",
@@ -127,7 +127,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e96e5c1c25205c2a0a59",
+        "name": "1c2031fb1fadc9cd062a",
         "field": {
           "Measure": {
             "Expression": {
@@ -135,7 +135,7 @@
                 "Entity": "Measure Table"
               }
             },
-            "Property": "Round Score 30 Average"
+            "Property": "Round Score Average"
           }
         },
         "type": "Advanced",
@@ -162,7 +162,7 @@
                               "Source": "m"
                             }
                           },
-                          "Property": "Round Score 30 Average"
+                          "Property": "Round Score Average"
                         }
                       },
                       "Right": {

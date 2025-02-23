@@ -4,7 +4,7 @@ table calc_grp_sessions
 
 	calculationGroup
 
-		calculationItem Selected =
+		calculationItem 'Default Selection' =
 				
 				// Last Developer:  Lukas Wadya
 				// Last Updated:    2024-09-05
@@ -12,16 +12,60 @@ table calc_grp_sessions
 				
 				SELECTEDMEASURE()
 
-		calculationItem All =
+		calculationItem Selected =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-09-05
-				// Description:     All sessions
+				// Last Updated:    2024-12-28
+				// Description:     Selected session, or last session if none are selected
+				
+				IF(
+				    ISFILTERED( dim_calendar ),
+				    SELECTEDMEASURE(),
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        calc_grp_sessions[sessions] = "Last"
+				    )
+				)
+
+		calculationItem Best =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2024-12-28
+				// Description:     Best session ever, as measured by session average shot score
 				
 				CALCULATE(
 				    SELECTEDMEASURE(),
-				    ALL( dim_session )
+				    WINDOW(
+				        0, ABS,
+				        0, ABS,
+				        ALL( dim_session ),
+				        ORDERBY( dim_session[session_score_average], DESC BLANKS LAST, dim_session[session_id], DESC BLANKS LAST )
+				    )
 				)
+
+		calculationItem Last =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2024-10-09
+				// Description:     Last session
+				
+				VAR _max_session_id =
+				CALCULATE(
+				    MAX( 'dim_session'[session_id] ),
+				    ALL( 'dim_session' )
+				)
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( 'dim_session' ),
+				        'dim_session'[session_id] = _max_session_id
+				    )
+				)
+				
+				RETURN
+				_result
 
 		calculationItem 'Last 5' =
 				
@@ -51,11 +95,13 @@ table calc_grp_sessions
 				RETURN
 				_result
 
-		calculationItem Last =
+		calculationItem 'Last 10' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-10-09
-				// Description:     Last session
+				// Last Updated:    2024-12-28
+				// Description:     Last 10 sessions
+				
+				VAR _last_n = 10
 				
 				VAR _max_session_id =
 				CALCULATE(
@@ -63,17 +109,30 @@ table calc_grp_sessions
 				    ALL( 'dim_session' )
 				)
 				
+				VAR _min_session_id = _max_session_id - _last_n + 1
+				
 				VAR _result =
 				CALCULATE(
 				    SELECTEDMEASURE(),
 				    FILTER(
 				        ALL( 'dim_session' ),
-				        'dim_session'[session_id] = _max_session_id
+				        'dim_session'[session_id] >= _min_session_id
 				    )
 				)
 				
 				RETURN
 				_result
+
+		calculationItem All =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2024-09-05
+				// Description:     All sessions
+				
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    ALL( dim_session )
+				)
 
 		calculationItem 'Neighboring Sessions Benchmark' =
 				

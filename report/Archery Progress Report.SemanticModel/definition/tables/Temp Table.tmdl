@@ -1,0 +1,35 @@
+table 'Temp Table'
+	lineageTag: 0fc5725d-19f5-430d-a1f3-92d378332726
+
+	column session_shot_id
+		formatString: 0
+		lineageTag: 074e0579-e890-4469-a9bc-b238c39c53b1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: fact_shot_score[session_shot_id]
+
+		annotation SummarizationSetBy = Automatic
+
+	column rolling_meets_session_average
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 31d16a75-aa18-4475-8fa4-9b78c82847d7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [rolling_meets_session_average]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Temp Table' = calculated
+		mode: import
+		source =
+				
+				FILTER(
+				    ADDCOLUMNS(
+				        VALUES( fact_shot_score[session_shot_id] ),
+				        "rolling_meets_session_average", [Shot Score Rolling Average Shots] >= CALCULATE( [Shot Score Average], ALLSELECTED( fact_shot_score[session_shot_id] ) )
+				    ),
+				    [rolling_meets_session_average] == TRUE
+				)
+
+	annotation PBI_Id = 91463bbf36164458a647da9c23529194
+

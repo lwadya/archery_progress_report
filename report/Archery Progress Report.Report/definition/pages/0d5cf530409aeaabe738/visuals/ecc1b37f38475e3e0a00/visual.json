@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "5bd35994770d87361d03",
+  "name": "ecc1b37f38475e3e0a00",
   "position": {
-    "x": 8.3297180043383943,
-    "y": 488.67678958785245,
-    "z": 2000,
-    "height": 223.51409978308024,
-    "width": 1262.6464208242949,
-    "tabOrder": 2000
+    "x": 14.69150885766647,
+    "y": 559.68845448991965,
+    "z": 7000,
+    "height": 155.6017104459377,
+    "width": 620.06108735491762,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,34 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_shot_score"
+                      "Entity": "dim_calendar"
                     }
                   },
-                  "Property": "score"
+                  "Property": "day_of_week_name"
                 }
               },
-              "queryRef": "fact_shot_score.score",
-              "nativeQueryRef": "score",
+              "queryRef": "dim_calendar.day_of_week_name",
+              "nativeQueryRef": "day_of_week_name",
               "active": true
-            }
-          ],
-          "showAll": true
-        },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "calc_grp_sessions"
-                    }
-                  },
-                  "Property": "sessions"
-                }
-              },
-              "queryRef": "Calc_Grp_Sessions.Sessions",
-              "nativeQueryRef": "Sessions"
             }
           ]
         },
@@ -61,11 +42,12 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Shot Percentage"
+                  "Property": "Shot Score Average"
                 }
               },
-              "queryRef": "Measure Table.Shot Percentage",
-              "nativeQueryRef": "Shot Percentage"
+              "queryRef": "Measure Table.Shot Score Average",
+              "nativeQueryRef": "Shot Score Average",
+              "format": "#,0.00"
             }
           ]
         }
@@ -91,7 +73,60 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filter44e2880a9a04c88bcbfd",
+        "name": "d839d83ccc685e77f000",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_session"
+              }
+            },
+            "Property": "days_since_previous_session"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_session",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "days_since_previous_session"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "00e5ef933190397080be",
         "field": {
           "Column": {
             "Expression": {
@@ -132,35 +167,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Selected'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Last 5'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Last 10'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Best'"
-                        }
-                      }
-                    ],
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'All'"
+                          "Value": "'Neighboring Sessions Difference'"
                         }
                       }
                     ]
@@ -170,13 +177,7 @@
             }
           ]
         },
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
-        }
+        "howCreated": "User"
       }
     ]
   }

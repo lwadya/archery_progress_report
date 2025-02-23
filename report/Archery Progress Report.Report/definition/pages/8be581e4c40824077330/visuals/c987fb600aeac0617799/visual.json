@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "c987fb600aeac0617799",
   "position": {
-    "x": 10.339256865912763,
-    "y": 492.83791060850837,
+    "x": 9.96662958843159,
+    "y": 499.75528364849828,
     "z": 3000,
-    "height": 222.63866451265483,
-    "width": 612.08400646203563,
+    "height": 212.8587319243604,
+    "width": 1261.4905450500555,
     "tabOrder": 3000
   },
   "visual": {
@@ -60,11 +60,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Shot Score Rolling Average"
+                  "Property": "Shot Score Rolling Average Sessions"
                 }
               },
               "queryRef": "Measure Table.Shot Score Rolling Average",
-              "nativeQueryRef": "Shot Score Rolling Average"
+              "nativeQueryRef": "Shot Score Rolling Average Sessions"
             }
           ]
         }
@@ -212,6 +212,84 @@
                       "Percent": -0.2
                     }
                   }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_session"
+                          }
+                        },
+                        "Property": "major_adjustment"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "null"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelContentLayout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SingleLine'"
+                }
+              }
+            },
+            "leaderLines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

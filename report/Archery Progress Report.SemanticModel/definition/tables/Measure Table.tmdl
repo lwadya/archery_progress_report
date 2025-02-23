@@ -14,15 +14,15 @@ table 'Measure Table'
 		displayFolder: Score
 		lineageTag: edf13954-720e-48a5-ba68-bd7384bdea2e
 
-	measure 'Shot Score Rolling Average' =
+	measure 'Shot Score Rolling Average Sessions' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-10-09
-			// Description:     Rolling average score of all selected shots
+			// Last Updated:    2024-12-26
+			// Description:     Rolling average score across sessions for all selected shots
 			
 			VAR _session_window = 5
 			
-			VAR _latest_session_id = MAX( 'dim_session'[session_id] )
+			VAR _latest_session_id = MAX( dim_session[session_id] )
 			
 			VAR _earliest_session_id = _latest_session_id - _session_window + 1
 			
@@ -30,8 +30,8 @@ table 'Measure Table'
 			CALCULATE(
 			    [Shot Score Average],
 			    FILTER(
-			        ALL( 'dim_session' ),
-			        'dim_session'[session_id] >= _earliest_session_id && 'dim_session'[session_id] <= _latest_session_id
+			        ALL( dim_session ),
+			        dim_session[session_id] >= _earliest_session_id && 'dim_session'[session_id] <= _latest_session_id
 			    )
 			)
 			
@@ -41,8 +41,7 @@ table 'Measure Table'
 			    _rolling_average
 			)
 			
-			RETURN
-			_result
+			RETURN _result
 		formatString: 0.0
 		displayFolder: Score
 		lineageTag: c3457a91-fee8-44fd-826a-36232c6d55ee
@@ -58,15 +57,15 @@ table 'Measure Table'
 		displayFolder: Shot
 		lineageTag: 21936e43-5cf6-4ee0-8164-46334dea594a
 
-	measure 'Round Score 30 Average' =
+	measure 'Round Score Average' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-11-28
-			// Description:     Average 30-shot round score for all selected shots
+			// Last Updated:    2024-12-28
+			// Description:     Average round score for all selected shots
 			
 			AVERAGEX(
 			    fact_shot_score,
-			    [Round Score 30]
+			    [Round Score]
 			)
 		formatString: 0
 		displayFolder: Score
@@ -78,7 +77,7 @@ table 'Measure Table'
 			// Last Updated:    2024-10-09
 			// Description:     Total count of shots for selected sessions
 			
-			SUM( 'dim_session'[session_shot_count] )
+			SUM( dim_session[session_shot_count] )
 		formatString: 0
 		displayFolder: Shot
 		lineageTag: 8c24f062-e816-497b-b392-b30fcccc303d
@@ -110,13 +109,15 @@ table 'Measure Table'
 			    ALL( 'dim_session' )
 			)
 			
-			RETURN
+			VAR _result =
 			DIVIDE(
 			    _current_session_id,
 			    _total_sessions
 			)
+			
+			RETURN _result
 		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: Session
+		displayFolder: _DELETE
 		lineageTag: 8e43940f-2ba4-473d-a7ca-7113b1fa4ccd
 
 	measure 'End Count' =
@@ -163,27 +164,27 @@ table 'Measure Table'
 		displayFolder: Session
 		lineageTag: fc368630-612a-4a05-b6ac-2b39facfdf35
 
-	measure 'Round Score 30 Max' =
+	measure 'Round Score Max' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-11-28
-			// Description:     Max 30-shot round score for all selected shots
+			// Last Updated:    2024-12-28
+			// Description:     Max round score for all selected shots
 			
 			MAXX(
 			    fact_shot_score,
-			    [Round Score 30]
+			    [Round Score]
 			)
 		formatString: 0
 		displayFolder: Score
 		lineageTag: ae9066ce-e793-414d-a28b-58d944daafb2
 
-	measure 'Round Score 30' =
+	measure 'Round Score' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-11-28
-			// Description:     30-shot round score for last 30 selected shots
+			// Last Updated:    2024-12-28
+			// Description:     Round score for last n selected shots
 			
-			VAR _round_shot_count = 30
+			VAR _round_shot_count = [round_shot_count_value]
 			
 			VAR _result =
 			CALCULATE(
@@ -199,8 +200,7 @@ table 'Measure Table'
 			    )
 			)
 			
-			RETURN
-			_result
+			RETURN _result
 		formatString: 0
 		displayFolder: Score
 		lineageTag: c2b388a6-a127-4e63-8611-30846c1fea4f
@@ -216,15 +216,15 @@ table 'Measure Table'
 		displayFolder: _DELETE
 		lineageTag: c518d8ed-1543-42b5-8a12-84720986cd04
 
-	measure 'Round Score 30 Min' =
+	measure 'Round Score Min' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-12-4
-			// Description:     Min 30-shot round score for all selected shots
+			// Last Updated:    2024-12-28
+			// Description:     Min round score for all selected shots
 			
 			MINX(
 			    fact_shot_score,
-			    [Round Score 30]
+			    [Round Score]
 			)
 		formatString: 0
 		displayFolder: Score
@@ -265,8 +265,7 @@ table 'Measure Table'
 			    )
 			)
 			
-			RETURN
-			_result
+			RETURN _result
 		formatString: 0%;-0%;0%
 		displayFolder: Score
 		lineageTag: 57a44a7f-5765-4f8e-98bb-31f01da67285
@@ -304,6 +303,139 @@ table 'Measure Table'
 		formatString: 0
 		displayFolder: _DELETE
 		lineageTag: 6281b985-9b71-4dc7-837e-2e4815568739
+
+	measure 'Shot Score Rolling Average Shots' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-12-26
+			// Description:     Rolling average score of last n shots
+			
+			VAR _shot_window = 5
+			
+			VAR _latest_shot_id = MAX( fact_shot_score[session_shot_id] )
+			
+			VAR _rolling_average =
+			CALCULATE(
+			    [Shot Score Average],
+			    WINDOW(
+			        1 - _shot_window, REL,
+			        0, REL,
+			        ALLSELECTED( fact_shot_score[session_shot_id] ),
+			        ORDERBY( fact_shot_score[session_shot_id] )
+			    )
+			)
+			
+			VAR _result =
+			IF(
+			    _latest_shot_id >= _shot_window,
+			    _rolling_average
+			)
+			
+			RETURN _result
+		formatString: 0.0
+		displayFolder: Score
+		lineageTag: 6067fd42-8eef-4625-accc-002321a30470
+
+	measure 'Day of Week' =
+			
+			WEEKDAY( SELECTEDVALUE( dim_session[date] ) )
+		displayFolder: _DELETE
+		lineageTag: 6ce24da6-d87e-4e98-958d-8567755b3d28
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rolling Average Difference' =
+			
+			VAR _current_value = [Shot Score Rolling Average Shots]
+			VAR _current_shot_id = MAX( fact_shot_score[session_shot_id] )
+			
+			VAR _next_value =
+			CALCULATE(
+			    [Shot Score Rolling Average Shots],
+			    FILTER(
+			        ALL( fact_shot_score ),
+			        fact_shot_score[session_shot_id] = _current_shot_id + 1
+			    )
+			)
+			
+			VAR _result =
+			IF(
+			    NOT( ISBLANK( _current_value ) ) && NOT( ISBLANK( _next_value ) ),
+			    _next_value - _current_value
+			)
+			
+			RETURN _result
+		formatString: 0.0
+		displayFolder: _DELETE
+		lineageTag: 1a4b23f0-8e9a-4fa0-be4f-11ca7eaa3434
+
+	measure 'Rolling Meets Session Average Shot ID Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-12-27
+			// Description:     The first session shot id for selected sessions where the rolling average meets or exceeds the full session average shot score
+			
+			VAR _shot_id_benchmark_table =
+			FILTER(
+			    ADDCOLUMNS(
+			        VALUES( fact_shot_score[session_shot_id] ),
+			        "rolling_meets_session_average", [Shot Score Rolling Average Shots] >= CALCULATE( [Shot Score Average], ALLSELECTED( fact_shot_score[session_shot_id] ) )
+			    ),
+			    [rolling_meets_session_average] == TRUE
+			)
+			
+			VAR _result =
+			MINX(
+			    _shot_id_benchmark_table,
+			    [session_shot_id]
+			)
+			
+			RETURN _result
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: 01ef077e-48dd-49f4-82f1-7a76a1a12f3a
+
+	measure 'Rolling Meets Session Average Shot ID Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-12-27
+			// Description:     The last session shot id for selected sessions where the rolling average meets or exceeds the full session average shot score
+			
+			VAR _shot_id_benchmark_table =
+			FILTER(
+			    ADDCOLUMNS(
+			        VALUES( fact_shot_score[session_shot_id] ),
+			        "rolling_meets_session_average", [Shot Score Rolling Average Shots] >= CALCULATE( [Shot Score Average], ALLSELECTED( fact_shot_score[session_shot_id] ) )
+			    ),
+			    [rolling_meets_session_average] == TRUE
+			)
+			
+			VAR _result =
+			MAXX(
+			    _shot_id_benchmark_table,
+			    [session_shot_id]
+			)
+			
+			RETURN _result
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: ae836bad-5516-41c3-a451-e253840f2de2
+
+	measure 'Session Rank' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-12-28
+			// Description:     Session rank by highest session average shot score
+			
+			RANK(
+			    SKIP,
+			    ALL( dim_session ),
+			    ORDERBY( [Round Score Average], DESC BLANKS LAST, dim_session[session_id], DESC BLANKS LAST )
+			    --ORDERBY( dim_session[session_score_average], DESC BLANKS LAST )
+			)
+		formatString: 0
+		displayFolder: Session
+		lineageTag: 7819e57a-ac6d-42f6-936b-41474bf992ce
 
 	partition 'Measure Table' = m
 		mode: import

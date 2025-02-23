@@ -42,7 +42,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Average"
+                  "Property": "Round Score Average"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Average",
@@ -56,7 +56,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Max"
+                  "Property": "Round Score Max"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Max",
@@ -70,7 +70,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Min"
+                  "Property": "Round Score Min"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Min",

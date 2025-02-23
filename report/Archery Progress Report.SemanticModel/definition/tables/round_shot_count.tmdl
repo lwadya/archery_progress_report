@@ -1,0 +1,26 @@
+table round_shot_count
+	lineageTag: 40c6a923-17bc-4d4e-9c78-43f990b0e8e3
+
+	measure round_shot_count_value = SELECTEDVALUE('round_shot_count'[round_shot_count], 30)
+		formatString: 0
+		lineageTag: e4cfe8f8-bb02-47b9-8a55-a94b940fb3b1
+
+	column round_shot_count
+		formatString: 0
+		lineageTag: bdf2b88b-6a14-422a-9bf6-099b50681b0c
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition round_shot_count = calculated
+		mode: import
+		source = GENERATESERIES(1, 100, 1)
+
+	annotation PBI_Id = 74b940b788d04ae8884cc252d539a299
+

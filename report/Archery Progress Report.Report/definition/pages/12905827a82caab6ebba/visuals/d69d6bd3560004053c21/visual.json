@@ -33,6 +33,24 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Session Rank"
+                }
+              },
+              "queryRef": "Measure Table.Session Rank",
+              "nativeQueryRef": "Session Rank"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -43,11 +61,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Average"
+                  "Property": "Round Score Average"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Average",
-              "nativeQueryRef": "Round Score 30 Average"
+              "nativeQueryRef": "Round Score Average"
             }
           ]
         },
@@ -61,11 +79,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Min"
+                  "Property": "Round Score Min"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Min",
-              "nativeQueryRef": "Round Score 30 Min"
+              "nativeQueryRef": "Round Score Min"
             },
             {
               "field": {
@@ -75,11 +93,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Max"
+                  "Property": "Round Score Max"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Max",
-              "nativeQueryRef": "Round Score 30 Max"
+              "nativeQueryRef": "Round Score Max"
             }
           ]
         }
@@ -182,34 +200,6 @@
                 }
               }
             },
-            "start": {
-              "expr": {
-                "Literal": {
-                  "Value": "150D"
-                }
-              }
-            },
-            "secStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "150D"
-                }
-              }
-            },
-            "end": {
-              "expr": {
-                "Literal": {
-                  "Value": "260D"
-                }
-              }
-            },
-            "secEnd": {
-              "expr": {
-                "Literal": {
-                  "Value": "260D"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -228,6 +218,54 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Round Score Min"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Round Score Max"
+                }
+              }
+            },
+            "secStart": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Round Score Min"
+                }
+              }
+            },
+            "secEnd": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Round Score Max"
                 }
               }
             }
@@ -335,19 +373,85 @@
       ],
       "dataPoint": [
         {
+          "properties": {}
+        },
+        {
           "properties": {
             "fill": {
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 1,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
+                                    }
+                                  },
+                                  "Property": "Session Rank"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "1D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#cccccc'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
+                                    }
+                                  },
+                                  "Property": "Session Rank"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "1D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#D8DB0C'"
+                            }
+                          }
+                        }
+                      ]
                     }
                   }
                 }
               }
             }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ],

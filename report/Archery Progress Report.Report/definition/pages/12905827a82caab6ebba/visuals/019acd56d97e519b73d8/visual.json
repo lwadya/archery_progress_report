@@ -23,7 +23,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Max"
+                  "Property": "Round Score Max"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Max",
@@ -38,7 +38,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Average"
+                  "Property": "Round Score Average"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Average",
@@ -53,7 +53,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Min"
+                  "Property": "Round Score Min"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Min",
@@ -73,7 +73,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Round Score 30 Max"
+                "Property": "Round Score Max"
               }
             },
             "direction": "Descending"
@@ -276,5 +276,63 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ce4dddf1fa8bec7a8a4b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calc_grp_sessions"
+              }
+            },
+            "Property": "sessions"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "calc_grp_sessions",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "sessions"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Selected'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "9e2fa9545be20d2520ba",
+  "name": "03472dc8b10e1aaee3a5",
   "position": {
-    "x": 45.492730210016155,
-    "y": 155.77813677975229,
-    "z": 6000,
-    "height": 266.7528271405493,
-    "width": 594.85191168551432,
-    "tabOrder": 6000
+    "x": 10.164935858277337,
+    "y": 82.1014050091631,
+    "z": 2000,
+    "height": 168.11240073304828,
+    "width": 620.06108735491762,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "scatterChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
-        "X": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -23,11 +23,11 @@
                       "Entity": "dim_session"
                     }
                   },
-                  "Property": "session_shot_count"
+                  "Property": "days_since_previous_session_buckets"
                 }
               },
-              "queryRef": "dim_session.session_shot_count",
-              "nativeQueryRef": "session_shot_count",
+              "queryRef": "dim_session.days_since_previous_session_buckets",
+              "nativeQueryRef": "days_since_previous_session_buckets",
               "active": true
             }
           ]
@@ -36,37 +36,48 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_session"
+                      "Entity": "Measure Table"
                     }
                   },
-                  "Property": "session_score_average"
+                  "Property": "Shot Score Average"
                 }
               },
-              "queryRef": "dim_session.session_score_average",
-              "nativeQueryRef": "session_score_average"
+              "queryRef": "Measure Table.Shot Score Average",
+              "nativeQueryRef": "Shot Score Average",
+              "format": "#,0.00"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_session"
+                  }
+                },
+                "Property": "days_since_previous_session_buckets"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
-      "trend": [
+      "categoryAxis": [
         {
           "properties": {
-            "show": {
+            "axisType": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "displayName": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Trend line 1'"
+                  "Value": "'Categorical'"
                 }
               }
             }
@@ -79,7 +90,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b5cdce83517088263da5",
+        "name": "e2954f984436ec7e41c3",
         "field": {
           "Column": {
             "Expression": {
@@ -132,7 +143,7 @@
         "howCreated": "User"
       },
       {
-        "name": "e42087f2314c9d5c6d25",
+        "name": "00e5ef933190397080be",
         "field": {
           "Column": {
             "Expression": {

@@ -15,7 +15,7 @@ table dim_calendar
 		annotation PBI_FormatHint = {"isCustom":true}
 
 	column start_of_year
-		formatString: General Date
+		formatString: yyyy
 		lineageTag: d7dccf0a-5f4c-4ddf-9e79-2336f7c7017e
 		summarizeBy: none
 		isNameInferred
@@ -23,8 +23,10 @@ table dim_calendar
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isCustom":true}
+
 	column start_of_month
-		formatString: General Date
+		formatString: yyyy-mm
 		lineageTag: b8a31b2d-e9ec-4a1e-bbe1-d036a2bf5333
 		summarizeBy: none
 		isNameInferred
@@ -32,14 +34,47 @@ table dim_calendar
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column start_of_week
-		formatString: General Date
+		formatString: yyyy-mm-dd
 		lineageTag: ed67a976-bfc5-4db8-b93d-99a8b6660644
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Start_of_Week]
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column day_of_week_number
+		formatString: 0
+		lineageTag: 5c21f40c-9e7f-4efd-acea-c0c5ba76d083
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [day_of_week_number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_week_name
+		lineageTag: ff820805-fd6b-4cd6-8bf8-3fd2c3b9c936
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [day_of_week_name]
+		sortByColumn: day_of_week_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_of_quarter
+		formatString: yyyy-mm
+		lineageTag: 4db77fc5-2c31-4830-a69e-08f5dc17be3d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [start_of_quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	partition dim_calendar = calculated
 		mode: import
@@ -60,8 +95,11 @@ table dim_calendar
 				    _base_calendar,
 				    "date", [Date],
 				    "start_of_year", DATE( YEAR( [Date] ), 1, 1 ),
+				    "start_of_quarter", DATE( YEAR( [Date] ), CEILING( MONTH( [Date] ) / 3, 1 ), 1 ),
 				    "start_of_month", DATE( YEAR( [Date] ), MONTH( [Date] ), 1 ),
-				    "start_of_week", [Date] - WEEKDAY( [Date], 1 ) + 1
+				    "start_of_week", [Date] - WEEKDAY( [Date], 1 ) + 1,
+				    "day_of_week_number", WEEKDAY( [Date], 2 ),
+				    "day_of_week_name", FORMAT( [Date], "ddd" )
 				)
 				
 				RETURN

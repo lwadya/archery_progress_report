@@ -84,6 +84,52 @@ table dim_session
 
 		annotation SummarizationSetBy = Automatic
 
+	column shot_count_per_end
+		dataType: decimal
+		formatString: 0.0
+		lineageTag: 81519720-0f0c-40aa-acf7-c2088aef9b43
+		summarizeBy: sum
+		sourceColumn: shot_count_per_end
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_shot_count_buckets
+		dataType: string
+		lineageTag: 4ad71c61-0bac-425f-9394-815f5da0b692
+		summarizeBy: none
+		sourceColumn: session_shot_count_buckets
+		sortByColumn: session_shot_count_rounded
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column shot_count_per_end_buckets
+		dataType: string
+		lineageTag: e4322097-29bf-47e4-b463-c815fdc92225
+		summarizeBy: none
+		sourceColumn: shot_count_per_end_buckets
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_shot_count_rounded
+		dataType: int64
+		formatString: 0
+		lineageTag: 99adde56-7a1e-4b05-8a95-2593dcf9a61b
+		summarizeBy: sum
+		sourceColumn: session_shot_count_rounded
+
+		annotation SummarizationSetBy = Automatic
+
+	column shot_count_per_end_rounded
+		dataType: decimal
+		formatString: 0.0
+		lineageTag: 72fb94d0-a3bb-4d55-9663-6e53f7fc9a4b
+		summarizeBy: sum
+		sourceColumn: shot_count_per_end_rounded
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_session = m
 		mode: import
 		queryGroup: 'Table Queries'
@@ -94,9 +140,14 @@ table dim_session
 				    #"Merged Queries" = Table.NestedJoin(#"Removed Other Columns", {"session_id"}, score_session_agg, {"session_id"}, "session_counts", JoinKind.LeftOuter),
 				    #"Expanded session_counts" = Table.ExpandTableColumn(#"Merged Queries", "session_counts", {"session_end_count", "session_score_average", "session_shot_count"}),
 				    #"Added Custom" = Table.AddColumn( #"Expanded session_counts", "days_since_previous_session", each if [session_id] > 1 then Duration.Days( [date] - (#"Expanded session_counts"[date]{[session_id] - 2}) ) else null, Int64.Type ),
-				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "days_since_previous_session_buckets", each if [days_since_previous_session] = null then null else if [days_since_previous_session] > 7 then "8+" else Number.ToText( [days_since_previous_session], "#" ), type text)
+				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "days_since_previous_session_buckets", each if [days_since_previous_session] = null then null else if [days_since_previous_session] > 7 then "8+" else Number.ToText( [days_since_previous_session], "#" ), type text),
+				    #"Inserted Division" = Table.AddColumn(#"Added Conditional Column", "shot_count_per_end", each Number.Round( [session_shot_count] / [session_end_count], 2 ), Currency.Type),
+				    #"Inserted Round Down" = Table.AddColumn(#"Inserted Division", "session_shot_count_rounded", each Number.RoundDown([session_shot_count], -1), Int64.Type),
+				    #"Added Custom1" = Table.AddColumn(#"Inserted Round Down", "session_shot_count_buckets", each Number.ToText( [session_shot_count_rounded] ) & " - " & Number.ToText( [session_shot_count_rounded] + 9 ), type text),
+				    #"Inserted Round Down1" = Table.AddColumn(#"Added Custom1", "shot_count_per_end_rounded", each Number.RoundDown([shot_count_per_end] * 2) / 2, Currency.Type),
+				    #"Added Custom2" = Table.AddColumn(#"Inserted Round Down1", "shot_count_per_end_buckets", each Number.ToText( [shot_count_per_end_rounded] ) & " - " & Number.ToText( [shot_count_per_end_rounded] + .5 ), type text)
 				in
-				    #"Added Conditional Column"
+				    #"Added Custom2"
 
 	annotation PBI_NavigationStepName = Navigation
 

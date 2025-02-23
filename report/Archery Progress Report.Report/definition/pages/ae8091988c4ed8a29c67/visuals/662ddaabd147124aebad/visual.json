@@ -56,7 +56,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Shot Score Rolling Average"
+                  "Property": "Shot Score Rolling Average Sessions"
                 }
               },
               "queryRef": "Measure Table.Shot Score Rolling Average",

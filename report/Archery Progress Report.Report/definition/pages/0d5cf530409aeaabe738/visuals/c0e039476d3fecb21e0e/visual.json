@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "a9ec3c2256caa31564aa",
+  "name": "c0e039476d3fecb21e0e",
   "position": {
-    "x": 631.30730050933789,
-    "y": 280.339558573854,
-    "z": 2000,
-    "height": 203.1918505942275,
-    "width": 640,
-    "tabOrder": 2000
+    "x": 640.39095907147225,
+    "y": 413.63469761759319,
+    "z": 5000,
+    "height": 155.6017104459377,
+    "width": 631.00794135613933,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -41,11 +41,11 @@
                       "Entity": "dim_session"
                     }
                   },
-                  "Property": "session_shot_count"
+                  "Property": "shot_count_per_end"
                 }
               },
-              "queryRef": "dim_session.session_shot_count",
-              "nativeQueryRef": "session_shot_count",
+              "queryRef": "dim_session.shot_count_per_end",
+              "nativeQueryRef": "shot_count_per_end",
               "active": true
             }
           ]
@@ -299,5 +299,24 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "66c994dfd0f5cb53019f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "calc_grp_sessions"
+              }
+            },
+            "Property": "sessions"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
   }
 }

@@ -5,6 +5,100 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "91b0bdd0f31e2ed2f002",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "round_shot_count"
+              }
+            },
+            "Property": "round_shot_count"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "r",
+              "Entity": "round_shot_count",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "round_shot_count"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "30L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "requireSingleSelect": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "f00394f37c52eaae7679",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "48ffa1841797bcfb0ece",
+        "boundFilter": "91b0bdd0f31e2ed2f002",
+        "qnaSingleSelectRequired": true,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "round_shot_count"
+              }
+            },
+            "Property": "round_shot_count"
+          }
+        }
+      }
+    ]
+  },
   "objects": {
     "background": [
       {
@@ -31,5 +125,12 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "d69d6bd3560004053c21",
+      "target": "5bd35994770d87361d03",
+      "type": "DataFilter"
+    }
+  ]
 }

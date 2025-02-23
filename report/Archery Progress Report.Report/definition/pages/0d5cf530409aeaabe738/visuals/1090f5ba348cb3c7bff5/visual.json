@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "1dfd97d70aa450151de2",
+  "name": "1090f5ba348cb3c7bff5",
   "position": {
-    "x": 10.865874363327674,
-    "y": 280.339558573854,
-    "z": 5000,
-    "height": 203.1918505942275,
-    "width": 611.748726655348,
-    "tabOrder": 5000
+    "x": 10.164935858277337,
+    "y": 413.63469761759319,
+    "z": 6000,
+    "height": 155.6017104459377,
+    "width": 620.06108735491762,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "columnChart",
@@ -23,11 +23,11 @@
                       "Entity": "dim_session"
                     }
                   },
-                  "Property": "days_since_previous_session_buckets"
+                  "Property": "shot_count_per_end_buckets"
                 }
               },
-              "queryRef": "dim_session.days_since_previous_session_buckets",
-              "nativeQueryRef": "days_since_previous_session_buckets",
+              "queryRef": "dim_session.shot_count_per_end_buckets",
+              "nativeQueryRef": "shot_count_per_end_buckets",
               "active": true
             }
           ]
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Measure Table.Shot Score Average",
-              "nativeQueryRef": "Shot Score Average"
+              "nativeQueryRef": "Shot Score Average",
+              "format": "#,0.00"
             }
           ]
         }
@@ -61,7 +62,7 @@
                     "Entity": "dim_session"
                   }
                 },
-                "Property": "days_since_previous_session_buckets"
+                "Property": "shot_count_per_end_buckets"
               }
             },
             "direction": "Ascending"
@@ -89,7 +90,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "31c6abeee7e2dff1a857",
+        "name": "dd38ab466c34241661cf",
         "field": {
           "Column": {
             "Expression": {

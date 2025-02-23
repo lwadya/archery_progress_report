@@ -42,7 +42,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Average"
+                  "Property": "Round Score Average"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Average",
@@ -60,7 +60,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Min"
+                  "Property": "Round Score Min"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Min",
@@ -74,7 +74,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Max"
+                  "Property": "Round Score Max"
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Max",
@@ -294,7 +294,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b554e6c1cb9910bbcb38",
+        "name": "760a4b44e3d1f54d9d3b",
         "field": {
           "Column": {
             "Expression": {

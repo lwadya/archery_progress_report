@@ -886,7 +886,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Shot Score Rolling Average"
+			          "ConceptualProperty": "Shot Score Rolling Average Sessions"
 			        }
 			      },
 			      "State": "Generated",
@@ -2053,7 +2053,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Round Score 30 Average"
+			          "ConceptualProperty": "Round Score Average"
 			        }
 			      },
 			      "State": "Generated",
@@ -3614,7 +3614,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Round Score 30 Max"
+			          "ConceptualProperty": "Round Score Max"
 			        }
 			      },
 			      "State": "Generated",
@@ -3752,7 +3752,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Round Score 30"
+			          "ConceptualProperty": "Round Score"
 			        }
 			      },
 			      "State": "Generated",
@@ -4008,7 +4008,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Round Score 30 Min"
+			          "ConceptualProperty": "Round Score Min"
 			        }
 			      },
 			      "State": "Generated",

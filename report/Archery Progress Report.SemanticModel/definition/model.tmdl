@@ -30,6 +30,8 @@ ref table dim_calendar
 ref table fact_shot_score
 ref table 'Measure Table'
 ref table calc_grp_sessions
+ref table 'Temp Table'
+ref table round_shot_count
 
 ref cultureInfo en-US
 
