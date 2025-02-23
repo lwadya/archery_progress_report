@@ -5368,120 +5368,126 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "session dates scores": {
+			          "session dates scores text": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "scores": {
+			          "text": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "dates scores": {
+			          "scores text": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "session date notch": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
+			          "dates scores text": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "session date slash": {
+			          "session date score manuscript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.514
 			          }
 			        },
 			        {
-			          "session date groove": {
+			          "session date score transcript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.514
 			          }
 			        },
 			        {
-			          "session date nick": {
+			          "session date score typescript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.514
 			          }
 			        },
 			        {
-			          "session date cut": {
+			          "session date score edition": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.514
 			          }
 			        },
 			        {
-			          "session date marks": {
+			          "session date score version": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.514
 			          }
 			        },
 			        {
-			          "date notch": {
+			          "date score manuscript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.485
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "date slash": {
+			          "date score transcript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.485
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "date groove": {
+			          "date score typescript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.485
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "date nick": {
+			          "date score edition": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.485
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "date score version": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
 			          }
 			        },
 			        {
@@ -7316,6 +7322,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.499
 			          }
+			        },
+			        {
+			          "Most Recent Adjustment": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7741,24 +7757,58 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.v_Session_Dates_Scores_FormatString_session_dates_scores_FormatString": {
+			    "measure_table.date_max": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Session Dates Scores FormatString"
+			          "ConceptualProperty": "Date Max"
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
-			          "_session dates scores FormatString": {
+			          "date max": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "date maximum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "moment max": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period max": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    },
 			    "measure_table.v_Days_Since_Previous_Session_FormatString_days_since_previous_session_FormatString": {
 			      "Definition": {
@@ -13029,7 +13079,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Most Recent Adjustment": {
+			          "Most Recent Adjustment,": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -21377,7 +21427,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "adjustment date range text": {
+			          "session adjustment date range text": {
 			            "State": "Generated"
 			          }
 			        },
@@ -21397,6 +21447,22 @@ cultureInfo en-US
 			          "date range text": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "adjustment date range text": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "session adjustment moment range text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
 			          }
 			        },
 			        {
@@ -21420,6 +21486,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "session adjustment period range text": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
 			          "adjustment period range text": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -21440,63 +21516,43 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "adjustment date range manuscript": {
+			          "session adjustment date range manuscript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.514
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "adjustment date range transcript": {
+			          "session adjustment date range transcript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.514
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "adjustment date range typescript": {
+			          "session adjustment date range typescript": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.514
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "adjustment date range edition": {
+			          "session adjustment date range edition": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "adjustment date range version": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "date range manuscript": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
@@ -21549,11 +21605,210 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.v_Adjustment_Date_Range_Text_FormatString_adjustment_date_range_text_FormatString": {
+			    "measure_table.date_min": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Adjustment Date Range Text FormatString"
+			          "ConceptualProperty": "Date Min"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date min": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "date minimum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "moment min": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period min": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "measure_table.session_adjustment_time_series_chart_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "Session Adjustment Time Series Chart Title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "session adjustment time series chart title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "chart title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "series chart title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "time series chart title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "adjustment time series chart title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "adjustment time series chart designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "time series chart designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "series chart designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "adjustment time series chart name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "adjustment time series chart award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "adjustment time series chart call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "adjustment time series chart heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "adjustment time series chart label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "chart designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "time series chart name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Session_Dates_Scores_Text_FormatString_session_dates_scores_text_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Session Dates Scores Text FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -21562,7 +21817,157 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "_adjustment date range text FormatString": {
+			          "_session dates scores text FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Session_Adjustment_Date_Range_Text_FormatString_session_adjustment_date_range_text_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Session Adjustment Date Range Text FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_session adjustment date range text FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measure_table.v_Date_Min_FormatString_date_min_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Date Min FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_date min FormatString": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "_ moment min formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_ period min formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "_date minimum formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "measure_table.v_Date_Max_FormatString_date_max_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Date Max FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_date max FormatString": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "_ moment max formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_ period max formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "_date maximum formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "measure_table.v_Session_Adjustment_Time_Series_Chart_Title_FormatString_session_adjustment_time_series_chart_title_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measure Table",
+			          "ConceptualProperty": "_Session Adjustment Time Series Chart Title FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_session adjustment time series chart title FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -21570,6 +21975,151 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
+			    "session_has_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_session"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "session": {
+			          "Target": {
+			            "Entity": "session"
+			          }
+			        },
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "session"
+			            },
+			            "Object": {
+			              "Role": "calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_sessions_have_dim_calendars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "session"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_dim_sessions"
+			        }
+			      ]
+			    },
+			    "measure_table_has_session_adjustment_time_series_chart_title": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.session_adjustment_time_series_chart_title": {
+			          "Target": {
+			            "Entity": "measure_table.session_adjustment_time_series_chart_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.session_adjustment_time_series_chart_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_session_adjustment_time_series_chart_title"
+			        }
+			      ]
+			    },
+			    "calendar_has_measure_table_date_min": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "measure_table.date_min": {
+			          "Target": {
+			            "Entity": "measure_table.date_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "measure_table.date_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_date_min"
+			        }
+			      ]
+			    },
+			    "measure_table_has_adjustment_date_range_text": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_table": {
+			          "Target": {
+			            "Entity": "measure_table"
+			          }
+			        },
+			        "measure_table.adjustment_date_range_text": {
+			          "Target": {
+			            "Entity": "measure_table.adjustment_date_range_text"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_table"
+			            },
+			            "Object": {
+			              "Role": "measure_table.adjustment_date_range_text"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_tables_have_session_adjustment_date_range_text"
+			        }
+			      ]
+			    },
 			    "session_has_measure_table_session_adjustment_selected_ID_max": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_session"
@@ -25136,6 +25686,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "calendar_has_measure_table_date_max": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "measure_table.date_max": {
+			          "Target": {
+			            "Entity": "measure_table.date_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "measure_table.date_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_date_max"
+			        }
+			      ]
+			    },
 			    "session_has_measure_table_session_date_range_improvements": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_session"
@@ -25166,6 +25749,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_sessions_have_session_date_range_text"
+			        }
+			      ]
+			    },
+			    "calendar_has_measure_table_session_date_range_improvements": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "measure_table.session_date_range_improvements": {
+			          "Target": {
+			            "Entity": "measure_table.session_date_range_improvements"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "measure_table.session_date_range_improvements"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_session_date_range_text"
 			        }
 			      ]
 			    },
@@ -25713,7 +26329,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_session_dates_scores"
+			          "ID": "measure_tables_have_session_dates_scores_text"
 			        }
 			      ]
 			    },
@@ -27286,85 +27902,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "select_major_adjustments_are_Started_on_dates"
-			        }
-			      ]
-			    },
-			    "session_has_measure_table_adjustment_date_range_text": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_session"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "session": {
-			          "Target": {
-			            "Entity": "session"
-			          }
-			        },
-			        "measure_table.adjustment_date_range_text": {
-			          "Target": {
-			            "Entity": "measure_table.adjustment_date_range_text"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "session"
-			            },
-			            "Object": {
-			              "Role": "measure_table.adjustment_date_range_text"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_sessions_have_adjustment_date_range_text"
-			        }
-			      ]
-			    },
-			    "session_has_calendar": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_session"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "session": {
-			          "Target": {
-			            "Entity": "session"
-			          }
-			        },
-			        "calendar": {
-			          "Target": {
-			            "Entity": "calendar"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "session"
-			            },
-			            "Object": {
-			              "Role": "calendar"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_sessions_have_dim_calendars"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendar"
-			            },
-			            "Object": {
-			              "Role": "session"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_dim_sessions"
 			        }
 			      ]
 			    },

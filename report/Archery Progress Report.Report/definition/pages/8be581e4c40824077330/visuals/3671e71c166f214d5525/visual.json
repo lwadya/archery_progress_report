@@ -3,7 +3,7 @@
   "name": "3671e71c166f214d5525",
   "position": {
     "x": 7.1252955082742346,
-    "y": 2.9511426319937044,
+    "y": 3.9511426319937044,
     "z": 5000,
     "height": 247,
     "width": 807,
@@ -30,6 +30,25 @@
               "nativeQueryRef": "Session Date",
               "active": true,
               "displayName": "Session Date"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Session Adjustment Most Recent"
+                }
+              },
+              "queryRef": "Measure Table.Session Adjustment Most Recent",
+              "nativeQueryRef": "Most Recent Adjustment",
+              "displayName": "Most Recent Adjustment"
             }
           ]
         },
@@ -198,7 +217,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.2
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -309,6 +328,17 @@
           "selector": {
             "metadata": "Measure Table.Shot Score Rolling Average Selected Adjustment Start"
           }
+        },
+        {
+          "properties": {
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            }
+          }
         }
       ],
       "markers": [
@@ -351,9 +381,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -514,6 +543,13 @@
               }
             },
             "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableBackground": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -768,11 +804,17 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

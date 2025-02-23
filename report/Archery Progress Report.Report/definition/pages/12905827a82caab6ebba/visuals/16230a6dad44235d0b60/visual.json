@@ -328,6 +328,18 @@
                   "Value": "true"
                 }
               }
+            },
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
             }
           }
         }

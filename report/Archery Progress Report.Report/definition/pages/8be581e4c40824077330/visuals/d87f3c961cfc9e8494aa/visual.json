@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "d87f3c961cfc9e8494aa",
   "position": {
-    "x": 350,
+    "x": 370,
     "y": 0,
     "z": 6000,
     "height": 60,
@@ -41,7 +41,7 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "5D"
                 }
               }
             },
@@ -99,7 +99,7 @@
                         },
                         "Right": {
                           "Literal": {
-                            "Value": "4D"
+                            "Value": "5D"
                           }
                         }
                       }

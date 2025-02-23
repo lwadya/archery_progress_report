@@ -75,6 +75,17 @@
                   "Value": "true"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -95,7 +106,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }

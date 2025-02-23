@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "b31f8be60bcdcb20f82f",
   "position": {
-    "x": 385,
-    "y": 1.5734480639213277,
-    "z": 3000,
+    "x": 124,
+    "y": 0,
+    "z": 3875,
     "height": 60,
-    "width": 120,
-    "tabOrder": 8000
+    "width": 110,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "latest sessions from"
+                    "value": "latest shot scores"
                   }
                 ]
               }
@@ -35,7 +35,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Latest Sessions Text'"
+                  "Value": "'Latest Shots Text'"
                 }
               }
             }
@@ -68,7 +68,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "11D"
                 }
               }
             },
@@ -92,5 +92,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "a8f52eb805b0b29ceb26"
+  "parentGroupName": "fbaf64c1420f690e8648"
 }

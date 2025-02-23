@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "3b45376cc03a3a466ed6",
   "position": {
-    "x": 223,
+    "x": 228,
     "y": 0,
     "z": 2000,
-    "height": 60,
-    "width": 140,
+    "height": 60.101522842639596,
+    "width": 155,
     "tabOrder": 5000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Session Rolling Average:"
+                    "value": "Smooth curve by averaging"
                   }
                 ]
               }

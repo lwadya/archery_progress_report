@@ -311,9 +311,19 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -343,9 +353,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -355,8 +364,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#F0F0F0'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -390,7 +400,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -576,6 +586,57 @@
               "expr": {
                 "Literal": {
                   "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
                 }
               }
             }

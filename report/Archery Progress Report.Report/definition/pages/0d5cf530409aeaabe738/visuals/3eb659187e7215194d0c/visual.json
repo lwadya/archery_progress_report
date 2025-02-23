@@ -5,8 +5,8 @@
     "x": 0,
     "y": 0,
     "z": 16000,
-    "height": 73,
-    "width": 1010,
+    "height": 69,
+    "width": 1012,
     "tabOrder": 0
   },
   "visual": {
@@ -112,7 +112,7 @@
             "cellPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "10L"
+                  "Value": "8L"
                 }
               }
             },
@@ -591,7 +591,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

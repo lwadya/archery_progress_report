@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "7efb8916639ea45b75e1",
   "position": {
-    "x": 0,
-    "y": 0.6526791478373144,
-    "z": 500,
+    "x": 8.8720809902138082,
+    "y": 123.65267914783732,
+    "z": 3250,
     "height": 220,
     "width": 1264,
-    "tabOrder": 1000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -760,7 +760,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -852,6 +852,17 @@
                   "Value": "true"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -859,5 +870,56 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "195ba389613ee67d72f4"
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "223887062208ab1af682",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_shot_score"
+              }
+            },
+            "Property": "session_shot_id"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "7c8d8ce1915863e066e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "Round Score Pace Rolling Average Shots"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "5bccdc3c04d61dd5ac29",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "Shot Count"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      }
+    ]
+  }
 }

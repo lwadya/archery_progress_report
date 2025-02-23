@@ -208,16 +208,16 @@ table 'Measure Table'
 	measure 'Shot Score Rolling Average Shots' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-10
+			// Last Updated:    2025-02-20
 			// Description:     Rolling average shot score by session shot id, window set by select_shot_rolling_average parameter
 			
-			VAR _window = SELECTEDVALUE( select_shot_rolling_average[shots], 4 )
+			VAR _window = SELECTEDVALUE( select_shot_rolling_average[shots], 3 )
 			
 			VAR _result =
 			CALCULATE(
 			    [Shot Score Average],
 			    WINDOW(
-			        - _window, REL,
+			        1 - _window, REL,
 			        0, REL,
 			        ALLSELECTED( fact_shot_score[session_shot_id] ),
 			        ORDERBY( fact_shot_score[session_shot_id] )
@@ -871,7 +871,7 @@ table 'Measure Table'
 	measure 'Session Range Warning Text' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-08
+			// Last Updated:    2025-02-20
 			// Description:     Display text for session range slicer warning if full session window cannot be selected
 			
 			VAR _session_count = COUNTROWS( dim_session )
@@ -880,7 +880,7 @@ table 'Measure Table'
 			VAR _result =
 			IF(
 			    _session_count < _session_window,
-			    UNICHAR( 9888 ) & " Date range has fewer than " & _session_window & " sessions",
+			    UNICHAR( 9888 ) & " Date range has fewer than " & _session_window & " sessions " & UNICHAR( 9888 ),
 			    ""
 			)
 			
@@ -1564,6 +1564,86 @@ table 'Measure Table'
 			"Average score by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range (selected adjustment periods highlighted)"
 		displayFolder: Display Text
 		lineageTag: bcdb8b56-d86f-47dc-af18-6f1cdc305cc6
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Factor BG Color Days Since Previous' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-20
+			// Description:     Background shape color for Days Since Previous Session factor card
+			
+			IF(
+			    SELECTEDVALUE( select_fatigue_factor[factor_name] ) = "Days Since Previous Session",
+			    "#FFFFFFFF",
+			    "#FFFFFF00"
+			)
+		displayFolder: Correlations
+		lineageTag: 1ae1d4f5-51f8-43d8-9fcd-6f8844a0a706
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Factor BG Color Shots per Session' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-20
+			// Description:     Background shape color for Shots per Session factor card
+			
+			IF(
+			    SELECTEDVALUE( select_fatigue_factor[factor_name] ) = "Shots per Session",
+			    "#FFFFFFFF",
+			    "#FFFFFF00"
+			)
+		displayFolder: Correlations
+		lineageTag: b4d64ea3-b38c-4879-81ed-90bce1bfa609
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Factor BG Color Shots per End' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-20
+			// Description:     Background shape color for Shots per End factor card
+			
+			IF(
+			    SELECTEDVALUE( select_fatigue_factor[factor_name] ) = "Shots per End",
+			    "#FFFFFFFF",
+			    "#FFFFFF00"
+			)
+		displayFolder: Correlations
+		lineageTag: 777f48a9-01b2-41c2-9751-04a3f8586ed9
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Factor BG Color Day of Week' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-20
+			// Description:     Background shape color for Day of Week factor card
+			
+			IF(
+			    SELECTEDVALUE( select_fatigue_factor[factor_name] ) = "Day of Week",
+			    "#FFFFFFFF",
+			    "#FFFFFF00"
+			)
+		displayFolder: Correlations
+		lineageTag: ad4b954a-0b5a-4d17-8704-c24f7dbcf62f
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Session Range Warning BG Color' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-20
+			// Description:     Background color for shape warning if full session range window cannot be selected
+			
+			IF(
+			    LEN( [Session Range Warning Text] ) > 0,
+			    "#E83636FF",
+			    "#E8363600"
+			)
+		displayFolder: Display Text
+		lineageTag: 9fb84795-adcf-4daa-bf3f-0f86a9459be7
 
 		annotation PBI_FormatHint = {"isText":true}
 

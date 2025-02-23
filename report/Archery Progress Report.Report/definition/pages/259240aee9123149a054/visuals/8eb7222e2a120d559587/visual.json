@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "8eb7222e2a120d559587",
+  "position": {
+    "x": 60,
+    "y": 14,
+    "z": 1500,
+    "height": 60,
+    "width": 140,
+    "tabOrder": 9002
+  },
+  "visualGroup": {
+    "displayName": "Round Score Group",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "a8f52eb805b0b29ceb26"
+}

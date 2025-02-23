@@ -3,7 +3,7 @@
   "name": "d69d6bd3560004053c21",
   "position": {
     "x": 0,
-    "y": 1,
+    "y": 0,
     "z": 7500,
     "height": 192,
     "width": 1264,
@@ -134,7 +134,7 @@
                 "Property": "date"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -534,9 +534,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -661,7 +660,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             },
@@ -698,7 +697,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -723,6 +722,17 @@
                   "Value": "true"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -741,6 +751,36 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "themedValueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
                 }
               }
             }

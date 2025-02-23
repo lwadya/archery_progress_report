@@ -129,7 +129,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.2
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -140,8 +140,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
+                      "ColorId": 1,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -164,7 +164,7 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "2D"
                 }
               }
             }
@@ -264,7 +264,7 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "2D"
                 }
               }
             }
@@ -364,7 +364,7 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "2D"
                 }
               }
             }
@@ -422,7 +422,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Number of Last Shot in Round'"
+                  "Value": "'Shot Number (Last Shot in Round Range)'"
                 }
               }
             },
@@ -518,6 +518,13 @@
                   "Value": "3D"
                 }
               }
+            },
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
             }
           }
         }
@@ -581,7 +588,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             }
@@ -734,7 +741,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -744,6 +751,41 @@
               "expr": {
                 "Literal": {
                   "Value": "4D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
+                    }
+                  }
                 }
               }
             }

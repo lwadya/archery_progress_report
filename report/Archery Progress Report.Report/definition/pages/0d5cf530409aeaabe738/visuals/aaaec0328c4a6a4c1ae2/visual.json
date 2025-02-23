@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "aaaec0328c4a6a4c1ae2",
   "position": {
-    "x": 500,
-    "y": 0,
+    "x": 498,
+    "y": 13,
     "z": 7000,
     "height": 60,
     "width": 215.56238475722191,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -212,11 +212,6 @@
           }
         }
       ]
-    },
-    "syncGroup": {
-      "groupName": "date",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   },

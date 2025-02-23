@@ -73,21 +73,16 @@
           "type": "CustomTheme"
         },
         {
-          "name": "title_bar1574112459214878.png",
-          "path": "title_bar1574112459214878.png",
-          "type": "Image"
-        },
-        {
-          "name": "end_sort_arrow_down5274179272921182.png",
-          "path": "end_sort_arrow_down5274179272921182.png",
+          "name": "title_bar00021530176904160925.png",
+          "path": "title_bar00021530176904160925.png",
           "type": "Image"
         }
       ]
     }
   ],
   "settings": {
-    "hideVisualContainerHeader": true,
     "useStylableVisualContainerHeader": true,
+    "exportDataMode": "None",
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,

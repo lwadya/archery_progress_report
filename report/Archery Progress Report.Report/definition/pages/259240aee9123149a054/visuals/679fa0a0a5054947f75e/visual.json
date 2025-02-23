@@ -4,10 +4,10 @@
   "position": {
     "x": 8.1269841269841265,
     "y": 536.38095238095241,
-    "z": 4500,
+    "z": 7000,
     "height": 176,
     "width": 1264,
-    "tabOrder": 9002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineChart",
@@ -317,9 +317,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -392,9 +391,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -591,7 +589,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -627,7 +625,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             },
@@ -648,9 +646,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -741,6 +738,22 @@
               }
             },
             "Property": "Decline Period Shot Count"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "6320bee274c141bae94c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "Decline Period Shot Count End Date"
           }
         },
         "type": "Advanced",

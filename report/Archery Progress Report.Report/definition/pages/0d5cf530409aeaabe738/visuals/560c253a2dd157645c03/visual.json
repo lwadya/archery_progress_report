@@ -48,8 +48,7 @@
               },
               "queryRef": "Measure Table.Days Since Previous Session",
               "nativeQueryRef": "Days Since Previous Session",
-              "displayName": "Days Since Previous Session",
-              "format": "0.0"
+              "displayName": "Days Since Previous Session"
             },
             {
               "field": {
@@ -468,7 +467,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FAFAFA'"
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -558,7 +557,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FAFAFA'"
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -753,8 +752,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#e6e6e6'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -790,7 +790,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             },
@@ -812,7 +812,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FAFAFA'"
+                      "Value": "'#F6F6F6'"
                     }
                   }
                 }

@@ -3,7 +3,7 @@
   "name": "5bd35994770d87361d03",
   "position": {
     "x": 631.53998678122935,
-    "y": 32.844048376830017,
+    "y": 33,
     "z": 5000,
     "height": 174,
     "width": 632,
@@ -784,6 +784,24 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
                 }
               }
             }

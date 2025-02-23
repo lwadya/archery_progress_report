@@ -150,7 +150,7 @@
             "gridlineShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -592,7 +592,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FAFAFA'"
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -628,7 +628,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             }
@@ -649,8 +649,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#e6e6e6'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -687,6 +688,24 @@
               "expr": {
                 "Literal": {
                   "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
                 }
               }
             }

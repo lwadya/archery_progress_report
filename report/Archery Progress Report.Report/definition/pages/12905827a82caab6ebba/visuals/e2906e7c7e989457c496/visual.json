@@ -3,7 +3,7 @@
   "name": "e2906e7c7e989457c496",
   "position": {
     "x": 0,
-    "y": 0.84404837683001688,
+    "y": 1,
     "z": 4000,
     "height": 206,
     "width": 1265,
@@ -237,7 +237,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             },
@@ -279,9 +279,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -326,7 +325,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }

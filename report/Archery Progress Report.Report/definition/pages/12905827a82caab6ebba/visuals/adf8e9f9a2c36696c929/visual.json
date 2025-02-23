@@ -3,10 +3,10 @@
   "name": "adf8e9f9a2c36696c929",
   "position": {
     "x": 924,
-    "y": 0,
+    "y": 1,
     "z": 10000,
-    "height": 24,
-    "width": 280,
+    "height": 21,
+    "width": 273,
     "tabOrder": 3000
   },
   "visual": {
@@ -323,7 +323,7 @@
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "7D"
+                  "Value": "0D"
                 }
               }
             }

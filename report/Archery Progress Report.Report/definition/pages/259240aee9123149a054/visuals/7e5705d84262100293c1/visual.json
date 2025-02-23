@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "7e5705d84262100293c1",
   "position": {
-    "x": 8.1269841269841265,
-    "y": 352,
-    "z": 2500,
+    "x": 0,
+    "y": 0,
+    "z": 4000,
     "height": 176,
     "width": 1264,
     "tabOrder": 3000
@@ -345,9 +345,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -420,9 +419,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -619,7 +617,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -629,6 +627,13 @@
               "expr": {
                 "Literal": {
                   "Value": "4D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -655,7 +660,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "4D"
                 }
               }
             },
@@ -676,9 +681,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#F8F8F8'"
                     }
                   }
                 }
@@ -690,6 +694,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "c1c26a243fdc1532ca9f",
   "filterConfig": {
     "filters": [
       {
