@@ -140,7 +140,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Average End Scores'"
+                  "Value": "'Average Scores by End'"
                 }
               }
             },

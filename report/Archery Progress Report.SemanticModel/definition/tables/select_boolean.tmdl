@@ -1,0 +1,22 @@
+table select_boolean
+	lineageTag: 95c146cd-e2a3-47a3-b737-04bef913cb43
+
+	column select_boolean
+		formatString: 0
+		lineageTag: 27313655-5334-4cda-84d4-a3d5498ec83f
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition select_boolean = calculated
+		mode: import
+		source = GENERATESERIES(0, 1, 1)
+
+	annotation PBI_Id = 16b8cf3258d647378695cc18e9a8e945
+

@@ -10,3 +10,15 @@ relationship 0704709f-7b99-6984-e2a3-7fb00c95dd05
 	fromColumn: dim_session.date
 	toColumn: dim_calendar.date
 
+relationship 01308b14-e14a-5743-d13d-65bbc886aa77
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: select_fatigue_factor.factor_id
+	toColumn: fields_fatigue_column.factor_id
+
+relationship c95d40f9-b57e-cf67-ca99-a154bec885c9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: select_fatigue_factor.factor_id
+	toColumn: fields_fatigue_measure.factor_id
+

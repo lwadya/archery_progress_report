@@ -1,0 +1,38 @@
+/// Table defined in PBI to allow control of multiple field parameter selections through a single slicer
+table select_fatigue_factor
+	lineageTag: b69c7bdb-2844-42b3-b59e-11964bda0291
+
+	column factor_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a5b9d26-aeb4-47b5-bbbd-3947e20d5ea2
+		summarizeBy: none
+		sourceColumn: factor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column factor_name
+		dataType: string
+		lineageTag: b3029c5a-ee40-4162-b190-2dc318558461
+		summarizeBy: none
+		sourceColumn: factor_name
+		sortByColumn: factor_id
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_fatigue_factor = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUXJJrCxWCM7MS05VCChKLcvMLwVyU4uLM/PzlGJ1opWMgGqCM/JLihUKUotQZIxRZFzzUsCiJhAzFfLTFMJTU7OVYmMB", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [factor_id = _t, factor_name = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"factor_id", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "e16f340bc4300e91ebf7",
+  "position": {
+    "x": 130,
+    "y": 8,
+    "z": 16002,
+    "height": 65.28082633957392,
+    "width": 1050.2775984506134,
+    "tabOrder": 0
+  },
+  "visualGroup": {
+    "displayName": "Fatigue Factor Button Group",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "0d104ccfbca84edaf45f"
+}

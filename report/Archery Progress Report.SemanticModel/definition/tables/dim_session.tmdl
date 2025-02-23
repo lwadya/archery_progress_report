@@ -98,6 +98,9 @@ table dim_session
 		lineageTag: e4322097-29bf-47e4-b463-c815fdc92225
 		summarizeBy: none
 		sourceColumn: shot_count_per_end_buckets
+		sortByColumn: shot_count_per_end_rounded
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

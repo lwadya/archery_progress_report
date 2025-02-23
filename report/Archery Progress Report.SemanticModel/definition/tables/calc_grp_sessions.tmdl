@@ -3,7 +3,7 @@ table calc_grp_sessions
 	lineageTag: e0fef639-72d4-427c-a750-e8f3c91647dd
 
 	calculationGroup
-		precedence: 1
+		precedence: 2
 
 		calculationItem 'Default Selection' =
 				
@@ -121,12 +121,16 @@ table calc_grp_sessions
 		calculationItem 'Selected Range' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-05
+				// Last Updated:    2025-02-14
 				// Description:     Sessions selected using the range selection tables
 				
 				VAR _default_session_range = 30
 				
-				VAR _range_end_session_id = MAX( select_session_end_date[session_id] )
+				VAR _range_end_session_id =
+				SELECTEDVALUE(
+				    select_session_end_date_time_series[session_id],
+				    MAX( select_session_end_date[session_id] )
+				)
 				
 				VAR _range_length = SELECTEDVALUE( select_session_range[sessions], _default_session_range )
 				

@@ -4,7 +4,7 @@
   "position": {
     "x": 500,
     "y": 0,
-    "z": 7875,
+    "z": 7000,
     "height": 60,
     "width": 215.56238475722191,
     "tabOrder": 6000
@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "select_session_end_date.date",
-              "nativeQueryRef": "date",
+              "nativeQueryRef": "date1",
               "active": true
             }
           ]
@@ -81,42 +81,6 @@
                 "Literal": {
                   "Value": "false"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "s",
-                    "Entity": "select_session_end_date",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 3,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "s"
-                              }
-                            },
-                            "Property": "date"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "datetime'2025-01-25T00:00:00'"
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
               }
             }
           }

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "8c92c58083abcf051105",
+  "position": {
+    "x": 0,
+    "y": 164,
+    "z": 6500,
+    "height": 168,
+    "width": 1264,
+    "tabOrder": 3000
+  },
+  "visualGroup": {
+    "displayName": "Correlation Time Series Group",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "a87249b3ffce749391bf"
+}

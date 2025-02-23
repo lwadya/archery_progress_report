@@ -1,3 +1,4 @@
+/// Table defined in PBI that defines selectable color palettes for cell backgrounds in the End Scores page matrix visual
 table select_data_table_colors
 	lineageTag: 1012ce1e-abae-4db7-8bd3-30ff6782116b
 

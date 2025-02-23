@@ -4,7 +4,7 @@ table select_session_end_date
 
 	column date
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: c5dd40db-5d46-4cc8-91d6-1be845dfc2d2
 		summarizeBy: none
 		sourceColumn: date

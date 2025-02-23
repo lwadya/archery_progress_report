@@ -1,0 +1,58 @@
+table fields_fatigue_measure
+	lineageTag: 1c0f7f02-45e7-42a0-a05a-d6a060872c52
+
+	column fields_fatigue_measure
+		lineageTag: 2f065181-7d69-4dbd-86e9-d07cb6219174
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'fields_fatigue_measure Order'
+
+		relatedColumnDetails
+			groupByColumn: 'fields_fatigue_measure Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'fields_fatigue_measure Fields'
+		isHidden
+		lineageTag: 77918ec8-8a9e-4c2d-b3e1-091350cc73db
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'fields_fatigue_measure Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'fields_fatigue_measure Order'
+		isHidden
+		formatString: 0
+		lineageTag: 3b6af48d-a729-4811-9575-ee2f4778486b
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column factor_id
+		formatString: 0
+		lineageTag: e1490da1-e101-49e5-b84a-ffe79a352715
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fields_fatigue_measure = calculated
+		mode: import
+		source =
+				{
+				    ("Days Since Previous Session", NAMEOF([Days Since Previous Session]), 0, 1),
+				    ("Shots per Session", NAMEOF([Shot Count Session Avg]), 1, 2),
+				    ("Shots per End", NAMEOF([Shot Count Per End Avg]), 2, 3),
+				    ("Day of Week", NAMEOF([Day of Week Number]), 3, 4)
+				}
+
+	annotation PBI_Id = ffacf09aa0954516b8c81b16a62e50f1
+

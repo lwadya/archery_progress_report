@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "0d104ccfbca84edaf45f",
+  "position": {
+    "x": 0,
+    "y": 115,
+    "z": 2000,
+    "height": 82,
+    "width": 1280,
+    "tabOrder": 4000
+  },
+  "visualGroup": {
+    "displayName": "Fatigue Factor Group",
+    "groupMode": "ScaleMode"
+  }
+}

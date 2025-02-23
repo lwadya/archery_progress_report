@@ -1,3 +1,4 @@
+/// Table defined in PBI to enable custom sorting column for the End Scores page matrix visual
 table select_data_table_sort
 	lineageTag: 591f18ae-4d5b-40b5-9249-c688841bb967
 

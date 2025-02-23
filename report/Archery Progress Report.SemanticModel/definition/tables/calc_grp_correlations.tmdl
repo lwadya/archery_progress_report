@@ -1,0 +1,264 @@
+table calc_grp_correlations
+	lineageTag: 856bd851-8114-4990-b801-7bc09ef381c7
+
+	calculationGroup
+		precedence: 1
+
+		calculationItem Default = SELECTEDMEASURE()
+
+		calculationItem 'Performance Coefficient' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Pearson correlation coefficient of shot score performance against benchmark and the selected dimension
+				
+				VAR _comparison_values_table =
+				SELECTCOLUMNS(
+				    dim_session,
+				    "x_values", CALCULATE( [Shot Score Average], calc_grp_correlations[formula] = "Neighboring Sessions Difference" ),
+				    "y_values", SELECTEDMEASURE()
+				)
+				
+				VAR _x_avg =
+				AVERAGEX(
+				    _comparison_values_table,
+				    [x_values]
+				)
+				
+				VAR _y_avg =
+				AVERAGEX(
+				    _comparison_values_table,
+				    [y_values]
+				)
+				
+				VAR _numerator =
+				SUMX(
+				    _comparison_values_table,
+				    ([x_values] - _x_avg) * ([y_values] - _y_avg)
+				)
+				
+				VAR _denominator =
+				SQRT(
+				    SUMX(
+				        _comparison_values_table,
+				        ([x_values] - _x_avg)^2
+				    ) *
+				    SUMX(
+				        _comparison_values_table,
+				        ([y_values] - _y_avg)^2
+				    )
+				)
+				
+				VAR _result =
+				DIVIDE( _numerator, _denominator )
+				
+				RETURN _result
+
+			formatStringDefinition = "0.00"
+
+		calculationItem 'Performance Description' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-13
+				// Description:     Performance Correlation Coefficient value as a simple description
+				
+				VAR _correlation_color_step =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_correlations[formula] = "Performance Color Step"
+				)
+				
+				VAR _result =
+				SWITCH(
+				    _correlation_color_step,
+				    3, "performance improves significantly",
+				    2, "performance improves moderately",
+				    1, "performance improves slightly",
+				    0, "performance remains consistent",
+				    -1, "performance declines slightly",
+				    -2, "performance declines moderately",
+				    -3, "performance declines significantly",
+				    ""
+				)
+				
+				RETURN _result
+
+		calculationItem 'Performance Color Step' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-13
+				// Description:     Color step value corresponding to a Performance Correlation Coefficient description
+				
+				VAR _zero_buffer_value = .05
+				
+				VAR _correlation_coefficient =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_correlations[formula] = "Performance Coefficient"
+				)
+				
+				VAR _absolute_coefficient = ABS( _correlation_coefficient )
+				
+				VAR _direction =
+				SWITCH(
+				    TRUE(),
+				    _correlation_coefficient > _zero_buffer_value, 1,
+				    _correlation_coefficient < -_zero_buffer_value, -1,
+				    0
+				)
+				
+				VAR _degree =
+				SWITCH(
+				    TRUE(),
+				    _absolute_coefficient > .5, 3,
+				    _absolute_coefficient > .3, 2,
+				    1
+				)
+				
+				VAR _result = _direction * _degree
+				
+				RETURN _result
+
+			formatStringDefinition = "#"
+
+		calculationItem 'Performance Arrow' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-13
+				// Description:     Arrow characters corresponding to a Performance Correlation Coefficient color step value
+				
+				VAR _up_char = UNICHAR( 9650 )
+				VAR _down_char = UNICHAR( 9660 )
+				VAR _neutral_char = "="
+				
+				VAR _color_step =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_correlations[formula] = "Performance Color Step"
+				)
+				
+				VAR _num_characters = ABS( _color_step )
+				
+				VAR _result =
+				SWITCH(
+				    TRUE(),
+				    _color_step < 0, REPT( _down_char, _num_characters ),
+				    _color_step > 0, REPT( _up_char, _num_characters ),
+				    _neutral_char
+				)
+				
+				RETURN _result
+
+		calculationItem 'Performance Positive Coefficient' = ```
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-14
+				// Description:     Only positive Pearson correlation coefficient values from the Performance Coefficient item
+				//                  Used to separate blue and red colored areas in the time series shaded area line chart on the Fatigue Effects page
+				
+				VAR _raw_coefficient =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_correlations[formula] = "Performance Coefficient" 
+				)
+				
+				VAR _result =
+				IF(
+				    _raw_coefficient > 0,
+				    _raw_coefficient,
+				    0
+				)
+				
+				RETURN _result
+				```
+
+			formatStringDefinition = "0.00"
+
+		calculationItem 'Performance Negative Coefficient' = ```
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-14
+				// Description:     Only negative Pearson correlation coefficient values from the Performance Coefficient item
+				//                  Used to separate blue and red colored areas in the time series shaded area line chart on the Fatigue Effects page
+				
+				VAR _raw_coefficient =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_correlations[formula] = "Performance Coefficient" 
+				)
+				
+				VAR _result =
+				IF(
+				    _raw_coefficient < 0,
+				    _raw_coefficient,
+				    0
+				)
+				
+				RETURN _result
+				```
+
+			formatStringDefinition = "0.00"
+
+		calculationItem 'Neighboring Sessions Benchmark' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-20
+				// Description:     A range defined by n sessions before and after the selected session, not including the selected session
+				
+				VAR _default_session_offset = 5
+				
+				VAR _session_offset = SELECTEDVALUE( select_session_rolling_average[sessions], _default_session_offset )
+				VAR _pivot_session = MAX( dim_session[session_id] )
+				VAR _benchmark_start_id = _pivot_session - _session_offset
+				VAR _benchmark_end_id = _pivot_session + _session_offset
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        dim_session[session_id] >= _benchmark_start_id && dim_session[session_id] <= _benchmark_end_id && dim_session[session_id] <> _pivot_session
+				    )
+				)
+				
+				RETURN
+				_result
+
+		calculationItem 'Neighboring Sessions Difference' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-15
+				// Description:     Average difference between selected session and neighboring sessions benchmark, multiplied by round shot count
+				
+				VAR _score_multiplier = SELECTEDVALUE( select_round_scoring[shot_count], 1 )
+				
+				VAR _result =
+				AVERAGEX(
+				    dim_session,
+				    SELECTEDMEASURE() -
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        calc_grp_correlations[formula] = "Neighboring Sessions Benchmark"
+				    )
+				) * _score_multiplier
+				
+				RETURN _result
+
+	column formula
+		dataType: string
+		lineageTag: ab77e99f-7f92-4adf-a574-4ad20de821fa
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: 73331e16-cabe-464b-9bad-d6b4d5c67662
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

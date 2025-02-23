@@ -17,7 +17,7 @@ queryGroup 'Table Queries'
 
 	annotation PBI_QueryGroupOrder = 1
 
-annotation PBI_QueryOrder = ["raw_shot_data","score_shot_agg","score_end_agg","Measure Table","fact_shot_score","dim_session","score_session_agg","dim_score_buckets","select_round_scoring","select_session_end_date","select_data_table_columns","select_data_table_sort","select_data_table_colors","select_scoring_pace_features"]
+annotation PBI_QueryOrder = ["raw_shot_data","score_shot_agg","score_end_agg","Measure Table","fact_shot_score","dim_session","score_session_agg","dim_score_buckets","select_round_scoring","select_session_end_date","select_data_table_columns","select_data_table_sort","select_data_table_colors","select_scoring_pace_features","select_fatigue_factor"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
@@ -41,6 +41,12 @@ ref table select_data_table_colors
 ref table select_session_rolling_average
 ref table select_shot_rolling_average
 ref table select_scoring_pace_features
+ref table fields_fatigue_measure
+ref table fields_fatigue_column
+ref table calc_grp_correlations
+ref table select_fatigue_factor
+ref table select_boolean
+ref table select_session_end_date_time_series
 
 ref cultureInfo en-US
 

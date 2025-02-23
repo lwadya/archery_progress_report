@@ -23,7 +23,6 @@ table select_scoring_pace_features
 
 	partition select_scoring_pace_features = m
 		mode: import
-		queryGroup: 'Table Queries'
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUXIuzS3NSSzJLEtVCE7OL8rMS1cISExOVYrViVYyAsoHpBYpBGfkl2DKGgNlgxNzC3KAOjOrUhU0lBWCU4uLM/PzijXBCkyACsITi3IVQgsUEvNSFFxSk3My84CaYwE=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [feature_id = _t, feature_name = _t]),

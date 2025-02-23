@@ -1,0 +1,58 @@
+table fields_fatigue_column
+	lineageTag: b54b41bb-ef1f-48cb-ae7c-69cdba6b6a88
+
+	column fields_fatigue_column
+		lineageTag: 3fe3b9dc-1a65-4313-836b-948e2b3c3245
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'fields_fatigue_column Order'
+
+		relatedColumnDetails
+			groupByColumn: 'fields_fatigue_column Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'fields_fatigue_column Fields'
+		isHidden
+		lineageTag: 4ef765ee-8b94-445f-b33e-a2a956f0ee3d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'fields_fatigue_column Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'fields_fatigue_column Order'
+		isHidden
+		formatString: 0
+		lineageTag: 1385fc8d-6b5e-4c3e-a234-c552c8b82748
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column factor_id
+		formatString: 0
+		lineageTag: 9971fe5a-d95b-45d0-b0c9-a489d55fc29a
+		summarizeBy: none
+		sourceColumn: [Value4]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fields_fatigue_column = calculated
+		mode: import
+		source =
+				{
+				    ("Days Since Previous Session", NAMEOF('dim_session'[days_since_previous_session_buckets]), 0, 1),
+				    ("Shots per Session", NAMEOF('dim_session'[session_shot_count_buckets]), 1, 2),
+				    ("Shots per End", NAMEOF('dim_session'[shot_count_per_end_buckets]), 2, 3),
+				    ("Day of Week", NAMEOF('dim_calendar'[day_of_week_display]), 3, 4)
+				}
+
+	annotation PBI_Id = 25bcde9d9f824388963f3281264f1d02
+

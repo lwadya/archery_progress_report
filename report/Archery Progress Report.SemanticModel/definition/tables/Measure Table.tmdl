@@ -414,10 +414,10 @@ table 'Measure Table'
 	measure 'Days Since Previous Session' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-12-23
-			// Description:     Number of days since the previous session
+			// Last Updated:    2025-02-13
+			// Description:     Average number of days since the previous session
 			
-			MIN( dim_session[days_since_previous_session] )
+			AVERAGE( dim_session[days_since_previous_session] )
 		formatString: 0
 		displayFolder: Time
 		lineageTag: 6733a7a0-92d5-4f2d-b979-a6c92845316a
@@ -430,20 +430,20 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Shot Score Average],
-			    calc_grp_formulas[formula] = "Neighboring Sessions Difference"
+			    calc_grp_correlations[formula] = "Neighboring Sessions Difference"
 			)
 		displayFolder: Shot
 		lineageTag: 9721f256-1e14-415d-b8eb-2a335bb676ff
 
 		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
 
-	measure 'Shot Count Per End Max' =
+	measure 'Shot Count Per End Avg' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-03
-			// Description:     Max count of shots per end
+			// Last Updated:    2025-02-13
+			// Description:     Average count of shots per end
 			
-			MAX( dim_session[shot_count_per_end] )
+			AVERAGE( dim_session[shot_count_per_end] )
 		formatString: 0.0
 		displayFolder: End
 		lineageTag: 1fe63990-cd04-474d-99b5-45ff3b969281
@@ -451,10 +451,13 @@ table 'Measure Table'
 	measure 'Day of Week Number' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-01
-			// Description:     Day of week number of the current date
+			// Last Updated:    2025-02-13
+			// Description:     Average day of week number for the selected date or session
 			
-			MIN( dim_calendar[day_of_week_number] )
+			CALCULATE(
+			    AVERAGE( dim_calendar[day_of_week_number] ),
+			    CROSSFILTER( dim_session[date], dim_calendar[date], Both )
+			)
 		formatString: 0
 		displayFolder: Time
 		lineageTag: 6f6ffb2e-f9cc-4d0a-bc38-abf1057017c4
@@ -508,14 +511,14 @@ table 'Measure Table'
 			VAR _value =
 			CALCULATE(
 			    [Days Since Previous Session],
-			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
+			    calc_grp_correlations[formula] = "Performance Coefficient"
 			)
 			
 			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
 			
-			RETURN _result
+			RETURN _value
 		formatString: 0.00
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: fa7330d8-6088-450d-a880-78f1415ae7cb
 
 	measure 'Days Since Prev Correlation Desc' =
@@ -526,9 +529,9 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Days Since Previous Session],
-			    calc_grp_formulas[formula] = "Performance Correlation Description"
+			    calc_grp_correlations[formula] = "Performance Description"
 			)
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: b4c535c2-8a72-4771-9635-3ce6da74170b
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -542,14 +545,14 @@ table 'Measure Table'
 			VAR _value =
 			CALCULATE(
 			    [Shot Count],
-			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
+			    calc_grp_correlations[formula] = "Performance Coefficient"
 			)
 			
 			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
 			
-			RETURN _result
+			RETURN _value
 		formatString: 0.00
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 525bfea6-360a-40e7-9bcb-53e75b69d924
 
 	measure 'Shots Per Session Correlation Desc' =
@@ -560,9 +563,9 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Shot Count],
-			    calc_grp_formulas[formula] = "Performance Correlation Description"
+			    calc_grp_correlations[formula] = "Performance Description"
 			)
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 76007cb8-378a-4dd0-b1d4-0778712784fc
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -575,15 +578,15 @@ table 'Measure Table'
 			
 			VAR _value =
 			CALCULATE(
-			    [Shot Count Per End Max],
-			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
+			    [Shot Count Per End Avg],
+			    calc_grp_correlations[formula] = "Performance Coefficient"
 			)
 			
 			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
 			
-			RETURN _result
+			RETURN _value
 		formatString: 0.00
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 6437fcc6-95a5-422f-b672-56079f4957c2
 
 	measure 'Shots Per End Correlation Desc' =
@@ -593,10 +596,10 @@ table 'Measure Table'
 			// Description:     Correlation description for performance against benchmark and count of shots per end
 			
 			CALCULATE(
-			    [Shot Count Per End Max],
-			    calc_grp_formulas[formula] = "Performance Correlation Description"
+			    [Shot Count Per End Avg],
+			    calc_grp_correlations[formula] = "Performance Description"
 			)
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: aafbcb26-437e-4f1c-b1c0-aa2b4da520fa
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -609,7 +612,7 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Day of Week Number],
-			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
+			    calc_grp_correlations[formula] = "Performance Coefficient"
 			)
 		formatString: 0.00
 		displayFolder: _Delete
@@ -623,7 +626,7 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Day of Week Number],
-			    calc_grp_formulas[formula] = "Performance Correlation Description"
+			    calc_grp_correlations[formula] = "Performance Description"
 			)
 		displayFolder: _Delete
 		lineageTag: 8994be80-5da6-406e-aaae-034f07773ef2
@@ -638,7 +641,7 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Day of Week Number],
-			    calc_grp_formulas[formula] = "Performance Correlation Color Step"
+			    calc_grp_correlations[formula] = "Performance Color Step"
 			)
 		formatString: 0
 		displayFolder: _Delete
@@ -652,10 +655,10 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Days Since Previous Session],
-			    calc_grp_formulas[formula] = "Performance Correlation Color Step"
+			    calc_grp_correlations[formula] = "Performance Color Step"
 			)
 		formatString: 0
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 206f416c-9348-4853-bc32-3d71f765fa22
 
 	measure 'Shots Per End Correlation Color' =
@@ -665,11 +668,11 @@ table 'Measure Table'
 			// Description:     Correlation color step value for performance against benchmark and count of shots per end
 			
 			CALCULATE(
-			    [Shot Count Per End Max],
-			    calc_grp_formulas[formula] = "Performance Correlation Color Step"
+			    [Shot Count Per End Avg],
+			    calc_grp_correlations[formula] = "Performance Color Step"
 			)
 		formatString: 0
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 1c66542c-7242-4785-b542-4139eba3bd15
 
 	measure 'Shots Per Session Correlation Color' =
@@ -680,10 +683,10 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Shot Count],
-			    calc_grp_formulas[formula] = "Performance Correlation Color Step"
+			    calc_grp_correlations[formula] = "Performance Color Step"
 			)
 		formatString: 0
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 1ce06bce-bb97-4d23-9eae-d846c52da4fb
 
 	measure 'Data Table Values' =
@@ -709,7 +712,7 @@ table 'Measure Table'
 			    "Days Since Prev Session", [Days Since Previous Session],
 			    "Total Ends", [End Count],
 			    "Total Shots", [Shot Count],
-			    "Shots per End", [Shot Count Per End Max],
+			    "Shots per End", [Shot Count Per End Avg],
 			    "Notes", [Data Table Notes Icon Text],
 			    [Data Table End Score Average]
 			)
@@ -925,7 +928,7 @@ table 'Measure Table'
 			
 			CALCULATE(
 			    [Shot Score Average],
-			    calc_grp_formulas[formula] = "Neighboring Sessions Difference"
+			    calc_grp_correlations[formula] = "Neighboring Sessions Difference"
 			)
 		displayFolder: Shot
 		lineageTag: 89dc8f4b-6c5f-499f-a4b4-d9bd53c8fc38
@@ -1067,90 +1070,6 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isText":true}
 
-	measure 'Days Since Previous Session Axis Min' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-02-08
-			// Description:     Minimum number of days since the previous session for all sessions for chart axis
-			
-			CALCULATE(
-			    MIN( dim_session[days_since_previous_session] ) - (STDEV.P( dim_session[days_since_previous_session] ) * .1),
-			    ALL( dim_session[date] )
-			)
-		formatString: 0.0
-		displayFolder: Time
-		lineageTag: 4d296d8b-8630-495f-a347-bf2acb8f9661
-
-	measure 'Days Since Previous Session Axis Max' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-02-08
-			// Description:     Maximum number of days since the previous session for all sessions for chart axis
-			
-			CALCULATE(
-			    MAX( dim_session[days_since_previous_session] ) + (STDEV.P( dim_session[days_since_previous_session] ) * .1),
-			    ALL( dim_session[date] )
-			)
-		formatString: 0.0
-		displayFolder: Time
-		lineageTag: 024579b0-32a6-4ed3-8b4b-576b25d43ecf
-
-	measure 'Shot Count Per End Axis Min' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-02-08
-			// Description:     Minimum number of shots per end for all sessions for chart axis
-			
-			CALCULATE(
-			    MIN( dim_session[shot_count_per_end] ) - (STDEV.P( dim_session[shot_count_per_end] ) * .1),
-			    ALL( dim_session[date] )
-			)
-		formatString: 0.0
-		displayFolder: End
-		lineageTag: f32f3083-6670-4c99-bcb2-c4e088722bbb
-
-	measure 'Shot Count Per End Axis Max' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-02-08
-			// Description:     Maximum number of shots per end for all sessions for chart axis
-			
-			CALCULATE(
-			    MAX( dim_session[shot_count_per_end] ) + (STDEV.P( dim_session[shot_count_per_end] ) * .1),
-			    ALL( dim_session[date] )
-			)
-		formatString: 0.0
-		displayFolder: End
-		lineageTag: 11b5f5fe-90e1-498c-bdf2-42d78c987a4e
-
-	measure 'Shot Count Per Session Axis Max' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-02-08
-			// Description:     Maximum shot count for all sessions for chart axis
-			
-			CALCULATE(
-			    MAX( dim_session[session_shot_count] ) + (STDEV.P( dim_session[session_shot_count] ) * .1),
-			    ALL( dim_session[date] )
-			)
-		formatString: 0
-		displayFolder: Shot
-		lineageTag: ddc0afcc-2cf0-4474-920f-8cc83644dd8b
-
-	measure 'Shot Count Per Session Axis Min' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-02-08
-			// Description:     Minimum shot count for all sessions for chart axis
-			
-			CALCULATE(
-			    MIN( dim_session[session_shot_count] ) - (STDEV.P( dim_session[session_shot_count] ) * .1),
-			    ALL( dim_session[date] )
-			)
-		formatString: 0
-		displayFolder: Shot
-		lineageTag: 1fbb8477-b331-4103-8e76-c6466d004861
-
 	measure 'Session Range Warning Text' =
 			
 			// Last Developer:  Lukas Wadya
@@ -1193,6 +1112,347 @@ table 'Measure Table'
 		lineageTag: 4e3b1945-dc22-4043-aa1a-5bfb7c76574e
 
 		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Session Count Minimum Filter' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-14
+			// Description:     Returns 1 if session end date passes filter, 0 if not
+			//                  Filter to optionally exclude values calculated from a session range smaller than
+			//                  the specified window from time series line chart in Fatigue Effects page
+			
+			VAR _range_is_complete =
+			IF(
+			    MAX( select_session_end_date_time_series[session_id] ) >= SELECTEDVALUE( select_session_range[sessions] ),
+			    1,
+			    0
+			)
+			
+			VAR _result =
+			IF(
+			    COUNTROWS( select_boolean ) == 1,
+			    _range_is_complete,
+			    1
+			)
+			
+			RETURN _result
+		formatString: 0
+		displayFolder: Time
+		lineageTag: a6abb858-79ea-4c18-b5d9-2dfb75a77ca7
+
+	measure 'Fields Fatigue Selected Meas' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-13
+			// Description:     Returns the value of the selected measure in the field parameter fields_fatigue_scatter_axis
+			//                  Changes to existing field parameter items update automatically, but new items need to be added to SWITCH statement
+			
+			VAR _measure_name =
+			SELECTCOLUMNS(
+			    SUMMARIZE(
+			        fields_fatigue_measure,
+			        fields_fatigue_measure[fields_fatigue_measure],
+			        fields_fatigue_measure[fields_fatigue_measure Fields]
+			    ),
+			    "parameter", [fields_fatigue_measure Fields]
+			)
+			
+			VAR _result =
+			SWITCH(
+			    _measure_name,
+			    NAMEOF( [Days Since Previous Session] ), [Days Since Previous Session],
+			    NAMEOF( [Shot Count Session Avg] ), [Shot Count Session Avg],
+			    NAMEOF( [Shot Count Per End Avg] ), [Shot Count Per End Avg],
+			    NAMEOF( [Day of Week Number] ), [Day of Week Number]
+			)
+			
+			RETURN _result
+		formatString: 0.0
+		displayFolder: Correlations
+		lineageTag: 6a2ee866-e5ed-4f83-b76d-b1680c6a5b97
+
+	measure 'Fields Fatigue Scatter X Axis Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-12
+			// Description:     Maximum bound for fatigue scatter chart x axis
+			
+			VAR _max_value =
+			MAXX(
+			    ALL( dim_session[date] ),
+			    [Fields Fatigue Selected Meas]
+			)
+			
+			VAR _std_value =
+			STDEVX.P(
+			    ALL( dim_session[date] ),
+			    [Fields Fatigue Selected Meas]
+			)
+			
+			VAR _result = _max_value + (_std_value * .1)
+			
+			RETURN _result
+		displayFolder: Correlations
+		lineageTag: cb1dd65c-4e86-4992-a31d-4fa3b6ba95bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Fields Fatigue Scatter X Axis Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-12
+			// Description:     Minimum bound for fatigue scatter chart x axis
+			
+			VAR _min_value =
+			MINX(
+			    ALL( dim_session[date] ),
+			    [Fields Fatigue Selected Meas]
+			)
+			
+			VAR _std_value =
+			STDEVX.P(
+			    ALL( dim_session[date] ),
+			    [Fields Fatigue Selected Meas]
+			)
+			
+			VAR _result = _min_value - (_std_value * .1)
+			
+			RETURN _result
+		displayFolder: Correlations
+		lineageTag: 115cd53b-acc0-411f-861b-7ff0b3ea1b74
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Fields Fatigue Column Order' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-13
+			// Description:     Rank order of fatigue column chart categories for sorting
+			
+			VAR _measure_name =
+			SELECTCOLUMNS(
+			    SUMMARIZE(
+			        fields_fatigue_column,
+			        fields_fatigue_column[fields_fatigue_column],
+			        fields_fatigue_column[fields_fatigue_column Fields]
+			    ),
+			    "parameter", [fields_fatigue_column Fields]
+			)
+			
+			// Return the rank value from the sort columns for each of the column options
+			// if a sort column doesn't exist then use the column itself
+			VAR _result =
+			SWITCH(
+			    _measure_name,
+			    NAMEOF( dim_session[days_since_previous_session_buckets] ), RANK( DENSE, ALL( dim_session[days_since_previous_session_buckets] ), ORDERBY( dim_session[days_since_previous_session_buckets], ASC ), LAST ),
+			    NAMEOF( dim_session[session_shot_count_buckets] ), RANK( DENSE, ALL( dim_session[session_shot_count_rounded] ), ORDERBY( dim_session[session_shot_count_rounded], ASC ), LAST ),
+			    NAMEOF( dim_session[shot_count_per_end_buckets] ), RANK( DENSE, ALL( dim_session[shot_count_per_end_rounded] ), ORDERBY( dim_session[shot_count_per_end_rounded], ASC ), LAST ),
+			    NAMEOF( dim_calendar[day_of_week_display] ), RANK( DENSE, ALL( dim_calendar[day_of_week_display] ), ORDERBY( dim_calendar[day_of_week_display], ASC ), LAST )
+			)
+			
+			RETURN _result
+		formatString: 0
+		displayFolder: Correlations
+		lineageTag: b5a6d427-872d-4eec-aae7-9c9f3cfe749a
+
+	measure 'Shot Count Session Avg' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-13
+			// Description:     Average count of shots for selected sessions
+			
+			AVERAGE( dim_session[session_shot_count] )
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: 98f1487c-4a31-4ab2-aad7-9fe98e810a09
+
+	measure 'Fields Fatigue Correlation Color' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-13
+			// Description:     Color step that corresponds to a correlation coefficient value
+			
+			CALCULATE(
+			    [Fields Fatigue Selected Meas],
+			    calc_grp_correlations[formula] = "Performance Color Step"
+			)
+		formatString: 0
+		displayFolder: Correlations
+		lineageTag: 4b773b00-c5c5-4ad6-b6b8-0ba92d63e0ae
+
+	measure 'Fields Fatigue Correlation Arrow' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-13
+			// Description:     Arrow character that corresponds to a correlation coefficient value
+			
+			CALCULATE(
+			    [Fields Fatigue Selected Meas],
+			    calc_grp_correlations[formula] = "Performance Arrow"
+			) & ""
+		displayFolder: Correlations
+		lineageTag: 3b554e58-a8a1-45ba-9331-29b21a9c33ad
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Fields Fatigue Correlation Description' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-13
+			// Description:     Descriptive text that corresponds to a correlation coefficient value
+			
+			CALCULATE(
+			    [Fields Fatigue Selected Meas],
+			    calc_grp_correlations[formula] = "Performance Description"
+			)
+		displayFolder: Correlations
+		lineageTag: 21b1a84e-8fd9-45f2-8c6e-59dece2e49ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Fatigue Column Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-13
+			// Description:     Title for points above benchmark column chart on Fatigue Effects page
+			
+			"Average points above benchmark by " & LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) )
+		displayFolder: Correlations
+		lineageTag: f7aeb150-ff4b-49fe-aea2-de09d6101775
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Fatigue Scatter Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-13
+			// Description:     Title for points above benchmark scatter chart on Fatigue Effects page
+			
+			"Points above benchmark by session date, " & LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) )
+		displayFolder: Correlations
+		lineageTag: 04667063-64af-47c1-b0e1-b3e530fe27d6
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Fatigue Correlation Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-14
+			// Description:     Title for correlation coefficient chart on Fatigue Effects page
+			
+			"Correlation by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range: performance vs "
+			& LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) )
+		displayFolder: Correlations
+		lineageTag: 70105733-cdee-4678-a3fc-6b7e8a6a961e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Fatigue Factor Time Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-14
+			// Description:     Title for fatigue factor time series chart on Fatigue Effects page
+			
+			"Average " & LOWER( SELECTEDVALUE( select_fatigue_factor[factor_name] ) ) & " by rolling " & SELECTEDVALUE( select_session_range[sessions] ) & "-session range"
+		displayFolder: Correlations
+		lineageTag: f4fa9765-40e9-4c03-ad68-3630c5f9ce15
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Fatigue Session Range Slicer Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-13
+			// Description:     Title for correlation chart range slicer on Fatigue Effects page
+			
+			"Hide dates with ranges less than " & SELECTEDVALUE( select_session_range[sessions] ) & " sessions"
+		displayFolder: Correlations
+		lineageTag: f66b84b8-af57-40d6-8fc1-da4d1e6e16db
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Fields Fatigue End Date Selected Meas' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-14
+			// Description:     Returns the selected fatigue field parameter measure only if the date in filter context is the latest in the date slicer
+			
+			IF(
+			    MAX( select_session_end_date[date] ) == MAX( select_session_end_date_time_series[date] ),
+			    [Fields Fatigue Selected Meas]
+			)
+		formatString: 0.0
+		displayFolder: Correlations
+		lineageTag: 28cb6b30-cd18-45f7-8c85-0935a5965313
+
+	measure 'Fields Fatigue Correlation Coefficient' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-14
+			// Description:     Correlation coefficient value for selected fatigue field parameter measure
+			
+			CALCULATE(
+			    [Fields Fatigue Selected Meas],
+			    calc_grp_correlations[formula] = "Performance Coefficient"
+			)
+		formatString: 0.00
+		displayFolder: Correlations
+		lineageTag: 97b76532-9251-4bff-af7d-55d6bf97f397
+
+	measure 'Fields Fatigue Correlation Coefficient Positive' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-14
+			// Description:     Only positive correlation coefficient values for selected fatigue field parameter measure
+			
+			VAR _raw_value = [Fields Fatigue Correlation Coefficient]
+			
+			VAR _result =
+			IF(
+			    ISBLANK( _raw_value ) || _raw_value > 0,
+			    _raw_value,
+			    0
+			)
+			
+			RETURN _result
+		formatString: 0.00
+		displayFolder: Correlations
+		lineageTag: 6a4e9513-2560-4e60-b682-0c4648e3f233
+
+	measure 'Fields Fatigue Correlation Coefficient Negative' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-14
+			// Description:     Only negative correlation coefficient values for selected fatigue field parameter measure
+			
+			VAR _raw_value = [Fields Fatigue Correlation Coefficient]
+			
+			VAR _result =
+			IF(
+			    ISBLANK( _raw_value ) || _raw_value < 0,
+			    _raw_value,
+			    0
+			)
+			
+			RETURN _result
+		formatString: 0.00
+		displayFolder: Correlations
+		lineageTag: 57c19332-b6bd-4e8d-9848-a9da8ee8252b
+
+	measure 'Fields Fatigue End Date Correlation Coefficient' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-14
+			// Description:     Returns the performance correlation coefficient for the selected fatigue field parameter
+			//                  measure only if the date in filter context is the latest in the date slicer
+			
+			IF(
+			    MAX( select_session_end_date[date] ) == MAX( select_session_end_date_time_series[date] ),
+			    [Fields Fatigue Correlation Coefficient]
+			)
+		formatString: 0.00
+		displayFolder: Correlations
+		lineageTag: a6733b52-8b8d-43ca-883a-0119060d62db
 
 	partition 'Measure Table' = m
 		mode: import

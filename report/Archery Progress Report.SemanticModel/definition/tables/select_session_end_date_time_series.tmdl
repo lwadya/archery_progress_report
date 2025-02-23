@@ -1,0 +1,29 @@
+table select_session_end_date_time_series
+	lineageTag: 71062c48-9f05-4bc8-bdc5-2022b9f7a711
+
+	column date
+		formatString: Short Date
+		lineageTag: 978b9a4c-d251-4356-af8a-4f4c52377d66
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: select_session_end_date[date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		formatString: 0
+		lineageTag: 5a779bc6-f8fc-49b6-8bfb-866b56f07569
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: select_session_end_date[session_id]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_session_end_date_time_series = calculated
+		mode: import
+		source =
+				
+				select_session_end_date
+
+	annotation PBI_Id = 8ca5ba9f697a4ad99bd0c1815c2ab9d9
+
