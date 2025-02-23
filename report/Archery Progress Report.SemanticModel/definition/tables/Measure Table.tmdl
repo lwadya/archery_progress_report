@@ -65,7 +65,7 @@ table 'Measure Table'
 			// Last Updated:    2024-12-30
 			// Description:     Average round score across all rounds of n shots
 			
-			VAR _round_shot_count = SELECTEDVALUE( select_round_type[shot_count] )
+			VAR _round_shot_count = SELECTEDVALUE( select_round_scoring[shot_count] )
 			
 			VAR _result =
 			AVERAGEX(
@@ -89,7 +89,7 @@ table 'Measure Table'
 		displayFolder: Round
 		lineageTag: 0fc71b9c-19cc-4aaa-bfe2-d72aca981feb
 
-		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format] )
 
 	measure 'Shot Count Selected Sessions' =
 			
@@ -166,7 +166,7 @@ table 'Measure Table'
 			// Last Updated:    2024-12-30
 			// Description:     Max round score across all rounds of n shots
 			
-			VAR _round_shot_count = SELECTEDVALUE( select_round_type[shot_count] )
+			VAR _round_shot_count = SELECTEDVALUE( select_round_scoring[shot_count] )
 			
 			VAR _result =
 			MAXX(
@@ -190,7 +190,7 @@ table 'Measure Table'
 		displayFolder: Round
 		lineageTag: ae9066ce-e793-414d-a28b-58d944daafb2
 
-		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format] )
 
 	measure 'Round Score Min' =
 			
@@ -198,7 +198,7 @@ table 'Measure Table'
 			// Last Updated:    2024-12-30
 			// Description:     Min round score across all rounds of n shots
 			
-			VAR _round_shot_count = SELECTEDVALUE( select_round_type[shot_count] )
+			VAR _round_shot_count = SELECTEDVALUE( select_round_scoring[shot_count] )
 			
 			VAR _result =
 			MINX(
@@ -222,7 +222,7 @@ table 'Measure Table'
 		displayFolder: Round
 		lineageTag: 36547374-7101-4b34-b3ca-e9444d9b0cd8
 
-		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format] )
 
 	measure 'Shot Score Rolling Average Shots' =
 			
@@ -363,14 +363,14 @@ table 'Measure Table'
 		displayFolder: Session
 		lineageTag: 7819e57a-ac6d-42f6-936b-41474bf992ce
 
-	measure 'Session Dates Performance' =
+	measure 'Session Dates Scores' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-05
-			// Description:     Display text for selected session dates for the Performance page
+			// Last Updated:    2025-02-02
+			// Description:     Display text for selected session dates for the scores pages
 			
 			VAR _count_selected_sessions = COUNTROWS( dim_session )
-			
+			VAR _min_selected_date = MIN( dim_session[date] )
 			VAR _max_selected_date = MAX( dim_session[date] )
 			
 			VAR _max_dataset_date =
@@ -380,12 +380,11 @@ table 'Measure Table'
 			)
 			
 			VAR _result =
-			_max_selected_date &
 			SWITCH(
 			    TRUE,
-			    _count_selected_sessions > 1, " (+" & _count_selected_sessions - 1 & " older sessions)",
-			    _max_selected_date = _max_dataset_date, " (latest session)",
-			    ""
+			    _max_selected_date = _max_dataset_date, _max_selected_date & " (latest session, select other dates below)",
+			    _count_selected_sessions > 1, _min_selected_date & " - " & _max_selected_date & " (" & _count_selected_sessions & " sessions)",
+			    _max_selected_date
 			)
 			
 			RETURN _result
@@ -412,7 +411,7 @@ table 'Measure Table'
 			// Last Updated:    2024-12-31
 			// Description:     Selected round type as defined by the select_round_type table
 			
-			SELECTEDVALUE( select_round_type[round_type] )
+			SELECTEDVALUE( select_round_scoring[round_scoring] )
 		displayFolder: Round
 		lineageTag: b14d1817-ed85-4c4d-b45a-9253e0db7d43
 
@@ -442,7 +441,7 @@ table 'Measure Table'
 		displayFolder: Shot
 		lineageTag: 9721f256-1e14-415d-b8eb-2a335bb676ff
 
-		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format], "0.0" )
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
 
 	measure 'Shot Count Per End Max' =
 			
@@ -925,11 +924,11 @@ table 'Measure Table'
 			// Last Updated:    2025-01-18
 			// Description:     Round pace for any given shot, equal to average shot score multiplied by round shot count
 			
-			[Shot Score Average] * SELECTEDVALUE( select_round_type[shot_count], 1 )
+			[Shot Score Average] * SELECTEDVALUE( select_round_scoring[shot_count], 1 )
 		displayFolder: Round
 		lineageTag: eb1a1150-40d3-4d7a-8661-a05a1248b70c
 
-		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format] )
 
 	measure 'Round Score Pace Rolling Average Shots' =
 			
@@ -937,11 +936,11 @@ table 'Measure Table'
 			// Last Updated:    2025-01-19
 			// Description:     Rolling average round pace over n shots, equal to rolling average shot score multiplied by round shot count
 			
-			[Shot Score Rolling Average Shots] * SELECTEDVALUE( select_round_type[shot_count], 1 )
+			[Shot Score Rolling Average Shots] * SELECTEDVALUE( select_round_scoring[shot_count], 1 )
 		displayFolder: Round
 		lineageTag: 773dc509-483a-485c-957e-6f524d58d7ff
 
-		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format] )
 
 	measure 'Round Score Pace Rolling Average Sessions' =
 			
@@ -949,11 +948,11 @@ table 'Measure Table'
 			// Last Updated:    2025-01-19
 			// Description:     Rolling average round pace over n sessions, equal to rolling average shot score multiplied by round shot count
 			
-			[Shot Score Rolling Average Sessions] * SELECTEDVALUE( select_round_type[shot_count], 1 )
+			[Shot Score Rolling Average Sessions] * SELECTEDVALUE( select_round_scoring[shot_count], 1 )
 		displayFolder: Round
 		lineageTag: 2577dbb2-6d49-4bb9-88c5-2914ab499101
 
-		formatStringDefinition = SELECTEDVALUE( select_round_type[display_format] )
+		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format] )
 
 	measure 'Session Adjustment Chart Data Label' =
 			
@@ -991,7 +990,7 @@ table 'Measure Table'
 			// Last Updated:    2025-01-23
 			// Description:     Descriptive text for round score min metric
 			
-			SELECTEDVALUE( select_round_type[min_description] )
+			SELECTEDVALUE( select_round_scoring[min_description] )
 		displayFolder: Round
 		lineageTag: 09904902-e4ca-4646-94b0-04cc0a5e912d
 
@@ -1003,7 +1002,7 @@ table 'Measure Table'
 			// Last Updated:    2025-01-23
 			// Description:     Descriptive text for round score max metric
 			
-			SELECTEDVALUE( select_round_type[max_description] )
+			SELECTEDVALUE( select_round_scoring[max_description] )
 		displayFolder: Round
 		lineageTag: 30910a5f-7ecd-48d6-b5d5-e763860cf498
 
@@ -1015,7 +1014,7 @@ table 'Measure Table'
 			// Last Updated:    2025-01-23
 			// Description:     Descriptive text for round score average metric
 			
-			SELECTEDVALUE( select_round_type[average_description] )
+			SELECTEDVALUE( select_round_scoring[average_description] )
 		displayFolder: Round
 		lineageTag: 105ee184-f153-4cc4-9029-0e139a520a89
 
@@ -1027,7 +1026,7 @@ table 'Measure Table'
 			// Last Updated:    2025-01-23
 			// Description:     Descriptive text for the selected round type
 			
-			SELECTEDVALUE( select_round_type[round_description] )
+			SELECTEDVALUE( select_round_scoring[round_description] )
 		displayFolder: Round
 		lineageTag: 079cc39a-8d9c-43ca-a46b-6681c165dc0e
 

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "0fcdb43a7b3035c000b9",
   "position": {
-    "x": 1117.51866743251,
-    "y": 2.2056289488799541,
+    "x": 498.7012987012987,
+    "y": 54.403778040141717,
     "z": 20000,
-    "height": 67.639287765651929,
-    "width": 152.18839747271684,
+    "height": 67.24911452184179,
+    "width": 151.87721369539551,
     "tabOrder": 20000
   },
   "visual": {
@@ -20,10 +20,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "select_round_type"
+                      "Entity": "select_round_scoring"
                     }
                   },
-                  "Property": "round_type"
+                  "Property": "round_scoring"
                 }
               },
               "queryRef": "select_round_type.round_type",
@@ -71,7 +71,7 @@
                 "From": [
                   {
                     "Name": "s",
-                    "Entity": "select_round_type",
+                    "Entity": "select_round_scoring",
                     "Type": 0
                   }
                 ],
@@ -87,7 +87,7 @@
                                   "Source": "s"
                                 }
                               },
-                              "Property": "round_type"
+                              "Property": "round_scoring"
                             }
                           }
                         ],
@@ -95,7 +95,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'300'"
+                                "Value": "'30 Shot Total'"
                               }
                             }
                           ]

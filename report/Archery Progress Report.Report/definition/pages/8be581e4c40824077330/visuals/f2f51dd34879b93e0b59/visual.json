@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "f2f51dd34879b93e0b59",
   "position": {
-    "x": 10.084411930219472,
-    "y": 0,
-    "z": 3000,
-    "height": 72.031513787281938,
-    "width": 231.22115925717503,
+    "x": 11.334120425029516,
+    "y": 65.737898465171185,
+    "z": 4000,
+    "height": 59.693034238488785,
+    "width": 162.45572609208972,
     "tabOrder": 3000
   },
   "visual": {
@@ -83,6 +83,19 @@
             }
           }
         }
+      ],
+      "numericInputStyle": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -93,6 +106,40 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

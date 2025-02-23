@@ -154,7 +154,7 @@ table calc_grp_formulas
 				// Last Updated:    2025-01-15
 				// Description:     Average difference between selected session and neighboring sessions benchmark, multiplied by round shot count
 				
-				VAR _score_multiplier = SELECTEDVALUE( select_round_type[shot_count], 1 )
+				VAR _score_multiplier = SELECTEDVALUE( select_round_scoring[shot_count], 1 )
 				
 				VAR _result =
 				AVERAGEX(
@@ -237,7 +237,7 @@ table calc_grp_formulas
 				// Last Updated:    2025-01-15
 				// Description:     Difference between adjustment period and benchmark period, multiplied by round shot count
 				
-				VAR _score_multiplier = SELECTEDVALUE( select_round_type[shot_count], 1 )
+				VAR _score_multiplier = SELECTEDVALUE( select_round_scoring[shot_count], 1 )
 				
 				VAR _adjustment_value =
 				CALCULATE(

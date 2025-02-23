@@ -1,10 +1,10 @@
 /// Raw score data from data source
 expression raw_shot_data =
 		let
-		    //Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1nCBdNwAHM2udDAdk-XrrSoA7iWGeCGFj7CJXsgXMB-M/edit?usp=sharing"),
-		    //DataTable = Source{[name="TrackingScore",ItemKind="Table"]}[Data],
-		    Source = Excel.Workbook(File.Contents("C:\Users\lukas\OneDrive\Documents\projects\archery_performance\data\Archery.xlsx"), null, true),
-		    DataTable = Source{[Item="TrackingScore",Kind="Sheet"]}[Data],
+		    Source = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1nCBdNwAHM2udDAdk-XrrSoA7iWGeCGFj7CJXsgXMB-M/edit?usp=sharing"),
+		    DataTable = Source{[name="TrackingScore",ItemKind="Table"]}[Data],
+		    //Source = Excel.Workbook(File.Contents("C:\Users\lukas\OneDrive\Documents\projects\archery_performance\data\Archery.xlsx"), null, true),
+		    //DataTable = Source{[Item="TrackingScore",Kind="Sheet"]}[Data],
 		    #"Removed Top Rows" = Table.Skip(DataTable,1),
 		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
 		    #"Filtered Rows" = Table.SelectRows(#"Promoted Headers", each [Date] <> null and [Date] <> ""),

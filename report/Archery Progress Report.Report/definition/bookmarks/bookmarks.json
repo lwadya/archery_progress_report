@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "b2b104e10470d6a0077a",
+      "displayName": "Session Round Dates",
+      "children": [
+        "cd0a027c3a55d6709535",
+        "918bba3cb0889b2556b3"
+      ]
+    }
+  ]
+}

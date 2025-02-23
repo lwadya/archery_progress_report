@@ -897,12 +897,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "sessions": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "average sessions": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -1352,6 +1346,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Session Date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -2112,7 +2116,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Average": {
+			          "Average Round Score": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2705,6 +2709,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Sessions": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -3384,7 +3398,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Max": {
+			          "Best Round Score": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -3516,7 +3530,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Min": {
+			          "Worst Round Score": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5286,90 +5300,30 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Session Dates Performance"
+			          "ConceptualProperty": "Session Dates Scores"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "session dates performance": {
+			          "session dates scores": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "performance": {
+			          "scores": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "dates performance": {
+			          "dates scores": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "session date presentation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "session date recital": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "session date enactment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "date presentation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "date recital": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "date enactment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "session date act": {
+			          "session date notch": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5379,7 +5333,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session date routine": {
+			          "session date slash": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5389,7 +5343,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session date concert": {
+			          "session date groove": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5399,13 +5353,73 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "session date show": {
+			          "session date nick": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "session date cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "session date marks": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "date notch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date slash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date groove": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date nick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
 			          }
 			        },
 			        {
@@ -6013,25 +6027,25 @@ cultureInfo en-US
 			    "select_round_type": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type"
+			          "ConceptualEntity": "select_round_scoring"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "select round type": {
+			          "select round scoring": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "select_round_type": {
+			          "select_round_scoring": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "type": {
+			          "scoring": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -6043,232 +6057,63 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "category": {
+			          "choice": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.736
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "genre": {
+			          "first-rate": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.736
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "manner": {
+			          "first-class": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.736
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "variety": {
+			          "hand-picked": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.736
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "brand": {
+			          "exclusive": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.452
 			          }
 			        },
 			        {
-			          "class": {
+			          "elite": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "kind": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "style": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "form": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "grouping": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        }
-			      ]
-			    },
-			    "select_round_type.round_type": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
-			          "ConceptualProperty": "round_type"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "round type": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "round_type": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "type": {
-			            "Type": "Noun",
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "round category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "round genre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "round manner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "round variety": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "genre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "manner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "variety": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "round brand": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "round class": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
+			            "Weight": 0.452
 			          }
 			        }
 			      ]
@@ -6276,7 +6121,7 @@ cultureInfo en-US
 			    "select_round_type.sort_order": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
+			          "ConceptualEntity": "select_round_scoring",
 			          "ConceptualProperty": "sort_order"
 			        }
 			      },
@@ -6405,7 +6250,7 @@ cultureInfo en-US
 			    "select_round_type.shot_count": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
+			          "ConceptualEntity": "select_round_scoring",
 			          "ConceptualProperty": "shot_count"
 			        }
 			      },
@@ -6438,7 +6283,7 @@ cultureInfo en-US
 			    "select_round_type.display_format": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
+			          "ConceptualEntity": "select_round_scoring",
 			          "ConceptualProperty": "display_format"
 			        }
 			      },
@@ -6567,7 +6412,7 @@ cultureInfo en-US
 			    "select_round_type.average_description": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
+			          "ConceptualEntity": "select_round_scoring",
 			          "ConceptualProperty": "average_description"
 			        }
 			      },
@@ -6660,7 +6505,7 @@ cultureInfo en-US
 			    "select_round_type.min_description": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
+			          "ConceptualEntity": "select_round_scoring",
 			          "ConceptualProperty": "min_description"
 			        }
 			      },
@@ -6763,7 +6608,7 @@ cultureInfo en-US
 			    "select_round_type.max_description": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
+			          "ConceptualEntity": "select_round_scoring",
 			          "ConceptualProperty": "max_description"
 			        }
 			      },
@@ -7519,21 +7364,6 @@ cultureInfo en-US
 			          "selected type": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Type": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Round Type": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -7828,11 +7658,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.v_Session_Dates_Performance_FormatString_session_dates_performance_FormatString": {
+			    "measure_table.v_Session_Dates_Scores_FormatString_session_dates_scores_FormatString": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "_Session Dates Performance FormatString"
+			          "ConceptualProperty": "_Session Dates Scores FormatString"
 			        }
 			      },
 			      "State": "Generated",
@@ -7841,7 +7671,7 @@ cultureInfo en-US
 			      },
 			      "Terms": [
 			        {
-			          "_session dates performance FormatString": {
+			          "_session dates scores FormatString": {
 			            "State": "Generated"
 			          }
 			        }
@@ -7964,7 +7794,7 @@ cultureInfo en-US
 			    "select_round_type.round_description": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "select_round_type",
+			          "ConceptualEntity": "select_round_scoring",
 			          "ConceptualProperty": "round_description"
 			        }
 			      },
@@ -14145,12 +13975,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "sessions": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "average sessions": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -15374,16 +15198,6 @@ cultureInfo en-US
 			          "selected type description": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Description": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -15459,6 +15273,65 @@ cultureInfo en-US
 			        {
 			          "_round selected type description FormatString": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "select_round_type.round_scoring": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "select_round_scoring",
+			          "ConceptualProperty": "round_scoring"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "round scoring": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "round_scoring": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "scoring": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Score Format": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Round Score Format": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Round Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -15600,6 +15473,59 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_calendars_have_dim_sessions"
+			        }
+			      ]
+			    },
+			    "select_round_type_has_round_scoring": {
+			      "Binding": {
+			        "ConceptualEntity": "select_round_scoring"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "select_round_type": {
+			          "Target": {
+			            "Entity": "select_round_type"
+			          }
+			        },
+			        "select_round_type.round_scoring": {
+			          "Target": {
+			            "Entity": "select_round_type.round_scoring"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "select_round_type"
+			            },
+			            "Object": {
+			              "Role": "select_round_type.round_scoring"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_round_scoring_have_round_scoring"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "select_round_type"
+			            },
+			            "Prepositions": [
+			              {
+			                "round": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "select_round_type.round_scoring"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "select_round_scoring_are_round_round_scoring"
 			        }
 			      ]
 			    },
@@ -17599,7 +17525,7 @@ cultureInfo en-US
 			    },
 			    "select_round_type_has_round_description": {
 			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
+			        "ConceptualEntity": "select_round_scoring"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -17626,7 +17552,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_have_round_description"
+			          "ID": "select_round_scoring_have_round_description"
 			        },
 			        {
 			          "Preposition": {
@@ -17646,7 +17572,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_are_round_round_description"
+			          "ID": "select_round_scoring_are_round_round_description"
 			        }
 			      ]
 			    },
@@ -17903,7 +17829,7 @@ cultureInfo en-US
 			    },
 			    "select_round_type_has_max_description": {
 			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
+			        "ConceptualEntity": "select_round_scoring"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -17930,13 +17856,13 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_have_max_descriptions"
+			          "ID": "select_round_scoring_have_max_descriptions"
 			        }
 			      ]
 			    },
 			    "select_round_type_has_min_description": {
 			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
+			        "ConceptualEntity": "select_round_scoring"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -17963,13 +17889,13 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_have_min_descriptions"
+			          "ID": "select_round_scoring_have_min_descriptions"
 			        }
 			      ]
 			    },
 			    "select_round_type_has_average_description": {
 			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
+			        "ConceptualEntity": "select_round_scoring"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -17996,13 +17922,13 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_have_average_descriptions"
+			          "ID": "select_round_scoring_have_average_descriptions"
 			        }
 			      ]
 			    },
 			    "select_round_type_has_display_format": {
 			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
+			        "ConceptualEntity": "select_round_scoring"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -18029,13 +17955,13 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_have_display_formats"
+			          "ID": "select_round_scoring_have_display_formats"
 			        }
 			      ]
 			    },
 			    "select_round_type_has_shot_count": {
 			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
+			        "ConceptualEntity": "select_round_scoring"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -18062,13 +17988,13 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_have_shot_counts"
+			          "ID": "select_round_scoring_have_shot_counts"
 			        }
 			      ]
 			    },
 			    "select_round_type_has_sort_order": {
 			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
+			        "ConceptualEntity": "select_round_scoring"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -18095,60 +18021,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "select_round_type_have_sort_orders"
-			        }
-			      ]
-			    },
-			    "select_round_type_has_round_type": {
-			      "Binding": {
-			        "ConceptualEntity": "select_round_type"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "select_round_type": {
-			          "Target": {
-			            "Entity": "select_round_type"
-			          }
-			        },
-			        "select_round_type.round_type": {
-			          "Target": {
-			            "Entity": "select_round_type.round_type"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "select_round_type"
-			            },
-			            "Object": {
-			              "Role": "select_round_type.round_type"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "select_round_type_have_round_type"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "select_round_type"
-			            },
-			            "Prepositions": [
-			              {
-			                "round": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "select_round_type.round_type"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "select_round_type_are_round_round_type"
+			          "ID": "select_round_scoring_have_sort_orders"
 			        }
 			      ]
 			    },
@@ -18313,7 +18186,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "measure_tables_have_session_dates_performance"
+			          "ID": "measure_tables_have_session_dates_scores"
 			        }
 			      ]
 			    },

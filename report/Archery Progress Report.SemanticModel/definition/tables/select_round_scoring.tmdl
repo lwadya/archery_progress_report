@@ -1,17 +1,6 @@
 /// Table defined in PBI to allow users to select type of round for performance KPIs
-table select_round_type
+table select_round_scoring
 	lineageTag: ee5a8820-0588-4b32-9a46-ba022f251b9f
-
-	column round_type
-		dataType: string
-		lineageTag: baed64a4-2f02-4117-a1d6-ae7cad82855f
-		summarizeBy: none
-		sourceColumn: round_type
-		sortByColumn: sort_order
-
-		changedProperty = SortByColumn
-
-		annotation SummarizationSetBy = Automatic
 
 	column sort_order
 		dataType: int64
@@ -71,12 +60,23 @@ table select_round_type
 
 		annotation SummarizationSetBy = Automatic
 
-	partition select_round_type = m
+	column round_scoring
+		dataType: string
+		lineageTag: a1bfcc05-854d-421b-9f8a-e9882c8b6e3f
+		summarizeBy: none
+		sourceColumn: round_scoring
+		sortByColumn: sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_round_scoring = m
 		mode: import
 		queryGroup: 'Table Queries'
 		source =
 				let
-				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("nZExb4MwEIX/yhNzVDkFvHeo1KFDd8RgwQUsgS+yDenPrw0koFZtQ4ab7r279+kVRfJBFq+mTg7JMcwLnDZNR3Ate1zY+hbDGZ5xFDizNt4tSvEkon4kqxqCNrUedT2obna6ii2F/TtfyHmoRbbucGILZUDT6zfdtP/rykORpCK+fQ6TiknmlpQKvfrU/dCDTwiqNW0aHduw8+EgU12Hio2javB6JFhlGnLzgfn4irBJ89PzzXLFud8T0bI8hkzDZPnvaEG1omX5frTr8R1oG8vdaDdPRJNTa1kY+UdrctuafKA1ub81+UBrN09ZfgE=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [round_type = _t, sort_order = _t, round_description = _t, shot_count = _t, display_format = _t, average_description = _t, min_description = _t, max_description = _t]),
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("nZE/b4MwFMS/yokZVU4B7x0qdegQqd0Qg0scQAK/yDZJ++37nJLUSfonZHiDzf0ed76yTJba4tGs8LDVVjU6SZMFz3SCa8nD1WS1w9sHtFml2JH1LcYNPGEhsKHOeDdx4k78SEPVlpyD6vuwJMifaaedh7rUrslCmaBj2VPXtP/rqrRMMoGX8PGVvOqZvOfhuwC4ybTCoN67YRxAa2QiMp8F3yfe979gWbBck3G6Hn231bDKNPwa+wVfy7/DRL4umTPkEOx6JoTMi9OQGQ/f/RoyL6KQeTE/5GH5jJARcnXIIxNCyrMmcx75R5MyblLe0KSc36S8ockjU1Wf", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [round_scoring = _t, sort_order = _t, round_description = _t, shot_count = _t, display_format = _t, average_description = _t, min_description = _t, max_description = _t]),
 				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"sort_order", Int64.Type}, {"shot_count", Int64.Type}})
 				in
 				    #"Changed Type"

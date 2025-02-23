@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "d69d6bd3560004053c21",
   "position": {
-    "x": 8.3297180043383943,
-    "y": 73.579175704989154,
-    "z": 0,
-    "height": 187.41865509761388,
-    "width": 1262.6464208242949,
+    "x": 8,
+    "y": 118,
+    "z": 6000,
+    "height": 192,
+    "width": 1264,
     "tabOrder": 0
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "dim_calendar.date",
-              "nativeQueryRef": "date",
+              "nativeQueryRef": "Session Date",
               "active": true,
+              "displayName": "Session Date",
               "format": "M/d"
             }
           ]
@@ -80,7 +81,8 @@
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Average",
-              "nativeQueryRef": "Round Score Average"
+              "nativeQueryRef": "Average Round Score",
+              "displayName": "Average Round Score"
             }
           ]
         },
@@ -98,7 +100,8 @@
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Min",
-              "nativeQueryRef": "Round Score Min"
+              "nativeQueryRef": "Worst Round Score",
+              "displayName": "Worst Round Score"
             },
             {
               "field": {
@@ -112,7 +115,8 @@
                 }
               },
               "queryRef": "Measure Table.Round Score 30 Max",
-              "nativeQueryRef": "Round Score Max"
+              "nativeQueryRef": "Best Round Score",
+              "displayName": "Best Round Score"
             }
           ]
         }
@@ -139,13 +143,6 @@
       "categoryAxis": [
         {
           "properties": {
-            "axisType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Categorical'"
-                }
-              }
-            },
             "innerPadding": {
               "expr": {
                 "Literal": {
@@ -153,24 +150,10 @@
                 }
               }
             },
-            "showAxisTitle": {
+            "axisType": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "concatenateLabels": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "'Categorical'"
                 }
               }
             },
@@ -181,10 +164,10 @@
                 }
               }
             },
-            "maxMarginFactor": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "25L"
+                  "Value": "false"
                 }
               }
             },
@@ -281,6 +264,24 @@
                     }
                   },
                   "Property": "Round Score Max"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#605E5C'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -421,7 +422,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#cccccc'"
+                              "Value": "'#e6e6e6'"
                             }
                           }
                         },
@@ -504,7 +505,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Round Max, Average, and Min by Session Date'"
                 }
               }
             }
@@ -518,6 +526,32 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }

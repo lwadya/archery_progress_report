@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "de0fb369dfd9d60bf586",
   "position": {
-    "x": 8.4488448844884481,
-    "y": 489.32893289328928,
-    "z": 3000,
-    "height": 223.19031903190319,
-    "width": 630.84708470847079,
+    "x": 8.4600132187706532,
+    "y": 542,
+    "z": 4000,
+    "height": 168.35426305353602,
+    "width": 632,
     "tabOrder": 3000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "calc_grp_sessions.sessions",
-              "nativeQueryRef": "sessions",
-              "active": true
+              "nativeQueryRef": "Sessions",
+              "active": true,
+              "displayName": "Sessions"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "select_score_buckets.score_bucket",
-              "nativeQueryRef": "score_bucket"
+              "nativeQueryRef": "Score",
+              "displayName": "Score"
             }
           ]
         },
@@ -860,7 +862,7 @@
             "stackedGapSize": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
+                  "Value": "0D"
                 }
               }
             }
@@ -980,7 +982,7 @@
             "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "15L"
+                  "Value": "10L"
                 }
               }
             },
@@ -1016,6 +1018,98 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Shot Percentage Horizontal Chart'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }

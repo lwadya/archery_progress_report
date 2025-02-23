@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "5bd35994770d87361d03",
   "position": {
-    "x": 645.63256325632562,
-    "y": 488.62486248624862,
-    "z": 1000,
-    "height": 223.89438943894388,
-    "width": 625.21452145214516,
+    "x": 640,
+    "y": 542,
+    "z": 3000,
+    "height": 168,
+    "width": 632,
     "tabOrder": 1000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "select_score_buckets.score_bucket",
-              "nativeQueryRef": "score_bucket",
-              "active": true
+              "nativeQueryRef": "Score",
+              "active": true,
+              "displayName": "Score"
             }
           ],
           "showAll": true
@@ -47,7 +48,8 @@
                 }
               },
               "queryRef": "Calc_Grp_Sessions.Sessions",
-              "nativeQueryRef": "Sessions"
+              "nativeQueryRef": "Sessions",
+              "displayName": "Sessions"
             }
           ]
         },
@@ -284,8 +286,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#3B8FE6'"
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -596,6 +599,92 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Shot Percentage Vertical Chart'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
