@@ -1,0 +1,47 @@
+/// Table defined in PBI to group rarer, lower scores into a single bucket
+table dim_score_buckets
+	lineageTag: aec2c89e-c340-48ea-ad41-1e7b01603e63
+
+	column score_bucket
+		dataType: string
+		lineageTag: 6974cecd-eed0-4cf4-b8bf-f4114d06522e
+		summarizeBy: none
+		sourceColumn: score_bucket
+		sortByColumn: sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d637525-176f-4b4b-bfd0-0704f7b3a978
+		summarizeBy: none
+		sourceColumn: sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column score
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e401b0c-d3c8-4b5a-a71e-0a02e841552c
+		summarizeBy: none
+		sourceColumn: score
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_score_buckets = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("bY67DcAwCAVXiahdgIl/sxBXniH750FaipPenbBkMxKmQuIw7WK0MCtYYRNLwQwbWDcYYR2rgR72Ly9uz8us52px7I+SqFmsWZQs4rv7Aw==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [score_bucket = _t, sort_order = _t, score = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"score_bucket", type text}, {"sort_order", Int64.Type}, {"score", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

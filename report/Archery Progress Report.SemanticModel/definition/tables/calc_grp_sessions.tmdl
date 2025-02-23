@@ -3,6 +3,7 @@ table calc_grp_sessions
 	lineageTag: e0fef639-72d4-427c-a750-e8f3c91647dd
 
 	calculationGroup
+		precedence: 1
 
 		calculationItem 'Default Selection' =
 				
@@ -12,10 +13,10 @@ table calc_grp_sessions
 				
 				SELECTEDMEASURE()
 
-		calculationItem Selected =
+		calculationItem 'Selected Sessions' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-12-28
+				// Last Updated:    2024-12-30
 				// Description:     Selected session, or last session if none are selected
 				
 				IF(
@@ -23,107 +24,90 @@ table calc_grp_sessions
 				    SELECTEDMEASURE(),
 				    CALCULATE(
 				        SELECTEDMEASURE(),
-				        calc_grp_sessions[sessions] = "Last"
+				        calc_grp_sessions[sessions] = "Last Session"
 				    )
 				)
 
-		calculationItem Best =
+		calculationItem 'Best Session' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-12-28
-				// Description:     Best session ever, as measured by session average shot score
+				// Last Updated:    2024-12-31
+				// Description:     Best session ever, by top round score average
 				
+				VAR _round_scores_table =
+				SUMMARIZE(
+				    ALL( fact_shot_score ),
+				    fact_shot_score[session_id],
+				    "round_score_average", [Round Score Average]
+				)
+				
+				VAR _best_session_id =
+				MAXX(
+				    TOPN(
+				        1,
+				        _round_scores_table,
+				        [round_score_average], DESC
+				    ),
+				    [session_id]
+				)
+				
+				VAR _result =
 				CALCULATE(
 				    SELECTEDMEASURE(),
-				    WINDOW(
-				        0, ABS,
-				        0, ABS,
+				    FILTER(
 				        ALL( dim_session ),
-				        ORDERBY( dim_session[session_score_average], DESC BLANKS LAST, dim_session[session_id], DESC BLANKS LAST )
+				        dim_session[session_id] = _best_session_id
 				    )
 				)
+				
+				RETURN _result
 
-		calculationItem Last =
+		calculationItem 'Last Session' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-10-09
+				// Last Updated:    2024-12-31
 				// Description:     Last session
 				
-				VAR _max_session_id =
-				CALCULATE(
-				    MAX( 'dim_session'[session_id] ),
-				    ALL( 'dim_session' )
-				)
-				
-				VAR _result =
 				CALCULATE(
 				    SELECTEDMEASURE(),
-				    FILTER(
-				        ALL( 'dim_session' ),
-				        'dim_session'[session_id] = _max_session_id
+				    TOPN(
+				        1,
+				        ALL( dim_session ),
+				        dim_session[session_id], DESC
 				    )
 				)
-				
-				RETURN
-				_result
 
-		calculationItem 'Last 5' =
+		calculationItem 'Last 5 Sessions' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-10-09
+				// Last Updated:    2024-12-31
 				// Description:     Last 5 sessions
 				
-				VAR _last_n = 5
-				
-				VAR _max_session_id =
-				CALCULATE(
-				    MAX( 'dim_session'[session_id] ),
-				    ALL( 'dim_session' )
-				)
-				
-				VAR _min_session_id = _max_session_id - _last_n + 1
-				
-				VAR _result =
 				CALCULATE(
 				    SELECTEDMEASURE(),
-				    FILTER(
-				        ALL( 'dim_session' ),
-				        'dim_session'[session_id] >= _min_session_id
+				    TOPN(
+				        5,
+				        ALL( dim_session ),
+				        dim_session[session_id], DESC
 				    )
 				)
-				
-				RETURN
-				_result
 
-		calculationItem 'Last 10' =
+		calculationItem 'Last 10 Sessions' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-12-28
+				// Last Updated:    2024-12-31
 				// Description:     Last 10 sessions
 				
-				VAR _last_n = 10
-				
-				VAR _max_session_id =
-				CALCULATE(
-				    MAX( 'dim_session'[session_id] ),
-				    ALL( 'dim_session' )
-				)
-				
-				VAR _min_session_id = _max_session_id - _last_n + 1
-				
-				VAR _result =
 				CALCULATE(
 				    SELECTEDMEASURE(),
-				    FILTER(
-				        ALL( 'dim_session' ),
-				        'dim_session'[session_id] >= _min_session_id
+				    TOPN(
+				        10,
+				        ALL( dim_session ),
+				        dim_session[session_id], DESC
 				    )
 				)
-				
-				RETURN
-				_result
 
-		calculationItem All =
+		calculationItem 'All Sessions' =
 				
 				// Last Developer:  Lukas Wadya
 				// Last Updated:    2024-09-05
@@ -134,164 +118,25 @@ table calc_grp_sessions
 				    ALL( dim_session )
 				)
 
-		calculationItem 'Neighboring Sessions Benchmark' =
+		calculationItem 'Selected Range' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-11-30
-				// Description:     A range defined by n sessions before and after the selected session
+				// Last Updated:    2025-01-05
+				// Description:     Sessions selected using the range selection tables
 				
-				VAR _session_offset = 5
+				VAR _default_session_range = 30
 				
-				VAR _pivot_session = MAX( dim_session[session_id] )
-				VAR _benchmark_start_id = _pivot_session - _session_offset
-				VAR _benchmark_end_id = _pivot_session + _session_offset
+				VAR _range_end_session_id = MAX( select_session_end_date[session_id] )
+				
+				VAR _range_length = SELECTEDVALUE( select_session_range[sessions], _default_session_range )
 				
 				VAR _result =
 				CALCULATE(
 				    SELECTEDMEASURE(),
-				    FILTER(
-				        ALL( dim_session ),
-				        dim_session[session_id] >= _benchmark_start_id && dim_session[session_id] <= _benchmark_end_id
-				    )
+				    dim_session[session_id] > _range_end_session_id - _range_length && dim_session[session_id] <= _range_end_session_id
 				)
 				
-				RETURN
-				_result
-
-		calculationItem 'Neighboring Sessions Difference' =
-				
-				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-11-30
-				// Description:     Average difference between selected session and neighboring sessions benchmark
-				
-				AVERAGEX(
-				    dim_session,
-				    SELECTEDMEASURE() -
-				    CALCULATE(
-				        SELECTEDMEASURE(),
-				        calc_grp_sessions[sessions] = "Neighboring Sessions Benchmark"
-				    )
-				)
-
-		calculationItem 'Adjustment Current' =
-				
-				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-12-03
-				// Description:     Range of n consecutive sessions starting with the latest major adjustment
-				
-				VAR _max_sessions = 5
-				
-				VAR _start_session_id =
-				CALCULATE(
-				    MAX( dim_session[session_id] ),
-				    NOT( ISBLANK( dim_session[major_adjustment] ) )
-				)
-				
-				VAR _end_session_id = _start_session_id + _max_sessions
-				
-				VAR _result =
-				CALCULATE(
-				    SELECTEDMEASURE(),
-				    FILTER(
-				        ALL( dim_session ),
-				        dim_session[session_id] >= _start_session_id && dim_session[session_id] < _end_session_id
-				    )
-				)
-				
-				RETURN
-				_result
-
-		calculationItem 'Adjustment Benchmark' =
-				
-				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-12-25
-				// Description:     Equivalent number of sessions to Adjustment Current, but before the selected adjustment
-				
-				VAR _start_session_id =
-				CALCULATE(
-				    [Session ID Min],
-				    calc_grp_sessions[sessions] = "Adjustment Current"
-				)
-				
-				VAR _session_count =
-				CALCULATE(
-				    [Session Count],
-				    calc_grp_sessions[sessions] = "Adjustment Current"
-				)
-				
-				VAR _benchmark_end_id = _start_session_id - 1
-				VAR _benchmark_start_id = _start_session_id - _session_count
-				
-				VAR _result =
-				CALCULATE(
-				    SELECTEDMEASURE(),
-				    FILTER(
-				        ALL( dim_session ),
-				        dim_session[session_id] >= _benchmark_start_id && dim_session[session_id] <= _benchmark_end_id
-				    )
-				)
-				
-				RETURN
-				_result
-
-		calculationItem 'Adjustment Difference' =
-				
-				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-12-25
-				// Description:     Difference between adjustment period and benchmark period
-				
-				VAR _adjustment_value =
-				CALCULATE(
-				    SELECTEDMEASURE(),
-				    calc_grp_sessions[sessions] = "Adjustment Current"
-				)
-				
-				VAR _benchmark_value =
-				CALCULATE(
-				    SELECTEDMEASURE(),
-				    calc_grp_sessions[sessions] = "Adjustment Benchmark"
-				)
-				
-				VAR _result =
-				IF(
-				    NOT( ISBLANK( _adjustment_value ) ) && NOT( ISBLANK( _benchmark_value ) ),
-				    _adjustment_value - _benchmark_value
-				)
-				
-				RETURN
-				_result
-
-		calculationItem 'Adjustment Percent Difference' =
-				
-				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-11-10
-				// Description:     Percent difference between adjustment period and benchmark period
-				
-				VAR _adjustment_value =
-				CALCULATE(
-				    SELECTEDMEASURE(),
-				    calc_grp_sessions[sessions] = "Adjustment Current"
-				)
-				
-				VAR _benchmark_value =
-				CALCULATE(
-				    SELECTEDMEASURE(),
-				    calc_grp_sessions[sessions] = "Adjustment Benchmark"
-				)
-				
-				VAR _result =
-				IF(
-				    NOT( ISBLANK( _adjustment_value ) ) && NOT( ISBLANK( _benchmark_value ) ),
-				    DIVIDE(
-				        _adjustment_value - _benchmark_value,
-				        _benchmark_value
-				    )
-				)
-				
-				RETURN
-				_result
-
-			formatStringDefinition = "0.0%"
+				RETURN _result
 
 	column sessions
 		dataType: string

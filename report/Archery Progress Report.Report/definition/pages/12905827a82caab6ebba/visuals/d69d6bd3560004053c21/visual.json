@@ -332,7 +332,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 9,
+                      "ColorId": 3,
                       "Percent": 0
                     }
                   }
@@ -358,8 +358,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.2
+                      "ColorId": 4,
+                      "Percent": 0
                     }
                   }
                 }
@@ -433,7 +433,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#D8DB0C'"
+                              "Value": "'#EBEB31'"
                             }
                           }
                         }

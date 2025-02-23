@@ -8,15 +8,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "91b0bdd0f31e2ed2f002",
+        "name": "2df4896b9985ca48e8fd",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "round_shot_count"
+                "Entity": "select_round_type"
               }
             },
-            "Property": "round_shot_count"
+            "Property": "round_type"
           }
         },
         "type": "Categorical",
@@ -24,8 +24,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "r",
-              "Entity": "round_shot_count",
+              "Name": "s",
+              "Entity": "select_round_type",
               "Type": 0
             }
           ],
@@ -38,10 +38,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "r"
+                            "Source": "s"
                           }
                         },
-                        "Property": "round_shot_count"
+                        "Property": "round_type"
                       }
                     }
                   ],
@@ -49,7 +49,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "30L"
+                          "Value": "'300'"
                         }
                       }
                     ]
@@ -79,21 +79,21 @@
     ]
   },
   "pageBinding": {
-    "name": "f00394f37c52eaae7679",
+    "name": "129de8927ec03aa1e3fe",
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "48ffa1841797bcfb0ece",
-        "boundFilter": "91b0bdd0f31e2ed2f002",
+        "name": "99cdaf2bdc40268f9db9",
+        "boundFilter": "2df4896b9985ca48e8fd",
         "qnaSingleSelectRequired": true,
         "fieldExpr": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "round_shot_count"
+                "Entity": "select_round_type"
               }
             },
-            "Property": "round_shot_count"
+            "Property": "round_type"
           }
         }
       }
@@ -130,6 +130,41 @@
     {
       "source": "d69d6bd3560004053c21",
       "target": "5bd35994770d87361d03",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3745a2ce731cc4a81c1b",
+      "target": "064baaf80ad0eb532414",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3745a2ce731cc4a81c1b",
+      "target": "55f1ea822ce3fd9b5a50",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3745a2ce731cc4a81c1b",
+      "target": "019acd56d97e519b73d8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3745a2ce731cc4a81c1b",
+      "target": "b3bf5ad866a83f48c9fa",
+      "type": "NoFilter"
+    },
+    {
+      "source": "3745a2ce731cc4a81c1b",
+      "target": "d69d6bd3560004053c21",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d69d6bd3560004053c21",
+      "target": "3745a2ce731cc4a81c1b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d69d6bd3560004053c21",
+      "target": "de0fb369dfd9d60bf586",
       "type": "DataFilter"
     }
   ]

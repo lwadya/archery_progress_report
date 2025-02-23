@@ -2,6 +2,10 @@ relationship 8534e468-6fde-7eba-4823-1e141da74d77
 	fromColumn: fact_shot_score.session_id
 	toColumn: dim_session.session_id
 
+relationship AutoDetected_068b28eb-d7e5-4060-8f5d-6571ea33110c
+	fromColumn: fact_shot_score.score
+	toColumn: dim_score_buckets.score
+
 relationship 0704709f-7b99-6984-e2a3-7fb00c95dd05
 	fromColumn: dim_session.date
 	toColumn: dim_calendar.date

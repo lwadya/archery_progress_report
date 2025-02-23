@@ -1,0 +1,87 @@
+/// Table defined in PBI to allow users to select type of round for performance KPIs
+table select_round_type
+	lineageTag: ee5a8820-0588-4b32-9a46-ba022f251b9f
+
+	column round_type
+		dataType: string
+		lineageTag: baed64a4-2f02-4117-a1d6-ae7cad82855f
+		summarizeBy: none
+		sourceColumn: round_type
+		sortByColumn: sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 386f04eb-a8c0-4677-80f3-0284d5b0d2a1
+		summarizeBy: sum
+		sourceColumn: sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column shot_count
+		dataType: int64
+		formatString: 0
+		lineageTag: babfc93d-ad9e-48aa-8eae-a4adcaf614f7
+		summarizeBy: sum
+		sourceColumn: shot_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column display_format
+		dataType: string
+		lineageTag: d42741b2-c48f-4d03-a31f-50ea7e2fc042
+		summarizeBy: none
+		sourceColumn: display_format
+
+		annotation SummarizationSetBy = Automatic
+
+	column average_description
+		dataType: string
+		lineageTag: 34005b64-03fe-42f4-a3f0-0da487c2610b
+		summarizeBy: none
+		sourceColumn: average_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column min_description
+		dataType: string
+		lineageTag: 4cb5f999-841a-4372-8cf2-89d9d88d9175
+		summarizeBy: none
+		sourceColumn: min_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_description
+		dataType: string
+		lineageTag: a48ed4a5-df6e-4dc4-8fce-509a63b6056e
+		summarizeBy: none
+		sourceColumn: max_description
+
+		annotation SummarizationSetBy = Automatic
+
+	column round_description
+		dataType: string
+		lineageTag: 6107190f-08f8-48ed-98bc-b4c9f43b6290
+		summarizeBy: none
+		sourceColumn: round_description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_round_type = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("nZExb4MwEIX/yhNzVDkFvHeo1KFDd8RgwQUsgS+yDenPrw0koFZtQ4ab7r279+kVRfJBFq+mTg7JMcwLnDZNR3Ate1zY+hbDGZ5xFDizNt4tSvEkon4kqxqCNrUedT2obna6ii2F/TtfyHmoRbbucGILZUDT6zfdtP/rykORpCK+fQ6TiknmlpQKvfrU/dCDTwiqNW0aHduw8+EgU12Hio2javB6JFhlGnLzgfn4irBJ89PzzXLFud8T0bI8hkzDZPnvaEG1omX5frTr8R1oG8vdaDdPRJNTa1kY+UdrctuafKA1ub81+UBrN09ZfgE=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [round_type = _t, sort_order = _t, round_description = _t, shot_count = _t, display_format = _t, average_description = _t, min_description = _t, max_description = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"sort_order", Int64.Type}, {"shot_count", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

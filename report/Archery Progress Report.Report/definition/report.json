@@ -2,9 +2,14 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.2.0/schema.json",
   "themeCollection": {
     "baseTheme": {
-      "name": "CY24SU06",
-      "reportVersionAtImport": "5.56",
+      "name": "CY24SU10",
+      "reportVersionAtImport": "5.60",
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Archery_Performance04000961535636627.json",
+      "reportVersionAtImport": "5.60",
+      "type": "RegisteredResources"
     }
   },
   "layoutOptimization": "None",
@@ -46,9 +51,20 @@
       "type": "SharedResources",
       "items": [
         {
-          "name": "CY24SU06",
-          "path": "BaseThemes/CY24SU06.json",
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Archery_Performance04000961535636627.json",
+          "path": "Archery_Performance04000961535636627.json",
+          "type": "CustomTheme"
         }
       ]
     }

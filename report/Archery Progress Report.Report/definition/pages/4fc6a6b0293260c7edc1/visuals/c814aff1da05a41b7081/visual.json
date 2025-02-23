@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "fact_shot_score.end",
-              "nativeQueryRef": "end1",
-              "active": true
+              "nativeQueryRef": "End",
+              "active": true,
+              "displayName": "End"
             }
           ]
         },
@@ -46,8 +47,9 @@
                 }
               },
               "queryRef": "dim_calendar.date",
-              "nativeQueryRef": "date",
-              "active": true
+              "nativeQueryRef": "Date",
+              "active": true,
+              "displayName": "Date"
             }
           ]
         },
@@ -65,7 +67,8 @@
                 }
               },
               "queryRef": "Measure Table.Shot Score Average",
-              "nativeQueryRef": "Shot Score Average"
+              "nativeQueryRef": "Average Shot Score",
+              "displayName": "Average Shot Score"
             }
           ]
         }
@@ -98,7 +101,6 @@
             "queryRefs": [
               "dim_calendar.date"
             ],
-            "isCollapsed": true,
             "isPinned": true
           }
         ],
@@ -165,7 +167,7 @@
             "rowPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             },
@@ -187,6 +189,44 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "gridHorizontalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "gridVerticalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -902,12 +942,6 @@
               }
             ]
           }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "metadata": "dim_calendar.date"
-          }
         }
       ],
       "values": [
@@ -924,6 +958,13 @@
                   }
                 }
               }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         },
@@ -937,52 +978,28 @@
                       "Cases": [
                         {
                           "Condition": {
-                            "And": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
                               "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Average"
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
                                     }
                                   },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "3D"
-                                    }
-                                  }
+                                  "Property": "Shot Score Average"
                                 }
                               },
                               "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Average"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "5D"
-                                    }
-                                  }
+                                "Literal": {
+                                  "Value": "5D"
                                 }
                               }
                             }
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#b3b3b3'"
+                              "Value": "'#939393'"
                             }
                           }
                         },
@@ -1033,7 +1050,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#A6D4FF'"
+                              "Value": "'#62a5eb'"
                             }
                           }
                         },
@@ -1084,7 +1101,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#FF8668'"
+                              "Value": "'#ed5e5e'"
                             }
                           }
                         },
@@ -1111,7 +1128,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#F2FF00'"
+                              "Value": "'#efef5a'"
                             }
                           }
                         }

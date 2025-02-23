@@ -4,15 +4,13 @@ table dim_calendar
 
 	column date
 		isKey
-		formatString: yyyy-mm-dd
+		formatString: Short Date
 		lineageTag: 7b49a55a-4455-44fd-a9ce-38f4fa0f06f2
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Date]
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isCustom":true}
 
 	column start_of_year
 		formatString: yyyy
@@ -76,12 +74,21 @@ table dim_calendar
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
+	column day_of_week_display
+		lineageTag: d8e80212-5468-4dc6-9c51-926951bea58a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [day_of_week_display]
+		sortByColumn: day_of_week_number
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_calendar = calculated
 		mode: import
 		source =
 				
 				// Last Developer:      Lukas Wadya
-				// Last Change Date:    2024-10-09
+				// Last Change Date:    2025-01-04
 				// Description:         Calendar table for the report
 				
 				VAR _base_calendar =
@@ -99,7 +106,8 @@ table dim_calendar
 				    "start_of_month", DATE( YEAR( [Date] ), MONTH( [Date] ), 1 ),
 				    "start_of_week", [Date] - WEEKDAY( [Date], 1 ) + 1,
 				    "day_of_week_number", WEEKDAY( [Date], 2 ),
-				    "day_of_week_name", FORMAT( [Date], "ddd" )
+				    "day_of_week_name", FORMAT( [Date], "ddd" ),
+				    "day_of_week_display", FORMAT( [Date], "ddd" ) & " (" & WEEKDAY( [Date], 2 ) & ")"
 				)
 				
 				RETURN

@@ -1,0 +1,302 @@
+table calc_grp_formulas
+	lineageTag: a2c12ae1-4ff8-4185-abf5-d9851d7f8596
+
+	calculationGroup
+
+		calculationItem Default =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Selected measure with no modifications
+				
+				SELECTEDMEASURE()
+
+		calculationItem 'Performance Correlation Coefficient' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Pearson correlation coefficient of shot score performance against benchmark and the selected dimension
+				
+				VAR _comparison_values_table =
+				SELECTCOLUMNS(
+				    dim_session,
+				    "x_values", CALCULATE( [Shot Score Average], calc_grp_formulas[formula] = "Neighboring Sessions Difference" ),
+				    "y_values", SELECTEDMEASURE()
+				)
+				
+				VAR _x_avg =
+				AVERAGEX(
+				    _comparison_values_table,
+				    [x_values]
+				)
+				
+				VAR _y_avg =
+				AVERAGEX(
+				    _comparison_values_table,
+				    [y_values]
+				)
+				
+				VAR _numerator =
+				SUMX(
+				    _comparison_values_table,
+				    ([x_values] - _x_avg) * ([y_values] - _y_avg)
+				)
+				
+				VAR _denominator =
+				SQRT(
+				    SUMX(
+				        _comparison_values_table,
+				        ([x_values] - _x_avg)^2
+				    ) *
+				    SUMX(
+				        _comparison_values_table,
+				        ([y_values] - _y_avg)^2
+				    )
+				)
+				
+				VAR _result =
+				DIVIDE( _numerator, _denominator )
+				
+				RETURN _result
+
+		calculationItem 'Performance Correlation Description' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-06
+				// Description:     Performance Correlation Coefficient value as a simple description
+				
+				VAR _zero_buffer_value = .02
+				
+				VAR _correlation_coefficient =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
+				)
+				
+				VAR _absolute_coefficient = ABS( _correlation_coefficient )
+				
+				VAR _degree =
+				SWITCH(
+				    TRUE(),
+				    _absolute_coefficient > .5, "Strong ",
+				    _absolute_coefficient > .3, "Moderate ",
+				    _absolute_coefficient > _zero_buffer_value, "Weak ",
+				    ""
+				)
+				
+				VAR _direction =
+				SWITCH(
+				    TRUE(),
+				    _correlation_coefficient > _zero_buffer_value, "Positive",
+				    _correlation_coefficient < -_zero_buffer_value, "Negative",
+				    "None"
+				)
+				
+				VAR _result = _degree & _direction
+				
+				RETURN _result
+
+		calculationItem 'Neighboring Sessions Benchmark' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     A range defined by n sessions before and after the selected session, not including the selected session
+				
+				VAR _session_offset = 5
+				
+				VAR _pivot_session = MAX( dim_session[session_id] )
+				VAR _benchmark_start_id = _pivot_session - _session_offset
+				VAR _benchmark_end_id = _pivot_session + _session_offset
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        dim_session[session_id] >= _benchmark_start_id && dim_session[session_id] <= _benchmark_end_id && dim_session[session_id] <> _pivot_session
+				    )
+				)
+				
+				RETURN
+				_result
+
+		calculationItem 'Neighboring Sessions Difference' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Average difference between selected session and neighboring sessions benchmark
+				
+				AVERAGEX(
+				    dim_session,
+				    SELECTEDMEASURE() -
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        calc_grp_formulas[formula] = "Neighboring Sessions Benchmark"
+				    )
+				)
+
+		calculationItem 'Adjustment Current' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Range of n consecutive sessions starting with the latest major adjustment
+				
+				VAR _max_sessions = 5
+				
+				VAR _start_session_id =
+				CALCULATE(
+				    MAX( dim_session[session_id] ),
+				    NOT( ISBLANK( dim_session[major_adjustment] ) )
+				)
+				
+				VAR _end_session_id = _start_session_id + _max_sessions
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        dim_session[session_id] >= _start_session_id && dim_session[session_id] < _end_session_id
+				    )
+				)
+				
+				RETURN
+				_result
+
+		calculationItem 'Adjustment Benchmark' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Equivalent number of sessions to Adjustment Current, but before the selected adjustment
+				
+				VAR _start_session_id =
+				CALCULATE(
+				    [Session ID Min],
+				    calc_grp_formulas[formula] = "Adjustment Current"
+				)
+				
+				VAR _session_count =
+				CALCULATE(
+				    [Session Count],
+				    calc_grp_formulas[formula] = "Adjustment Current"
+				)
+				
+				VAR _benchmark_end_id = _start_session_id - 1
+				VAR _benchmark_start_id = _start_session_id - _session_count
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        dim_session[session_id] >= _benchmark_start_id && dim_session[session_id] <= _benchmark_end_id
+				    )
+				)
+				
+				RETURN
+				_result
+
+		calculationItem 'Adjustment Difference' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Difference between adjustment period and benchmark period
+				
+				VAR _adjustment_value =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_formulas[formula] = "Adjustment Current"
+				)
+				
+				VAR _benchmark_value =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_formulas[formula] = "Adjustment Benchmark"
+				)
+				
+				VAR _result =
+				IF(
+				    NOT( ISBLANK( _adjustment_value ) ) && NOT( ISBLANK( _benchmark_value ) ),
+				    _adjustment_value - _benchmark_value
+				)
+				
+				RETURN
+				_result
+
+		calculationItem 'Adjustment Percent Difference' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-05
+				// Description:     Percent difference between adjustment period and benchmark period
+				
+				VAR _adjustment_value =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_formulas[formula] = "Adjustment Current"
+				)
+				
+				VAR _benchmark_value =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_formulas[formula] = "Adjustment Benchmark"
+				)
+				
+				VAR _result =
+				IF(
+				    NOT( ISBLANK( _adjustment_value ) ) && NOT( ISBLANK( _benchmark_value ) ),
+				    DIVIDE(
+				        _adjustment_value - _benchmark_value,
+				        _benchmark_value
+				    )
+				)
+				
+				RETURN
+				_result
+
+			formatStringDefinition = "0.0%"
+
+		calculationItem 'Performance Correlation Color Step' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-01-07
+				// Description:     Color step value corresponding to a Performance Correlation Coefficient description
+				
+				VAR _correlation_description =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_formulas[formula] = "Performance Correlation Description"
+				)
+				
+				VAR _result =
+				SWITCH(
+				    _correlation_description,
+				    "Strong Positive", 3,
+				    "Moderate Positive", 2,
+				    "Weak Positive", 1,
+				    "None", 0,
+				    "Weak Negative", -1,
+				    "Moderate Negative", -2,
+				    "Strong Negative", -3,
+				    BLANK()
+				)
+				
+				RETURN _result
+
+	column formula
+		dataType: string
+		lineageTag: 676e5f0c-1b85-44a1-b5fa-09034ee4e12e
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		formatString: 0
+		lineageTag: b5908a60-bc41-43e7-a599-3082b7ad8dd3
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

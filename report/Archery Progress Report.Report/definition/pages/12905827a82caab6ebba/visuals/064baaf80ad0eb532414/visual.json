@@ -114,13 +114,6 @@
                 }
               }
             },
-            "dataLabelDecimalPoints": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "dataLabelDisplayUnits": {
               "expr": {
                 "Literal": {
@@ -134,7 +127,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -149,6 +142,20 @@
                       "Percent": -0.3
                     }
                   }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'back'"
                 }
               }
             }
@@ -207,10 +214,41 @@
                 }
               }
             },
-            "dataLabelDecimalPoints": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'back'"
+                }
+              }
+            },
+            "dataLabelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -253,7 +291,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 9,
+                      "ColorId": 3,
                       "Percent": 0
                     }
                   }
@@ -271,8 +309,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#d64550'"
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
                     }
                   }
                 }
@@ -285,17 +324,24 @@
                 }
               }
             },
-            "dataLabelDecimalPoints": {
+            "dataLabelText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ValueAndName'"
+                }
+              }
+            },
+            "transparency": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
                 }
               }
             },
-            "dataLabelText": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'ValueAndName'"
+                  "Value": "'back'"
                 }
               }
             }
@@ -407,7 +453,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Selected'"
+                          "Value": "'Selected Sessions'"
                         }
                       }
                     ]

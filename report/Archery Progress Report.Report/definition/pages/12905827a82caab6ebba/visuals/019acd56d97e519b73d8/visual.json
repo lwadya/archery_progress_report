@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "019acd56d97e519b73d8",
   "position": {
-    "x": 8.3297180043383943,
-    "y": 10.412147505422993,
+    "x": 168.97689768976898,
+    "y": 0,
     "z": 1000,
-    "height": 63.167028199566161,
-    "width": 282.51626898047721,
+    "height": 63.366336633663366,
+    "width": 282.33223322332231,
     "tabOrder": 1000
   },
   "visual": {
@@ -130,6 +130,63 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Round Score 30 Max"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Round Score 30 Average"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measure Table.Round Score 30 Min"
           }
         }
       ],
@@ -321,7 +378,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Selected'"
+                          "Value": "'Selected Sessions'"
                         }
                       }
                     ]

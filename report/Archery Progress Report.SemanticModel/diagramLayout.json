@@ -4,16 +4,17 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 254,
+        "x": 0,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 1252,
-            "y": 435.125
+            "x": 1327,
+            "y": 0
           },
           "nodeIndex": "Measure Table",
+          "nodeLineageTag": "e06aa0ae-6b63-4802-b6e2-30fd7ea315c9",
           "size": {
             "height": 104,
             "width": 234
@@ -22,10 +23,11 @@
         },
         {
           "location": {
-            "x": 1536,
-            "y": 423.125
+            "x": 1328,
+            "y": 132.9375
           },
           "nodeIndex": "calc_grp_sessions",
+          "nodeLineageTag": "e0fef639-72d4-427c-a750-e8f3c91647dd",
           "size": {
             "height": 128,
             "width": 234
@@ -34,8 +36,8 @@
         },
         {
           "location": {
-            "x": 43,
-            "y": 110.25
+            "x": 0,
+            "y": 0
           },
           "nodeIndex": "dim_calendar",
           "nodeLineageTag": "dccd6de7-88ba-4012-a0c1-7e7849e1910c",
@@ -47,8 +49,8 @@
         },
         {
           "location": {
-            "x": 316,
-            "y": 326
+            "x": 244,
+            "y": 298.8125
           },
           "nodeIndex": "dim_session",
           "nodeLineageTag": "05e65518-a919-4c75-a671-443a92a8bdd7",
@@ -60,8 +62,8 @@
         },
         {
           "location": {
-            "x": 612,
-            "y": 614
+            "x": 430,
+            "y": 679.8125
           },
           "nodeIndex": "fact_shot_score",
           "nodeLineageTag": "e6891884-0821-44e6-a257-b96b37aa6cd8",
@@ -73,25 +75,63 @@
         },
         {
           "location": {
-            "x": 1777,
-            "y": 331.125
+            "x": 1329,
+            "y": 292.90625
           },
-          "nodeIndex": "Temp Table",
+          "nodeIndex": "calc_grp_formulas",
+          "nodeLineageTag": "a2c12ae1-4ff8-4185-abf5-d9851d7f8596",
           "size": {
-            "height": 200,
+            "height": 128,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 2018,
-            "y": 294.625
+            "x": 641,
+            "y": 447.5625
           },
-          "nodeIndex": "round_shot_count",
-          "nodeLineageTag": "40c6a923-17bc-4d4e-9c78-43f990b0e8e3",
+          "nodeIndex": "dim_score_buckets",
+          "nodeLineageTag": "aec2c89e-c340-48ea-ad41-1e7b01603e63",
           "size": {
-            "height": 224,
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1072,
+            "y": 466.90625
+          },
+          "nodeIndex": "select_session_end_date",
+          "nodeLineageTag": "4faa2d23-3000-4abf-87c0-28d8cd734f75",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1068,
+            "y": 295.90625
+          },
+          "nodeIndex": "select_session_range",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1063,
+            "y": 0
+          },
+          "nodeIndex": "select_round_type",
+          "size": {
+            "height": 270,
             "width": 234
           },
           "zIndex": 0

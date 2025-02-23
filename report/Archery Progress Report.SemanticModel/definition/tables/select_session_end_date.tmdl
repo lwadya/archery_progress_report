@@ -1,0 +1,37 @@
+table select_session_end_date
+	lineageTag: 4faa2d23-3000-4abf-87c0-28d8cd734f75
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c5dd40db-5d46-4cc8-91d6-1be845dfc2d2
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column session_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 9aba9d4e-44cf-41d9-85a8-2f56d1aab38e
+		summarizeBy: sum
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition select_session_end_date = m
+		mode: import
+		queryGroup: 'Table Queries'
+		source =
+				let
+				    Source = dim_session,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"date", "session_id"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

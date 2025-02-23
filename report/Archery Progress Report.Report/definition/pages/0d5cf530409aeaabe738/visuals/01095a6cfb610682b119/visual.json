@@ -2,36 +2,18 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "01095a6cfb610682b119",
   "position": {
-    "x": 648.99205864386079,
-    "y": 559.853390348198,
-    "z": 8000,
-    "height": 155.6017104459377,
-    "width": 631.00794135613933,
-    "tabOrder": 8000
+    "x": 830,
+    "y": 560,
+    "z": 6000,
+    "height": 150,
+    "width": 440,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "scatterChart",
     "query": {
       "queryState": {
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measure Table"
-                    }
-                  },
-                  "Property": "Shot Score Session Percentage Rank"
-                }
-              },
-              "queryRef": "Measure Table.Shot Score Session Rank",
-              "nativeQueryRef": "Shot Score Session Percentage Rank"
-            }
-          ]
-        },
-        "X": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -41,11 +23,30 @@
                       "Entity": "dim_calendar"
                     }
                   },
-                  "Property": "day_of_week_number"
+                  "Property": "date"
                 }
               },
-              "queryRef": "dim_calendar.day_of_week_number",
-              "nativeQueryRef": "day_of_week_number",
+              "queryRef": "dim_calendar.date",
+              "nativeQueryRef": "date",
+              "active": true
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Day of Week Number"
+                }
+              },
+              "queryRef": "Measure Table.Day of Week Number",
+              "nativeQueryRef": "Day of Week Number",
               "active": true
             }
           ]
@@ -54,17 +55,17 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_session"
+                      "Entity": "Measure Table"
                     }
                   },
-                  "Property": "session_score_average"
+                  "Property": "Shot Score Performance Against Benchmark"
                 }
               },
-              "queryRef": "dim_session.session_score_average",
-              "nativeQueryRef": "session_score_average"
+              "queryRef": "Measure Table.Shot Score Performance Against Benchmark",
+              "nativeQueryRef": "Shot Score Performance Against Benchmark"
             }
           ]
         }
@@ -87,6 +88,18 @@
                   "Value": "'Trend line 1'"
                 }
               }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -98,6 +111,20 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -128,154 +155,55 @@
                       "Cases": [
                         {
                           "Condition": {
-                            "And": {
+                            "Comparison": {
+                              "ComparisonKind": 2,
                               "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Session Percentage Rank"
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
                                     }
                                   },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0.66D"
-                                    }
-                                  }
+                                  "Property": "Shot Score Performance Against Benchmark"
                                 }
                               },
                               "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 4,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Session Percentage Rank"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "1D"
-                                    }
-                                  }
+                                "Literal": {
+                                  "Value": "0D"
                                 }
                               }
                             }
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#118DFF'"
+                              "Value": "'#3B8FE6'"
                             }
                           }
                         },
                         {
                           "Condition": {
-                            "And": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
                               "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Session Percentage Rank"
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measure Table"
                                     }
                                   },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0.33D"
-                                    }
-                                  }
+                                  "Property": "Shot Score Performance Against Benchmark"
                                 }
                               },
                               "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Session Percentage Rank"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0.66D"
-                                    }
-                                  }
+                                "Literal": {
+                                  "Value": "0D"
                                 }
                               }
                             }
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#b3b3b3'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "And": {
-                              "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Session Percentage Rank"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
-                                  }
-                                }
-                              },
-                              "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measure Table"
-                                        }
-                                      },
-                                      "Property": "Shot Score Session Percentage Rank"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0.33D"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#D64550'"
+                              "Value": "'#E83636'"
                             }
                           }
                         }
@@ -299,7 +227,57 @@
       ],
       "categoryAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.5D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "7.5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "responsive": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     },

@@ -1,0 +1,28 @@
+{
+  "name": "Archery Performance",
+  "textClasses": {
+    "callout": {
+      "fontFace": "'Segoe UI Bold', wf_segoe-ui_bold, helvetica, arial, sans-serif",
+      "fontSize": 30
+    },
+    "title": {
+      "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif"
+    }
+  },
+  "dataColors": [
+    "#EBEB31",
+    "#E83636",
+    "#3B8FE6",
+    "#4B4B4B",
+    "#61B032",
+    "#9E2CCD",
+    "#F6B94A",
+    "#313D6D"
+  ],
+  "bad": "#E83636",
+  "good": "#3B8FE6",
+  "minimum": "#E83636",
+  "maximum": "#3B8FE6",
+  "neutral": "#CCCCCC",
+  "center": "#CCCCCC"
+}
