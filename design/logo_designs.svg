@@ -8,14 +8,14 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="logo_designs_v0004.svg"
+   sodipodi:docname="logo_designs_v0005.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview1"
-     pagecolor="#ffffff"
+     pagecolor="#e5e8eb"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
@@ -23,17 +23,23 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.5768098"
-     inkscape:cx="496.88937"
-     inkscape:cy="1048.9534"
-     inkscape:window-width="1431"
+     inkscape:zoom="0.78840488"
+     inkscape:cx="381.14934"
+     inkscape:cy="676.04858"
+     inkscape:window-width="1267"
      inkscape:window-height="926"
-     inkscape:window-x="903"
-     inkscape:window-y="305"
+     inkscape:window-x="14"
+     inkscape:window-y="64"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g4-3-3-5-39-8-4-8-9" />
+     inkscape:current-layer="layer7-1-26-0-7-5" />
   <defs
      id="defs1">
+    <rect
+       x="281.58121"
+       y="1031.1961"
+       width="339.92687"
+       height="45.661818"
+       id="rect21" />
     <mask
        maskUnits="userSpaceOnUse"
        id="mask23">
@@ -925,884 +931,146 @@
          d="m 63.788908,-67.186393 c 0,-19.838796 -13.791279,-20.066878 -33.945625,-20.066878 -11.082635,0 -20.0668856,8.984243 -20.0668856,20.066878 0,11.082636 8.9842506,20.066905 20.0668856,20.066905 20.075488,0 33.945625,18.618576 33.945625,-20.066905 z"
          sodipodi:nodetypes="sssss" />
     </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask20-4">
+      <path
+         id="path20-2"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272782"
+         d="m 63.788908,-67.186393 c 0,-19.838796 -13.791279,-20.066878 -33.945625,-20.066878 -11.082635,0 -20.0668856,8.984243 -20.0668856,20.066878 0,11.082636 8.9842506,20.066905 20.0668856,20.066905 20.075488,0 33.945625,18.618576 33.945625,-20.066905 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask19-0">
+      <path
+         id="path19-9"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272782"
+         d="m 63.788908,-67.186393 c 0,-19.838796 -13.791279,-20.066878 -33.945625,-20.066878 -11.082635,0 -20.0668856,8.984243 -20.0668856,20.066878 0,11.082636 8.9842506,20.066905 20.0668856,20.066905 20.075488,0 33.945625,18.618576 33.945625,-20.066905 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask18-7">
+      <path
+         id="path18-3"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272782"
+         d="m 63.788908,-67.186393 c 0,-19.838796 -13.791279,-20.066878 -33.945625,-20.066878 -11.082635,0 -20.0668856,8.984243 -20.0668856,20.066878 0,11.082636 8.9842506,20.066905 20.0668856,20.066905 20.075488,0 33.945625,18.618576 33.945625,-20.066905 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask20-4-0">
+      <path
+         id="path20-2-7"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272782"
+         d="m 63.788908,-67.186393 c 0,-19.838796 -13.791279,-20.066878 -33.945625,-20.066878 -11.082635,0 -20.0668856,8.984243 -20.0668856,20.066878 0,11.082636 8.9842506,20.066905 20.0668856,20.066905 20.075488,0 33.945625,18.618576 33.945625,-20.066905 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask19-0-1">
+      <path
+         id="path19-9-7"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272782"
+         d="m 63.788908,-67.186393 c 0,-19.838796 -13.791279,-20.066878 -33.945625,-20.066878 -11.082635,0 -20.0668856,8.984243 -20.0668856,20.066878 0,11.082636 8.9842506,20.066905 20.0668856,20.066905 20.075488,0 33.945625,18.618576 33.945625,-20.066905 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask18-7-7">
+      <path
+         id="path18-3-7"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272782"
+         d="m 63.788908,-67.186393 c 0,-19.838796 -13.791279,-20.066878 -33.945625,-20.066878 -11.082635,0 -20.0668856,8.984243 -20.0668856,20.066878 0,11.082636 8.9842506,20.066905 20.0668856,20.066905 20.075488,0 33.945625,18.618576 33.945625,-20.066905 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask7-8-9-7-5-0">
+      <path
+         id="path8-1-0-9-7-1"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask6-8-8-4-6-6">
+      <path
+         id="path7-5-0-1-18-4"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask8-6-1-7-92-0">
+      <path
+         id="path9-5-5-8-7-6"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask7-8-9-7-5-0-8">
+      <path
+         id="path8-1-0-9-7-1-3"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask8-6-1-7-92-0-0">
+      <path
+         id="path9-5-5-8-7-6-7"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask7-8-9-7-4-2-9">
+      <path
+         id="path8-1-0-9-4-1-9"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask6-8-8-4-3-3-2">
+      <path
+         id="path7-5-0-1-5-3-5"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask8-6-1-7-8-5-5">
+      <path
+         id="path9-5-5-8-4-2-3"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.272783"
+         d="m 63.817025,-67.186392 c 0,-19.838792 -13.791279,-20.066884 -33.945624,-20.066884 -11.082636,0 -20.066887,8.98425 -20.066887,20.066884 0,11.082639 8.984251,20.066892 20.066887,20.066892 20.075486,0 33.945624,18.618588 33.945624,-20.066892 z"
+         sodipodi:nodetypes="sssss" />
+    </mask>
   </defs>
-  <g
-     inkscape:groupmode="layer"
-     id="layer6"
-     inkscape:label="Option 2"
-     transform="translate(-37.834333,-12.953498)"
-     style="display:inline;fill:#5a5a5a;fill-opacity:1">
-    <g
-       inkscape:groupmode="layer"
-       id="layer3"
-       inkscape:label="Layer 3"
-       style="display:inline">
-      <rect
-         style="fill:#5a5a5a;fill-opacity:1;stroke-width:0.210575"
-         id="rect3"
-         width="59.176289"
-         height="23.278244"
-         x="49.251991"
-         y="20.571838" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.76111px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="77.523804"
-         y="28.292637"
-         id="text2"><tspan
-           sodipodi:role="line"
-           id="tspan2"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.76111px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="77.523804"
-           y="28.292637">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.76111px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="58.646786"
-         y="34.913876"
-         id="text2-1"><tspan
-           sodipodi:role="line"
-           id="tspan2-3"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.76111px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="58.646786"
-           y="34.913876">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.76111px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-         x="82.032471"
-         y="41.519058"
-         id="text2-1-4"><tspan
-           sodipodi:role="line"
-           id="tspan2-3-4"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.76111px;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-           x="82.032471"
-           y="41.519058">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4"
-       inkscape:label="Layer 4"
-       style="display:none">
-      <path
-         id="rect2"
-         style="fill:#5bacff;fill-opacity:1;stroke-width:0.165093"
-         d="M 51.152775,22.618484 H 79.025913 L 76.93269,28.317203 H 51.152775 Z"
-         sodipodi:nodetypes="ccccc" />
-      <rect
-         style="fill:#ffff5a;fill-opacity:1;stroke-width:0.178292"
-         id="rect2-7"
-         width="30.800215"
-         height="5.5630341"
-         x="51.166348"
-         y="35.983158"
-         ry="0" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.0871946"
-         id="rect2-4"
-         width="7.1912398"
-         height="5.6987181"
-         x="51.186703"
-         y="29.266989"
-         ry="0" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="g6"
-       inkscape:label="Layer 4"
-       style="display:none">
-      <path
-         id="path5"
-         style="fill:#5bacff;fill-opacity:1;stroke-width:0.165093"
-         d="m 67.076526,22.618258 c -3.797893,0.886956 -7.158847,2.910461 -9.697599,5.698877 h 19.553845 l 2.092895,-5.698877 z" />
-      <path
-         id="rect5"
-         style="fill:#ffff5a;fill-opacity:1;stroke-width:0.178292"
-         d="m 53.155929,35.983333 a 18.962072,18.962072 0 0 0 -0.714169,5.095297 18.962072,18.962072 0 0 0 0.03359,0.467671 h 29.491223 v -5.562968 z" />
-      <path
-         id="rect6"
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.0871946"
-         d="m 56.6198,29.266947 a 18.962072,18.962072 0 0 0 -3.122807,5.698877 h 4.880839 v -5.698877 z" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="g8"
-       inkscape:label="Layer 4"
-       style="display:inline">
-      <path
-         id="path6"
-         style="fill:#5bacff;fill-opacity:1;stroke-width:0.165093"
-         d="m 61.941439,22.618258 a 26.08547,26.08547 0 0 0 -4.6731,5.698877 h 19.664433 l 2.092895,-5.698877 z" />
-      <path
-         id="rect7"
-         style="fill:#ffff5a;fill-opacity:1;stroke-width:0.178292"
-         d="m 54.185323,35.983333 a 26.08547,26.08547 0 0 0 -0.706934,5.562968 h 28.488184 v -5.562968 z" />
-      <path
-         id="rect8"
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.0871946"
-         d="m 56.749508,29.266947 a 26.08547,26.08547 0 0 0 -2.34301,5.698877 h 3.971334 v -5.698877 z" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7"
-     inkscape:label="Option 4"
-     transform="translate(53.094932,-20.938311)">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.199033"
-         id="rect1-7"
-         width="59.379318"
-         height="20.7255"
-         x="51.200001"
-         y="22.700001"
-         mask="url(#mask23)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:7.76111px;font-family:'Franklin Gothic Medium Cond';-inkscape-font-specification:'Franklin Gothic Medium Cond, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="87.130318"
-         y="29.27281"
-         id="text1-9"><tspan
-           sodipodi:role="line"
-           id="tspan1-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:7.76111px;font-family:'Franklin Gothic Medium Cond';-inkscape-font-specification:'Franklin Gothic Medium Cond, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="87.130318"
-           y="29.27281">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:7.76111px;font-family:'Franklin Gothic Medium Cond';-inkscape-font-specification:'Franklin Gothic Medium Cond, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="35.324394"
-         id="text3-9"><tspan
-           sodipodi:role="line"
-           id="tspan3-1"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:7.76111px;font-family:'Franklin Gothic Medium Cond';-inkscape-font-specification:'Franklin Gothic Medium Cond, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="35.324394">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:7.76111px;font-family:'Franklin Gothic Medium Cond';-inkscape-font-specification:'Franklin Gothic Medium Cond, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-         x="89.403564"
-         y="41.472641"
-         id="text3-3-8"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:7.76111px;font-family:'Franklin Gothic Medium Cond';-inkscape-font-specification:'Franklin Gothic Medium Cond, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-           x="89.403564"
-           y="41.472641">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="fill:#ffff5a;fill-opacity:1;stroke-width:0.165716"
-         id="rect2-7-8-0"
-         width="28.631071"
-         height="5.1700001"
-         x="4.819252"
-         y="58.917484"
-         ry="0"
-         mask="url(#mask26)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105777"
-         id="rect2-4-1-1"
-         width="11.665099"
-         height="5.1700001"
-         x="4.8832488"
-         y="52.773483"
-         ry="0"
-         mask="url(#mask25)" />
-      <path
-         id="rect2-74-8"
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.157248"
-         d="m 4.909108,46.718484 h 27.237647 l -1.491625,5.17 H 4.909108 Z"
-         sodipodi:nodetypes="ccccc"
-         mask="url(#mask24)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1"
-     inkscape:label="Option 4a"
-     transform="translate(-39.292903,8.8295944)">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:none;fill:#5a5a5a;fill-opacity:1;stroke-width:0.202231"
-         id="rect1-7-7"
-         width="58.850151"
-         height="21.396687"
-         x="58.363953"
-         y="-44.935673"
-         mask="none"
-         transform="scale(1,-1)" />
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5"
-         mask="url(#mask8)"
-         style="display:inline;fill:#5bacff;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26"
-     inkscape:label="Option 4c"
-     transform="translate(25.582373,9.0673464)">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-3"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-5)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9"
-         mask="url(#mask8-6)"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-2"
-     inkscape:label="Option 4d"
-     transform="translate(25.345693,35.236354)">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-3"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-3-3"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-5-5)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-0"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-8"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-3"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-2"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-4"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-1)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-9"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-2)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-0"
-         mask="url(#mask8-6-3)"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-5"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-7"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-4"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-7"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-7-1"
-     inkscape:label="Option 4g"
-     transform="translate(95.530425,35.401393)">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-8-2"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <path
-         id="rect1-7-7-0-3-5-8-2"
-         mask="none"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5bacff;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
-         d="M 82.449296,-23.539176 C 72.094989,-24.855375 64.060602,-33.583008 63.828727,-44.239205 h 52.923903 v 20.700029 z"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-4-1"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-2-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-3-5"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-8-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-4-8"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-1-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-3-2"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-0-8"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-7-3)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#5bacff;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-4-4"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-4-5)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-1-2"
-         mask="url(#mask8-6-1-7-5)"
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-7-7"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-7-5"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-2-8"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-1-4"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-7-0"
-     inkscape:label="Option 4h"
-     transform="translate(95.689688,9.8123056)"
-     style="fill:#5a5a5a;fill-opacity:1">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-8-3"
-       inkscape:label="Layer 3"
-       style="display:inline;fill:#5a5a5a;fill-opacity:1"
-       transform="translate(-15.843565,6.404166)">
-      <path
-         id="rect1-7-7-0-3-5-8-3"
-         mask="none"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
-         d="M 82.449296,-23.539176 C 72.094989,-24.855375 64.060602,-33.583008 63.828727,-44.239205 h 52.923903 v 20.700029 z"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-4-4"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-2-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-3-6"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-8-7"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-4-5"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-1-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-3-6"
-       inkscape:label="Layer 4"
-       style="display:inline;fill:#5a5a5a;fill-opacity:1"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-0-0"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-7-4)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#5a5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-4-9"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-4-3)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-1-8"
-         mask="url(#mask8-6-1-7-8)"
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-7-3"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none;fill:#5a5a5a;fill-opacity:1">
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-7-57"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-2-9"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-1-0"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-2"
-     inkscape:label="Option 4b"
-     transform="translate(-39.550097,116.89255)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-0"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-7"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-9)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-2"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-0"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-6"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-3"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-0"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-2)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-6"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-5)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-4"
-         mask="url(#mask8-5)"
-         style="display:inline;fill:#5bacff;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-3"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:inline">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.25;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-7"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.25;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-0"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.25;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-52"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
+  <rect
+     style="display:inline;fill:#2a2a2a;fill-opacity:1;stroke:none;stroke-width:0.777916;stroke-dasharray:none;stroke-opacity:1"
+     id="rect20"
+     width="572.38519"
+     height="17.774868"
+     x="-159.19981"
+     y="76.108566"
+     transform="matrix(0.36468272,0,0,1.0006511,58.72861,169.83171)" />
   <g
      inkscape:groupmode="layer"
      id="layer7-1-26-0"
      inkscape:label="Option 4e"
-     transform="translate(25.009527,88.106242)"
+     transform="translate(-39.088778,116.96726)"
      style="display:inline">
     <g
        inkscape:groupmode="layer"
@@ -1907,115 +1175,6 @@
          style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
          d="m 59.404097,33.708287 h 15.12789"
          id="path11-0-2"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-7"
-     inkscape:label="Option 4f"
-     transform="translate(94.572119,87.88926)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-8"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <path
-         id="rect1-7-7-0-3-5-8"
-         mask="none"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
-         d="M 82.449296,-23.539176 C 72.094989,-24.855375 64.060602,-33.583008 63.828727,-44.239205 h 52.923903 v 20.700029 z"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-4"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-3"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-4"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-1"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-3"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-0"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-7)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#000000;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-4"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-4)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-1"
-         mask="url(#mask8-6-1-7)"
-         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-7"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-7"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-2"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-1"
          transform="translate(-23.868387,27.101713)" />
     </g>
   </g>
@@ -2133,699 +1292,9 @@
   </g>
   <g
      inkscape:groupmode="layer"
-     id="layer7-1-26-0-7-13"
-     inkscape:label="Option 4j"
-     transform="translate(94.481396,115.98591)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-8-26"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <path
-         id="rect1-7-7-0-3-5-8-0"
-         mask="none"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
-         d="M 82.449296,-23.539176 C 72.094989,-24.855375 64.060602,-33.583008 63.828727,-44.239205 h 52.923903 v 20.700029 z"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-4-5"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-2-7"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-3-4"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-8-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-4-9"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-1-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-3-61"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-0-1"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-7-6)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#000000;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-4-90"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-4-4)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-1-4"
-         mask="url(#mask8-6-1-7-9)"
-         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-7-2"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:inline">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-7-1"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-2-97"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-1-09"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-3"
-     inkscape:label="Option 4k"
-     transform="translate(-39.981542,146.17882)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-9"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:none;fill:#5a5a5a;fill-opacity:1;stroke-width:0.202231"
-         id="rect1-7-7-5"
-         width="58.850151"
-         height="21.396687"
-         x="58.363953"
-         y="-44.935673"
-         mask="none"
-         transform="scale(1,-1)" />
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-1"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-3)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-3"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-28"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-81"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-9"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-81"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-33"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-4"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-3)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-3"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-6)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-92"
-         mask="url(#mask8-59)"
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-7"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-2"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-1"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-7"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-6"
-     inkscape:label="Option 4l"
-     transform="translate(24.287301,146.0579)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-08"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:none;fill:#5a5a5a;fill-opacity:1;stroke-width:0.202231"
-         id="rect1-7-7-8"
-         width="58.850151"
-         height="21.396687"
-         x="58.363953"
-         y="-44.935673"
-         mask="none"
-         transform="scale(1,-1)" />
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-15"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-7)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-7"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-7"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-2"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-7"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-2"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-0)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-7"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-0)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-93"
-         mask="url(#mask8-56)"
-         style="display:inline;fill:#5bacff;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-6"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-3"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-8"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-1"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-3-0"
-     inkscape:label="Option 4m"
-     transform="translate(94.073239,145.81391)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-9-6"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:none;fill:#5a5a5a;fill-opacity:1;stroke-width:0.202231"
-         id="rect1-7-7-5-8"
-         width="58.850151"
-         height="21.396687"
-         x="58.363953"
-         y="-44.935673"
-         mask="none"
-         transform="scale(1,-1)" />
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-1-7"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-3-7)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-3-6"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-6-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffff5a;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-28-1"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-81-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-9-9"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-81-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-33-6"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-4-1"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-3-0)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-3-5"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-6-5)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-92-4"
-         mask="url(#mask8-59-3)"
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-7-1"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-2-3"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-1-8"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-7-5"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-7-0-21"
-     inkscape:label="Option 4n"
-     transform="translate(-40.249607,178.53104)"
-     style="display:inline;fill:#5a5a5a;fill-opacity:1">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-8-3-0"
-       inkscape:label="Layer 3"
-       style="display:inline;fill:#5a5a5a;fill-opacity:1"
-       transform="translate(-15.843565,6.404166)">
-      <path
-         id="rect1-7-7-0-3-5-8-3-7"
-         mask="none"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
-         d="M 82.449296,-23.539176 C 72.094989,-24.855375 64.060602,-33.583008 63.828727,-44.239205 h 52.923903 v 20.700029 z"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-4-4-6"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-2-0-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-3-6-8"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-8-7-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-4-5-58"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-1-5-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5a5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-3-6-9"
-       inkscape:label="Layer 4"
-       style="display:inline;fill:#5a5a5a;fill-opacity:1"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-0-0-5"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-7-4-32)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-4-9-7"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-4-3-34)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-1-8-3"
-         mask="url(#mask8-6-1-7-8-2)"
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-7-3-2"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none;fill:#5a5a5a;fill-opacity:1">
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-7-57-2"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-2-9-2"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-1-0-0"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-7-0-2"
-     inkscape:label="Option 4o"
-     transform="translate(24.058761,177.58183)"
-     style="display:inline;fill:#5a5a5a;fill-opacity:1">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-8-3-49"
-       inkscape:label="Layer 3"
-       style="display:inline;fill:#5a5a5a;fill-opacity:1"
-       transform="translate(-15.843565,6.404166)">
-      <path
-         id="rect1-7-7-0-3-5-8-3-0"
-         mask="none"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
-         d="M 82.449296,-23.539176 C 72.094989,-24.855375 64.060602,-33.583008 63.828727,-44.239205 h 52.923903 v 20.700029 z"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-4-4-4"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-2-0-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-3-6-9"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-8-7-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-4-5-5"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-1-5-32"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-3-6-3"
-       inkscape:label="Layer 4"
-       style="display:inline;fill:#5a5a5a;fill-opacity:1"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-0-0-0"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-7-4-3)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-4-9-1"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-4-3-2)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-1-8-7"
-         mask="url(#mask8-6-1-7-8-9)"
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-7-3-19"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none;fill:#5a5a5a;fill-opacity:1">
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-7-57-8"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-2-9-83"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-1-0-2"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
      id="layer7-1-26-0-7-0-0"
      inkscape:label="Option 4p"
-     transform="translate(-39.537705,60.747181)"
+     transform="translate(23.218227,34.906503)"
      style="display:inline;fill:#5a5a5a;fill-opacity:1">
     <g
        inkscape:groupmode="layer"
@@ -2932,561 +1401,6 @@
   </g>
   <g
      inkscape:groupmode="layer"
-     id="layer7-1-26-2-1"
-     inkscape:label="Option 4q"
-     transform="translate(25.505162,60.602706)">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-3-0"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#fe5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-3-3-9"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-5-5-3)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-0-7"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-4-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-8-0"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-4-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-3-1"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-9-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-2-1"
-       inkscape:label="Layer 4"
-       style="display:inline"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-4-7"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-1-3)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-9-1"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-2-9)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-0-7"
-         mask="url(#mask8-6-3-6)"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-5-9"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:inline;stroke:#fe5a5a;stroke-opacity:1">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#fe5a5a;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-7-4"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#fe5a5a;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-4-9"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#fe5a5a;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-7-8"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-7-1-8"
-     inkscape:label="Option 4r"
-     transform="translate(94.933115,61.129009)">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-8-2-0"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <path
-         id="rect1-7-7-0-3-5-8-2-8"
-         mask="none"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#fe5a5a;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
-         d="M 82.449296,-23.539176 C 72.094989,-24.855375 64.060602,-33.583008 63.828727,-44.239205 h 52.923903 v 20.700029 z"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-4-1-5"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-2-5-1"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-3-5-4"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-8-3-7"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-4-8-3"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-1-9-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fe5a5a;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-3-2-1"
-       inkscape:label="Layer 4"
-       style="display:inline;fill:#fe5a5a;fill-opacity:1"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#fe5a5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-0-8-6"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-7-3-1)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#fe5a5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-4-4-8"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-4-5-5)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-1-2-0"
-         mask="url(#mask8-6-1-7-5-8)"
-         style="display:inline;fill:#fe5a5a;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-7-7-8"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:inline">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-7-5-6"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-2-8-5"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-1-4-7"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-3"
-     inkscape:label="Option 4s"
-     transform="translate(-39.516275,210.10889)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-83"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#5a5a5a;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-3-5-2"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-5-3-2)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-33"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-73"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-0"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-1"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-48"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-78"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5bacff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-9"
-       inkscape:label="Layer 4"
-       style="display:inline;fill:#ffff5a;fill-opacity:1"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-8"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-3)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#ffff5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-9"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-5)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-79"
-         mask="url(#mask8-6-1-1)"
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-19"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-5"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-8"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-9"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-34"
-     inkscape:label="Option 4t"
-     transform="translate(24.094742,209.68195)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-6"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-3-5-3"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-5-3-3)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-8"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-4"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-7"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-90"
-       inkscape:label="Layer 4"
-       style="display:inline;fill:#ffff5a;fill-opacity:1"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-1"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-1)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#ffff5a;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-40"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-1)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-73"
-         mask="url(#mask8-6-1-5)"
-         style="display:inline;fill:#ffff5a;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-4"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-9"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-4"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-5"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer7-1-26-0-36"
-     inkscape:label="Option 4u"
-     transform="translate(93.314446,209.68569)"
-     style="display:inline">
-    <g
-       inkscape:groupmode="layer"
-       id="g4-3-3-5-39-2"
-       inkscape:label="Layer 3"
-       style="display:inline"
-       transform="translate(-15.843565,6.404166)">
-      <rect
-         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.198911"
-         id="rect1-7-7-0-3-5-0"
-         width="58.388714"
-         height="20.700001"
-         x="58.363953"
-         y="-44.238991"
-         mask="url(#mask9-5-3-9)"
-         transform="scale(1,-1)" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="90.230423"
-         y="29.801977"
-         id="text1-9-1-21-8-0"><tspan
-           sodipodi:role="line"
-           id="tspan1-3-2-2-9-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="90.230423"
-           y="29.801977">Archery</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="72.503563"
-         y="36.383091"
-         id="text3-9-7-2-6-5"><tspan
-           sodipodi:role="line"
-           id="tspan3-1-5-8-2-16"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="72.503563"
-           y="36.383091">Performance</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-         x="92.803513"
-         y="43.031265"
-         id="text3-3-8-3-8-5-1"><tspan
-           sodipodi:role="line"
-           id="tspan3-0-2-4-87-7-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
-           x="92.803513"
-           y="43.031265">Report</tspan></text>
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer4-8-8-4-4-6-7"
-       inkscape:label="Layer 4"
-       style="display:inline;fill:#5bacff;fill-opacity:1"
-       transform="translate(39.895328,-16.214318)">
-      <rect
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.174469"
-         id="rect2-7-8-0-5-3-00-3-3"
-         width="31.206142"
-         height="5.1699982"
-         x="5.1518216"
-         y="-65.6492"
-         ry="0"
-         mask="url(#mask7-8-9-9)"
-         transform="scale(1,-1)" />
-      <rect
-         style="fill:#5bacff;fill-opacity:1;stroke-width:0.105013"
-         id="rect2-4-1-1-5-5-8-5"
-         width="10.968136"
-         height="5.170002"
-         x="5.1318555"
-         y="-59.013348"
-         ry="0"
-         mask="url(#mask6-8-8-0)"
-         transform="scale(1,-1)" />
-      <path
-         id="rect2-7-8-0-5-9-5-0"
-         mask="url(#mask8-6-1-45)"
-         style="display:inline;fill:#5bacff;fill-opacity:1;stroke-width:0.165716"
-         transform="scale(1,-1)"
-         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
-         sodipodi:nodetypes="ccccc" />
-    </g>
-    <g
-       inkscape:groupmode="layer"
-       id="layer8-9-9-0"
-       inkscape:label="Option 5"
-       transform="translate(23.868387,-27.101713)"
-       style="display:none">
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 49.798387,46.925287 h 26.7"
-         id="path11-50-5-3-65"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 51.871374,40.314287 h 4.1"
-         id="path11-5-3-0-1"
-         transform="translate(-23.868387,27.101713)" />
-      <path
-         style="display:inline;fill:none;fill-opacity:1;stroke:#5a5a5a;stroke-width:0.15;stroke-dasharray:none;stroke-opacity:1"
-         d="m 59.404097,33.708287 h 15.12789"
-         id="path11-0-2-8"
-         transform="translate(-23.868387,27.101713)" />
-    </g>
-  </g>
-  <g
-     inkscape:groupmode="layer"
      id="layer7-1-5"
      inkscape:label="Option 4v"
      transform="translate(-39.046584,34.835535)"
@@ -3581,7 +1495,7 @@
      inkscape:groupmode="layer"
      id="layer7-1-5-1"
      inkscape:label="Option 4w"
-     transform="matrix(1.0012081,0,0,1.0012081,-39.707456,87.84401)"
+     transform="matrix(1.0012081,0,0,1.0012081,-39.371863,78.782993)"
      inkscape:export-filename="report_main_logo.png"
      inkscape:export-xdpi="150"
      inkscape:export-ydpi="150">
@@ -3680,7 +1594,7 @@
      inkscape:groupmode="layer"
      id="layer7-1-26-0-7-5"
      inkscape:label="Option 4x"
-     transform="matrix(1.0006511,0,0,1.0006511,-40.232201,238.05659)"
+     transform="matrix(1.0006511,0,0,1.0006511,-39.896608,153.4871)"
      style="display:inline"
      inkscape:export-filename="report_main_logo.png"
      inkscape:export-xdpi="150"
@@ -3771,7 +1685,7 @@
      inkscape:groupmode="layer"
      id="layer7-1-26-0-7-5-4"
      inkscape:label="Option 4y"
-     transform="matrix(1.0000883,0,0,1.0000883,23.650422,237.97696)"
+     transform="matrix(1.0000883,0,0,1.0000883,24.992795,153.74306)"
      style="display:inline"
      inkscape:export-filename="report_main_logo.png"
      inkscape:export-xdpi="150"
@@ -3853,9 +1767,9 @@
      inkscape:groupmode="layer"
      id="layer7-1-26-0-7-5-4-4"
      inkscape:label="Option 4z"
-     transform="matrix(1.0006511,0,0,1.0006511,92.328605,237.16227)"
+     transform="matrix(1.0006511,0,0,1.0006511,24.203181,77.419897)"
      style="display:inline"
-     inkscape:export-filename="report_main_logo.png"
+     inkscape:export-filename="report_main_logo_color.png"
      inkscape:export-xdpi="150"
      inkscape:export-ydpi="150">
     <g
@@ -3940,4 +1854,328 @@
          sodipodi:nodetypes="ccccc" />
     </g>
   </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7-1-26-0-7-5-4-2"
+     inkscape:label="Option 5a"
+     transform="matrix(1.0000883,0,0,1.0000883,24.419758,186.27654)"
+     style="display:inline"
+     inkscape:export-filename="report_main_logo.png"
+     inkscape:export-xdpi="150"
+     inkscape:export-ydpi="150">
+    <g
+       inkscape:groupmode="layer"
+       id="g4-3-3-5-39-8-4-8-6"
+       inkscape:label="Layer 3"
+       style="display:inline"
+       transform="translate(-15.843565,6.404166)">
+      <rect
+         style="display:inline;fill:#70d077;fill-opacity:0;stroke:none;stroke-width:1.17251"
+         id="rect4-6-0"
+         width="49.995586"
+         height="19.998234"
+         x="65.515755"
+         y="24.519144" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="90.230423"
+         y="29.801977"
+         id="text1-9-1-21-8-4-2-5-1"><tspan
+           sodipodi:role="line"
+           id="tspan1-3-2-2-9-2-3-0-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+           x="90.230423"
+           y="29.801977">Archery</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="72.503563"
+         y="36.383091"
+         id="text3-9-7-2-6-3-3-9-5"><tspan
+           sodipodi:role="line"
+           id="tspan3-1-5-8-2-8-41-0-7"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+           x="72.503563"
+           y="36.383091">Performance</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="92.803513"
+         y="43.031265"
+         id="text3-3-8-3-8-5-4-1-0-5"><tspan
+           sodipodi:role="line"
+           id="tspan3-0-2-4-87-7-1-3-6-4"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+           x="92.803513"
+           y="43.031265">Report</tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer4-8-8-4-4-6-3-8-1-12"
+       inkscape:label="Layer 4"
+       style="display:inline"
+       transform="translate(39.895328,-16.214318)">
+      <path
+         id="rect2-7-8-0-5-3-00-3-0-7-3-0"
+         mask="url(#mask20-4)"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.174469"
+         d="m 5.1520365,-60.479088 v -2.460779 H 36.357719 v 2.460779 z m 0,-2.960682 v -2.209279 H 36.357719 v 2.209279 z"
+         transform="scale(1,-1)" />
+      <path
+         id="rect2-4-1-1-5-5-8-4-42-8-0"
+         mask="url(#mask19-0)"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         d="m 5.1318958,-53.843503 v -2.460264 H 16.099795 v 2.460264 z m 0,-2.959649 v -2.210313 H 16.099795 v 2.210313 z"
+         transform="scale(1,-1)" />
+      <path
+         id="rect2-7-8-0-5-9-5-1-7-9-1"
+         mask="url(#mask18-7)"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.165716"
+         d="m 5.2212379,-47.237355 v -2.461296 H 34.140694 l 0.833515,2.461296 z m 0,-2.960682 v -2.20928 H 33.223517 l 0.748305,2.20928 z"
+         transform="scale(1,-1)" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer4-8-8-4-4-6-3-8-1-12-8"
+       inkscape:label="Layer 4"
+       style="display:inline"
+       transform="matrix(0.36173202,0,0,1,99.114955,-16.214318)">
+      <path
+         id="rect2-4-1-1-5-5-8-4-42-8-0-1-4"
+         mask="none"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         d="m 5.1519363,60.478869 v 2.460264 H 16.119835 v -2.460264 z m 0,2.959649 v 2.210313 H 16.119835 v -2.210313 z" />
+      <path
+         id="rect2-4-1-1-5-5-8-4-42-8-0-1"
+         mask="none"
+         style="fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         d="m 5.1318958,-53.843503 v -2.460264 H 16.099795 v 2.460264 z m 0,-2.959649 v -2.210313 H 16.099795 v 2.210313 z"
+         transform="scale(1,-1)" />
+      <path
+         id="rect2-4-1-1-5-5-8-4-42-8-0-1-5"
+         mask="none"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         d="m 5.2209302,47.237039 v 2.460264 H 16.188829 v -2.460264 z m 0,2.959649 v 2.210313 H 16.188829 v -2.210313 z" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7-1-26-0-7-5-8"
+     inkscape:label="Option 5b"
+     transform="matrix(1.0006511,0,0,1.0006511,-40.632198,186.05659)"
+     style="display:inline"
+     inkscape:export-filename="report_main_logo.png"
+     inkscape:export-xdpi="150"
+     inkscape:export-ydpi="150">
+    <g
+       inkscape:groupmode="layer"
+       id="g4-3-3-5-39-8-4-9"
+       inkscape:label="Layer 3"
+       style="display:inline"
+       transform="translate(-15.843565,6.404166)">
+      <rect
+         style="display:inline;fill:#70d077;fill-opacity:0;stroke:none;stroke-width:1.17185"
+         id="rect4-8"
+         width="49.967464"
+         height="19.986986"
+         x="65.543404"
+         y="24.51911" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="90.230423"
+         y="29.801977"
+         id="text1-9-1-21-8-4-2-4"><tspan
+           sodipodi:role="line"
+           id="tspan1-3-2-2-9-2-3-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+           x="90.230423"
+           y="29.801977">Archery</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="72.503563"
+         y="36.383091"
+         id="text3-9-7-2-6-3-3-4"><tspan
+           sodipodi:role="line"
+           id="tspan3-1-5-8-2-8-41-3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+           x="72.503563"
+           y="36.383091">Performance</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="92.803513"
+         y="43.031265"
+         id="text3-3-8-3-8-5-4-1-9"><tspan
+           sodipodi:role="line"
+           id="tspan3-0-2-4-87-7-1-3-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+           x="92.803513"
+           y="43.031265">Report</tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer4-8-8-4-4-6-3-8-8"
+       inkscape:label="Layer 4"
+       style="display:inline"
+       transform="translate(39.895328,-16.214318)">
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.174469"
+         id="rect2-7-8-0-5-3-00-3-0-7-0"
+         width="31.206142"
+         height="5.1699982"
+         x="5.1518216"
+         y="-65.6492"
+         ry="0"
+         mask="url(#mask7-8-9-7-5-0)"
+         transform="scale(1,-1)" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         id="rect2-4-1-1-5-5-8-4-42-87"
+         width="10.968136"
+         height="5.170002"
+         x="5.1318555"
+         y="-59.013348"
+         ry="0"
+         mask="url(#mask6-8-8-4-6-6)"
+         transform="scale(1,-1)" />
+      <path
+         id="rect2-7-8-0-5-9-5-1-7-7"
+         mask="url(#mask8-6-1-7-92-0)"
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.165716"
+         transform="scale(1,-1)"
+         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer4-8-8-4-4-6-3-8-8-4"
+       inkscape:label="Layer 4"
+       style="display:inline"
+       transform="matrix(0.36444544,0,0,1,99.296157,-16.214319)">
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         id="rect2-4-1-1-5-5-8-4-42-87-6-4"
+         width="10.968136"
+         height="5.170002"
+         x="5.1315532"
+         y="-65.648911"
+         ry="0"
+         mask="none"
+         transform="scale(1,-1)" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         id="rect2-4-1-1-5-5-8-4-42-87-6"
+         width="10.968136"
+         height="5.170002"
+         x="5.1318555"
+         y="-59.013348"
+         ry="0"
+         mask="none"
+         transform="scale(1,-1)" />
+      <rect
+         style="display:inline;fill:#000000;fill-opacity:1;stroke-width:0.105013"
+         id="rect2-4-1-1-5-5-8-4-42-87-6-9"
+         width="10.968136"
+         height="5.170002"
+         x="5.1315532"
+         y="-52.407532"
+         ry="0"
+         mask="none"
+         transform="scale(1,-1)" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7-1-26-0-7-0-0-3"
+     inkscape:label="Option 4p"
+     transform="matrix(0.68974975,0,0,0.68974975,-31.005651,226.83265)"
+     style="display:inline;fill:#5a5a5a;fill-opacity:1">
+    <g
+       inkscape:groupmode="layer"
+       id="g4-3-3-5-39-8-3-4-7"
+       inkscape:label="Layer 3"
+       style="display:inline;fill:#5a5a5a;fill-opacity:1"
+       transform="translate(-15.843565,6.404166)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="90.230423"
+         y="29.801977"
+         id="text1-9-1-21-8-4-4-5-3"><tspan
+           sodipodi:role="line"
+           id="tspan1-3-2-2-9-2-0-7-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="90.230423"
+           y="29.801977">Archery</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="72.503563"
+         y="36.383091"
+         id="text3-9-7-2-6-3-6-3-0"><tspan
+           sodipodi:role="line"
+           id="tspan3-1-5-8-2-8-7-3-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="72.503563"
+           y="36.383091">Performance</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+         x="92.803513"
+         y="43.031265"
+         id="text3-3-8-3-8-5-4-5-0-8"><tspan
+           sodipodi:role="line"
+           id="tspan3-0-2-4-87-7-1-5-3-0"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="92.803513"
+           y="43.031265">Report</tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer4-8-8-4-4-6-3-6-0-6"
+       inkscape:label="Layer 4"
+       style="display:inline;fill:#5a5a5a;fill-opacity:1"
+       transform="translate(39.895328,-16.214318)">
+      <rect
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.174469"
+         id="rect2-7-8-0-5-3-00-3-0-0-3-8"
+         width="31.206142"
+         height="5.1699982"
+         x="5.1518216"
+         y="-65.6492"
+         ry="0"
+         mask="url(#mask7-8-9-7-4-2-9)"
+         transform="scale(1,-1)" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.105013"
+         id="rect2-4-1-1-5-5-8-4-9-2-1"
+         width="10.968136"
+         height="5.170002"
+         x="5.1318555"
+         y="-59.013348"
+         ry="0"
+         mask="url(#mask6-8-8-4-3-3-2)"
+         transform="scale(1,-1)" />
+      <path
+         id="rect2-7-8-0-5-9-5-1-8-1-9"
+         mask="url(#mask8-6-1-7-8-5-5)"
+         style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.165716"
+         transform="scale(1,-1)"
+         d="M 5.2210588,-52.407528 H 33.223427 l 1.750929,5.17 H 5.2210588 Z"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     transform="matrix(0.26458333,0,0,0.26458333,-9.061017,-22.149153)"
+     id="text20"
+     style="font-size:29.3333px;font-family:'Franklin Gothic Medium';-inkscape-font-specification:'Franklin Gothic Medium, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect21);fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.88976;stroke-dasharray:none;stroke-opacity:1"><tspan
+       x="281.58203"
+       y="1057.936"
+       id="tspan2"><tspan
+         style="font-weight:600;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI, Semi-Bold'"
+         id="tspan1">Performance by Session</tspan></tspan></text>
 </svg>
