@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "5d1566802eebb2a135b5",
+  "position": {
+    "x": 7.8672403196066387,
+    "y": 61.364474492931784,
+    "z": 7001,
+    "height": 651.63552550706822,
+    "width": 1264.1327596803933,
+    "tabOrder": 6006
+  },
+  "visualGroup": {
+    "displayName": "End Scores Group",
+    "groupMode": "ScaleMode"
+  }
+}

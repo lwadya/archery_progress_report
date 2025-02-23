@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "15c1e4bc09e2c2f8fdbc",
   "position": {
-    "x": 566.70602125147582,
-    "y": 61.959858323494686,
+    "x": 719.85248924400742,
+    "y": 55.070682237246473,
     "z": 6000,
-    "height": 63.471074380165284,
-    "width": 550.83825265643441,
-    "tabOrder": 5000
+    "height": 62.93792255685311,
+    "width": 551.49354640442539,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,7 +23,7 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Session Date Range Improvements"
+                  "Property": "Session Date Range"
                 }
               },
               "queryRef": "Measure Table.Session Date Range Improvements",
@@ -230,5 +230,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

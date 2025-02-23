@@ -17,19 +17,28 @@ table select_session_range
 
 	partition select_session_range = calculated
 		mode: import
-		source =
+		source = ```
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-22
+				// Last Updated:    2025-02-08
 				// Description:     Series from 5 to the total number of session in the dataset
+				
+				VAR _step = 5
 				
 				VAR _max_session_id =
 				COUNTROWS( ALL( dim_session ) )
 				
+				VAR _max_range = 
+				ROUNDUP(
+				    DIVIDE( _max_session_id, _step ),
+				    0
+				) * _step
+				
 				VAR _result =
-				GENERATESERIES( 5, _max_session_id, 5 )
+				GENERATESERIES( 5, _max_range, _step )
 				
 				RETURN _result
+				```
 
 	annotation PBI_Id = 35a0b03df36141a0897e3962e84beeee
 

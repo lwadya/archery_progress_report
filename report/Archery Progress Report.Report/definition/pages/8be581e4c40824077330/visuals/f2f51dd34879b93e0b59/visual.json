@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "f2f51dd34879b93e0b59",
   "position": {
-    "x": 11.334120425029516,
-    "y": 65.737898465171185,
-    "z": 4000,
-    "height": 59.693034238488785,
-    "width": 162.45572609208972,
+    "x": 60,
+    "y": 55,
+    "z": 5000,
+    "height": 60,
+    "width": 170.71911493546406,
     "tabOrder": 3000
   },
   "visual": {
@@ -23,17 +23,32 @@
                       "Entity": "select_session_end_date"
                     }
                   },
-                  "Property": "session_id"
+                  "Property": "date"
                 }
               },
-              "queryRef": "select_session_end_date.session_id",
-              "nativeQueryRef": "session_id",
+              "queryRef": "select_session_end_date.date",
+              "nativeQueryRef": "date",
               "active": true
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "select_session_end_date"
+                  }
+                },
+                "Property": "date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -44,7 +59,7 @@
             "endDate": {
               "expr": {
                 "Literal": {
-                  "Value": "datetime'2024-09-06T00:00:00'"
+                  "Value": "datetime'2025-01-24T00:00:00'"
                 }
               }
             },
@@ -66,6 +81,42 @@
                 "Literal": {
                   "Value": "false"
                 }
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "s",
+                    "Entity": "select_session_end_date",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 3,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "s"
+                              }
+                            },
+                            "Property": "date"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "datetime'2025-01-25T00:00:00'"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -90,7 +141,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "9D"
                 }
               }
             }
@@ -140,6 +191,32 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -119,10 +119,10 @@ table 'Measure Table'
 	measure 'End Count' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2024-12-20
+			// Last Updated:    2024-02-10
 			// Description:     Count of ends
 			
-			DISTINCTCOUNT( fact_shot_score[end] )
+			DISTINCTCOUNT( fact_shot_score[end_id] )
 		formatString: #,0
 		displayFolder: End
 		lineageTag: 7ed5ffc0-eb90-4eb8-9a92-56c24da1df70
@@ -227,30 +227,20 @@ table 'Measure Table'
 	measure 'Shot Score Rolling Average Shots' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-20
-			// Description:     Rolling average shot score of last n shots
+			// Last Updated:    2025-02-10
+			// Description:     Rolling average shot score by session shot id, window set by select_shot_rolling_average parameter
 			
-			VAR _default_shot_window = 5
+			VAR _window = SELECTEDVALUE( select_shot_rolling_average[shots], 4 )
 			
-			VAR _shot_window = SELECTEDVALUE( select_shot_rolling_average[shots], _default_shot_window )
-			
-			VAR _latest_shot_id = MAX( fact_shot_score[session_shot_id] )
-			
-			VAR _rolling_average =
+			VAR _result =
 			CALCULATE(
 			    [Shot Score Average],
 			    WINDOW(
-			        1 - _shot_window, REL,
+			        - _window, REL,
 			        0, REL,
 			        ALLSELECTED( fact_shot_score[session_shot_id] ),
 			        ORDERBY( fact_shot_score[session_shot_id] )
 			    )
-			)
-			
-			VAR _result =
-			IF(
-			    _latest_shot_id >= _shot_window,
-			    _rolling_average
 			)
 			
 			RETURN _result
@@ -258,35 +248,37 @@ table 'Measure Table'
 		displayFolder: Shot
 		lineageTag: 6067fd42-8eef-4625-accc-002321a30470
 
-	measure 'Rolling Meets Session Average Shot ID Min' =
+	measure 'Score Meets Average Shot ID Min' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-02
-			// Description:     The first session shot id for selected sessions where the rolling average meets or exceeds the full session average shot score
+			// Last Updated:    2025-02-10
+			// Description:     The first session shot id for selected sessions where the average shot score meets or exceeds the average score across all shots
 			
 			VAR _position_if_at_min = -1000
 			
-			VAR _shot_id_benchmark_table =
-			FILTER(
-			    ADDCOLUMNS(
-			        VALUES( fact_shot_score[session_shot_id] ),
-			        "rolling_average_exists", NOT( ISBLANK( [Shot Score Rolling Average Shots] ) ),
-			        "rolling_meets_session_average", [Shot Score Rolling Average Shots] >= CALCULATE( [Shot Score Average], ALLSELECTED( fact_shot_score[session_shot_id] ) )
-			    ),
-			    [rolling_average_exists]
+			VAR _avg_score_all_shots =
+			CALCULATE(
+			    [Shot Score Average],
+			    ALLSELECTED( fact_shot_score[session_shot_id] )
+			)
+			
+			VAR _shot_id_table =
+			ADDCOLUMNS(
+			    VALUES( fact_shot_score[session_shot_id] ),
+			    "score_meets_average", [Shot Score Rolling Average Shots] >= _avg_score_all_shots
 			)
 			
 			VAR _min_shot_id =
 			MINX(
-			    _shot_id_benchmark_table,
+			    _shot_id_table,
 			    [session_shot_id]
 			)
 			
 			VAR _min_shot_at_avg =
 			MINX(
 			    FILTER(
-			        _shot_id_benchmark_table,
-			        [rolling_meets_session_average]
+			        _shot_id_table,
+			        [score_meets_average]
 			    ),
 			    [session_shot_id]
 			)
@@ -303,35 +295,37 @@ table 'Measure Table'
 		displayFolder: Shot
 		lineageTag: 01ef077e-48dd-49f4-82f1-7a76a1a12f3a
 
-	measure 'Rolling Meets Session Average Shot ID Max' =
+	measure 'Score Meets Average Shot ID Max' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-02
-			// Description:     The last session shot id for selected sessions where the rolling average meets or exceeds the full session average shot score
+			// Last Updated:    2025-02-10
+			// Description:     The last session shot id for selected sessions where the average shot score meets or exceeds the average score across all shots
 			
 			VAR _position_if_at_max = 1000
 			
-			VAR _shot_id_benchmark_table =
-			FILTER(
-			    ADDCOLUMNS(
-			        VALUES( fact_shot_score[session_shot_id] ),
-			        "rolling_average_exists", NOT( ISBLANK( [Shot Score Rolling Average Shots] ) ),
-			        "rolling_meets_session_average", [Shot Score Rolling Average Shots] >= CALCULATE( [Shot Score Average], ALLSELECTED( fact_shot_score[session_shot_id] ) )
-			    ),
-			    [rolling_average_exists]
+			VAR _avg_score_all_shots =
+			CALCULATE(
+			    [Shot Score Average],
+			    ALLSELECTED( fact_shot_score[session_shot_id] )
+			)
+			
+			VAR _shot_id_table =
+			ADDCOLUMNS(
+			    VALUES( fact_shot_score[session_shot_id] ),
+			    "score_meets_average", [Shot Score Rolling Average Shots] >= _avg_score_all_shots
 			)
 			
 			VAR _max_shot_id =
 			MAXX(
-			    _shot_id_benchmark_table,
+			    _shot_id_table,
 			    [session_shot_id]
 			)
 			
 			VAR _max_shot_at_avg =
 			MAXX(
 			    FILTER(
-			        _shot_id_benchmark_table,
-			        [rolling_meets_session_average]
+			        _shot_id_table,
+			        [score_meets_average]
 			    ),
 			    [session_shot_id]
 			)
@@ -476,11 +470,11 @@ table 'Measure Table'
 		displayFolder: Session
 		lineageTag: 16a5fb45-9073-4aa6-aee1-861dbfcf8e12
 
-	measure 'Session Date Range Improvements' =
+	measure 'Session Date Range' =
 			
 			// Last Developer:  Lukas Wadya
 			// Last Updated:    2025-01-05
-			// Description:     Display text for selected date range for the Improvement and Fatigue pages
+			// Description:     Display text for selected date range for the Adjustments and Fatigue Effects pages
 			
 			VAR _range_end_date = MAX( select_session_end_date[date] )
 			
@@ -508,13 +502,18 @@ table 'Measure Table'
 	measure 'Days Since Prev Correlation Coef' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
+			// Last Updated:    2025-02-07
 			// Description:     Correlation coefficient for performance against benchmark and days since previous session
 			
+			VAR _value =
 			CALCULATE(
 			    [Days Since Previous Session],
 			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
 			)
+			
+			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
+			
+			RETURN _result
 		formatString: 0.00
 		displayFolder: Correlations
 		lineageTag: fa7330d8-6088-450d-a880-78f1415ae7cb
@@ -537,13 +536,18 @@ table 'Measure Table'
 	measure 'Shots Per Session Correlation Coef' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
+			// Last Updated:    2025-02-07
 			// Description:     Correlation coefficient for performance against benchmark and count of shots per session
 			
+			VAR _value =
 			CALCULATE(
 			    [Shot Count],
 			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
 			)
+			
+			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
+			
+			RETURN _result
 		formatString: 0.00
 		displayFolder: Correlations
 		lineageTag: 525bfea6-360a-40e7-9bcb-53e75b69d924
@@ -566,13 +570,18 @@ table 'Measure Table'
 	measure 'Shots Per End Correlation Coef' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-07
+			// Last Updated:    2025-02-07
 			// Description:     Correlation coefficient for performance against benchmark and count of shots per end
 			
+			VAR _value =
 			CALCULATE(
 			    [Shot Count Per End Max],
 			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
 			)
+			
+			VAR _result = "Correlation coefficient: " & FORMAT( _value, "0.00" )
+			
+			RETURN _result
 		formatString: 0.00
 		displayFolder: Correlations
 		lineageTag: 6437fcc6-95a5-422f-b672-56079f4957c2
@@ -603,7 +612,7 @@ table 'Measure Table'
 			    calc_grp_formulas[formula] = "Performance Correlation Coefficient"
 			)
 		formatString: 0.00
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 96d5d791-327f-4c0c-9a94-62e039d918ee
 
 	measure 'Day of Week Correlation Desc' =
@@ -616,7 +625,7 @@ table 'Measure Table'
 			    [Day of Week Number],
 			    calc_grp_formulas[formula] = "Performance Correlation Description"
 			)
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 8994be80-5da6-406e-aaae-034f07773ef2
 
 		annotation PBI_FormatHint = {"isText":true}
@@ -632,7 +641,7 @@ table 'Measure Table'
 			    calc_grp_formulas[formula] = "Performance Correlation Color Step"
 			)
 		formatString: 0
-		displayFolder: Correlations
+		displayFolder: _Delete
 		lineageTag: 80e904dc-2d9c-4490-af66-d2cb0f4e946a
 
 	measure 'Days Since Prev Correlation Color' =
@@ -717,7 +726,12 @@ table 'Measure Table'
 		displayFolder: Data Table
 		lineageTag: 23463c1b-4620-44e4-ae0a-aef35606aac8
 
-		formatStringDefinition = SELECTEDVALUE( select_data_table_columns[display_format] )
+		formatStringDefinition =
+				IF(
+				    SELECTEDVALUE( select_data_table_columns[level] ) = "end" && [Data Table Values] = 10,
+				    "0",
+				    SELECTEDVALUE( select_data_table_columns[display_format] )
+				)
 
 	measure 'Data Table Colors' =
 			
@@ -921,7 +935,7 @@ table 'Measure Table'
 	measure 'Round Score Pace' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-18
+			// Last Updated:    2025-02-10
 			// Description:     Round pace for any given shot, equal to average shot score multiplied by round shot count
 			
 			[Shot Score Average] * SELECTEDVALUE( select_round_scoring[shot_count], 1 )
@@ -933,8 +947,8 @@ table 'Measure Table'
 	measure 'Round Score Pace Rolling Average Shots' =
 			
 			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-19
-			// Description:     Rolling average round pace over n shots, equal to rolling average shot score multiplied by round shot count
+			// Last Updated:    2025-02-10
+			// Description:     Rolling average round pace, equal to rolling average shot score multiplied by round shot count
 			
 			[Shot Score Rolling Average Shots] * SELECTEDVALUE( select_round_scoring[shot_count], 1 )
 		displayFolder: Round
@@ -1029,6 +1043,154 @@ table 'Measure Table'
 			SELECTEDVALUE( select_round_scoring[round_description] )
 		displayFolder: Round
 		lineageTag: 079cc39a-8d9c-43ca-a46b-6681c165dc0e
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Round Score Time Series Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-04
+			// Description:     Dynamic title for round score time series chart
+			
+			VAR _round_shot_count = SELECTEDVALUE( select_round_scoring[shot_count] )
+			
+			VAR _result =
+			IF(
+			    _round_shot_count = 1,
+			    "Average end scores for each shot in the selected sessions",
+			    "Round scores for each range of " & _round_shot_count & " shots in the selected sessions"
+			)
+			
+			RETURN _result
+		displayFolder: Round
+		lineageTag: fc1b4192-119d-4250-8148-2b1992cfdeac
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Days Since Previous Session Axis Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-08
+			// Description:     Minimum number of days since the previous session for all sessions for chart axis
+			
+			CALCULATE(
+			    MIN( dim_session[days_since_previous_session] ) - (STDEV.P( dim_session[days_since_previous_session] ) * .1),
+			    ALL( dim_session[date] )
+			)
+		formatString: 0.0
+		displayFolder: Time
+		lineageTag: 4d296d8b-8630-495f-a347-bf2acb8f9661
+
+	measure 'Days Since Previous Session Axis Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-08
+			// Description:     Maximum number of days since the previous session for all sessions for chart axis
+			
+			CALCULATE(
+			    MAX( dim_session[days_since_previous_session] ) + (STDEV.P( dim_session[days_since_previous_session] ) * .1),
+			    ALL( dim_session[date] )
+			)
+		formatString: 0.0
+		displayFolder: Time
+		lineageTag: 024579b0-32a6-4ed3-8b4b-576b25d43ecf
+
+	measure 'Shot Count Per End Axis Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-08
+			// Description:     Minimum number of shots per end for all sessions for chart axis
+			
+			CALCULATE(
+			    MIN( dim_session[shot_count_per_end] ) - (STDEV.P( dim_session[shot_count_per_end] ) * .1),
+			    ALL( dim_session[date] )
+			)
+		formatString: 0.0
+		displayFolder: End
+		lineageTag: f32f3083-6670-4c99-bcb2-c4e088722bbb
+
+	measure 'Shot Count Per End Axis Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-08
+			// Description:     Maximum number of shots per end for all sessions for chart axis
+			
+			CALCULATE(
+			    MAX( dim_session[shot_count_per_end] ) + (STDEV.P( dim_session[shot_count_per_end] ) * .1),
+			    ALL( dim_session[date] )
+			)
+		formatString: 0.0
+		displayFolder: End
+		lineageTag: 11b5f5fe-90e1-498c-bdf2-42d78c987a4e
+
+	measure 'Shot Count Per Session Axis Max' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-08
+			// Description:     Maximum shot count for all sessions for chart axis
+			
+			CALCULATE(
+			    MAX( dim_session[session_shot_count] ) + (STDEV.P( dim_session[session_shot_count] ) * .1),
+			    ALL( dim_session[date] )
+			)
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: ddc0afcc-2cf0-4474-920f-8cc83644dd8b
+
+	measure 'Shot Count Per Session Axis Min' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2024-02-08
+			// Description:     Minimum shot count for all sessions for chart axis
+			
+			CALCULATE(
+			    MIN( dim_session[session_shot_count] ) - (STDEV.P( dim_session[session_shot_count] ) * .1),
+			    ALL( dim_session[date] )
+			)
+		formatString: 0
+		displayFolder: Shot
+		lineageTag: 1fbb8477-b331-4103-8e76-c6466d004861
+
+	measure 'Session Range Warning Text' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-08
+			// Description:     Display text for session range slicer warning if full session window cannot be selected
+			
+			VAR _session_count = COUNTROWS( dim_session )
+			VAR _session_window = SELECTEDVALUE( select_session_range[sessions] )
+			
+			VAR _result =
+			IF(
+			    _session_count < _session_window,
+			    UNICHAR( 9888 ) & " Date range has fewer than " & _session_window & " sessions",
+			    ""
+			)
+			
+			RETURN _result
+		displayFolder: Time
+		lineageTag: 4ba731b7-116c-475d-b2fd-2f83c41ae10f
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Round Score Pace Line Chart Title' =
+			
+			// Last Developer:  Lukas Wadya
+			// Last Updated:    2025-02-10
+			// Description:     Dynamic title for round score pace line chart
+			
+			VAR _round_shot_count = SELECTEDVALUE( select_round_scoring[shot_count] )
+			
+			VAR _result =
+			IF(
+			    _round_shot_count = 1,
+			    "Average score by shot",
+			    "Average scoring pace for a " & _round_shot_count & "-shot round by shot"
+			)
+			
+			RETURN _result
+		displayFolder: Round
+		lineageTag: 4e3b1945-dc22-4043-aa1a-5bfb7c76574e
 
 		annotation PBI_FormatHint = {"isText":true}
 

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "adf8e9f9a2c36696c929",
   "position": {
-    "x": 1047.349636483807,
-    "y": 118.44018506278915,
+    "x": 924,
+    "y": 0,
     "z": 10000,
-    "height": 22,
-    "width": 180,
-    "tabOrder": 10000
+    "height": 24,
+    "width": 280,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "bookmarkNavigator",
@@ -85,7 +85,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "9D"
                 }
               }
             },
@@ -156,7 +156,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "9D"
                 }
               }
             },
@@ -303,9 +303,36 @@
             }
           }
         }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Session Score Order Navigator'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "314fe52c511e28991739",
   "howCreated": "InsertVisualButton"
 }

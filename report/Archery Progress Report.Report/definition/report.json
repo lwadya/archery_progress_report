@@ -7,8 +7,8 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "Archery_Performance04000961535636627.json",
-      "reportVersionAtImport": "5.60",
+      "name": "Archery_Performance6522022864024726.json",
+      "reportVersionAtImport": "5.61",
       "type": "RegisteredResources"
     }
   },
@@ -33,7 +33,14 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
+              }
+            }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
               }
             }
           }
@@ -41,6 +48,9 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "enlightenDataStoryDDFB78A6143E42CFAFBC50CCF18D978D"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -58,18 +68,18 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Archery_Performance04000961535636627.json",
-          "path": "Archery_Performance04000961535636627.json",
-          "type": "CustomTheme"
-        },
-        {
-          "name": "title_bar_solid2145029878131468.png",
-          "path": "title_bar_solid2145029878131468.png",
+          "name": "title_bar8762841819884204.png",
+          "path": "title_bar8762841819884204.png",
           "type": "Image"
         },
         {
-          "name": "title_bar8762841819884204.png",
-          "path": "title_bar8762841819884204.png",
+          "name": "Archery_Performance6522022864024726.json",
+          "path": "Archery_Performance6522022864024726.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "fatigue_container_bg5032828167531136.png",
+          "path": "fatigue_container_bg5032828167531136.png",
           "type": "Image"
         }
       ]

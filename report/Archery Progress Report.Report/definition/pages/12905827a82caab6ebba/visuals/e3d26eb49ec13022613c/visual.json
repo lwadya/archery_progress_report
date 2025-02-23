@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "e3d26eb49ec13022613c",
   "position": {
-    "x": 60,
+    "x": 65,
     "y": 0,
     "z": 2500,
     "height": 55.159386068476977,
-    "width": 130,
+    "width": 140,
     "tabOrder": 1000
   },
   "visual": {
@@ -167,7 +167,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "9D"
                 }
               }
             },
@@ -358,5 +358,25 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "9d5d14514b755a33c3a6"
+  "parentGroupName": "9d5d14514b755a33c3a6",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d3f4497c3e500dc1e1dd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "select_round_scoring"
+              }
+            },
+            "Property": "round_scoring"
+          }
+        },
+        "type": "Categorical",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      }
+    ]
+  }
 }

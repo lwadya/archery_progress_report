@@ -62,8 +62,35 @@ table calc_grp_formulas
 		calculationItem 'Performance Correlation Description' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-06
+				// Last Updated:    2025-02-06
 				// Description:     Performance Correlation Coefficient value as a simple description
+				
+				VAR _correlation_color_step =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    calc_grp_formulas[formula] = "Performance Correlation Color Step"
+				)
+				
+				VAR _result =
+				SWITCH(
+				    _correlation_color_step,
+				    3, "improves significantly",
+				    2, "improves moderately",
+				    1, "improves slightly",
+				    0, "remains consistent",
+				    -1, "declines slightly",
+				    -2, "declines moderately",
+				    -3, "declines significantly",
+				    ""
+				)
+				
+				RETURN _result
+
+		calculationItem 'Performance Correlation Color Step' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2025-02-06
+				// Description:     Color step value corresponding to a Performance Correlation Coefficient description
 				
 				VAR _zero_buffer_value = .02
 				
@@ -75,51 +102,23 @@ table calc_grp_formulas
 				
 				VAR _absolute_coefficient = ABS( _correlation_coefficient )
 				
-				VAR _degree =
-				SWITCH(
-				    TRUE(),
-				    _absolute_coefficient > .5, "Strong ",
-				    _absolute_coefficient > .3, "Moderate ",
-				    _absolute_coefficient > _zero_buffer_value, "Weak ",
-				    ""
-				)
-				
 				VAR _direction =
 				SWITCH(
 				    TRUE(),
-				    _correlation_coefficient > _zero_buffer_value, "Positive",
-				    _correlation_coefficient < -_zero_buffer_value, "Negative",
-				    "None"
+				    _correlation_coefficient > _zero_buffer_value, 1,
+				    _correlation_coefficient < -_zero_buffer_value, -1,
+				    0
 				)
 				
-				VAR _result = _degree & _direction
-				
-				RETURN _result
-
-		calculationItem 'Performance Correlation Color Step' =
-				
-				// Last Developer:  Lukas Wadya
-				// Last Updated:    2025-01-07
-				// Description:     Color step value corresponding to a Performance Correlation Coefficient description
-				
-				VAR _correlation_description =
-				CALCULATE(
-				    SELECTEDMEASURE(),
-				    calc_grp_formulas[formula] = "Performance Correlation Description"
-				)
-				
-				VAR _result =
+				VAR _degree =
 				SWITCH(
-				    _correlation_description,
-				    "Strong Positive", 3,
-				    "Moderate Positive", 2,
-				    "Weak Positive", 1,
-				    "None", 0,
-				    "Weak Negative", -1,
-				    "Moderate Negative", -2,
-				    "Strong Negative", -3,
-				    BLANK()
+				    TRUE(),
+				    _absolute_coefficient > .5, 3,
+				    _absolute_coefficient > .3, 2,
+				    1
 				)
+				
+				VAR _result = _direction * _degree
 				
 				RETURN _result
 

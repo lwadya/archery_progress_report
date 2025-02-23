@@ -56,13 +56,22 @@ table fact_shot_score
 
 		annotation SummarizationSetBy = User
 
+	column end_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7293982e-2258-4c58-bfe8-b4388c3ba216
+		summarizeBy: sum
+		sourceColumn: end_id
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_shot_score = m
 		mode: import
 		queryGroup: 'Table Queries'
 		source =
 				let
 				    Source = Table.NestedJoin(score_shot_agg, {"session_id", "end"}, score_end_agg, {"session_id", "end"}, "end_counts", JoinKind.LeftOuter),
-				    #"Expanded end_counts" = Table.ExpandTableColumn(Source, "end_counts", {"score_end_average"})
+				    #"Expanded end_counts" = Table.ExpandTableColumn(Source, "end_counts", {"score_end_average", "end_id"})
 				in
 				    #"Expanded end_counts"
 

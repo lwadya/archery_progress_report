@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "5bd35994770d87361d03",
   "position": {
-    "x": 640,
-    "y": 542,
-    "z": 3000,
-    "height": 168,
+    "x": 631.53998678122935,
+    "y": 32.844048376830017,
+    "z": 5000,
+    "height": 174,
     "width": 632,
-    "tabOrder": 1000
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -27,9 +27,9 @@
                 }
               },
               "queryRef": "select_score_buckets.score_bucket",
-              "nativeQueryRef": "Score",
+              "nativeQueryRef": "Scoring Area",
               "active": true,
-              "displayName": "Score"
+              "displayName": "Scoring Area"
             }
           ],
           "showAll": true
@@ -67,7 +67,8 @@
                 }
               },
               "queryRef": "Measure Table.Shot Percentage",
-              "nativeQueryRef": "Shot Percentage"
+              "nativeQueryRef": "Percentage of Shots",
+              "displayName": "Percentage of Shots"
             }
           ]
         }
@@ -105,6 +106,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
                 }
               }
             }
@@ -370,8 +378,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
+                      "ColorId": 1,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -454,7 +462,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 1,
-                      "Percent": 0
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -540,6 +548,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -596,6 +611,90 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualInformationButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showVisualWarningButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showVisualErrorButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillRoleSelector": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillUpButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillDownLevelButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showDrillDownExpandButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showPinButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showSeeDataLayoutToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showOptionsMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showFilterRestatementButton": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -677,7 +776,7 @@
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "2D"
                 }
               }
             },
@@ -694,6 +793,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "bc377811e68014a3b0dd",
   "filterConfig": {
     "filters": [
       {
@@ -766,6 +866,8 @@
             }
           ]
         },
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true,
         "objects": {
           "general": [
             {
@@ -781,6 +883,38 @@
             }
           ]
         }
+      },
+      {
+        "name": "bb952b68eee9ee1c9581",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "Shot Percentage"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "e3997d98ba247902040e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_score_buckets"
+              }
+            },
+            "Property": "score_bucket"
+          }
+        },
+        "type": "Categorical",
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true
       }
     ]
   }

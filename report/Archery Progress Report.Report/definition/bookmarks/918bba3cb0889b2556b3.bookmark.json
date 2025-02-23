@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.2.0/schema.json",
-  "displayName": "Oldest to newest",
+  "displayName": "Oldest dates to newest",
   "name": "918bba3cb0889b2556b3",
   "options": {
     "applyOnlyToTargetVisuals": true,
@@ -348,88 +348,6 @@
                     }
                   }
                 ]
-              }
-            }
-          },
-          "b3bf5ad866a83f48c9fa": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "ce4dddf1fa8bec7a8a4b",
-                  "type": "Categorical",
-                  "filter": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "c",
-                        "Entity": "calc_grp_sessions",
-                        "Type": 0
-                      }
-                    ],
-                    "Where": [
-                      {
-                        "Condition": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "c"
-                                    }
-                                  },
-                                  "Property": "sessions"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'Selected Sessions'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "calc_grp_sessions"
-                        }
-                      },
-                      "Property": "sessions"
-                    }
-                  },
-                  "howCreated": 1
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "cardVisual",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Measure Table"
-                        }
-                      },
-                      "Property": "Session Dates Scores"
-                    }
-                  }
-                }
-              ],
-              "display": {
-                "mode": "hidden"
               }
             }
           },
@@ -967,12 +885,6 @@
           "d867d27fc5247d00693a": {
             "singleVisual": {
               "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "11a5d3b962ab9092d42d": {
-            "singleVisual": {
-              "visualType": "textbox",
               "objects": {}
             }
           },

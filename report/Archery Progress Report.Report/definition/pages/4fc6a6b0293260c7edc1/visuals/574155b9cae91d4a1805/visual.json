@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "574155b9cae91d4a1805",
   "position": {
-    "x": 30.69544364508393,
-    "y": 61.390887290167861,
-    "z": 5500,
-    "height": 45.2757793764988,
-    "width": 475.7793764988009,
-    "tabOrder": 1000
+    "x": 5.1327596803933613,
+    "y": 37.635525507068216,
+    "z": 5000,
+    "height": 39,
+    "width": 492,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -264,7 +264,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "95D"
+                  "Value": "100D"
                 }
               }
             }
@@ -304,7 +304,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "70D"
+                  "Value": "90D"
                 }
               }
             }
@@ -344,7 +344,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "85D"
+                  "Value": "90D"
                 }
               }
             }
@@ -384,7 +384,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "85D"
+                  "Value": "90D"
                 }
               }
             }
@@ -424,7 +424,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "85D"
+                  "Value": "90D"
                 }
               }
             }
@@ -440,14 +440,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "9D"
                 }
               }
             },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -468,7 +468,7 @@
             "verticalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'middle'"
+                  "Value": "'top'"
                 }
               }
             }
@@ -549,6 +549,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sort Column Slicer'"
+                }
+              }
             }
           }
         }
@@ -615,5 +622,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "5d1566802eebb2a135b5"
 }

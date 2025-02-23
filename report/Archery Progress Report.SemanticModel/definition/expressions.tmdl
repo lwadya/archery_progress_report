@@ -69,9 +69,10 @@ expression score_shot_agg =
 expression score_end_agg =
 		let
 		    Source = score_shot_agg,
-		    #"Grouped Rows" = Table.Group(Source, {"session_id", "end"}, {{"end_shot_count", each Table.RowCount(_), Int64.Type}, {"score_end_average", each List.Average([score]), Currency.Type}})
+		    #"Grouped Rows" = Table.Group(Source, {"session_id", "end"}, {{"end_shot_count", each Table.RowCount(_), Int64.Type}, {"score_end_average", each List.Average([score]), Currency.Type}}),
+		    #"Added Index" = Table.AddIndexColumn(#"Grouped Rows", "end_id", 1, 1, Int64.Type)
 		in
-		    #"Grouped Rows"
+		    #"Added Index"
 	lineageTag: 71ed29f3-6a36-40c2-9fe9-bfcbfdf0ec46
 	queryGroup: 'Helper Queries'
 
