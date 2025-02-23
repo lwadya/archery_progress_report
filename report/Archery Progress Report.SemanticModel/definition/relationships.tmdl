@@ -1,18 +1,8 @@
-relationship AutoDetected_b6201b44-3b97-4ccf-94bf-5e4d22b7ded9
-	fromColumn: dim_end.session_id
-	toColumn: dim_session.session_id
-
-relationship AutoDetected_6666b532-d8f8-47bc-98e2-ea8fb9dd0825
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: fact_round_score_30.end_id
-	toColumn: dim_end.end_id
-
-relationship AutoDetected_ee587158-924f-419d-8cfa-bbbc964e2aeb
-	fromColumn: fact_shot_score.end_id
-	toColumn: dim_end.end_id
-
 relationship 0704709f-7b99-6984-e2a3-7fb00c95dd05
 	fromColumn: dim_session.date
 	toColumn: dim_calendar.date
+
+relationship 8534e468-6fde-7eba-4823-1e141da74d77
+	fromColumn: fact_shot_score.session_id
+	toColumn: dim_session.session_id
 

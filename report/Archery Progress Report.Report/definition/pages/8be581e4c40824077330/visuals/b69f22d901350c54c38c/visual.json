@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "92f14ec01c3a53ed0135",
+  "name": "b69f22d901350c54c38c",
   "position": {
-    "x": 647.78115501519756,
-    "y": 232.46200607902736,
-    "z": 3000,
-    "height": 233.43465045592706,
-    "width": 615.68389057750767,
-    "tabOrder": 3000
+    "x": 10.339256865912763,
+    "y": 82.024771136241256,
+    "z": 1000,
+    "height": 189.553042541734,
+    "width": 1261.3893376413571,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_end"
+                      "Entity": "fact_shot_score"
                     }
                   },
-                  "Property": "normalized_session_time"
+                  "Property": "session_shot_id"
                 }
               },
-              "queryRef": "dim_end.normalized_session_time",
-              "nativeQueryRef": "normalized_session_time",
-              "active": true
+              "queryRef": "fact_shot_score.session_shot_id",
+              "nativeQueryRef": "shot",
+              "active": true,
+              "displayName": "shot"
             }
           ]
         },
@@ -42,11 +43,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "End Count"
+                  "Property": "Shot Count"
                 }
               },
-              "queryRef": "Measure Table.End Count",
-              "nativeQueryRef": "End Count"
+              "queryRef": "Measure Table.Shot Count",
+              "nativeQueryRef": "Shot Count"
             }
           ]
         },
@@ -79,7 +80,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "End Count"
+                "Property": "Shot Count"
               }
             },
             "direction": "Descending"
@@ -96,6 +97,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'Scalar'"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -122,7 +137,36 @@
       ],
       "valueAxis": [
         {
-          "properties": {}
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "secShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "secShowAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ]
     },

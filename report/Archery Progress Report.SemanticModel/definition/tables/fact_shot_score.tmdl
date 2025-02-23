@@ -11,25 +11,14 @@ table fact_shot_score
 
 		annotation SummarizationSetBy = Automatic
 
-	column end_id
-		dataType: int64
-		formatString: 0
-		lineageTag: 6395fb28-b88e-47a5-96ba-7419b937b629
-		summarizeBy: none
-		sourceColumn: end_id
-
-		annotation SummarizationSetBy = Automatic
-
 	column score_end_average
 		dataType: decimal
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		formatString: 0.00
 		lineageTag: b31eee47-36ee-43bb-ac88-9df71fe2f4dc
 		summarizeBy: sum
 		sourceColumn: score_end_average
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	column session_shot_id
 		dataType: int64
@@ -53,8 +42,17 @@ table fact_shot_score
 		dataType: int64
 		formatString: 0
 		lineageTag: e42132a5-77ed-433b-bd09-4841aee8c064
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column end
+		dataType: int64
+		formatString: 0
+		lineageTag: b89daec6-a380-4466-9a91-a0924e9a1346
+		summarizeBy: sum
+		sourceColumn: end
 
 		annotation SummarizationSetBy = Automatic
 
@@ -63,12 +61,10 @@ table fact_shot_score
 		queryGroup: 'Table Queries'
 		source =
 				let
-				    Source = Table.NestedJoin(basic_shot_score, {"session_id", "end"}, cumulative_end_score, {"session_id", "end"}, "basic_shot_score", JoinKind.LeftOuter),
-				    #"Expanded basic_shot_score" = Table.ExpandTableColumn(Source, "basic_shot_score", {"end_id", "shot_count", "score"}, {"end_id", "shot_count", "end_score"}),
-				    #"Added Custom" = Table.AddColumn(#"Expanded basic_shot_score", "score_end_average", each [end_score] / [shot_count], Currency.Type),
-				    #"Removed Columns" = Table.RemoveColumns(#"Added Custom",{"end", "shot_count", "end_score"})
+				    Source = Table.NestedJoin(score_shot_agg, {"session_id", "end"}, score_end_agg, {"session_id", "end"}, "end_counts", JoinKind.LeftOuter),
+				    #"Expanded end_counts" = Table.ExpandTableColumn(Source, "end_counts", {"score_end_average"})
 				in
-				    #"Removed Columns"
+				    #"Expanded end_counts"
 
 	annotation PBI_NavigationStepName = Navigation
 

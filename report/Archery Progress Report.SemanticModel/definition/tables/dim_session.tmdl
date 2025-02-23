@@ -51,14 +51,12 @@ table dim_session
 
 	column session_score_average
 		dataType: decimal
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		formatString: #,0.0
 		lineageTag: ad1acae8-6bc2-4b35-bb7e-196b9c691990
 		summarizeBy: sum
 		sourceColumn: session_score_average
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	column session_shot_count
 		dataType: int64
@@ -78,6 +76,14 @@ table dim_session
 
 		annotation SummarizationSetBy = Automatic
 
+	column days_since_previous_session_buckets
+		dataType: string
+		lineageTag: 51470912-358b-4310-b9de-1056cec9d4fe
+		summarizeBy: none
+		sourceColumn: days_since_previous_session_buckets
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_session = m
 		mode: import
 		queryGroup: 'Table Queries'
@@ -85,11 +91,12 @@ table dim_session
 				let
 				    Source = raw_shot_data,
 				    #"Removed Other Columns" = Table.SelectColumns(Source,{"date", "notes", "major_adjustment", "session_id"}),
-				    #"Merged Queries" = Table.NestedJoin(#"Removed Other Columns", {"session_id"}, session_counts, {"session_id"}, "session_counts", JoinKind.LeftOuter),
-				    #"Expanded session_counts" = Table.ExpandTableColumn(#"Merged Queries", "session_counts", {"session_end_count", "session_score_average", "session_shot_count"}, {"session_end_count", "session_score_average", "session_shot_count"}),
-				    #"Added Custom" = Table.AddColumn( #"Expanded session_counts", "days_since_previous_session", each if [session_id] > 1 then Duration.Days( [date] - (#"Expanded session_counts"[date]{[session_id] - 2}) ) else null, Int64.Type )
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Other Columns", {"session_id"}, score_session_agg, {"session_id"}, "session_counts", JoinKind.LeftOuter),
+				    #"Expanded session_counts" = Table.ExpandTableColumn(#"Merged Queries", "session_counts", {"session_end_count", "session_score_average", "session_shot_count"}),
+				    #"Added Custom" = Table.AddColumn( #"Expanded session_counts", "days_since_previous_session", each if [session_id] > 1 then Duration.Days( [date] - (#"Expanded session_counts"[date]{[session_id] - 2}) ) else null, Int64.Type ),
+				    #"Added Conditional Column" = Table.AddColumn(#"Added Custom", "days_since_previous_session_buckets", each if [days_since_previous_session] = null then null else if [days_since_previous_session] > 7 then "8+" else Number.ToText( [days_since_previous_session], "#" ), type text)
 				in
-				    #"Added Custom"
+				    #"Added Conditional Column"
 
 	annotation PBI_NavigationStepName = Navigation
 

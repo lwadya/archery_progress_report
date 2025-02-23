@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_end"
+                      "Entity": "fact_shot_score"
                     }
                   },
                   "Property": "end"
                 }
               },
-              "queryRef": "dim_end.end",
-              "nativeQueryRef": "end",
+              "queryRef": "fact_shot_score.end",
+              "nativeQueryRef": "end1",
               "active": true
             }
           ]

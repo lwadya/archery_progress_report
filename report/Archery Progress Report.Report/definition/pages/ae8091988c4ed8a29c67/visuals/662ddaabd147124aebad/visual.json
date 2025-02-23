@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
-  "name": "9ccb7f62814879e02982",
+  "name": "662ddaabd147124aebad",
   "position": {
-    "x": 22.37082066869301,
-    "y": 233.43465045592706,
-    "z": 1000,
-    "height": 233.43465045592706,
-    "width": 608.87537993920978,
-    "tabOrder": 1000
+    "x": 20.824295010845987,
+    "y": 8.3297180043383943,
+    "z": 3000,
+    "height": 231.84381778741866,
+    "width": 1235.5748373101951,
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_end"
+                      "Entity": "dim_session"
                     }
                   },
-                  "Property": "normalized_session_time"
+                  "Property": "date"
                 }
               },
-              "queryRef": "dim_end.normalized_session_time",
-              "nativeQueryRef": "normalized_session_time",
+              "queryRef": "Session.Date",
+              "nativeQueryRef": "Date",
               "active": true
             }
           ]
@@ -42,16 +42,12 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "End Count"
+                  "Property": "Shot Score Average"
                 }
               },
-              "queryRef": "Measure Table.End Count",
-              "nativeQueryRef": "End Count"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
+              "queryRef": "Measure Table.Shot Score Average",
+              "nativeQueryRef": "Shot Score Average"
+            },
             {
               "field": {
                 "Measure": {
@@ -60,11 +56,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Round Score 30 Average"
+                  "Property": "Shot Score Rolling Average"
                 }
               },
-              "queryRef": "Measure Table.Round Score 30 Average",
-              "nativeQueryRef": "Round Score 30 Average"
+              "queryRef": "Measure Table.Shot Score Rolling Average",
+              "nativeQueryRef": "Shot Score Rolling Average"
             }
           ]
         }
@@ -76,15 +72,16 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dim_end"
+                    "Entity": "dim_session"
                   }
                 },
-                "Property": "normalized_session_time"
+                "Property": "date"
               }
             },
             "direction": "Ascending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -95,24 +92,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Categorical'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
                 }
               }
             }

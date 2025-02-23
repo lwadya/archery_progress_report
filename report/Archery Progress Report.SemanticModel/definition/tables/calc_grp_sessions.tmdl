@@ -20,7 +20,7 @@ table calc_grp_sessions
 				
 				CALCULATE(
 				    SELECTEDMEASURE(),
-				    ALL( 'dim_session' )
+				    ALL( dim_session )
 				)
 
 		calculationItem 'Last 5' =
@@ -75,11 +75,50 @@ table calc_grp_sessions
 				RETURN
 				_result
 
-		calculationItem 'Adjustment Current' = ```
+		calculationItem 'Neighboring Sessions Benchmark' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-11-06
-				// Description:     Range between one major adjustment to the next, up to a maximum number of sessions
+				// Last Updated:    2024-11-30
+				// Description:     A range defined by n sessions before and after the selected session
+				
+				VAR _session_offset = 5
+				
+				VAR _pivot_session = MAX( dim_session[session_id] )
+				VAR _benchmark_start_id = _pivot_session - _session_offset
+				VAR _benchmark_end_id = _pivot_session + _session_offset
+				
+				VAR _result =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    FILTER(
+				        ALL( dim_session ),
+				        dim_session[session_id] >= _benchmark_start_id && dim_session[session_id] <= _benchmark_end_id
+				    )
+				)
+				
+				RETURN
+				_result
+
+		calculationItem 'Neighboring Sessions Difference' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2024-11-30
+				// Description:     Average difference between selected session and neighboring sessions benchmark
+				
+				AVERAGEX(
+				    dim_session,
+				    SELECTEDMEASURE() -
+				    CALCULATE(
+				        SELECTEDMEASURE(),
+				        calc_grp_sessions[sessions] = "Neighboring Sessions Benchmark"
+				    )
+				)
+
+		calculationItem 'Adjustment Current' =
+				
+				// Last Developer:  Lukas Wadya
+				// Last Updated:    2024-12-03
+				// Description:     Range of n consecutive sessions starting with the latest major adjustment
 				
 				VAR _max_sessions = 5
 				
@@ -89,23 +128,7 @@ table calc_grp_sessions
 				    NOT( ISBLANK( dim_session[major_adjustment] ) )
 				)
 				
-				VAR _next_adjustment_id = 
-				CALCULATE(
-				    MIN( dim_session[session_id] ),
-				    FILTER(
-				        ALL( dim_session ),
-				        NOT( ISBLANK( dim_session[major_adjustment] ) ) && dim_session[session_id] > _start_session_id
-				    )
-				)
-				
-				VAR _end_session_id =
-				MIN(
-				    _start_session_id + _max_sessions,
-				    COALESCE(
-				        _next_adjustment_id,
-				        _start_session_id + _max_sessions
-				    )
-				)
+				VAR _end_session_id = _start_session_id + _max_sessions
 				
 				VAR _result =
 				CALCULATE(
@@ -118,15 +141,12 @@ table calc_grp_sessions
 				
 				RETURN
 				_result
-				```
 
 		calculationItem 'Adjustment Benchmark' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-11-08
+				// Last Updated:    2024-12-25
 				// Description:     Equivalent number of sessions to Adjustment Current, but before the selected adjustment
-				
-				VAR _min_session_id = MIN( dim_session[session_id] )
 				
 				VAR _start_session_id =
 				CALCULATE(
@@ -136,7 +156,7 @@ table calc_grp_sessions
 				
 				VAR _session_count =
 				CALCULATE(
-				    [Session ID Count],
+				    [Session Count],
 				    calc_grp_sessions[sessions] = "Adjustment Current"
 				)
 				
@@ -158,7 +178,7 @@ table calc_grp_sessions
 		calculationItem 'Adjustment Difference' =
 				
 				// Last Developer:  Lukas Wadya
-				// Last Updated:    2024-11-10
+				// Last Updated:    2024-12-25
 				// Description:     Difference between adjustment period and benchmark period
 				
 				VAR _adjustment_value =

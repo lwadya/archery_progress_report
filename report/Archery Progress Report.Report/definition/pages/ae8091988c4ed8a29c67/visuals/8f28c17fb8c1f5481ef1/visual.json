@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
   "name": "8f28c17fb8c1f5481ef1",
   "position": {
-    "x": 22.37082066869301,
-    "y": 71.00303951367782,
+    "x": 22.212581344902386,
+    "y": 262.38611713665944,
     "z": 0,
-    "height": 301.51975683890578,
-    "width": 1235.258358662614,
+    "height": 231.84381778741866,
+    "width": 1235.5748373101951,
     "tabOrder": 0
   },
   "visual": {
@@ -42,11 +42,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Shot Score Average"
+                  "Property": "Round Score 30 Average"
                 }
               },
-              "queryRef": "Measure Table.Shot Score Average",
-              "nativeQueryRef": "Shot Score Average"
+              "queryRef": "Measure Table.Round Score 30 Average",
+              "nativeQueryRef": "Round Score 30 Average"
             },
             {
               "field": {
@@ -56,11 +56,25 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Shot Score Rolling Average"
+                  "Property": "Round Score 30 Max"
                 }
               },
-              "queryRef": "Measure Table.Shot Score Rolling Average",
-              "nativeQueryRef": "Shot Score Rolling Average"
+              "queryRef": "Measure Table.Round Score 30 Max",
+              "nativeQueryRef": "Round Score 30 Max"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Round Score 30 Min"
+                }
+              },
+              "queryRef": "Measure Table.Round Score 30 Min",
+              "nativeQueryRef": "Round Score 30 Min"
             }
           ]
         }

@@ -17,12 +17,7 @@ queryGroup 'Table Queries'
 
 	annotation PBI_QueryGroupOrder = 1
 
-/// Folder for settable parameters
-queryGroup Parameters
-
-	annotation PBI_QueryGroupOrder = 0
-
-annotation PBI_QueryOrder = ["raw_shot_data","basic_shot_score","Measure Table","dim_session","dim_end","fact_round_score_30","fact_shot_score","cumulative_end_score","session_counts","normalized_session_time_increment"]
+annotation PBI_QueryOrder = ["raw_shot_data","score_shot_agg","score_end_agg","Measure Table","dim_session","fact_shot_score","score_session_agg"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
@@ -32,8 +27,6 @@ annotation PBI_ProTooling = ["CalcGroup","DevMode"]
 
 ref table dim_session
 ref table dim_calendar
-ref table dim_end
-ref table fact_round_score_30
 ref table fact_shot_score
 ref table 'Measure Table'
 ref table calc_grp_sessions
