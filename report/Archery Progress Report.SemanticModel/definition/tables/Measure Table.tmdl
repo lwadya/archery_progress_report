@@ -718,21 +718,6 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Shot Score Adjustment Against Benchmark' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-02-17
-			// Description:     Shot Score Average at major adjustment minus benchmark value multiplied by round shot count
-			
-			CALCULATE(
-			    [Shot Score Average],
-			    calc_grp_formulas[formula] = "Adjustment Difference"
-			)
-		displayFolder: _Delete
-		lineageTag: 89dc8f4b-6c5f-499f-a4b4-d9bd53c8fc38
-
-		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format], "0.0" )
-
 	measure 'Round Score Pace' =
 			
 			// Last Developer:  Lukas Wadya
@@ -768,36 +753,6 @@ table 'Measure Table'
 		lineageTag: 2577dbb2-6d49-4bb9-88c5-2914ab499101
 
 		formatStringDefinition = SELECTEDVALUE( select_round_scoring[display_format] )
-
-	measure 'Session Adjustment Chart Data Label' =
-			
-			// Last Developer:  Lukas Wadya
-			// Last Updated:    2025-01-20
-			// Description:     Displays most recent major adjustment for a session at the middle of the chart category range
-			
-			VAR _selected_id = SELECTEDVALUE( dim_session[session_id] )
-			VAR _latest_adjustment = SELECTEDVALUE( dim_session[latest_major_adjustment] )
-			
-			VAR _middle_range_id =
-			CALCULATE(
-			    INT( (MAX( dim_session[session_id] ) - MIN( dim_session[session_id] )) / 2 + MIN( dim_session[session_id] ) ),
-			    FILTER(
-			        ALL( dim_session ),
-			        dim_session[latest_major_adjustment] = _latest_adjustment
-			    )
-			)
-			
-			VAR _result =
-			IF(
-			    _selected_id = _middle_range_id,
-			    _latest_adjustment
-			)
-			
-			RETURN _result
-		displayFolder: _Delete
-		lineageTag: 23789799-a4bf-4969-ba25-1a8a6d539649
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	measure 'Round Score Min Description' =
 			

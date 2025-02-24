@@ -5876,7 +5876,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Average Points Above Benchmark": {
+			          "Points Above Benchmark": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5886,7 +5886,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Points Above Benchmark": {
+			          "Average Points Above Benchmark": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6953,7 +6953,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Score": {
+			          "Scoring Area": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6963,7 +6963,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "Scoring Area": {
+			          "Score": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -11570,140 +11570,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "measure_table.shot_score_adjustment_against_benchmark": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Shot Score Adjustment Against Benchmark"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "shot score adjustment against benchmark": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "adjustment": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "score adjustment": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "shot score adjustment": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "shot score alteration against benchmark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "shot score modification against benchmark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "shot score regulation against benchmark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "shot score correction against benchmark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "shot score amendment against benchmark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "shot score variation against benchmark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "shot score alteration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "shot score modification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "shot score regulation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "shot score correction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        }
-			      ]
-			    },
 			    "session.session_score_average": {
 			      "Definition": {
 			        "Binding": {
@@ -13504,146 +13370,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.499
-			          }
-			        }
-			      ]
-			    },
-			    "measure_table.session_adjustment_chart_data_label": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Measure Table",
-			          "ConceptualProperty": "Session Adjustment Chart Data Label"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "session adjustment chart data label": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "label": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "data label": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "chart data label": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "adjustment chart data label": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "session adjustment chart data sticker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "adjustment chart data sticker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.771
-			          }
-			        },
-			        {
-			          "chart data sticker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "session adjustment chart data tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.757
-			          }
-			        },
-			        {
-			          "session adjustment chart data decal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.757
-			          }
-			        },
-			        {
-			          "data sticker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "adjustment chart data tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.748
-			          }
-			        },
-			        {
-			          "adjustment chart data decal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.748
-			          }
-			        },
-			        {
-			          "chart data tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "chart data decal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
 			          }
 			        }
 			      ]
